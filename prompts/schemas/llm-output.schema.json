@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IncidentAttributionReport",
+  "type": "object",
+  "properties": {
+    "incidentId": { "type": "string" },
+    "summary": { "type": "string" },
+    "topSuspect": {
+      "type": "object",
+      "properties": {
+        "mmsi": { "type": "string" },
+        "vesselName": { "type": "string" },
+        "attributionConfidence": { "type": "number" },
+        "rationale": { "type": "string" }
+      },
+      "required": ["mmsi", "vesselName", "attributionConfidence", "rationale"]
+    },
+    "environmentalContext": { "type": "string" }
+  },
+  "required": ["incidentId", "summary", "topSuspect"]
+}

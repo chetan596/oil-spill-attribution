@@ -1,0 +1,6 @@
+model:
+  name: sar_super_res
+  scale_factor: 2
+training:
+  epochs: 30
+  batch_size: 8

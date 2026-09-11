@@ -1,0 +1,16 @@
+[project]
+name = "oil-spill-ml"
+version = "0.1.0"
+description = "FastAPI Machine Learning Service for SAR Oil Spill Detection & Hindcast Modeling"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "pydantic>=2.6.4",
+    "numpy>=1.26.0",
+    "torch>=2.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

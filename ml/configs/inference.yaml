@@ -1,0 +1,4 @@
+threshold: 0.5
+tile_size: 512
+stride: 448
+device: cuda

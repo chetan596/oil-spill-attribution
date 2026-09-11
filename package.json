@@ -1,0 +1,13 @@
+{
+  "name": "oil-spill-attribution",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-powered oil spill detection and vessel attribution system",
+  "scripts": {
+    "dev": "pnpm --parallel dev",
+    "build": "pnpm --recursive build",
+    "test": "pnpm --recursive test",
+    "lint": "pnpm --recursive lint"
+  },
+  "packageManager": "pnpm@10.0.0"
+}
