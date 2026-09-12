@@ -1,0 +1,96 @@
+{
+  "model_id": "unet-dual-pol-sar-v2",
+  "training_time_sec": 1047.3708453178406,
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0023,
+      "train_dice": 0.0073,
+      "val_loss": 1.0005,
+      "val_dice": 0.0,
+      "val_recall": 0.0,
+      "val_precision": 1.0,
+      "lr": 0.000467,
+      "duration_sec": 141.4
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.9925,
+      "train_dice": 0.0004,
+      "val_loss": 0.9967,
+      "val_dice": 0.0,
+      "val_recall": 0.0,
+      "val_precision": 0.0,
+      "lr": 0.000375,
+      "duration_sec": 247.32
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.9947,
+      "train_dice": 0.0,
+      "val_loss": 0.9972,
+      "val_dice": 0.0,
+      "val_recall": 0.0,
+      "val_precision": 0.0,
+      "lr": 0.000251,
+      "duration_sec": 214.8
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.9925,
+      "train_dice": 0.0,
+      "val_loss": 0.9971,
+      "val_dice": 0.0,
+      "val_recall": 0.0,
+      "val_precision": 0.0,
+      "lr": 0.000126,
+      "duration_sec": 141.14
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.9896,
+      "train_dice": 0.0,
+      "val_loss": 0.9981,
+      "val_dice": 0.0,
+      "val_recall": 0.0,
+      "val_precision": 0.0,
+      "lr": 3.4e-05,
+      "duration_sec": 157.73
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.9919,
+      "train_dice": 0.0,
+      "val_loss": 0.9969,
+      "val_dice": 0.0,
+      "val_recall": 0.0,
+      "val_precision": 0.0,
+      "lr": 1e-06,
+      "duration_sec": 144.74
+    }
+  ],
+  "test_metrics_th50": {
+    "loss": 0.994076669216156,
+    "dice": 0.0,
+    "iou": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "fpr": 1.2520307577728357e-06,
+    "tp": 0,
+    "fp": 26,
+    "fn": 205257,
+    "tn": 20766237
+  },
+  "test_metrics_th35": {
+    "loss": 0.994076669216156,
+    "dice": 0.008903377804564004,
+    "iou": 0.004471595052352057,
+    "precision": 0.07085240898190487,
+    "recall": 0.004750142504275127,
+    "fpr": 0.0006157102026493645,
+    "tp": 975,
+    "fp": 12786,
+    "fn": 204282,
+    "tn": 20753477
+  }
+}

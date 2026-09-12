@@ -1,0 +1,174 @@
+{
+  "registry_version": "1.0",
+  "active_model_id": "unet-dual-pol-sar-v2",
+  "models": [
+    {
+      "model_id": "unet-sar-oil-spill-v1",
+      "architecture": "UNet",
+      "framework": "PyTorch",
+      "in_channels": 1,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        1,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_sar_oil_spill_v1.pth",
+      "training_dataset": null,
+      "status": "untrained",
+      "metrics": {},
+      "created_at": "2026-09-12T14:00:00Z",
+      "description": "Standard U-Net architecture for Sentinel-1 C-Band VV SAR marine oil slick segmentation."
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v1",
+      "architecture": "UNet",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v1.pth",
+      "training_dataset": "zenodo_sentinel1_verified_real_subset_20_scenes",
+      "status": "trained",
+      "metrics": {
+        "val_loss": 1.959,
+        "val_iou": 0.0,
+        "val_dice": 0.0,
+        "val_precision": 1.0,
+        "val_recall": 0.0,
+        "test_loss": 1.9603,
+        "test_iou": 0.0,
+        "test_dice": 0.0,
+        "test_precision": 1.0,
+        "test_recall": 0.0,
+        "lookalike_fpr": 0.0,
+        "lookalike_specificity": 1.0
+      },
+      "created_at": "2026-09-12T14:00:00Z",
+      "description": "Dual-polarization (VV+VH) U-Net for joint slick detection and vessel/land masking.",
+      "hyperparameters": {
+        "epochs": 6,
+        "batch_size": 8,
+        "learning_rate": 0.0005,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "Weighted_CrossEntropy_SoftDice",
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "input_channels": 2,
+        "num_classes": 2
+      },
+      "trained_at": "2026-09-12T12:38:45Z"
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v2",
+      "architecture": "UNet",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v2.pth",
+      "training_dataset": "zenodo_sentinel1_verified_real_subset_20_scenes",
+      "status": "trained",
+      "metrics": {
+        "val_loss": 0.9969,
+        "val_dice": 0.0,
+        "val_recall": 0.0,
+        "val_precision": 0.0,
+        "test_loss": 0.9941,
+        "test_dice_th50": 0.0,
+        "test_recall_th50": 0.0,
+        "test_precision_th50": 0.0,
+        "test_dice_th35": 0.0089,
+        "test_recall_th35": 0.0048,
+        "test_precision_th35": 0.0709
+      },
+      "created_at": "2026-09-12T14:00:00Z",
+      "description": "Improved Dual-pol U-Net with Focal Soft-Dice Loss, balanced positive sampling, and data augmentation.",
+      "hyperparameters": {
+        "epochs": 6,
+        "batch_size": 8,
+        "learning_rate": 0.0005,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "FocalDiceLoss_gamma2.0_alpha0.75",
+        "sampler": "WeightedRandomSampler_Positive_Balanced",
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "input_channels": 2,
+        "num_classes": 2
+      },
+      "trained_at": "2026-09-12T13:10:00Z"
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v3",
+      "architecture": "UNet",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v3.pth",
+      "training_dataset": "zenodo_sentinel1_verified_real_expanded_40_scenes",
+      "status": "trained",
+      "metrics": {
+        "val_loss": 0.9974,
+        "val_dice": 0.0,
+        "val_recall": 0.0,
+        "val_precision": 0.0,
+        "test_loss": 0.994,
+        "test_dice_th50": 0.0,
+        "test_recall_th50": 0.0,
+        "test_precision_th50": 0.0,
+        "test_dice_th35": 0.0,
+        "test_recall_th35": 0.0,
+        "test_precision_th35": 0.0
+      },
+      "created_at": "2026-09-12T14:00:00Z",
+      "description": "Expanded Real-Data Dual-pol U-Net trained on 40 verified Sentinel-1 SAR scenes (448 train tiles).",
+      "hyperparameters": {
+        "epochs": 6,
+        "batch_size": 8,
+        "learning_rate": 0.0005,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "FocalDiceLoss_gamma2.0_alpha0.75",
+        "sampler": "WeightedRandomSampler_Positive_Balanced",
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "input_channels": 2,
+        "num_classes": 2,
+        "total_scenes": 40,
+        "train_scenes": 28
+      },
+      "trained_at": "2026-09-12T14:15:00Z"
+    }
+  ]
+}

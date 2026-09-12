@@ -1,21 +1,43 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const morgan = require('morgan');
-const routes = require('./routes');
-const errorMiddleware = require('./middleware/error.middleware');
-const requestIdMiddleware = require('./middleware/request-id.middleware');
+const express = require("express");
+const cors = require("cors");
+const helmet = require("helmet");
+const morgan = require("morgan");
+
+const routes = require("./routes");
+const {
+  notFoundHandler,
+  errorHandler
+} = require("./middleware/error.middleware");
 
 const app = express();
 
+app.disable("x-powered-by");
+
 app.use(helmet());
-app.use(cors());
-app.use(express.json());
-app.use(morgan('dev'));
-app.use(requestIdMiddleware);
 
-app.use('/api/v1', routes);
+app.use(
+  cors({
+    origin: true,
+    credentials: true
+  })
+);
 
-app.use(errorMiddleware);
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ extended: true }));
+
+app.use(morgan("dev"));
+
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    service: "oil-spill-attribution-api",
+    version: "0.1.0"
+  });
+});
+
+app.use("/api/v1", routes);
+
+app.use(notFoundHandler);
+app.use(errorHandler);
 
 module.exports = app;

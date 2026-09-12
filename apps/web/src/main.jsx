@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
+import AppRouter from './app/router/AppRouter';
+import { useAuthStore } from './app/store/authStore';
+import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root') || document.body).render(
-  <React.StrictMode>
+function App() {
+  const { initializeAuth } = useAuthStore();
+
+  useEffect(() => {
+    initializeAuth();
+  }, [initializeAuth]);
+
+  return (
     <BrowserRouter>
-      <Dashboard />
+      <AppRouter />
     </BrowserRouter>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
   </React.StrictMode>
 );

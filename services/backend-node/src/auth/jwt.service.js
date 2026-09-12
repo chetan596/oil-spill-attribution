@@ -1,5 +1,12 @@
-const jwt = require('jsonwebtoken');
-const env = require('../config/env');
+const jwt = require("jsonwebtoken");
+const env = require("../config/env");
 
-exports.sign = (payload) => jwt.sign(payload, env.JWT_SECRET, { expiresIn: '7d' });
-exports.verify = (token) => jwt.verify(token, env.JWT_SECRET);
+/**
+ * JWT service — signs and verifies tokens.
+ * Reads from env.jwtSecret (camelCase) — consistent with env.js convention.
+ */
+exports.sign = (payload) =>
+  jwt.sign(payload, env.jwtSecret, { expiresIn: env.jwtExpiresIn });
+
+exports.verify = (token) =>
+  jwt.verify(token, env.jwtSecret);

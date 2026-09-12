@@ -1,0 +1,57 @@
+[
+  {
+    "mmsi": "999001001",
+    "imo": "9900001",
+    "name": "DEMO MARINER ALPHA",
+    "flag": "PA",
+    "type": "Crude Oil Tanker",
+    "vesselType": "Crude Oil Tanker",
+    "length": 280.0,
+    "lengthM": 280.0,
+    "source": "demo"
+  },
+  {
+    "mmsi": "999002002",
+    "imo": "9900002",
+    "name": "DEMO VOYAGER BETA",
+    "flag": "LR",
+    "type": "Chemical Tanker",
+    "vesselType": "Chemical Tanker",
+    "length": 185.0,
+    "lengthM": 185.0,
+    "source": "demo"
+  },
+  {
+    "mmsi": "999003003",
+    "imo": "9900003",
+    "name": "DEMO CARRIER GAMMA",
+    "flag": "SG",
+    "type": "Product Tanker",
+    "vesselType": "Product Tanker",
+    "length": 220.0,
+    "lengthM": 220.0,
+    "source": "demo"
+  },
+  {
+    "mmsi": "999004004",
+    "imo": "9900004",
+    "name": "DEMO BULKER DELTA",
+    "flag": "MH",
+    "type": "Bulk Carrier",
+    "vesselType": "Bulk Carrier",
+    "length": 225.0,
+    "lengthM": 225.0,
+    "source": "demo"
+  },
+  {
+    "mmsi": "999005005",
+    "imo": "9900005",
+    "name": "DEMO EXPRESS EPSILON",
+    "flag": "MT",
+    "type": "Container Ship",
+    "vesselType": "Container Ship",
+    "length": 335.0,
+    "lengthM": 335.0,
+    "source": "demo"
+  }
+]

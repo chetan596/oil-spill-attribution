@@ -1,8 +1,39 @@
-const app = require('./app');
-const env = require('./config/env');
+const app = require("./app");
+const config = require("./config/env");
+const logger = require("./logger");
+const { createAnalysisWorker } = require("./jobs/analysis.worker");
 
-const PORT = env.PORT || 4000;
+// Server entrypoint - SIH26143 backend
+let worker;
+try {
+  worker = createAnalysisWorker();
+} catch (err) {
+  logger.warn(`[Worker] Could not start analysis worker: ${err.message}`);
+}
 
-app.listen(PORT, () => {
-  console.log(`[Backend-Node] Service listening on port ${PORT} in ${env.NODE_ENV} mode`);
+const server = app.listen(config.port, config.host, () => {
+  logger.info(
+    `Oil Spill Attribution API running at http://${config.host}:${config.port}`
+  );
 });
+
+const shutdown = async (signal) => {
+  logger.info(`${signal} received. Shutting down server...`);
+
+  if (worker) {
+    try {
+      await worker.close();
+      logger.info("BullMQ worker closed.");
+    } catch (err) {
+      logger.error("Error closing BullMQ worker:", err);
+    }
+  }
+
+  server.close(() => {
+    logger.info("HTTP server closed.");
+    process.exit(0);
+  });
+};
+
+process.on("SIGTERM", () => shutdown("SIGTERM"));
+process.on("SIGINT", () => shutdown("SIGINT"));

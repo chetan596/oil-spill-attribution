@@ -7,3 +7,13 @@ training:
   batch_size: 16
   lr: 0.0001
   loss: dice_bce
+data:
+  manifest_path: data/raw/satellite/dataset_manifest.json
+  synthetic_manifest_path: data/samples/synthetic/dataset_manifest.json
+  splits_path: ml/datasets/splits/splits.json
+  tile_size: 512
+  stride: 448
+  mode: binary
+  polarization: VV
+  augment: true
+  num_workers: 0

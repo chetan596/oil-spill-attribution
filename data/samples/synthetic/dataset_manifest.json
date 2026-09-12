@@ -1,0 +1,291 @@
+{
+  "dataset_id": "synthetic-sar-test-v1",
+  "dataset_version": "1.0",
+  "source": "synthetic_test",
+  "WARNING": "SYNTHETIC DATA ONLY. NOT real Sentinel-1 imagery. NOT suitable for accuracy evaluation.",
+  "generated_at": "2026-09-12T10:24:33.513399+00:00",
+  "generator_script": "scripts/generate_synthetic_sar.py",
+  "total_scenes": 7,
+  "scenes": [
+    {
+      "scene_id": "synth_512_001",
+      "source": "synthetic_test",
+      "WARNING": "SYNTHETIC DATA \u2014 NOT real Sentinel-1 imagery. Do not use for accuracy claims.",
+      "image_path": "data/samples/synthetic/synth_512_001_VV.tif",
+      "mask_path": "data/samples/synthetic/synth_512_001_mask.png",
+      "split": "test",
+      "polarization": "VV",
+      "width": 512,
+      "height": 512,
+      "crs": "EPSG:4326",
+      "transform": [
+        0.0013671875000000056,
+        0.0,
+        72.5,
+        0.0,
+        -0.0013671874999999986,
+        19.3,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "resolution": [
+        0.00136719,
+        0.00136719
+      ],
+      "acquisition_time": null,
+      "classes": [
+        {
+          "id": 0,
+          "name": "sea_background"
+        },
+        {
+          "id": 1,
+          "name": "oil_spill_synthetic"
+        }
+      ],
+      "contains_spill": true,
+      "spill_pixel_count": 10393
+    },
+    {
+      "scene_id": "synth_512_002",
+      "source": "synthetic_test",
+      "WARNING": "SYNTHETIC DATA \u2014 NOT real Sentinel-1 imagery. Do not use for accuracy claims.",
+      "image_path": "data/samples/synthetic/synth_512_002_VV.tif",
+      "mask_path": "data/samples/synthetic/synth_512_002_mask.png",
+      "split": "train",
+      "polarization": "VV",
+      "width": 512,
+      "height": 512,
+      "crs": "EPSG:4326",
+      "transform": [
+        0.0013671875000000056,
+        0.0,
+        72.5,
+        0.0,
+        -0.0013671874999999986,
+        19.3,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "resolution": [
+        0.00136719,
+        0.00136719
+      ],
+      "acquisition_time": null,
+      "classes": [
+        {
+          "id": 0,
+          "name": "sea_background"
+        },
+        {
+          "id": 1,
+          "name": "oil_spill_synthetic"
+        }
+      ],
+      "contains_spill": true,
+      "spill_pixel_count": 18715
+    },
+    {
+      "scene_id": "synth_512_003",
+      "source": "synthetic_test",
+      "WARNING": "SYNTHETIC DATA \u2014 NOT real Sentinel-1 imagery. Do not use for accuracy claims.",
+      "image_path": "data/samples/synthetic/synth_512_003_VV.tif",
+      "mask_path": "data/samples/synthetic/synth_512_003_mask.png",
+      "split": "train",
+      "polarization": "VV",
+      "width": 512,
+      "height": 512,
+      "crs": "EPSG:4326",
+      "transform": [
+        0.0013671875000000056,
+        0.0,
+        72.5,
+        0.0,
+        -0.0013671874999999986,
+        19.3,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "resolution": [
+        0.00136719,
+        0.00136719
+      ],
+      "acquisition_time": null,
+      "classes": [
+        {
+          "id": 0,
+          "name": "sea_background"
+        },
+        {
+          "id": 1,
+          "name": "oil_spill_synthetic"
+        }
+      ],
+      "contains_spill": true,
+      "spill_pixel_count": 18573
+    },
+    {
+      "scene_id": "synth_512_004",
+      "source": "synthetic_test",
+      "WARNING": "SYNTHETIC DATA \u2014 NOT real Sentinel-1 imagery. Do not use for accuracy claims.",
+      "image_path": "data/samples/synthetic/synth_512_004_VV.tif",
+      "mask_path": "data/samples/synthetic/synth_512_004_mask.png",
+      "split": "train",
+      "polarization": "VV",
+      "width": 512,
+      "height": 512,
+      "crs": "EPSG:4326",
+      "transform": [
+        0.0013671875000000056,
+        0.0,
+        72.5,
+        0.0,
+        -0.0013671874999999986,
+        19.3,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "resolution": [
+        0.00136719,
+        0.00136719
+      ],
+      "acquisition_time": null,
+      "classes": [
+        {
+          "id": 0,
+          "name": "sea_background"
+        },
+        {
+          "id": 1,
+          "name": "oil_spill_synthetic"
+        }
+      ],
+      "contains_spill": true,
+      "spill_pixel_count": 10251
+    },
+    {
+      "scene_id": "synth_512_005",
+      "source": "synthetic_test",
+      "WARNING": "SYNTHETIC DATA \u2014 NOT real Sentinel-1 imagery. Do not use for accuracy claims.",
+      "image_path": "data/samples/synthetic/synth_512_005_VV.tif",
+      "mask_path": "data/samples/synthetic/synth_512_005_mask.png",
+      "split": "val",
+      "polarization": "VV",
+      "width": 512,
+      "height": 512,
+      "crs": "EPSG:4326",
+      "transform": [
+        0.0013671875000000056,
+        0.0,
+        72.5,
+        0.0,
+        -0.0013671874999999986,
+        19.3,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "resolution": [
+        0.00136719,
+        0.00136719
+      ],
+      "acquisition_time": null,
+      "classes": [
+        {
+          "id": 0,
+          "name": "sea_background"
+        },
+        {
+          "id": 1,
+          "name": "oil_spill_synthetic"
+        }
+      ],
+      "contains_spill": false,
+      "spill_pixel_count": 0
+    },
+    {
+      "scene_id": "synth_512_006",
+      "source": "synthetic_test",
+      "WARNING": "SYNTHETIC DATA \u2014 NOT real Sentinel-1 imagery. Do not use for accuracy claims.",
+      "image_path": "data/samples/synthetic/synth_512_006_VV.tif",
+      "mask_path": "data/samples/synthetic/synth_512_006_mask.png",
+      "split": "train",
+      "polarization": "VV",
+      "width": 512,
+      "height": 512,
+      "crs": "EPSG:4326",
+      "transform": [
+        0.0013671875000000056,
+        0.0,
+        72.5,
+        0.0,
+        -0.0013671874999999986,
+        19.3,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "resolution": [
+        0.00136719,
+        0.00136719
+      ],
+      "acquisition_time": null,
+      "classes": [
+        {
+          "id": 0,
+          "name": "sea_background"
+        },
+        {
+          "id": 1,
+          "name": "oil_spill_synthetic"
+        }
+      ],
+      "contains_spill": false,
+      "spill_pixel_count": 0
+    },
+    {
+      "scene_id": "synth_2048_001",
+      "source": "synthetic_test",
+      "WARNING": "SYNTHETIC DATA \u2014 NOT real Sentinel-1 imagery. Do not use for accuracy claims.",
+      "image_path": "data/samples/synthetic/synth_2048_001_VV.tif",
+      "mask_path": "data/samples/synthetic/synth_2048_001_mask.png",
+      "split": "val",
+      "polarization": "VV",
+      "width": 2048,
+      "height": 2048,
+      "crs": "EPSG:4326",
+      "transform": [
+        0.0003417968750000014,
+        0.0,
+        72.5,
+        0.0,
+        -0.00034179687499999965,
+        19.3,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "resolution": [
+        0.0003418,
+        0.0003418
+      ],
+      "acquisition_time": null,
+      "classes": [
+        {
+          "id": 0,
+          "name": "sea_background"
+        },
+        {
+          "id": 1,
+          "name": "oil_spill_synthetic"
+        }
+      ],
+      "contains_spill": true,
+      "spill_pixel_count": 181353
+    }
+  ]
+}

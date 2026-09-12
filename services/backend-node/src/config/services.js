@@ -1,8 +1,12 @@
-const env = require('./env');
+const env = require("./env");
 
+/**
+ * External service configurations.
+ * All consumers should import from here, not read env directly.
+ */
 module.exports = {
   mlService: {
-    baseUrl: env.ML_SERVICE_URL,
-    timeoutMs: 60000,
+    baseUrl:   env.mlServiceUrl,
+    timeoutMs: env.mlServiceTimeoutMs,
   },
 };

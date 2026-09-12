@@ -1,0 +1,1 @@
+# app/data/adapters package

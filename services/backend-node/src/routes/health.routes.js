@@ -1,8 +1,14 @@
-const { Router } = require('express');
-const router = Router();
+const express = require("express");
 
-router.get('/', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+const router = express.Router();
+
+router.get("/", (req, res) => {
+  res.json({
+    success: true,
+    status: "healthy",
+    service: "oil-spill-attribution-api",
+    timestamp: new Date().toISOString()
+  });
 });
 
 module.exports = router;

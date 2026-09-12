@@ -1,0 +1,251 @@
+// Prisma Schema — Oil Spill Attribution System (SIH26143)
+// Location: services/backend-node/prisma/schema.prisma
+//
+// Spatial Strategy:
+// PostGIS native types are handled in Prisma via Float latitude/longitude
+// coordinates and geomWkt String (WKT format) for geometry representation.
+// This guarantees smooth migrations without Prisma unsupported() column conflicts.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ───────────────────────────────────────────────────────────────────
+
+enum Role {
+  ADMIN
+  ANALYST
+  VIEWER
+}
+
+enum JobStatus {
+  QUEUED
+  RUNNING
+  DETECTION
+  HINDCAST
+  ATTRIBUTION
+  COMPLETED
+  FAILED
+}
+
+// ─── Models (13 Core Models) ─────────────────────────────────────────────────
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      Role     @default(VIEWER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  jobs      AnalysisJob[]
+  reports   Report[]
+  auditLogs AuditLog[]
+
+  @@map("users")
+}
+
+model SatelliteScene {
+  id            String   @id @default(uuid())
+  sceneId       String   @unique
+  satellite     String   // e.g. "Sentinel-1", "RADARSAT-2"
+  acquisitionAt DateTime
+  fileUrl       String?
+  geomWkt       String?  @db.Text // WKT polygon of scene footprint/bounds
+  bandInfo      Json?    // { polarisation: "VV+VH", resolution: 10 }
+  createdAt     DateTime @default(now())
+
+  analyses Analysis[]
+
+  @@map("satellite_scenes")
+}
+
+model Analysis {
+  id        String    @id @default(uuid())
+  sceneId   String?
+  status    JobStatus @default(QUEUED)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  scene   SatelliteScene? @relation(fields: [sceneId], references: [id])
+  jobs    AnalysisJob[]
+  spill   Spill?
+  report  Report?
+
+  @@map("analyses")
+}
+
+model AnalysisJob {
+  id           String    @id @default(uuid())
+  analysisId   String
+  userId       String?
+  bullJobId    String?   // BullMQ job ID for status tracking
+  status       JobStatus @default(QUEUED)
+  progress     Int       @default(0)
+  errorMessage String?   @db.Text
+  payload      Json?     // Original job payload
+  startedAt    DateTime?
+  completedAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  analysis Analysis @relation(fields: [analysisId], references: [id])
+  user     User?    @relation(fields: [userId], references: [id])
+
+  @@map("analysis_jobs")
+}
+
+model Spill {
+  id                String   @id @default(uuid())
+  analysisId        String   @unique
+  latitude          Float    // Centroid latitude
+  longitude         Float    // Centroid longitude
+  areaKm2           Float    // Slick area in sq km
+  geomWkt           String?  @db.Text // WKT polygon of detected oil slick
+  confidence        Float    // Detection confidence (0.0 to 1.0)
+  estimatedAgeHours Float?
+  detectedAt        DateTime @default(now())
+  createdAt         DateTime @default(now())
+
+  analysis           Analysis            @relation(fields: [analysisId], references: [id])
+  driftRun           DriftRun?
+  attributionResults AttributionResult[]
+
+  @@map("spills")
+}
+
+model DriftRun {
+  id              String   @id @default(uuid())
+  spillId         String   @unique
+  latitude        Float    // Estimated discharge origin latitude
+  longitude       Float    // Estimated discharge origin longitude
+  originTimestamp DateTime // Estimated time of discharge
+  timeWindowHours Int      @default(24)
+  simulationMeta  Json?    // Simulation inputs (windVector, currentVector, model)
+  createdAt       DateTime @default(now())
+
+  spill  Spill        @relation(fields: [spillId], references: [id])
+  points DriftPoint[]
+
+  @@map("drift_runs")
+}
+
+model DriftPoint {
+  id         String   @id @default(uuid())
+  driftRunId String
+  latitude   Float
+  longitude  Float
+  geomWkt    String?  @db.Text // WKT representation of the point
+  timestamp  DateTime
+  phase      String   // "backward" | "forward"
+  seqIndex   Int      // Sequence index within run and phase
+
+  driftRun DriftRun @relation(fields: [driftRunId], references: [id])
+
+  @@index([driftRunId, phase, seqIndex])
+  @@map("drift_points")
+}
+
+model Vessel {
+  id         String   @id @default(uuid())
+  mmsi       String   @unique
+  imo        String?
+  name       String?
+  flag       String?
+  vesselType String?
+  lengthM    Float?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  aisTracks    AisTrack[]
+  attributions AttributionResult[]
+
+  @@map("vessels")
+}
+
+model AisTrack {
+  id         String   @id @default(uuid())
+  vesselId   String
+  mmsi       String
+  latitude   Float
+  longitude  Float
+  geomWkt    String?  @db.Text // WKT representation of point
+  timestamp  DateTime
+  speedKnots Float?
+  headingDeg Float?
+  navStatus  String?
+  createdAt  DateTime @default(now())
+
+  vessel Vessel @relation(fields: [vesselId], references: [id])
+
+  @@index([mmsi, timestamp])
+  @@map("ais_tracks")
+}
+
+model AttributionResult {
+  id              String   @id @default(uuid())
+  spillId         String
+  vesselId        String
+  proximityScore  Float
+  temporalScore   Float
+  trajectoryScore Float
+  anomalyScore    Float
+  totalScore      Float
+  rank            Int
+  evidence        Json?    // Detailed feature vector & distances
+  createdAt       DateTime @default(now())
+
+  spill  Spill  @relation(fields: [spillId], references: [id])
+  vessel Vessel @relation(fields: [vesselId], references: [id])
+
+  @@unique([spillId, vesselId])
+  @@map("attribution_results")
+}
+
+model ModelVersion {
+  id          String   @id @default(uuid())
+  modelType   String   // "unet-detection", "pygnome-hindcast", "attribution-scoring"
+  version     String
+  artifactUrl String?
+  metrics     Json?    // Evaluation metrics e.g. { iou: 0.88, f1: 0.92 }
+  isActive    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@unique([modelType, version])
+  @@map("model_versions")
+}
+
+model Report {
+  id         String   @id @default(uuid())
+  analysisId String   @unique
+  userId     String?
+  title      String?
+  content    String?  @db.Text // Generated narrative & dossier
+  pdfUrl     String?
+  createdAt  DateTime @default(now())
+
+  analysis Analysis @relation(fields: [analysisId], references: [id])
+  user     User?    @relation(fields: [userId], references: [id])
+
+  @@map("reports")
+}
+
+model AuditLog {
+  id         String   @id @default(uuid())
+  userId     String?
+  action     String   // "JOB_CREATED", "REPORT_GENERATED", "LOGIN"
+  resource   String?  // Target resource e.g. "Analysis", "Report"
+  resourceId String?
+  meta       Json?
+  createdAt  DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id])
+
+  @@map("audit_logs")
+}
