@@ -305,7 +305,8 @@ describe("Phase 16.4 Part 1 — Backend Analysis Data Contract Integration", () 
     expect(geospatial.crs).toBe("EPSG:4326");
     expect(geospatial.crsName).toBe("WGS 84");
     expect(geospatial.bounds).toEqual([72.5, 18.5, 73.0, 19.0]);
-    expect(geospatial.centroid).toEqual([18.75, 72.75]);
+    // centroid is now a canonical object with provenance
+    expect(geospatial.centroid).toMatchObject({ latitude: 18.75, longitude: 72.75, provenance: "MODEL_DERIVED" });
     expect(provenance.inputGeolocation).toBe("REAL");
     expect(provenance.footprint).toBe("MODEL_DERIVED");
   });

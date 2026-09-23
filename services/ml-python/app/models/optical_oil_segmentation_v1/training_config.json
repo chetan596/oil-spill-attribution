@@ -1,0 +1,19 @@
+{
+  "model_name": "optical-oil-seg-unet-resnet18-v1",
+  "architecture": "OpticalUNetResNet18",
+  "encoder": "ResNet-18 (ImageNet Pretrained)",
+  "parameter_count": 19046385,
+  "input_resolution": [
+    256,
+    256
+  ],
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "loss_function": "0.5 * BCEWithLogits (pos_weight=3.0) + 0.5 * SoftDiceLoss",
+  "epochs_trained": 0,
+  "batch_size": 16,
+  "best_epoch": 18,
+  "operating_threshold": 0.8,
+  "checkpoint_sha256": "0b6629c1daf94933904b59c50049811fc5110f658b3eee633d509dc145dddc26"
+}

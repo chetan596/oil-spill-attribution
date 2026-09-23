@@ -1,0 +1,458 @@
+{
+  "model_id": "unet-dual-pol-sar-v3",
+  "validation_scenes_count": 7,
+  "validation_sweep": [
+    {
+      "threshold": 0.1,
+      "tp": 155393,
+      "fp": 29100650,
+      "fn": 0,
+      "tn": 104085,
+      "total_pixels": 29360128,
+      "iou": 0.5311483853096606,
+      "dice": 1.0566842095027253,
+      "precision": 0.5311483853096606,
+      "recall": 99.99999999999994,
+      "fpr": 99.64360231311807,
+      "pred_pos_pct": 99.64548860277448,
+      "pred_area_km2": 2925.6043,
+      "by_category": {
+        "oil_spill": {
+          "tp": 155393,
+          "fp": 12405384,
+          "fn": 0,
+          "tn": 22135,
+          "iou": 1.2371288814378283,
+          "dice": 2.44402206010143,
+          "precision": 1.2371288814378283,
+          "recall": 99.99999999999994,
+          "fpr": 99.82188721658764
+        },
+        "no_oil": {
+          "tp": 0,
+          "fp": 8388608,
+          "fn": 0,
+          "tn": 0,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 100.0
+        },
+        "lookalike": {
+          "tp": 0,
+          "fp": 8306658,
+          "fn": 0,
+          "tn": 81950,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 99.02307987213135
+        }
+      }
+    },
+    {
+      "threshold": 0.15,
+      "tp": 155393,
+      "fp": 29068737,
+      "fn": 0,
+      "tn": 135998,
+      "total_pixels": 29360128,
+      "iou": 0.5317284038908943,
+      "dice": 1.057832014495266,
+      "precision": 0.5317284038908943,
+      "recall": 99.99999999999994,
+      "fpr": 99.53432893672893,
+      "pred_pos_pct": 99.53679357256208,
+      "pred_area_km2": 2922.413,
+      "by_category": {
+        "oil_spill": {
+          "tp": 155393,
+          "fp": 12400574,
+          "fn": 0,
+          "tn": 26945,
+          "iou": 1.2376028066974054,
+          "dice": 2.4449468821589506,
+          "precision": 1.2376028066974054,
+          "recall": 99.99999999999994,
+          "fpr": 99.78318278974267
+        },
+        "no_oil": {
+          "tp": 0,
+          "fp": 8388608,
+          "fn": 0,
+          "tn": 0,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 100.0
+        },
+        "lookalike": {
+          "tp": 0,
+          "fp": 8279555,
+          "fn": 0,
+          "tn": 109053,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 98.69998693466187
+        }
+      }
+    },
+    {
+      "threshold": 0.2,
+      "tp": 155393,
+      "fp": 29031961,
+      "fn": 0,
+      "tn": 172774,
+      "total_pixels": 29360128,
+      "iou": 0.5323983804766954,
+      "dice": 1.0591578218630997,
+      "precision": 0.5323983804766954,
+      "recall": 99.99999999999994,
+      "fpr": 99.40840415090224,
+      "pred_pos_pct": 99.41153526306152,
+      "pred_area_km2": 2918.7354,
+      "by_category": {
+        "oil_spill": {
+          "tp": 155393,
+          "fp": 12396515,
+          "fn": 0,
+          "tn": 31004,
+          "iou": 1.2380030191425877,
+          "dice": 2.445727853617381,
+          "precision": 1.2380030191425877,
+          "recall": 99.99999999999994,
+          "fpr": 99.75052140334688
+        },
+        "no_oil": {
+          "tp": 0,
+          "fp": 8388608,
+          "fn": 0,
+          "tn": 0,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 100.0
+        },
+        "lookalike": {
+          "tp": 0,
+          "fp": 8246838,
+          "fn": 0,
+          "tn": 141770,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 98.30996990203857
+        }
+      }
+    },
+    {
+      "threshold": 0.25,
+      "tp": 24194,
+      "fp": 3056597,
+      "fn": 131199,
+      "tn": 26148138,
+      "total_pixels": 29360128,
+      "iou": 0.7532402031139575,
+      "dice": 1.4952178244500312,
+      "precision": 0.7853177966308004,
+      "recall": 15.569555900201415,
+      "fpr": 10.466100788108504,
+      "pred_pos_pct": 10.493111610412598,
+      "pred_area_km2": 308.07910000000004,
+      "by_category": {
+        "oil_spill": {
+          "tp": 24194,
+          "fp": 1295412,
+          "fn": 131199,
+          "tn": 11132107,
+          "iou": 1.6676259042393706,
+          "dice": 3.280544596979388,
+          "precision": 1.8334260377718805,
+          "recall": 15.569555900201415,
+          "fpr": 10.423737835363598
+        },
+        "no_oil": {
+          "tp": 0,
+          "fp": 874400,
+          "fn": 0,
+          "tn": 7514208,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 10.423660278320312
+        },
+        "lookalike": {
+          "tp": 0,
+          "fp": 886785,
+          "fn": 0,
+          "tn": 7501823,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 10.571300983428955
+        }
+      }
+    },
+    {
+      "threshold": 0.3,
+      "tp": 0,
+      "fp": 1398,
+      "fn": 155393,
+      "tn": 29203337,
+      "total_pixels": 29360128,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 0.004786895001786525,
+      "pred_pos_pct": 0.0047615596226283485,
+      "pred_area_km2": 0.1398,
+      "by_category": {
+        "oil_spill": {
+          "tp": 0,
+          "fp": 366,
+          "fn": 155393,
+          "tn": 12427153,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.0029450769699084747
+        },
+        "no_oil": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 8388608,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "lookalike": {
+          "tp": 0,
+          "fp": 1032,
+          "fn": 0,
+          "tn": 8387576,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.012302398681640625
+        }
+      }
+    },
+    {
+      "threshold": 0.35,
+      "tp": 0,
+      "fp": 7,
+      "fn": 155393,
+      "tn": 29204728,
+      "total_pixels": 29360128,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 2.396871603183525e-05,
+      "pred_pos_pct": 2.384185791015625e-05,
+      "pred_area_km2": 0.0007,
+      "by_category": {
+        "oil_spill": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 155393,
+          "tn": 12427519,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "no_oil": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 8388608,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "lookalike": {
+          "tp": 0,
+          "fp": 7,
+          "fn": 0,
+          "tn": 8388601,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 8.344650268554688e-05
+        }
+      }
+    },
+    {
+      "threshold": 0.4,
+      "tp": 0,
+      "fp": 6,
+      "fn": 155393,
+      "tn": 29204729,
+      "total_pixels": 29360128,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 2.054461374157307e-05,
+      "pred_pos_pct": 2.0435878208705356e-05,
+      "pred_area_km2": 0.0006000000000000001,
+      "by_category": {
+        "oil_spill": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 155393,
+          "tn": 12427519,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "no_oil": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 8388608,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "lookalike": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 0,
+          "tn": 8388602,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 7.152557373046875e-05
+        }
+      }
+    },
+    {
+      "threshold": 0.45,
+      "tp": 0,
+      "fp": 6,
+      "fn": 155393,
+      "tn": 29204729,
+      "total_pixels": 29360128,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 2.054461374157307e-05,
+      "pred_pos_pct": 2.0435878208705356e-05,
+      "pred_area_km2": 0.0006000000000000001,
+      "by_category": {
+        "oil_spill": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 155393,
+          "tn": 12427519,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "no_oil": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 8388608,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "lookalike": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 0,
+          "tn": 8388602,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 7.152557373046875e-05
+        }
+      }
+    },
+    {
+      "threshold": 0.5,
+      "tp": 0,
+      "fp": 4,
+      "fn": 155393,
+      "tn": 29204731,
+      "total_pixels": 29360128,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 1.3696409161048713e-05,
+      "pred_pos_pct": 1.362391880580357e-05,
+      "pred_area_km2": 0.0004,
+      "by_category": {
+        "oil_spill": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 155393,
+          "tn": 12427519,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "no_oil": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 8388608,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "lookalike": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 8388604,
+          "iou": 0.0,
+          "dice": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "fpr": 4.76837158203125e-05
+        }
+      }
+    }
+  ],
+  "selected_threshold": 0.25,
+  "selection_rationale": "Selected based on validation split optimization (Dice/IoU vs FPR trade-off)."
+}

@@ -1,0 +1,20 @@
+{
+  "threshold": 0.5,
+  "micro_pixel_aggregate": {
+    "tp": 66754,
+    "fp": 1326110,
+    "fn": 88639,
+    "tn": 27878625,
+    "iou": 0.045058,
+    "dice": 0.086231,
+    "precision": 0.047926,
+    "recall": 0.429582,
+    "fpr": 0.045407
+  },
+  "category_breakdown": {
+    "clean_ocean_fpr": 0.0,
+    "look_alike_fpr": 0.157122,
+    "oil_scenes_iou": 0.408369,
+    "oil_scenes_dice": 0.579917
+  }
+}

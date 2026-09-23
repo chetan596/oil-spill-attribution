@@ -1,10 +1,26 @@
 import { create } from 'zustand';
 import { authApi } from '../../api/auth.api';
 
+const getInitialToken = () => {
+  try {
+    return typeof localStorage !== 'undefined' ? localStorage.getItem('oil_spill_token') : null;
+  } catch {
+    return null;
+  }
+};
+
+const getInitialUser = () => {
+  try {
+    return typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem('oil_spill_user') || 'null') : null;
+  } catch {
+    return null;
+  }
+};
+
 export const useAuthStore = create((set, get) => ({
-  token: localStorage.getItem('oil_spill_token') || null,
-  user: JSON.parse(localStorage.getItem('oil_spill_user') || 'null'),
-  isAuthenticated: Boolean(localStorage.getItem('oil_spill_token')),
+  token: getInitialToken(),
+  user: getInitialUser(),
+  isAuthenticated: Boolean(getInitialToken()),
   isLoading: false,
   error: null,
 
@@ -17,8 +33,10 @@ export const useAuthStore = create((set, get) => ({
       const response = await authApi.login({ email, password });
       const { token, user } = response.data;
 
-      localStorage.setItem('oil_spill_token', token);
-      localStorage.setItem('oil_spill_user', JSON.stringify(user));
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('oil_spill_token', token);
+        localStorage.setItem('oil_spill_user', JSON.stringify(user));
+      }
 
       set({
         token,
@@ -42,8 +60,10 @@ export const useAuthStore = create((set, get) => ({
    * Log out user
    */
   logout: () => {
-    localStorage.removeItem('oil_spill_token');
-    localStorage.removeItem('oil_spill_user');
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem('oil_spill_token');
+      localStorage.removeItem('oil_spill_user');
+    }
     set({
       token: null,
       user: null,
@@ -56,7 +76,7 @@ export const useAuthStore = create((set, get) => ({
    * Initialize and verify existing auth session
    */
   initializeAuth: async () => {
-    const token = localStorage.getItem('oil_spill_token');
+    const token = getInitialToken();
     if (!token) {
       set({ isAuthenticated: false, user: null });
       return;
@@ -65,12 +85,16 @@ export const useAuthStore = create((set, get) => ({
     try {
       const response = await authApi.getMe();
       const user = response.data;
-      localStorage.setItem('oil_spill_user', JSON.stringify(user));
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('oil_spill_user', JSON.stringify(user));
+      }
       set({ user, isAuthenticated: true });
     } catch {
       // If token expired or invalid, clear
-      localStorage.removeItem('oil_spill_token');
-      localStorage.removeItem('oil_spill_user');
+      if (typeof localStorage !== 'undefined') {
+        localStorage.removeItem('oil_spill_token');
+        localStorage.removeItem('oil_spill_user');
+      }
       set({ token: null, user: null, isAuthenticated: false });
     }
   },

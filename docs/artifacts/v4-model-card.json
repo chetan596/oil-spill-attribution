@@ -1,0 +1,50 @@
+{
+  "model_id": "unet-dual-pol-sar-v4",
+  "model_name": "Dual-Polarimetric Sentinel-1 U-Net (Corrected Input dB Normalization)",
+  "version": "4.0.0-experimental",
+  "status": "EXPERIMENTAL",
+  "production_ready": false,
+  "strengths": [
+    "Corrected SAR dB preprocessing restored physical spatial gradient flow and feature learning.",
+    "Meaningful spatial learning with true positive pixel discovery increasing from 1,018 (V2) to 73,886 (V4-512) and 69,281 (V4-256).",
+    "Strong clean-ocean selectivity with Clean-Ocean FPR at 0.2812% (Mode A) and 0.2073% (Mode B).",
+    "Clear separation in output probability distribution between true oil (median 0.978) and clean ocean water (median 0.020)."
+  ],
+  "limitations": [
+    "Severe look-alike false positives with Look-Alike FPR at 59.55% (Mode A) and 59.77% (Mode B).",
+    "Low positive predictive value / precision (1.63% in Mode A, 1.75% in Mode B).",
+    "High overall FPR (21.53% in Mode A, 18.69% in Mode B) on unconstrained scenes containing low-wind damping zones.",
+    "Physical inability of single-sensor SAR backscatter to distinguish biogenic surfactants and calm water from mineral oil slicks without multimodal MetOcean wind data."
+  ],
+  "operational_guidance": "Do NOT use Model V4 as a standalone automated production alert system. Classify as experimental candidate requiring multimodal MetOcean and AIS drift fusion.",
+  "normalization": {
+    "type": "Decibel_Calibrated_Clipping",
+    "vv_range_db": [-35.0, -5.0],
+    "vh_range_db": [-45.0, -15.0],
+    "valid_mask_formula": "np.isfinite(arr) & (arr != nodata)"
+  },
+  "training": {
+    "loss": "FocalTverskyLoss(alpha=0.3, beta=0.7, gamma=1.33)",
+    "optimizer": "AdamW(lr=0.0005, weight_decay=0.0001)",
+    "sampler": "WeightedRandomSampler(pos_weight=2.5)",
+    "epochs": 15,
+    "seed": 42
+  },
+  "performance_summary": {
+    "operating_threshold": 0.50,
+    "v4_512_dice_pct": 3.1106,
+    "v4_512_iou_pct": 1.5799,
+    "v4_512_precision_pct": 1.6255,
+    "v4_512_recall_pct": 35.9968,
+    "v4_512_fpr_pct": 21.5325,
+    "v4_512_lookalike_fpr_pct": 59.5471,
+    "v4_512_clean_ocean_fpr_pct": 0.2812,
+    "v4_256_dice_pct": 3.3335,
+    "v4_256_iou_pct": 1.6950,
+    "v4_256_precision_pct": 1.7533,
+    "v4_256_recall_pct": 33.7533,
+    "v4_256_fpr_pct": 18.6941,
+    "v4_256_lookalike_fpr_pct": 59.7735,
+    "v4_256_clean_ocean_fpr_pct": 0.2073
+  }
+}

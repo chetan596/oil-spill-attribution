@@ -23,6 +23,15 @@ const spillService = {
   },
 
   /**
+   * Get full spill details by analysis ID.
+   */
+  async getByAnalysisId(analysisId) {
+    const spill = await spillRepository.findByAnalysisId(analysisId);
+    if (!spill) throw AppError.notFound("Spill for analysis " + analysisId);
+    return spill;
+  },
+
+  /**
    * Get drift trajectory for a spill.
    */
   async getDrift(spillId) {

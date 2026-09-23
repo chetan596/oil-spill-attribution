@@ -1,0 +1,146 @@
+{
+  "system": "Ocean Guard AI",
+  "sih_id": "SIH 26143",
+  "version": "1.0.0-rc1",
+  "production_freeze": "PASS",
+  "build_timestamp": "2026-09-21T02:30:00Z",
+  "freeze_timestamp": "2026-09-21T02:30:00Z",
+  "software_versions": {
+    "python": "3.11.16",
+    "pytorch": "2.x",
+    "fastapi": "0.x",
+    "node": "v20.x",
+    "vite": "5.4.21",
+    "rasterio": "1.x",
+    "scipy": "1.x"
+  },
+  "model_registry": {
+    "sentinel_2_multispectral": {
+      "model_id": "mados-resnet34-rgbnir-swir-v1",
+      "architecture": "U-Net ResNet-34",
+      "checkpoint_path": "ml/training/runs/mados_rgbnir_swir_resnet34/checkpoints/best_val_iou.pt",
+      "checkpoint_sha256": "856ea016b8f750a40af942ee2e59f5919d2f04fbc510d01d2c772ecbdb3ee983",
+      "input_bands": ["B4", "B3", "B2", "B8", "B11", "B12"],
+      "input_resolution_m": 10.0,
+      "preprocessing_version": "sentinel2-ms-v1",
+      "model_version": "1.0.0",
+      "threshold": 0.50,
+      "postprocessing_version": "connected-components-v1",
+      "benchmark": {
+        "dataset": "MADOS Sentinel-2 Test Partition (Locked)",
+        "iou": 0.4273,
+        "f1": 0.5987,
+        "precision": 0.6062,
+        "recall": 0.5915,
+        "positive_discovery_rate": 0.8010,
+        "clean_ocean_false_alarm_rate": 0.0231
+      }
+    },
+    "satellite_rgb_fallback": {
+      "model_id": "mados-resnet34-rgb-v1",
+      "architecture": "U-Net ResNet-34",
+      "checkpoint_path": "ml/training/runs/phase11_rgb_control/checkpoints/best_val_iou.pt",
+      "checkpoint_sha256": "a4c32de7177bc42c2f0298427ce8bef4a2bf8d4a35e25c3450a67eb16f8e099a",
+      "input_bands": ["B4", "B3", "B2"],
+      "input_resolution_m": 10.0,
+      "preprocessing_version": "mados-rgb-v1",
+      "model_version": "1.0.0",
+      "threshold": 0.50,
+      "postprocessing_version": "connected-components-v1",
+      "benchmark": {
+        "dataset": "MADOS RGB Sentinel-2 Test Partition (Locked)",
+        "iou": 0.3554,
+        "f1": 0.5245,
+        "precision": 0.5651,
+        "recall": 0.4893
+      }
+    },
+    "drone_aerial_rgb": {
+      "model_id": "kerf-resnet34-focaldice-v1",
+      "architecture": "U-Net ResNet-34",
+      "checkpoint_path": "ml/training/runs/resnet34_balanced_focaldice_pilot/checkpoints/best_val_iou.pt",
+      "checkpoint_sha256": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+      "input_bands": ["R", "G", "B"],
+      "input_resolution_m": 0.05,
+      "preprocessing_version": "kerf-rgb-v1",
+      "model_version": "1.0.0",
+      "threshold": 0.50,
+      "postprocessing_version": "connected-components-v1",
+      "benchmark": {
+        "dataset": "KERF Drone Benchmark Partition (Locked)",
+        "iou": 0.8268
+      }
+    }
+  },
+  "sar_registry": {
+    "model_id": "unet-dual-pol-sar-v09d",
+    "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v09d_residual_loss.pth",
+    "checkpoint_sha256": "ab22ffa2fb1c3be99ff2bb99353db76ed4934bd00210f7bce21df74506ce827d",
+    "status": "UNTOUCHED_AND_VERIFIED"
+  },
+  "dataset_versions": {
+    "mados_phase9_manifests": "ml/training/manifests/phase9_mados/",
+    "mados_phase10_manifests": "ml/training/manifests/phase10_mados_rgb/",
+    "kerf_benchmark": "ml/benchmark/",
+    "integrity": "VERIFIED_UNCHANGED"
+  },
+  "routing_rules": {
+    "sentinel_2_6band": "source_type=SENTINEL_2 AND bands>={B4,B3,B2,B8,B11,B12} -> mados-resnet34-rgbnir-swir-v1",
+    "satellite_rgb": "source_type=RGB_SATELLITE OR (SENTINEL_2 AND missing_swir) -> mados-resnet34-rgb-v1",
+    "drone_rgb": "source_type=DRONE OR source_type=AERIAL_RGB -> kerf-resnet34-focaldice-v1",
+    "unknown": "source_type=UNKNOWN -> AmbiguousModalityError (FAIL CLOSED)"
+  },
+  "api_version": "v1",
+  "test_results": {
+    "python_pytest": {
+      "passed": 378,
+      "failed": 0,
+      "skipped": 1,
+      "duration_s": 62.14
+    },
+    "node_jest": {
+      "passed": 135,
+      "failed": 0,
+      "suites": 19,
+      "duration_s": 21.98
+    },
+    "frontend_build": {
+      "errors": 0,
+      "duration_s": 3.03,
+      "modules_transformed": 1669
+    },
+    "phase13_integration": {
+      "passed": 6,
+      "failed": 0,
+      "duration_s": 5.95
+    }
+  },
+  "benchmark_references": {
+    "phase11_sentinel2_ms": "ml/training/reports/phase11_mados_multispectral_experiment.md",
+    "phase10_satellite_rgb": "ml/training/reports/phase10_mados_rgb_domain_adaptation.md",
+    "phase7b_drone_rgb": "ml/training/reports/phase7b_balanced_finetuning_report.md",
+    "phase12_router": "ml/training/reports/phase12_operational_model_router.md",
+    "phase13_final": "ml/training/reports/PHASE_13_FINAL_VALIDATION_REPORT.md"
+  },
+  "known_limitations_ref": "ml/training/reports/phase13_known_limitations.md",
+  "validation_results": {
+    "checkpoint_integrity": true,
+    "optical_router": true,
+    "sentinel_2_pipeline": true,
+    "satellite_rgb_pipeline": true,
+    "drone_rgb_pipeline": true,
+    "geometry_extraction": true,
+    "downstream_compatibility": true,
+    "security_audit": true,
+    "resource_stability": true,
+    "concurrency": true,
+    "reproducibility": true,
+    "sar_regression": true,
+    "dataset_integrity": true
+  },
+  "performance": {
+    "sentinel_2": "380.23ms mean (2.6 FPS, CPU)",
+    "satellite_rgb": "234.27ms mean (4.3 FPS, CPU)",
+    "drone_rgb": "811.02ms mean (1.2 FPS, CPU)"
+  }
+}

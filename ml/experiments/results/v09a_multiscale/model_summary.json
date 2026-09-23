@@ -1,0 +1,8 @@
+{
+  "model_id": "unet-dual-pol-sar-v09a-multiscale",
+  "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v09a_multiscale.pth",
+  "checkpoint_sha256": "de4202c61d88392b6f7e4f923f7ccaae16c4373fc57b8799128ae905779f808d",
+  "checkpoint_size_bytes": 15030923,
+  "parameter_count": 1242590,
+  "architecture": "UNetMultiScaleContext"
+}

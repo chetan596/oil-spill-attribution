@@ -13,10 +13,10 @@ export default function SpillDetails({ spill }) {
     <div
       style={{
         padding: '20px',
-        background: '#0f172a',
-        color: '#f8fafc',
-        borderRadius: '8px',
-        border: '1px solid #1e293b',
+        background: 'var(--og-surface, #121417)',
+        color: 'var(--og-text-primary, #ECEEF1)',
+        borderRadius: '6px',
+        border: '1px solid var(--og-border, #25292F)',
       }}
       role="region"
       aria-label="Spill Incident Details"
@@ -27,21 +27,21 @@ export default function SpillDetails({ spill }) {
             style={{
               width: '36px',
               height: '36px',
-              borderRadius: '8px',
-              background: 'rgba(244, 63, 94, 0.15)',
+              borderRadius: '6px',
+              background: 'rgba(168, 85, 247, 0.15)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: '#f43f5e',
+              color: 'var(--og-violet, #A855F7)',
             }}
           >
             <Droplet size={20} />
           </div>
           <div>
             <h3 style={{ fontSize: '1.05rem', fontWeight: 700 }}>
-              Potential Oil Slick <code style={{ color: '#38bdf8', fontSize: '0.85rem' }}>#{spill.id.slice(0, 8)}</code>
+              Potential Oil Slick <code style={{ color: 'var(--og-violet, #A855F7)', fontSize: '0.85rem' }}>#{spill.id.slice(0, 8)}</code>
             </h3>
-            <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
+            <div style={{ fontSize: '0.75rem', color: 'var(--og-text-muted, #777E87)' }}>
               Database Record ID: <span style={{ fontFamily: 'var(--font-mono)' }}>{spill.id}</span>
             </div>
           </div>
@@ -51,38 +51,38 @@ export default function SpillDetails({ spill }) {
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px', marginBottom: '16px', fontSize: '0.8rem' }}>
-        <div style={{ background: '#020617', padding: '10px', borderRadius: '6px', border: '1px solid #1e293b' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', fontSize: '0.72rem', marginBottom: '2px' }}>
-            <Satellite size={12} style={{ color: '#38bdf8' }} />
+        <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', padding: '10px', borderRadius: '6px', border: '1px solid var(--og-border, #25292F)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-text-secondary, #B1B6BD)', fontSize: '0.72rem', marginBottom: '2px' }}>
+            <Satellite size={12} style={{ color: 'var(--og-teal, #49C6C8)' }} />
             <span>Sensor</span>
           </div>
-          <div style={{ fontWeight: 600, color: '#f8fafc' }}>Sentinel-1 C-Band SAR</div>
+          <div style={{ fontWeight: 600, color: 'var(--og-text-primary, #ECEEF1)' }}>Sentinel-1 C-Band SAR</div>
         </div>
 
-        <div style={{ background: '#020617', padding: '10px', borderRadius: '6px', border: '1px solid #1e293b' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', fontSize: '0.72rem', marginBottom: '2px' }}>
-            <Droplet size={12} style={{ color: '#38bdf8' }} />
+        <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', padding: '10px', borderRadius: '6px', border: '1px solid var(--og-border, #25292F)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-text-secondary, #B1B6BD)', fontSize: '0.72rem', marginBottom: '2px' }}>
+            <Droplet size={12} style={{ color: 'var(--og-teal, #49C6C8)' }} />
             <span>Slick Area</span>
           </div>
-          <div style={{ fontWeight: 600, color: '#f8fafc' }}>{spill.areaKm2} km²</div>
+          <div style={{ fontWeight: 600, color: 'var(--og-text-primary, #ECEEF1)', fontVariantNumeric: 'tabular-nums' }}>{spill.areaKm2} km²</div>
         </div>
 
-        <div style={{ background: '#020617', padding: '10px', borderRadius: '6px', border: '1px solid #1e293b' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', fontSize: '0.72rem', marginBottom: '2px' }}>
-            <MapPin size={12} style={{ color: '#38bdf8' }} />
+        <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', padding: '10px', borderRadius: '6px', border: '1px solid var(--og-border, #25292F)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-text-secondary, #B1B6BD)', fontSize: '0.72rem', marginBottom: '2px' }}>
+            <MapPin size={12} style={{ color: 'var(--og-teal, #49C6C8)' }} />
             <span>Centroid</span>
           </div>
-          <div style={{ fontWeight: 600, color: '#f8fafc', fontFamily: 'var(--font-mono)' }}>
+          <div style={{ fontWeight: 600, color: 'var(--og-text-primary, #ECEEF1)', fontFamily: 'var(--font-mono)', fontVariantNumeric: 'tabular-nums' }}>
             {!isNaN(lat) && !isNaN(lng) ? `${lat.toFixed(3)}°, ${lng.toFixed(3)}°` : 'N/A'}
           </div>
         </div>
 
-        <div style={{ background: '#020617', padding: '10px', borderRadius: '6px', border: '1px solid #1e293b' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', fontSize: '0.72rem', marginBottom: '2px' }}>
-            <Clock size={12} style={{ color: '#38bdf8' }} />
+        <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', padding: '10px', borderRadius: '6px', border: '1px solid var(--og-border, #25292F)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-text-secondary, #B1B6BD)', fontSize: '0.72rem', marginBottom: '2px' }}>
+            <Clock size={12} style={{ color: 'var(--og-teal, #49C6C8)' }} />
             <span>Est. Slick Age</span>
           </div>
-          <div style={{ fontWeight: 600, color: '#f8fafc' }}>{spill.estimatedAgeHours ? `${spill.estimatedAgeHours} hours` : '14.5 hours'}</div>
+          <div style={{ fontWeight: 600, color: 'var(--og-text-primary, #ECEEF1)', fontVariantNumeric: 'tabular-nums' }}>{spill.estimatedAgeHours ? `${spill.estimatedAgeHours} hours` : '14.5 hours'}</div>
         </div>
       </div>
 

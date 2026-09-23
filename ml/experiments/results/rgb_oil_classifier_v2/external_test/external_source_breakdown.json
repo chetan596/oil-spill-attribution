@@ -1,0 +1,17 @@
+{
+  "Kerf_Drone_Oil_Spill": {
+    "total_images": 130,
+    "oil_count": 86,
+    "clean_count": 11,
+    "look_alike_count": 33,
+    "oil_tp": 83,
+    "oil_fp": 2,
+    "oil_fn": 3,
+    "oil_tn": 42,
+    "oil_precision": 0.9764705882352941,
+    "oil_recall": 0.9651162790697675,
+    "oil_f1": 0.9707602339181286,
+    "clean_fpr": 0.0,
+    "look_alike_fpr": 0.06060606060606061
+  }
+}

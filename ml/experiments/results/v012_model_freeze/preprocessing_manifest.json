@@ -1,0 +1,34 @@
+{
+  "version": "sentinel1_sigma0_db_v1",
+  "status": "FROZEN_STANDARD",
+  "input_modality": "Sentinel-1 C-Band SAR Dual-Polarization (VV, VH)",
+  "input_units": "Calibrated Sigma0 in Decibels (dB)",
+  "channel_specifications": {
+    "VV": {
+      "channel_index": 0,
+      "min_db": -35.0,
+      "max_db": -5.0,
+      "scaling_formula": "clip((VV_dB - (-35.0)) / (-5.0 - (-35.0)), 0.0, 1.0)",
+      "normalized_range": [
+        0.0,
+        1.0
+      ]
+    },
+    "VH": {
+      "channel_index": 1,
+      "min_db": -45.0,
+      "max_db": -15.0,
+      "scaling_formula": "clip((VH_dB - (-45.0)) / (-15.0 - (-45.0)), 0.0, 1.0)",
+      "normalized_range": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "non_finite_handling": "np.nan_to_num(nan=min_db, posinf=max_db, neginf=min_db)",
+  "historical_negative_db_flaw_audit": {
+    "historical_code": "arr * (arr > 0)",
+    "impact": "Set 100% of negative calibrated dB SAR values to exactly 0.0, eliminating virtually all radar backscatter signal and causing near-zero probability predictions in V2/V3.",
+    "status": "DOCUMENTED_AND_DISCARDED_FOR_NEW_EXPERIMENTS"
+  }
+}

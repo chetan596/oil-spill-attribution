@@ -1,0 +1,49 @@
+experiment_name: v6_controlled_retraining
+model_id: unet-dual-pol-sar-v6
+model_version: V6
+status: EXPERIMENTAL
+architecture:
+  name: UNet
+  in_channels: 2
+  num_classes: 2
+  base_channels: 16
+  bilinear: true
+preprocessing:
+  name: sentinel1_sigma0_db_v1
+  vv_range_db:
+  - -35.0
+  - -5.0
+  vh_range_db:
+  - -45.0
+  - -15.0
+  channel_order:
+  - VV
+  - VH
+  formula: clip((x - min) / (max - min), 0, 1)
+dataset:
+  manifest_path: ml/datasets/manifest.json
+  train_scenes_count: 28
+  train_composition:
+    oil_scenes: 12
+    look_alike_scenes: 8
+    clean_ocean_scenes: 8
+  validation_scenes_count: 7
+  held_out_test_scenes_count: 5
+  held_out_test_lock_status: STRICTLY_LOCKED
+training:
+  seed: 42
+  batch_size: 2
+  tile_size: 512
+  stride: 512
+  tiles_per_scene: 16
+  total_train_tiles: 448
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  epochs: 30
+  early_stopping_patience: 7
+  loss: Combined_CrossEntropy_SoftDice
+  ce_weight: 1.0
+  dice_weight: 1.0
+  foreground_weight: 5.0
+  use_amp: true
+  augment: true

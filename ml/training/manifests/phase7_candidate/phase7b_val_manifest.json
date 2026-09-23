@@ -1,0 +1,5106 @@
+[
+  {
+    "sample_id": "kerf_test_Oil (833)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (833).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (833).png",
+    "sha256_image": "2d5bde216f2f7a9f80ece256f6264838d360d752c4c30a57cf356622ab74e3c1",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 562507,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.271270736882716,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (365)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (365).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (365).png",
+    "sha256_image": "2159b6c2603b09efdc2f4fe1c77aa90f7675f9292fb58154ad33891674c119c7",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 343957,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.16587432484567902,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (744)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (744).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (744).png",
+    "sha256_image": "fb19a53a8f5ae259e508325104e55698d6e5a0121d514e63f9d5c4378159483f",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 251077,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.12108265817901234,
+    "categories": [
+      "oil",
+      "diffuse_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (1057)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (1057).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1057).png",
+    "sha256_image": "cfecda292f98b35ae6f6a93d7a964d9bd73f462bc8db9d2a4de550599fbbec5e",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 735180,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.35454282407407406,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (907)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (907).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (907).png",
+    "sha256_image": "5cb73ce8338b41574c8fceda6f35a3b44a5b2a09ebdcc5f9979fe7a7d08e6068",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 782322,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.3772771990740741,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (560)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (560).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (560).png",
+    "sha256_image": "b3e38460e3a6f08cea12e54bbd41424fd485919836dc30c99194ddf4f630f90c",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 353944,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.1706905864197531,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (647)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (647).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (647).png",
+    "sha256_image": "ea4309b392ada2be8437d40c0e8eeee3a13173ef2671587e40a7987329d1fec3",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1119288,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.5397800925925926,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (487)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (487).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (487).png",
+    "sha256_image": "31d55158b977be279b2b0095d119cdad74883332ad19bb83cc747e03df7f8426",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 816388,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.39370563271604936,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (949)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (949).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (949).png",
+    "sha256_image": "14abc480dc232df5036f5d469fa095085954892d6e80974c1933fb11c8e5e574",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 678736,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.32732253086419755,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (374)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (374).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (374).png",
+    "sha256_image": "e3a7643b1f67c4622ccf5be81d12be943056b86a285ea750d92d07b264ef6310",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 329549,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.1589260223765432,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (707)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (707).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (707).png",
+    "sha256_image": "8d79859938ad55a45444f29736c08ebde7b2b0503e8f2757de4c43f01cf00e7f",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 935634,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.45121238425925925,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (1067)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (1067).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1067).png",
+    "sha256_image": "6ba5aff34d081c54a584a7048846e199227c87ef98ed64766edbeacc12e009c0",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 908898,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.43831886574074075,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (500)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (500).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (500).png",
+    "sha256_image": "3347e12e8ba6a4ce0ea8b9a29f5d94a69d3ad0e3c23359ca5c3d60b1dd9a601e",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 722456,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.3484066358024691,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (372)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (372).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (372).png",
+    "sha256_image": "3df951923742d65c9fddc0349383390e332a54b17e9e052ff33ef1b79ee429bc",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 337770,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.162890625,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (263)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (263).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (263).png",
+    "sha256_image": "bd57398aa0930884524625c5909dcb1e503a06e892ec24d7e41cb7f125451da1",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1292690,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.6234037422839506,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (891)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (891).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (891).png",
+    "sha256_image": "e305175ab22c004d3a57c72da54f40c3b6f4ea3d710956fe5b89b68ad5ffc90b",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 779868,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.37609375,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (551)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (551).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (551).png",
+    "sha256_image": "53d780652fc324095b23a86e5d8928860d74dd2de8ff68ebbfd38a6492b2a473",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 444465,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.21434461805555555,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (558)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (558).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (558).png",
+    "sha256_image": "a3b72a98df300dda8a5b560eef39d8e4d7595b33c6d230e12900fd87d919f9e6",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 337874,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.16294077932098766,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (373)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (373).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (373).png",
+    "sha256_image": "46d00b53f990e12985d9cc99899db98ce1bb9288dfd690e57bae18a75aa711d2",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 336561,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.16230758101851853,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (807)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (807).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (807).png",
+    "sha256_image": "b20fcbbaec1b3f2bec7ea981972707d9fc7786b289ff077f2d8bf9e00c257b62",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1399017,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.6746802662037037,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (532)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (532).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (532).png",
+    "sha256_image": "662e10daee777dfb40d519d6896f96940387126bc85a7fb71a09953dd1451ae1",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 571843,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.27577305169753086,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (908)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (908).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (908).png",
+    "sha256_image": "896fc30633943528339fdc67795ee23d50d5b57c28b014969f8a81f0ca8411d8",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 784279,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.37822096836419755,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (748)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (748).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (748).png",
+    "sha256_image": "2924263d406101b86a2128786691fd14afae9536941b5cebbab9fc71d3c0fcd2",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 245188,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.11824266975308642,
+    "categories": [
+      "oil",
+      "diffuse_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (1033)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (1033).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (1033).png",
+    "sha256_image": "f5330fd6b911220b71b70be9801a2ff00471d8c7fde16b3cc10f85723257562a",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 275302,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.13276523919753086,
+    "categories": [
+      "oil",
+      "diffuse_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (887)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (887).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (887).png",
+    "sha256_image": "f117f305a6c1498e46109f9bad297662c22fa160f4bdfcdff3e5a50a94604e9e",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 782053,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.37714747299382717,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (811)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (811).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (811).png",
+    "sha256_image": "8d4d770fcf13d213f3921795be2c3651b3ee81dc410ae02cb7a893a1da356f75",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1371748,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.6615297067901235,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (704)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (704).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (704).png",
+    "sha256_image": "0ce65a85e4c0fe7e68e4f808e76437d307b5ddee64affda0f8342defe325f14e",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 937703,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.45221016589506174,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (605)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (605).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (605).png",
+    "sha256_image": "d3c409ed387eee2a80015fcb5d56c5d3ec1b0ecb5e3a83cac1bde53bf37d0b2f",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 977673,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.47148582175925924,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (795)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (795).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (795).png",
+    "sha256_image": "575fb0e0d759a7b2eef6201c5fa222e198e53b86da81bfa12534af7beb6d745c",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 382034,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.18423707561728395,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (862)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (862).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (862).png",
+    "sha256_image": "2120369dd156ebc42db0f446d3233fa1a851e1d8b02daebaf5d7fe2fd5a9763a",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 614566,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.29637635030864196,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (923)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (923).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (923).png",
+    "sha256_image": "3c35a8f186ae5c98a85b68e6a3bb3eaa8c46fab8477b6dab519c8922b0064d82",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 792147,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.38201533564814816,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (547)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (547).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (547).png",
+    "sha256_image": "4b36db7ee45df4dc65e42e2e38e3405f46f48174b7a418ee6e7cd1ed8745c214",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 461332,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.22247878086419753,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (914)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (914).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (914).png",
+    "sha256_image": "fff7f80e83e865f2e49ac9119bd9320c270d138d097d16557aa544472eb09829",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 781318,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.37679301697530865,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (1050)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (1050).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1050).png",
+    "sha256_image": "4496917e485b69da455da53225f157596ee2135033b9cd147002dc80abb11f30",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 634015,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.30575569058641977,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (805)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (805).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (805).png",
+    "sha256_image": "21e6fd599e9a886d362e039bddac2387311e5c4aaad2bab5a375aaed8caa4e1c",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1423023,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.6862572337962963,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (331)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (331).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (331).png",
+    "sha256_image": "1e72957956b40a249839466b2e90c5b84d3d3f61bb5c60e8229607366343190e",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 364212,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.17564236111111112,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (1082)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (1082).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (1082).png",
+    "sha256_image": "9a1ad5a59da6a2606d73a7a298a4c59b0c84952c531aa60db2cb5d5adc108ee9",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1668259,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.8045230516975309,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (306)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (306).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (306).png",
+    "sha256_image": "5fc547ea4a4081061da7082fecc6c91d94d3625106f5376e3ab2aa3ec48220d1",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 735266,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.3545842978395062,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (504)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (504).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (504).png",
+    "sha256_image": "6fa574581377234ed2b98c4ca36841ffa606eeb8fa1cc61a93b9158a80cdfa22",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 689721,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.33262008101851853,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (572)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (572).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (572).png",
+    "sha256_image": "935b69c9025092c36aa53f510f22b9be78b56912a5966cc26ba75da635f5d144",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 816279,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.3936530671296296,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (743)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (743).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (743).png",
+    "sha256_image": "b412a2f760511e3a5e1b73514b5df0d9562886fa65de2ae4357344ce9291c57b",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 256629,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.12376012731481481,
+    "categories": [
+      "oil",
+      "diffuse_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (1003)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (1003).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (1003).png",
+    "sha256_image": "40512f5dbd853c451544915ecbb0e3427b5b20c9b374fbe5e5d723a8b16ec6ad",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 392760,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.18940972222222222,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (1048)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (1048).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (1048).png",
+    "sha256_image": "c611240f77a1a640f0c1b3b8ec767f8a8d33dcc66019b7119c38cc0fdd2f986a",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 613489,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.2958569637345679,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (794)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (794).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (794).png",
+    "sha256_image": "a25571f2452a9a7ffe80fd8423611eddb4a0e908971b970dbbae07535835b93e",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 381167,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.18381896219135802,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (915)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (915).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (915).png",
+    "sha256_image": "8a82ba8e6a001d003d879d1e12d5a543f2a2b6d6d7e164cd66bae11b72fb6a26",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 834566,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.40247202932098763,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (554)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (554).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (554).png",
+    "sha256_image": "55c775d79b111f940891d2d82104d0fd9696c86df2a52deb1397fbcb7a179d3e",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 388829,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.18751398533950617,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (392)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (392).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (392).png",
+    "sha256_image": "672362f1de10579f1311816493737fb067cca9b120d975e5d7ab6d95846b46be",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1138329,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.5489626736111111,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (1185)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (1185).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (1185).png",
+    "sha256_image": "e26c6446cb71b6c81214361039979cf2774448c4a4f7d15e1656095aec0b06e9",
+    "width": 768,
+    "height": 432,
+    "oil_pixels": 59977,
+    "total_pixels": 331776,
+    "oil_fraction": 0.18077558352623457,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (813)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (813).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (813).png",
+    "sha256_image": "daeb2ad122f2cf75a209d6b9faf8172a1f888e27c7ff7dd5e5925ab2ec72a9e3",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1371748,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.6615297067901235,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (940)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (940).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (940).png",
+    "sha256_image": "3442dcdfb58d2b6c3c1bf21b02bc494de952053c4736210d72400504ce3560f0",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 706410,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.34066840277777777,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (526)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (526).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (526).png",
+    "sha256_image": "1e2b6ce916fa345f9e16d15e80621919d67f3242b49399b99a0250f1af8367b7",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 617170,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.297632137345679,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (659)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (659).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (659).png",
+    "sha256_image": "100697a4dd9956139ef99f1d01143028e84d8ca9c87520b93c20bea028c045b0",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1215004,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.5859394290123456,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (311)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (311).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (311).png",
+    "sha256_image": "10dc8a2ec3b7d369459000eedf9376e7c1d28f2fa7358278b0cb1059d02848a4",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 721656,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.34802083333333333,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (840)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (840).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (840).png",
+    "sha256_image": "e1624e9edd0fdcb268c1ed2618ea584c4ba8d1be7156ce98a790ac0a928423bc",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 502336,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.2422530864197531,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (488)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (488).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (488).png",
+    "sha256_image": "54699686a585c1f50953e0b95bc3e4bc8a5105e5e8514ec8d0b58abcc5da5a77",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 825872,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.39827932098765434,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (515)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (515).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (515).png",
+    "sha256_image": "3a2e2dc60b66a3c6a23c1d2ff514340a39dc144e95477017ac757266b586845f",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 540716,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.2607619598765432,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (860)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (860).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (860).png",
+    "sha256_image": "fe17983913d766dec0ad77a25b9fd19d27a6a6da7c1feb9333529b5e352f498b",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 591911,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.28545090663580247,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (530)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (530).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (530).png",
+    "sha256_image": "442f2bb4865fbecdfbd7c0cfb9b1d34f818a577ecb1371811d1af0bd6cf731e6",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 620392,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.29918595679012344,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (581)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (581).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (581).png",
+    "sha256_image": "92d29e084b85e960f6b0778bb7f33fb3616160b896f84b1f68e27d76b24f7ae7",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 829826,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.400186149691358,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (1186)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (1186).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1186).png",
+    "sha256_image": "7f6fc237941e3753c7f0d2d234749a4172328a8a4ef3ec0a161450aee1e14bbc",
+    "width": 768,
+    "height": 432,
+    "oil_pixels": 61170,
+    "total_pixels": 331776,
+    "oil_fraction": 0.18437138310185186,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (689)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (689).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (689).png",
+    "sha256_image": "2efd64cc7885a79ccc3fc85508de616c68dbf3f0513adfa7d198e487d1ef2f2d",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 939388,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.453022762345679,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (684)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (684).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (684).png",
+    "sha256_image": "596c013dade668f96c323a98523dbadbceb893983fbe1373114ee08e23794eca",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 935370,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.45108506944444443,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (354)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (354).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (354).png",
+    "sha256_image": "bf83dfa9b5e2e1eed06a24df43cca3fbd86baef47b8124eee6c60bc08f60aeae",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1263092,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.6091300154320988,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (1078)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (1078).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (1078).png",
+    "sha256_image": "0f64b6f99fa175124cbaeb5f33884b7ad8bc93ab497d815d3e8788e68224897c",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1672538,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.806586612654321,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (571)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (571).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (571).png",
+    "sha256_image": "75a446dc3f0f102400ef0f722bed6b69f49f611e47a7b9f46c8af3f11ffd07dc",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 806327,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.38885368441358026,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (754)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (754).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (754).png",
+    "sha256_image": "b85ff1417dc2ef33ed0cece507d7308d01df4d9ae887aa378cf15306a52bb03f",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 217457,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.10486930941358025,
+    "categories": [
+      "oil",
+      "diffuse_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (667)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (667).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (667).png",
+    "sha256_image": "7ae4e6a02c5e83126a860416bda55050756e3d009b0908fd119c329cfed9fbe0",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1752289,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.8450467785493827,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (550)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (550).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (550).png",
+    "sha256_image": "3cc8e4874f1ff5bc4487ca841490239beb77f2485e236ea366268b5f8b7aa9e6",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 396437,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.19118296682098765,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (628)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (628).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (628).png",
+    "sha256_image": "2df59f2b51ebf9925c2ace7f135437a575634020782103c6f0c4a9307ece633b",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1309431,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.6314771412037037,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (577)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (577).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (577).png",
+    "sha256_image": "f06d8c751fbd7c4febb495141d85d0a7ffe1cbea8f9b46bc21f07e0977878c28",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 822102,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.39646122685185187,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (911)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (911).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (911).png",
+    "sha256_image": "c420ab47e2003cb5409466632cb35da329ebd705d92ebbecf98ed00a3214474a",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 784490,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.3783227237654321,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (360)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (360).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (360).png",
+    "sha256_image": "de02378e4e4bb6583b75031d7942c51dae879feee256c0d89d6f298ec9d88268",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 729391,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.3517510609567901,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (398)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (398).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (398).png",
+    "sha256_image": "f69f1127ed981bc2c857bc466d2af4f523e53234d7b78dbfc4f66c040ef85da7",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1509770,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.7280912422839506,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (809)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (809).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (809).png",
+    "sha256_image": "b1eab86d5ebb581d6d8250b36632877655a7a41d926d7b5c2a061ffc50086f0a",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1389970,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.6703173225308642,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (553)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (553).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (553).png",
+    "sha256_image": "013671205690c905fe9d3ac65314e7de1e3a472f95c2cff1e498c26905b80ff0",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 462577,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.22307918595679013,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (1045)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (1045).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (1045).png",
+    "sha256_image": "8509024e8f0c773a3877ae3ea9f4b8e30910e3fd5cefa11a248785454a7add75",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 548742,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.26463252314814817,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (658)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (658).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (658).png",
+    "sha256_image": "dc0f1b6c00bff03a00fe8a3785785ea35997c4c997d85ecb2562595319d36209",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1173490,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.565919174382716,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (333)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (333).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (333).png",
+    "sha256_image": "079acff6ea975912462b027623a8e6211d0eb8d1dd576597f27bc84f19611d45",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 310153,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.1495722415123457,
+    "categories": [
+      "oil",
+      "diffuse_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (823)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (823).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (823).png",
+    "sha256_image": "1cb57ff0c353f3980b1801e942618ca348a68b474be991b84f0ed3178df171a9",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 1314564,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.6339525462962963,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (868)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (868).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (868).png",
+    "sha256_image": "497cafeab4bcb4d577b17924f51f80ceae95bdd150d6cfcf779f6cce131e6103",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 702962,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.33900559413580245,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (369)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (369).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (369).png",
+    "sha256_image": "6542f07ced01b7ae792f4019962d6ed9026c52564b0e4b658548ca4466a62e0e",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 359788,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.1735088734567901,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (735)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (735).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (735).png",
+    "sha256_image": "1ba57a84d6875bcd2dd3c5949f1ea8297aaacf13c9460e803eec5c75acf64d11",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 278843,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.13447289737654322,
+    "categories": [
+      "oil",
+      "diffuse_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (773)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (773).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (773).png",
+    "sha256_image": "13860bbc23650fd46bfc742eb6e1f6e4dc706b7e17a23adaa114de34a288d607",
+    "width": 5184,
+    "height": 2920,
+    "oil_pixels": 1881361,
+    "total_pixels": 15137280,
+    "oil_fraction": 0.12428659574243194,
+    "categories": [
+      "oil",
+      "diffuse_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (1055)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (1055).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1055).png",
+    "sha256_image": "ced1f4a2760c7ea061427579d27a9c2313ce9e1a2180cbf34ddb00f7d068324d",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 716250,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.34541377314814814,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (939)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (939).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (939).png",
+    "sha256_image": "a8dd3d2525b1a9fd1a99dc73d086b6347ce8d46bf1b1d9aa9d4936bd6a067874",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 695588,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.33544945987654323,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_val_Oil (1062)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (1062).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (1062).png",
+    "sha256_image": "daed5d082eda804aeff86a9e693979c3d56d21ff0bebd0e220472058e24aa584",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 806286,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.38883391203703704,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_train_Oil (683)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (683).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (683).png",
+    "sha256_image": "653d48ca340278659dc0598afc76378777306bff781352e59fd722597a4d7161",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 972174,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.46883391203703706,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "kerf_test_Oil (844)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_test",
+    "image_path": "data/raw/archives/kerf_extracted/test/images/Oil (844).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (844).png",
+    "sha256_image": "bc0b1698f076329d0ae18f0c7c87161dcdabf8829a2451d07ca41ca15bfa397d",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 384498,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.18542534722222223,
+    "categories": [
+      "oil",
+      "large_oil"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": true
+  },
+  {
+    "sample_id": "mados_Scene_70_crop2",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_70",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_70_crop2_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_70/10/Scene_70_L2R_cl_2.tif",
+    "sha256_image": "20a080db61aada48ecf4e3aaaa2e24cf217a122633242145fcf668b81bb114d3",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_val_Oil (185)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (185).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (185).png",
+    "sha256_image": "0b57a5ab0b9cee20394cdc44ad7308f24fd2810ff54e6bd62ee80416bc362fb7",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_25_crop6",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_25",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_25_crop6_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_25/10/Scene_25_L2R_cl_6.tif",
+    "sha256_image": "4c2b6e8477863a50cb24c88a7113350aed40fe9a1e252e8c1e7a5f8d330d5f46",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (232)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (232).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (232).png",
+    "sha256_image": "a5c49a5f7ca7bacb81d56de1b886f1289f008a7801d75511ce60a46a056781c3",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (173)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (173).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (173).png",
+    "sha256_image": "65d8b6d41a85213d59359219b15583d364b1fb0d7ccf33d49c13bdfe5538dd57",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_127_crop24",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_127",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_127_crop24_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_127/10/Scene_127_L2R_cl_24.tif",
+    "sha256_image": "2f33a661c6d3cf0880cbe0f07dd357f06b45bddaedb0c5cc86fda3383ad18cd1",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_114_crop27",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_114",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_114_crop27_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_114/10/Scene_114_L2R_cl_27.tif",
+    "sha256_image": "18141415187510bc571dc48048bdd8a39c92cf2a5d117d2db9e24ad51ca399d5",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_99_crop39",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_99",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_99_crop39_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_99/10/Scene_99_L2R_cl_39.tif",
+    "sha256_image": "8b45954a3f75fc77d38c2df44f64d2f7fe914d8f273367fa8104303e8e6fd08f",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_165_crop9",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_165",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_165_crop9_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_165/10/Scene_165_L2R_cl_9.tif",
+    "sha256_image": "0f9237ccbcd9fd13e592a5fadcefba4546762fccabcacc0ef1febc99537c63fc",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (1230)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (1230).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (1230).png",
+    "sha256_image": "4dfc23cbcbc7fe537d22530320a9220be200c0b47ed242c8e91fede6e6630097",
+    "width": 768,
+    "height": 432,
+    "oil_pixels": 0,
+    "total_pixels": 331776,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_98_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_98",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_98_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_98/10/Scene_98_L2R_cl_7.tif",
+    "sha256_image": "1c7ff07feb10019437d6e9b44f328fca2fcb0d6fdd370cd350d7ed520d32092c",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (66)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (66).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (66).png",
+    "sha256_image": "c37d11c44b3cb9f79a49b11a8eaf49efb4dfc2331a403b2faa45f838d83bd65b",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (190)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (190).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (190).png",
+    "sha256_image": "bf74de5652f2688c5723109fd1deb378602fd81fa004ee38eaf80720317ea4c6",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_163_crop1",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_163",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_163_crop1_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_163/10/Scene_163_L2R_cl_1.tif",
+    "sha256_image": "87259f0e674f59ac29cab8a4d117f22b48282221adcd0cd0769a632b1520e96f",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (98)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (98).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (98).png",
+    "sha256_image": "ed413c2870e5527c6640ae4a71414c31a426d895cd039219515344963dd9fcef",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_25_crop4",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_25",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_25_crop4_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_25/10/Scene_25_L2R_cl_4.tif",
+    "sha256_image": "6af2751fb439addecfde72ed743b36303bbe97a0cf43df73e2df0e6967851b99",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_141_crop12",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_141",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_141_crop12_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_141/10/Scene_141_L2R_cl_12.tif",
+    "sha256_image": "24c55e31ec61df6f7062e236bf51208831f89573b7a27db2d5b9db9eb28f5a38",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_54_crop6",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_54",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_54_crop6_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_54/10/Scene_54_L2R_cl_6.tif",
+    "sha256_image": "434f97cfc7fbdbd92612dcb12c3ac11db5d1f84bb993d52dda6a9feee2ca4b34",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_118_crop2",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_118",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_118_crop2_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_118/10/Scene_118_L2R_cl_2.tif",
+    "sha256_image": "adde363c7c6427687271e807bd6708a641c62565aa06c5fbab5e9284a7302a72",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_108_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_108",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_108_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_108/10/Scene_108_L2R_cl_7.tif",
+    "sha256_image": "1dd84326757bcea1dbdf14f12031127fc3aa39f61098299669bc928978a7a340",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_114_crop12",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_114",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_114_crop12_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_114/10/Scene_114_L2R_cl_12.tif",
+    "sha256_image": "80796019a16f563c284960330279a1a076e52c948fed6e0bb565c2283ebfa56c",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_val_Oil (155)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (155).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (155).png",
+    "sha256_image": "7b7cf97d627c386b42317c1b1ac28141cfff64f1fdddd866d36059f9fa7a7a24",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_val_Oil (176)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (176).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (176).png",
+    "sha256_image": "4123e708a678013f715b5b1a505054dacdab6239971cc2fbb1917fdab04c011c",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_84_crop24",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_84",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_84_crop24_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_84/10/Scene_84_L2R_cl_24.tif",
+    "sha256_image": "7899cb47caffed3069e352297d05908bf493f707a19ccfe99c3704872c2e50a4",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (220)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (220).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (220).png",
+    "sha256_image": "c68e56c36f34ed32a7058f6ed07bf798970403b4244a0215dcad3d641fb08ccf",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_98_crop18",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_98",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_98_crop18_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_98/10/Scene_98_L2R_cl_18.tif",
+    "sha256_image": "ba58c1165bfc463c4eafac149c2e816516e32ee5e6bf42b05f7e494180988281",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_154_crop8",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_154",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_154_crop8_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_154/10/Scene_154_L2R_cl_8.tif",
+    "sha256_image": "becf9c08059349ae0002150dea0bc5f4584721b01a96a863295c0383cede6f0f",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_12_crop28",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_12",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_12_crop28_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_12/10/Scene_12_L2R_cl_28.tif",
+    "sha256_image": "8ae30c431334b06e537254465f8d7411a68541efa1ad71527c864a4499062f69",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_41_crop13",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_41",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_41_crop13_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_41/10/Scene_41_L2R_cl_13.tif",
+    "sha256_image": "e9932887d1abe057e70cdec8d22ae3f2b22511087186ad0ae50be3d7cdeb2de2",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_val_Oil (138)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (138).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (138).png",
+    "sha256_image": "4ebbcd93a6d883abcb5203efb3f9ca53d2293d3a9e9bbf8f51327627e227e29b",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_42_crop10",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_42",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_42_crop10_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_42/10/Scene_42_L2R_cl_10.tif",
+    "sha256_image": "a193373e9bbadf19da9a667e7eb23a40fc259f8688ad9e44cd9bc2657b46f378",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_13_crop1",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_13",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_13_crop1_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_13/10/Scene_13_L2R_cl_1.tif",
+    "sha256_image": "83a3d5ecaa1a08c766a05f435a904f438cdfbdd46017c41c0f848de4140be535",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_18_crop15",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_18",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_18_crop15_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_18/10/Scene_18_L2R_cl_15.tif",
+    "sha256_image": "b494e736b6a324017b364d80fe05cf07e7e5002ac3d7507711b820d4a1097e39",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_115_crop12",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_115",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_115_crop12_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_115/10/Scene_115_L2R_cl_12.tif",
+    "sha256_image": "37c27b8c1c22d75c7c5c2aac0e31aa350d51afce7720ec9852c78fcf4630068c",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_139_crop30",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_139",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_139_crop30_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_139/10/Scene_139_L2R_cl_30.tif",
+    "sha256_image": "0c565a35fa03670e021588a3618d1043555f36c392ca38251abb82c2724ea969",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (69)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (69).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (69).png",
+    "sha256_image": "8960a43a5ddc34c30c0381d3f6c040596448d9a9e4b2c108485ff7de95a87461",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_val_Oil (159)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (159).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (159).png",
+    "sha256_image": "7be1ff1bbdb0982654ab99d00b0b8bf98b55047b950c416be023721e19b55ccb",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_168_crop12",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_168",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_168_crop12_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_168/10/Scene_168_L2R_cl_12.tif",
+    "sha256_image": "d1a54e81d11115cbcf1b5df4f6f4801d5802ee932f254c69aae06d8d9e0b2f47",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (101)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (101).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (101).png",
+    "sha256_image": "a100182f0ced088a0d3557b48fef0eb07438e6c666ecd12d4681ae1a9b1ca367",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_84_crop16",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_84",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_84_crop16_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_84/10/Scene_84_L2R_cl_16.tif",
+    "sha256_image": "31755d9601ef8d110f7fe6c4bb62c8fa55f4f6f83cab20afbb6d22ef0c808f9c",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_142_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_142",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_142_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_142/10/Scene_142_L2R_cl_7.tif",
+    "sha256_image": "2e66e4134e4bf3bfc0cf06c15ab11acb5cc6f65ae354c953f8423843195a6f6c",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (54)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (54).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (54).png",
+    "sha256_image": "706063f7e580f789c8015d68f4808d75fdae471709f7b548d28359f104b5aa0f",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_57_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_57",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_57_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_57/10/Scene_57_L2R_cl_7.tif",
+    "sha256_image": "f149083e2f08847fa42cdf2475a497c4dc1f1d783bc8ca44549c65b0453d7954",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_117_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_117",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_117_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_117/10/Scene_117_L2R_cl_7.tif",
+    "sha256_image": "6a3127289a9e969cc7d17e745f1b6fb3df26de3a0fd0afe6bfd51d72865c9dcf",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_12_crop16",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_12",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_12_crop16_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_12/10/Scene_12_L2R_cl_16.tif",
+    "sha256_image": "6a7b2d06789deb98827434209a9c2cc7817658746fb6926e10772b692767500a",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_135_crop31",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_135",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_135_crop31_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_135/10/Scene_135_L2R_cl_31.tif",
+    "sha256_image": "5c0905990d0e19b924ed577fc57e3ab3ad1c3df38c2d08fd514c000fce703c1e",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_0_crop5",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_0",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_0_crop5_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_0/10/Scene_0_L2R_cl_5.tif",
+    "sha256_image": "65f386b18d8312fd8ffaf22ec42d1f8f651a534965a71b92b36e04b59f44f095",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_157_crop44",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_157",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_157_crop44_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_157/10/Scene_157_L2R_cl_44.tif",
+    "sha256_image": "1710f9e8aad8411ae8a58fc9ebaf1232589b97f715d81df7db5c1cd99eedc868",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_71_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_71",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_71_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_71/10/Scene_71_L2R_cl_7.tif",
+    "sha256_image": "c6354e0a6c76cf519686e053db62fa14dfaa5533bc5d92cc3d253ff40224ac53",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (83)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (83).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (83).png",
+    "sha256_image": "2fb47f069dc67a82d25a3865dcf8a6d987ded9ccab29b7cbd71fb058a1df3580",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_171_crop13",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_171",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_171_crop13_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_171/10/Scene_171_L2R_cl_13.tif",
+    "sha256_image": "bb714c3485650bb607e8f8d1997cfe8785e688163a7c9f7eed2d5026fff62199",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_25_crop15",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_25",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_25_crop15_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_25/10/Scene_25_L2R_cl_15.tif",
+    "sha256_image": "19f2aabf40f975c74fb2203dc5020e8b96f1739c84d866a8d3b390b36e78bddb",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_139_crop27",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_139",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_139_crop27_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_139/10/Scene_139_L2R_cl_27.tif",
+    "sha256_image": "1d1cbe5e25ecb3a4fb9553da82b6755c4b8c7395796dcbdeff9a4361b7c4d3f2",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_99_crop44",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_99",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_99_crop44_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_99/10/Scene_99_L2R_cl_44.tif",
+    "sha256_image": "8db7d6b11a8a010a094d807ba68c748a680dc1c3475bd3234a2e95abdba4b58b",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_17_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_17",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_17_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_17/10/Scene_17_L2R_cl_7.tif",
+    "sha256_image": "f526a55a61fc777891e11e4207b8ee544466842c7bccbb8aa1a74abc1b75a045",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_51_crop18",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_51",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_51_crop18_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_51/10/Scene_51_L2R_cl_18.tif",
+    "sha256_image": "fa271c67dd0f03df783cff2d37b377661e6d78bb75518db49b7e0692a9df5eaf",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (191)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (191).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (191).png",
+    "sha256_image": "2d3d679efc6d2b8282ef17047589ffc914793f559bc2753d77dcca7dfa9214ab",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_122_crop2",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_122",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_122_crop2_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_122/10/Scene_122_L2R_cl_2.tif",
+    "sha256_image": "8d8d48f5b8cb99eb44bf12b411cfb1de3ce9cc3e1b3746341aa28f5735025eeb",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_125_crop11",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_125",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_125_crop11_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_125/10/Scene_125_L2R_cl_11.tif",
+    "sha256_image": "f19e75f7d0b8af0993ed6d0a53c2df232320441b94c37079dd67b540f4767cc5",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_108_crop15",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_108",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_108_crop15_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_108/10/Scene_108_L2R_cl_15.tif",
+    "sha256_image": "4468e3ae5da4565a8f2d4a9b0ce4f7c9568ae1398716bd72a50b7d81c3f36d6e",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_50_crop29",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_50",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_50_crop29_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_50/10/Scene_50_L2R_cl_29.tif",
+    "sha256_image": "3176fbc186ec70e8ca1eac31e4730b35518b13491d50d1319899fa09b3b729c5",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (31)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (31).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (31).png",
+    "sha256_image": "7480b2f7256b492c581ff99e3c99ac8ca04b4d8b4823fa3a1de0e0f1b37d9b45",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_120_crop27",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_120",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_120_crop27_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_120/10/Scene_120_L2R_cl_27.tif",
+    "sha256_image": "54d624d605d3ef079abf4c86c650588fc15c0612cc3749c9e3db89fc38e1c535",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (141)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (141).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (141).png",
+    "sha256_image": "572bc7bedc3ea5124dd5eb397764ca34672c27b7c6ee1a46527095817b8a48a3",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_127_crop14",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_127",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_127_crop14_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_127/10/Scene_127_L2R_cl_14.tif",
+    "sha256_image": "891277645b67a1f035229f695b07ea69f83cfbc8e126e05fbc34da0b7007b9e1",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_16_crop11",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_16",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_16_crop11_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_16/10/Scene_16_L2R_cl_11.tif",
+    "sha256_image": "5ce5a63f81482057c83a74953bf8222bd1e3aa73cb17b774bc52d624f9359c09",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_50_crop11",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_50",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_50_crop11_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_50/10/Scene_50_L2R_cl_11.tif",
+    "sha256_image": "2187bda7b52c3b9d82d92a074f8ab027877c0454f1d5070bb650029293656579",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_98_crop19",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_98",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_98_crop19_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_98/10/Scene_98_L2R_cl_19.tif",
+    "sha256_image": "d4fe72b3e332b6ce3016bbbe100cd0668554f8802c0648655ea074f9b85cf04f",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_134_crop3",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_134",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_134_crop3_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_134/10/Scene_134_L2R_cl_3.tif",
+    "sha256_image": "b826a19693c27d52240d8f455cca6246e402ace4f0d05df53c0b144792e9bd81",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (32)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (32).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (32).png",
+    "sha256_image": "cf50e43da18e5bb78d4ea671e02f0cd33cbc388d9ec3be2eb0427e9b8105c363",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (107)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (107).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (107).png",
+    "sha256_image": "112127751d41ac3858cdf18550e354399c68d83234a7e6d72c0a24938cb2b22c",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_62_crop2",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_62",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_62_crop2_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_62/10/Scene_62_L2R_cl_2.tif",
+    "sha256_image": "83e4ab0c2b36bda56a352ab55ce619e0dd72ec74c0e8a95f376659824d738c4e",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_99_crop81",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_99",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_99_crop81_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_99/10/Scene_99_L2R_cl_81.tif",
+    "sha256_image": "e9b6e33855756b2950919ee066c9605ea2558f87988b1651f6b6fd15c21b9aea",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_123_crop1",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_123",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_123_crop1_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_123/10/Scene_123_L2R_cl_1.tif",
+    "sha256_image": "a4edd0323da3c9e52bf9848952c17b1481d3ac2fe72693af9ae60ceb8ed3a52f",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_train_Oil (53)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_train",
+    "image_path": "data/raw/archives/kerf_extracted/train/images/Oil (53).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/train/masks/Oil (53).png",
+    "sha256_image": "44a588a2264c33bbf7a5ffa94ce2b794d1e386f17523d9f8cfc5864d16afcf44",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_108_crop33",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_108",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_108_crop33_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_108/10/Scene_108_L2R_cl_33.tif",
+    "sha256_image": "ded78f1e4827fba7df41d10395cd7c48fe44e8ba02155ce6b24f87e374c63386",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_134_crop2",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_134",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_134_crop2_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_134/10/Scene_134_L2R_cl_2.tif",
+    "sha256_image": "8e1af31039a6600b974e6286dc54c168259cb6ec621910ca0c38a760b2904037",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_172_crop14",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_172",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_172_crop14_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_172/10/Scene_172_L2R_cl_14.tif",
+    "sha256_image": "e44098915a388fe3708a3d60359486309613c67ee51c9fa07cfb1383c1f78aed",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_142_crop3",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_142",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_142_crop3_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_142/10/Scene_142_L2R_cl_3.tif",
+    "sha256_image": "27383061a971d6d442650294e1a9b309cd2083e3349543708b866be2a29c6526",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_36_crop18",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_36",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_36_crop18_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_36/10/Scene_36_L2R_cl_18.tif",
+    "sha256_image": "9ccf9a5d4261bdc776cefe7e2ae16a9be0f1d450a7e3297c963ba8ccc9905290",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "kerf_val_Oil (229)",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "source_group": "kerf_flight_val",
+    "image_path": "data/raw/archives/kerf_extracted/val/images/Oil (229).jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/val/masks/Oil (229).png",
+    "sha256_image": "6a7c9da926e359d6336960e5b3dca7fdc5f42c24901081a2802d3d6fb8551fd2",
+    "width": 1920,
+    "height": 1080,
+    "oil_pixels": 0,
+    "total_pixels": 2073600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_94_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_94",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_94_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_94/10/Scene_94_L2R_cl_7.tif",
+    "sha256_image": "9975b6e21456f7728d42bfbd7c85e99b173972cff396262192630230ad73d9f7",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_80_crop10",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_80",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_80_crop10_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_80/10/Scene_80_L2R_cl_10.tif",
+    "sha256_image": "8145df70c003e5a1593fe7cb0090a06ad9c2569f07203be4cde4d55c5bc10946",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_69_crop12",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_69",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_69_crop12_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_69/10/Scene_69_L2R_cl_12.tif",
+    "sha256_image": "db5cb2a3a3f17ab69091ae67c231377ffc5ed129ef1758777cdbc42837a99464",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_151_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_151",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_151_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_151/10/Scene_151_L2R_cl_7.tif",
+    "sha256_image": "5cdf1ba81d85266398ec4ea3fdabb302544ef04460e9633aa7d877d6ffa45a2c",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_159_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_159",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_159_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_159/10/Scene_159_L2R_cl_7.tif",
+    "sha256_image": "90faee8503f3ff09450dc6fa55aa3fb868789336d205f73a1e15130f7841f8ac",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_51_crop8",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_51",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_51_crop8_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_51/10/Scene_51_L2R_cl_8.tif",
+    "sha256_image": "db0d99f4614db2c1182663ae11af327494b5c5656eb1d8682e0b2caa1ebf07b9",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_20_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_20",
+    "image_path": "data/raw/optical_real/clean_ocean/mados/mados_Scene_20_crop7_clean_ocean.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_20/10/Scene_20_L2R_cl_7.tif",
+    "sha256_image": "20d9a3461de6445a8263af1722b46cdcda570a00c2e9f6ebc43c2d67846c12e3",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "clean_ocean"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_3_crop12",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_3",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_3_crop12_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_3/10/Scene_3_L2R_cl_12.tif",
+    "sha256_image": "a9f418eb73c5d9f597ad68022d85bcf4192ea4791e4805e3a575a5c3a8c4883c",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_139_crop11",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_139",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_139_crop11_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_139/10/Scene_139_L2R_cl_11.tif",
+    "sha256_image": "bdfca769e8603394f13b60a7df0aa3928b2cb06366cbaba8cf2f3dbb30f1ba11",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_50_crop8",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_50",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_50_crop8_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_50/10/Scene_50_L2R_cl_8.tif",
+    "sha256_image": "c0f51811e91ffd12680704102c4bad1e0d32fa893c5a230083e01fd79b584352",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_152_crop25",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_152",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_152_crop25_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_152/10/Scene_152_L2R_cl_25.tif",
+    "sha256_image": "6b6fbe816b369c9e31358501e67b0bd5f4b5485ecd5566e954f638d0d4636cb3",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_99_crop37",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_99",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_99_crop37_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_99/10/Scene_99_L2R_cl_37.tif",
+    "sha256_image": "8e5d3767eab95d2b10a19c13ba2a1108300520a1fc4f2a78106cd3b78f9f41a0",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_12_crop1",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_12",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_12_crop1_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_12/10/Scene_12_L2R_cl_1.tif",
+    "sha256_image": "74131d713600c030e7949c45eda400c3f48f6f4c16893f4984e86560b64cb558",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_131_crop16",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_131",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_131_crop16_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_131/10/Scene_131_L2R_cl_16.tif",
+    "sha256_image": "ca1953818267b4191e2bc2ef2fef705aeef2ab8610a20b3c7b38b54ea135c63f",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_135_crop1",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_135",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_135_crop1_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_135/10/Scene_135_L2R_cl_1.tif",
+    "sha256_image": "10dad7c9bbc566fd6777b44a4b24355cec50a2b0bcd1cfe479d4217aef884d5c",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_160_crop33",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_160",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_160_crop33_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_160/10/Scene_160_L2R_cl_33.tif",
+    "sha256_image": "e2d8975a654a2d17b21f5699effba7cb5d6deae96fbb32cc5084591f092d8f7a",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_23_crop2",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_23",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_23_crop2_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_23/10/Scene_23_L2R_cl_2.tif",
+    "sha256_image": "b8afc7b4cdf4203646ac41281984711c2189f1851203a5fb4f4d1cbf98f51d6a",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_97_crop4",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_97",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_97_crop4_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_97/10/Scene_97_L2R_cl_4.tif",
+    "sha256_image": "a06e9c2f1ed3649e996b8f7d613e14e0db740bec5d0e3ba87538373f6e46ad23",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_142_crop16",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_142",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_142_crop16_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_142/10/Scene_142_L2R_cl_16.tif",
+    "sha256_image": "72d3f5eb71f97dcb441823e1ebeaf786db5308d3591d69c5bbced10a97ee5263",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_160_crop26",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_160",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_160_crop26_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_160/10/Scene_160_L2R_cl_26.tif",
+    "sha256_image": "5d1f351ca6255a13dca51dd1cf49fc964d0e21c346b3f6a5f90a70f1b3db3fd0",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_68_crop5",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_68",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_68_crop5_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_68/10/Scene_68_L2R_cl_5.tif",
+    "sha256_image": "2e081f40930e15e5844e1664b2af49f46c17c67485a69ac2264a3c78abe8ed0d",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_157_crop11",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_157",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_157_crop11_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_157/10/Scene_157_L2R_cl_11.tif",
+    "sha256_image": "d975f843d8327408cc1a28b90d0e574d839c06a1aa0f77ba4fedf4adbe4015a5",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_3_crop13",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_3",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_3_crop13_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_3/10/Scene_3_L2R_cl_13.tif",
+    "sha256_image": "f459a79e8aee68fdfc8b18e2549bc49023401f5cea770d348b02e56fd4812316",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_135_crop22",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_135",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_135_crop22_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_135/10/Scene_135_L2R_cl_22.tif",
+    "sha256_image": "ae4e5495992cfa8fa4c2cd54b2a0f8bb7bb333083f7d1196346d5b80da7c2b22",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_114_crop9",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_114",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_114_crop9_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_114/10/Scene_114_L2R_cl_9.tif",
+    "sha256_image": "4af6e50e40d78117e3104f7b6a5fd70a25892ce729fa61c4927cd38e62fbdb9f",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_164_crop5",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_164",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_164_crop5_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_164/10/Scene_164_L2R_cl_5.tif",
+    "sha256_image": "d3ba6e775bafcc7fbcd99b981c9e437e3167a65a2a55faa922041be5ba4240ba",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_18_crop14",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_18",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_18_crop14_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_18/10/Scene_18_L2R_cl_14.tif",
+    "sha256_image": "1178db1216b555c8ae66c163a17f51c54dee9e29836d24f97ddc7a4104ac2e50",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_43_crop1",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_43",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_43_crop1_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_43/10/Scene_43_L2R_cl_1.tif",
+    "sha256_image": "8e21f636b2a039fe48488e347ad7920cfca18d68ec5cccfecdaf478a969516c2",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_125_crop8",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_125",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_125_crop8_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_125/10/Scene_125_L2R_cl_8.tif",
+    "sha256_image": "f66e25cd6fa08084f0015613859928ba1f426a3e7a93c3448ae51b72c7cbb9af",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_99_crop11",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_99",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_99_crop11_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_99/10/Scene_99_L2R_cl_11.tif",
+    "sha256_image": "94851bfd7f19822e607306269fc3409a0dbe2453ccfa645c27b99055a7154e3a",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_25_crop29",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_25",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_25_crop29_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_25/10/Scene_25_L2R_cl_29.tif",
+    "sha256_image": "f3c430e760b85454bf1ec6cb6d8f5bac6ac5eb8d5555dfe14ec75d830027203a",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_73_crop6",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_73",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_73_crop6_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_73/10/Scene_73_L2R_cl_6.tif",
+    "sha256_image": "6f4c3324b82cbaa011dbd13d530cc193e4f2a739e3fe0e012156c6f5c18a207f",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_12_crop62",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_12",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_12_crop62_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_12/10/Scene_12_L2R_cl_62.tif",
+    "sha256_image": "f77bcdeb21436613a49f7c94ff5d76cd9b07d3899cd4044481447bcb8c157e9e",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_135_crop24",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_135",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_135_crop24_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_135/10/Scene_135_L2R_cl_24.tif",
+    "sha256_image": "70095ed2bfb3c1a18893456644e6c986764420c841719a3b3966771a7a4316a0",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_109_crop8",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_109",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_109_crop8_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_109/10/Scene_109_L2R_cl_8.tif",
+    "sha256_image": "abba71317133477fd171b3aa5bdb8f2c30f6f9d315f410852aee116cea8a507e",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_152_crop14",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_152",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_152_crop14_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_152/10/Scene_152_L2R_cl_14.tif",
+    "sha256_image": "16c06a4a6ec4c152e02a74e3508df0539813399b202779de77ef5e78464ea1db",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_50_crop22",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_50",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_50_crop22_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_50/10/Scene_50_L2R_cl_22.tif",
+    "sha256_image": "6ec5bfb11770238be3bff1a2c381a1344799ad7c97c5b874dc1279fc6a5743eb",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_20_crop5",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_20",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_20_crop5_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_20/10/Scene_20_L2R_cl_5.tif",
+    "sha256_image": "bd3e419ca21b23f9e31dc097c4103eef32c2f437f5951f6eedbc992772f9aef7",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_13_crop4",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_13",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_13_crop4_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_13/10/Scene_13_L2R_cl_4.tif",
+    "sha256_image": "a3207714d3567ba8e9ec3e9d0b02bc2133624d10da78339efd75b19667d451d0",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_25_crop8",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_25",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_25_crop8_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_25/10/Scene_25_L2R_cl_8.tif",
+    "sha256_image": "5e5a06451fa03cb54ff8feaa81518ea2642aa449a443dbdd89a6ba4ffb178778",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_109_crop19",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_109",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_109_crop19_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_109/10/Scene_109_L2R_cl_19.tif",
+    "sha256_image": "4d416ce752743eec88e2ab8181b263bd25644491ff70aa3c5ad2df7e7ac27b4e",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_109_crop21",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_109",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_109_crop21_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_109/10/Scene_109_L2R_cl_21.tif",
+    "sha256_image": "b86a1b8f0684be1d2ef5d8de99c8cbedfa1e9d6c72acd902cde02010da32bd74",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_151_crop4",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_151",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_151_crop4_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_151/10/Scene_151_L2R_cl_4.tif",
+    "sha256_image": "256c8a69412f2ee14f4e05dd76edaea7c28e146807685630fcc26009494fb1de",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_156_crop10",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_156",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_156_crop10_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_156/10/Scene_156_L2R_cl_10.tif",
+    "sha256_image": "9f4af003cfab7c50679e9b21175d07a4717a3293eac4125f8b672ea8df59d0f8",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_128_crop6",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_128",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_128_crop6_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_128/10/Scene_128_L2R_cl_6.tif",
+    "sha256_image": "b57f54d4b7cbabcfcc121a0b44bca0605855c930e6bd4a7ee670d90eca1af2a8",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_2_crop2",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_2",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_2_crop2_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_2/10/Scene_2_L2R_cl_2.tif",
+    "sha256_image": "e2d17574e414eb78a0f9e70cd3934223e88b8326db322c6674350aa8b7d3c0b4",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_141_crop28",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_141",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_141_crop28_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_141/10/Scene_141_L2R_cl_28.tif",
+    "sha256_image": "0bbbd9fcac1d8d7488e88dc57fd3e1c6c2c43e52ccdc4c946f1fa1f1985a2ad2",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_112_crop18",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_112",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_112_crop18_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_112/10/Scene_112_L2R_cl_18.tif",
+    "sha256_image": "85a802b1ddfb585ddcc86b0963edd906c49387402a978622f85594d7c6ac424a",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_8_crop1",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_8",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_8_crop1_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_8/10/Scene_8_L2R_cl_1.tif",
+    "sha256_image": "4c5d2f59e007d5b8f43c9a049c5c209cb2489433e7c2e458ee1db2cd8648047e",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_114_crop25",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_114",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_114_crop25_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_114/10/Scene_114_L2R_cl_25.tif",
+    "sha256_image": "ba5dd4a6de264137f5f3f1a786bfc8c7e9257883bfac9b3ea8b881e1720e53ce",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_11_crop17",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_11",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_11_crop17_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_11/10/Scene_11_L2R_cl_17.tif",
+    "sha256_image": "ed471e0bbde316c9f7f5be904d8ae141b80d879ce035d67925fe78646f1e4710",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_68_crop12",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_68",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_68_crop12_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_68/10/Scene_68_L2R_cl_12.tif",
+    "sha256_image": "315242e9130f1b2c2c7591a95ca1abbb382c70829a2d3b12458af0f727b8decb",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_108_crop36",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_108",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_108_crop36_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_108/10/Scene_108_L2R_cl_36.tif",
+    "sha256_image": "25c61122ceb08180916045fe23ac3533dd61567224555d86339931d5610e75ca",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_19_crop6",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_19",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_19_crop6_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_19/10/Scene_19_L2R_cl_6.tif",
+    "sha256_image": "1312189a1db8bcbb71b6b9444e4e83ddf739aa4ec8ec929d753365620d00424f",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_25_crop14",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_25",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_25_crop14_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_25/10/Scene_25_L2R_cl_14.tif",
+    "sha256_image": "ca23b2d378617ea33f37b6e750322bc12d8d02ea45bd616a3fb79354c987967a",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_3_crop34",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_3",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_3_crop34_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_3/10/Scene_3_L2R_cl_34.tif",
+    "sha256_image": "5d4d76556e7cef83bf2e81ca5c7c8f72269dc5f95b56bcb8afe085aa6bc41c16",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_135_crop32",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_135",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_135_crop32_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_135/10/Scene_135_L2R_cl_32.tif",
+    "sha256_image": "4ab23d2cc29e8c2c020f86a4a9045e09cf33a389a4629a4d51546dc5313f619d",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_145_crop23",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_145",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_145_crop23_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_145/10/Scene_145_L2R_cl_23.tif",
+    "sha256_image": "9180e78f7c1b28b3b86af02c1a86a22c097547bfe4596d13a853a5c2c38fc1f7",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_172_crop16",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_172",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_172_crop16_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_172/10/Scene_172_L2R_cl_16.tif",
+    "sha256_image": "80989e842218d02cef7cbe018fb728ba009763fa3832b95f8daaf4109b2653d8",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_7_crop2",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_7",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_7_crop2_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_7/10/Scene_7_L2R_cl_2.tif",
+    "sha256_image": "5ffba294dd9aecc5504c6a55822296ef8dd14c199fd521e5434bccdcb392fa19",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_99_crop91",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_99",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_99_crop91_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_99/10/Scene_99_L2R_cl_91.tif",
+    "sha256_image": "b257148e2890c556e0be62d64cecdf3a6d82c05104421a337d833f80b507c137",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_50_crop27",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_50",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_50_crop27_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_50/10/Scene_50_L2R_cl_27.tif",
+    "sha256_image": "d9be3635a36d8a886c91b44f343e58c86db610bc4e7933058fd98ddef378baf0",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_95_crop9",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_95",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_95_crop9_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_95/10/Scene_95_L2R_cl_9.tif",
+    "sha256_image": "fcc96346f4a4126b7511132a1e2eb412d7994c84a3297fbc664c98f6e06589e2",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_120_crop22",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_120",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_120_crop22_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_120/10/Scene_120_L2R_cl_22.tif",
+    "sha256_image": "fc4d6cc7f3876460a4e2bb5ee4f4fec5b6c8477e0063e09cb5223a5dc42177e3",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_121_crop3",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_121",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_121_crop3_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_121/10/Scene_121_L2R_cl_3.tif",
+    "sha256_image": "2993fdbb0a998845656a4ed7f81208c20d0824d5c8b617f550bd441266ac406d",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_108_crop16",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_108",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_108_crop16_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_108/10/Scene_108_L2R_cl_16.tif",
+    "sha256_image": "07f0f5eee2d0ce116ba329fd939e836c796542af9366a12d6cf92b197f5582af",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_3_crop11",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_3",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_3_crop11_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_3/10/Scene_3_L2R_cl_11.tif",
+    "sha256_image": "bb41b9d6c1a610c3e57e8192687724b27abfa8e61a448bfb7fdb8743d93b472e",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_163_crop28",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_163",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_163_crop28_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_163/10/Scene_163_L2R_cl_28.tif",
+    "sha256_image": "7fc0278d4d02189266c6b9ec06cde1998cd7a18a03ca91371d68cdf4f6e52bf7",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_122_crop3",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_122",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_122_crop3_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_122/10/Scene_122_L2R_cl_3.tif",
+    "sha256_image": "97e6342dcc6909648aedd8da84f1b80c3dabedf2fc414928b137ea80c88de3df",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_144_crop12",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_144",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_144_crop12_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_144/10/Scene_144_L2R_cl_12.tif",
+    "sha256_image": "eb41422fc453c8da5482d001057e647a06bfed7dc983160d052f85b64ad09e12",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_171_crop22",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_171",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_171_crop22_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_171/10/Scene_171_L2R_cl_22.tif",
+    "sha256_image": "247a4d67ce77f0f93583a10ad73484c8dafb09204de54b3424d98d56ed4c9e11",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_171_crop5",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_171",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_171_crop5_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_171/10/Scene_171_L2R_cl_5.tif",
+    "sha256_image": "8685437b18de2b026803d75a48ad4de4d2f3be876276f9bbdabab0f8f0f9bbf0",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_130_crop3",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_130",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_130_crop3_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_130/10/Scene_130_L2R_cl_3.tif",
+    "sha256_image": "9e500ef3c973d3f26d485f5864ed01c890b1cc525f165d25efff9025c5c738de",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_81_crop19",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_81",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_81_crop19_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_81/10/Scene_81_L2R_cl_19.tif",
+    "sha256_image": "04f70d296905e3ecbe6e31a1e48a69e8b66d5df12e9b0f56ad2bca9f5da2d742",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_5_crop4",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_5",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_5_crop4_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_5/10/Scene_5_L2R_cl_4.tif",
+    "sha256_image": "437f66bcd23e998d14df1af7d45848fda4664fce19a7e63551f7ca3d8d57f93e",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_0_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_0",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_0_crop7_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_0/10/Scene_0_L2R_cl_7.tif",
+    "sha256_image": "6fcd3cb01bb6ff092d42c8e31a325758e434fd0facbb61c34cbb7a5c46ed2e5d",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_108_crop37",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_108",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_108_crop37_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_108/10/Scene_108_L2R_cl_37.tif",
+    "sha256_image": "2ce137d38a28ecc561da306f8d7bc058589c10f229455a6c103999d70e8568df",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_4_crop26",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_4",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_4_crop26_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_4/10/Scene_4_L2R_cl_26.tif",
+    "sha256_image": "fdf002754cc824ca214558a975646d74a9275ed6e1f733c7e18e970d5c365193",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_164_crop10",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_164",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_164_crop10_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_164/10/Scene_164_L2R_cl_10.tif",
+    "sha256_image": "0eef97a2116a70aa23bfe31d83c684a9f47351fd5cafca2092ca80c068e6d646",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_99_crop79",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_99",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_99_crop79_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_99/10/Scene_99_L2R_cl_79.tif",
+    "sha256_image": "f23baeaba06d3cbedb5a6f0da244e837c032c174d4ba0ca80d4a9411779a9eae",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_135_crop38",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_135",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_135_crop38_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_135/10/Scene_135_L2R_cl_38.tif",
+    "sha256_image": "77fafe1327a35ea86337b5bb54063df22518da363eff16a9331c0e5e416c53bb",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_6_crop19",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_6",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_6_crop19_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_6/10/Scene_6_L2R_cl_19.tif",
+    "sha256_image": "40b869ae579e8a533d11b2ddcff994d79f4e0e4e789e8fdaab74cf3eaf92ea0a",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_51_crop24",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_51",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_51_crop24_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_51/10/Scene_51_L2R_cl_24.tif",
+    "sha256_image": "50387dd28334d0e4644f20c11690d2a49cbd4b86f2df60e39d4f21615785aee6",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_54_crop9",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_54",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_54_crop9_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_54/10/Scene_54_L2R_cl_9.tif",
+    "sha256_image": "f94a68916b21a87629fa75f09d1273d2abd7a5e9c7554f80cf0e9997a0f95c42",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_59_crop1",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_59",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_59_crop1_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_59/10/Scene_59_L2R_cl_1.tif",
+    "sha256_image": "8459aa802ffa5a32ee973297a2dd7a5cc8abadc279bafdcd059a83acbf82817d",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_172_crop10",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_172",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_172_crop10_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_172/10/Scene_172_L2R_cl_10.tif",
+    "sha256_image": "bbc5c482804665b808655bc054f66fd86770932d76dc4b41a3c72b016dc59362",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_48_crop2",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_48",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_48_crop2_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_48/10/Scene_48_L2R_cl_2.tif",
+    "sha256_image": "adfaa13155a5b57fabcc0803a5defd35668d0bdb7ced3dd95d06bce5bac7d37e",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_70_crop1",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_70",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_70_crop1_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_70/10/Scene_70_L2R_cl_1.tif",
+    "sha256_image": "3df6b298131ca8a80ce798fb16ece506e3f7727e2aa154182b80539117bb3452",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_109_crop30",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_109",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_109_crop30_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_109/10/Scene_109_L2R_cl_30.tif",
+    "sha256_image": "8f476975c185066efae1f5fbbb695593f6cf8fc5961dfeccb6323b53e439e345",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_54_crop2",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_54",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_54_crop2_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_54/10/Scene_54_L2R_cl_2.tif",
+    "sha256_image": "6a5046b47980854d664adea3846705fc83220365c3d68b0168cf45fe0d42a7da",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_160_crop30",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_160",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_160_crop30_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_160/10/Scene_160_L2R_cl_30.tif",
+    "sha256_image": "2345b82ea3551003f2807b40715944de0920ce60b4a70ba92fcc30ad59bbaa66",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_171_crop6",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_171",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_171_crop6_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_171/10/Scene_171_L2R_cl_6.tif",
+    "sha256_image": "b6a985e1a6eae448d07f5d91394d3486fc16cfd9380fcb45af0e54767e3057c3",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_131_crop7",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_131",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_131_crop7_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_131/10/Scene_131_L2R_cl_7.tif",
+    "sha256_image": "3b3eb585dbbeb079401c2c061d243d4b639b44d5f2b3fe320e65f75b7efe6a7c",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_142_crop10",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_142",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_142_crop10_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_142/10/Scene_142_L2R_cl_10.tif",
+    "sha256_image": "0586d9e02c72c766cf6d2700019db0ca9649777d963b512b67b6ead8f4a85eb0",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  },
+  {
+    "sample_id": "mados_Scene_163_crop27",
+    "dataset": "MADOS_Sentinel2",
+    "source_group": "Scene_163",
+    "image_path": "data/raw/optical_real/look_alike/mados/mados_Scene_163_crop27_look_alike.png",
+    "mask_path": "data/raw/archives/mados_extracted/MADOS/Scene_163/10/Scene_163_L2R_cl_27.tif",
+    "sha256_image": "641882b6bfa23fdc4fcc066b99d616e56891af7cc8dd740fc975e0dfbf01e8bf",
+    "width": 240,
+    "height": 240,
+    "oil_pixels": 0,
+    "total_pixels": 57600,
+    "oil_fraction": 0.0,
+    "categories": [
+      "look_alike"
+    ],
+    "eligible_for_training": true,
+    "split": "val",
+    "is_oil_positive": false
+  }
+]

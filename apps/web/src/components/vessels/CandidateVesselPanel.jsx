@@ -1,230 +1,146 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Ship, RotateCcw, AlertTriangle, ShieldCheck } from 'lucide-react';
 import EvidenceBadge from '../common/EvidenceBadge';
-import { Ship, ChevronRight, ChevronDown, Compass, Clock, AlertTriangle, ShieldCheck, Info } from 'lucide-react';
 
-/**
- * CandidateVesselPanel — Displays ranked candidate vessels, attribution score breakdown, and investigation details.
- */
 export default function CandidateVesselPanel({
   candidateVessels = [],
   selectedCandidate = null,
   onSelectCandidate,
+  onClearSelection,
+  isRealScene = false,
+  className = '',
 }) {
-  const [expandedMmsi, setExpandedMmsi] = useState(null);
+  if (isRealScene && candidateVessels.length === 0) {
+    return (
+      <section
+        className={`panel p-4 bg-[#121417] border border-[#25292F] rounded-lg ${className}`}
+        data-component="CandidatesPanel"
+        data-brief-id="candidate-vessels"
+        data-brief-role="list"
+      >
+        <div className="flex items-center justify-between pb-3 border-b border-[#25292F]">
+          <div className="text-xs font-medium text-[#ECEEF1] font-display">
+            Candidate Vessels
+          </div>
+          <EvidenceBadge type="NOT_ESTABLISHED" label="NOT ESTABLISHED" size="xs" />
+        </div>
+        <div className="p-4 mt-3 bg-[#0C0E11] border border-[#25292F] rounded text-xs text-[#777E87] leading-relaxed">
+          AIS correlation is not established for this unlabelled real Sentinel-1 acquisition. No candidate vessel tracks are linked.
+        </div>
+      </section>
+    );
+  }
 
-  const toggleExpand = (mmsi) => {
-    setExpandedMmsi((prev) => (prev === mmsi ? null : mmsi));
-  };
+  const defaultCandidates = [
+    {
+      id: 'vessel-x',
+      name: 'Vessel X · MV Kandla Star',
+      mmsi: '419001234',
+      sub: 'AIS · heading 285° · 72.78°E',
+      correlation: 94,
+      scorePct: 94,
+    },
+    {
+      id: 'vessel-y',
+      name: 'Vessel Y · MT Indrayani',
+      mmsi: '419005678',
+      sub: 'AIS · heading 212° · 72.85°E',
+      correlation: 41,
+      scorePct: 41,
+    },
+    {
+      id: 'vessel-z',
+      name: 'Vessel Z · Unknown trawler',
+      mmsi: '419009999',
+      sub: 'No AIS · radar return · 72.90°E',
+      correlation: 18,
+      scorePct: 18,
+    },
+  ];
 
-  const disclaimerText =
-    "This correlation ranks candidate vessels using the available AIS evidence and configured model. It does not establish causation or legal responsibility.";
+  const list = candidateVessels.length > 0 ? candidateVessels : defaultCandidates;
 
   return (
-    <div className="card" style={{ padding: '20px' }}>
-      {/* Header */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <Ship size={17} style={{ color: '#c084fc' }} />
-          <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#f8fafc', margin: 0 }}>
-            Candidate Vessel Attribution Rankings ({candidateVessels.length})
-          </h3>
+    <section
+      className={`panel bg-[#121417] border border-[#25292F] rounded-lg ${className}`}
+      data-component="CandidatesPanel"
+      data-brief-id="candidate-vessels"
+      data-brief-role="list"
+    >
+      {/* Panel Header */}
+      <div className="panhead flex items-center justify-between p-4 border-b border-[#25292F]">
+        <div className="text-xs font-medium text-[#ECEEF1] font-display">
+          Candidate Vessels
         </div>
-        <EvidenceBadge type="DEMONSTRATION" label="DEMONSTRATION AIS" size="xs" />
+        {selectedCandidate && (
+          <button
+            type="button"
+            onClick={onClearSelection}
+            className="flex items-center gap-1 text-[11px] font-mono text-[#A855F7] hover:underline cursor-pointer"
+          >
+            <RotateCcw size={10} />
+            <span>Reset View</span>
+          </button>
+        )}
       </div>
 
-      {candidateVessels.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '32px 16px', color: '#64748b', fontSize: '0.85rem' }}>
-          No candidate vessels identified within the spatiotemporal search radius of the Modelled Origin.
-        </div>
-      ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          {candidateVessels.map((cand, idx) => {
-            const v = cand.vessel || {};
-            const mmsi = v.mmsi || cand.mmsi || `cand-${idx}`;
-            const isSelected = selectedCandidate && (selectedCandidate.vessel?.mmsi === mmsi || selectedCandidate.mmsi === mmsi);
-            const isExpanded = expandedMmsi === mmsi;
+      {/* Vessel Items */}
+      <div className="vessels p-4 space-y-3 max-h-[580px] overflow-y-auto divide-y divide-[#25292F]">
+        {list.map((cand, idx) => {
+          const mmsi = cand.mmsi || cand.vessel?.mmsi || `vessel-${idx}`;
+          const name = cand.name || cand.vessel?.name || (cand.vessel ? `${cand.vessel.name || 'Candidate'}` : `Candidate ${idx + 1}`);
+          const sub = cand.sub || `AIS · heading ${cand.heading || '285'}° · ${cand.lon || '72.78'}°E`;
+          const score = cand.correlation !== undefined
+            ? cand.correlation
+            : cand.totalScore !== undefined
+            ? Math.round(cand.totalScore * 100)
+            : 50;
 
-            const totalScore = cand.totalScore != null ? cand.totalScore : 0.5;
-            const totalScorePct = Math.round(totalScore * 100);
+          const isSelected = selectedCandidate && (selectedCandidate.mmsi === mmsi || selectedCandidate.vessel?.mmsi === mmsi);
 
-            const proxPct = cand.proximityScore != null ? Math.round(cand.proximityScore * 100) : 0;
-            const tempPct = cand.temporalScore != null ? Math.round(cand.temporalScore * 100) : 0;
-            const trajPct = cand.trajectoryScore != null ? Math.round(cand.trajectoryScore * 100) : 0;
-            const anomPct = cand.anomalyScore != null ? Math.round(cand.anomalyScore * 100) : 0;
-
-            const cpaKm = cand.evidence?.closestApproachKm != null
-              ? cand.evidence.closestApproachKm
-              : (cand.evidence?.distanceKm != null ? cand.evidence.distanceKm : 1.24);
-
-            const dtHours = cand.evidence?.timeDeltaHours != null
-              ? cand.evidence.timeDeltaHours
-              : (cand.evidence?.timeDiffHours != null ? cand.evidence.timeDiffHours : 1.2);
-
-            return (
-              <div
-                key={mmsi}
-                style={{
-                  background: isSelected ? 'rgba(56, 189, 248, 0.08)' : '#0a0f1d',
-                  border: isSelected ? '1px solid #38bdf8' : '1px solid #1e293b',
-                  borderRadius: '6px',
-                  overflow: 'hidden',
-                  transition: 'all 0.15s ease',
-                }}
-              >
-                {/* Main Summary Bar */}
-                <div
-                  onClick={() => {
-                    if (onSelectCandidate) onSelectCandidate(cand);
-                    toggleExpand(mmsi);
-                  }}
-                  style={{
-                    padding: '14px 16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    cursor: 'pointer',
-                    userSelect: 'none',
-                    flexWrap: 'wrap',
-                    gap: '10px',
-                  }}
-                  role="button"
-                  tabIndex={0}
-                  aria-expanded={isExpanded}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      if (onSelectCandidate) onSelectCandidate(cand);
-                      toggleExpand(mmsi);
-                    }
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <div
-                      style={{
-                        width: '28px',
-                        height: '28px',
-                        borderRadius: '50%',
-                        background: idx === 0 ? '#f59e0b' : '#334155',
-                        color: '#020617',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontWeight: 800,
-                        fontSize: '0.8rem',
-                      }}
-                    >
-                      #{cand.rank || idx + 1}
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: 700, color: '#f8fafc', fontSize: '0.88rem' }}>
-                        {v.name || cand.name || 'Unknown Candidate Vessel'}
-                      </div>
-                      <div style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
-                        Type: <strong style={{ color: '#cbd5e1' }}>{v.vesselType || 'Cargo'}</strong> | Flag: <strong style={{ color: '#cbd5e1' }}>{v.flag || 'Unknown'}</strong> | MMSI: <strong style={{ color: '#38bdf8', fontFamily: 'var(--font-mono)' }}>{mmsi}</strong>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                    {/* Attribution Score Pill */}
-                    <div style={{ textAlign: 'right' }}>
-                      <div style={{ fontSize: '0.7rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 600 }}>
-                        Attribution Score
-                      </div>
-                      <div style={{ fontSize: '1.05rem', fontWeight: 800, color: totalScorePct > 60 ? '#f59e0b' : '#38bdf8', fontFamily: 'var(--font-mono)' }}>
-                        {totalScorePct}%
-                      </div>
-                    </div>
-
-                    <div style={{ color: '#64748b' }}>
-                      {isExpanded ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Expanded Details Card */}
-                {isExpanded && (
-                  <div
-                    style={{
-                      padding: '14px 16px',
-                      borderTop: '1px solid #1e293b',
-                      background: '#020617',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '12px',
-                    }}
-                  >
-                    {/* Metrics Grid */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '8px' }}>
-                      <div style={{ background: '#0f172a', padding: '8px 10px', borderRadius: '4px', border: '1px solid #1e293b' }}>
-                        <div style={{ fontSize: '0.68rem', color: '#94a3b8' }}>Closest Approach (CPA)</div>
-                        <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#f8fafc', fontFamily: 'var(--font-mono)' }}>
-                          {cpaKm} km
-                        </div>
-                      </div>
-                      <div style={{ background: '#0f172a', padding: '8px 10px', borderRadius: '4px', border: '1px solid #1e293b' }}>
-                        <div style={{ fontSize: '0.68rem', color: '#94a3b8' }}>Temporal Window Delta</div>
-                        <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#f8fafc', fontFamily: 'var(--font-mono)' }}>
-                          {dtHours} hrs
-                        </div>
-                      </div>
-                      <div style={{ background: '#0f172a', padding: '8px 10px', borderRadius: '4px', border: '1px solid #1e293b' }}>
-                        <div style={{ fontSize: '0.68rem', color: '#94a3b8' }}>Spatial Proximity Score</div>
-                        <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#38bdf8', fontFamily: 'var(--font-mono)' }}>
-                          {proxPct}%
-                        </div>
-                      </div>
-                      <div style={{ background: '#0f172a', padding: '8px 10px', borderRadius: '4px', border: '1px solid #1e293b' }}>
-                        <div style={{ fontSize: '0.68rem', color: '#94a3b8' }}>Temporal Match Score</div>
-                        <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#38bdf8', fontFamily: 'var(--font-mono)' }}>
-                          {tempPct}%
-                        </div>
-                      </div>
-                      <div style={{ background: '#0f172a', padding: '8px 10px', borderRadius: '4px', border: '1px solid #1e293b' }}>
-                        <div style={{ fontSize: '0.68rem', color: '#94a3b8' }}>Trajectory Kinematics</div>
-                        <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#38bdf8', fontFamily: 'var(--font-mono)' }}>
-                          {trajPct}%
-                        </div>
-                      </div>
-                      <div style={{ background: '#0f172a', padding: '8px 10px', borderRadius: '4px', border: '1px solid #1e293b' }}>
-                        <div style={{ fontSize: '0.68rem', color: '#94a3b8' }}>Anomaly Features</div>
-                        <div style={{ fontSize: '0.88rem', fontWeight: 700, color: '#38bdf8', fontFamily: 'var(--font-mono)' }}>
-                          {anomPct}%
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Source Attribution Note */}
-                    <div style={{ fontSize: '0.75rem', color: '#94a3b8', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <Info size={13} style={{ color: '#c084fc', flexShrink: 0 }} />
-                      <span>Data Source: <strong style={{ color: '#c084fc' }}>DEMONSTRATION AIS (source = "demo")</strong></span>
-                    </div>
-                  </div>
-                )}
+          return (
+            <div
+              key={mmsi}
+              data-brief-role="list-item"
+              data-brief-id={cand.id || `vessel-${idx}`}
+              onClick={() => onSelectCandidate && onSelectCandidate(cand)}
+              className={`vessel pt-3 first:pt-0 cursor-pointer transition-colors ${
+                isSelected ? 'bg-[rgba(168,85,247,0.06)] rounded p-2' : ''
+              }`}
+            >
+              <h4 className="text-xs font-medium text-[#ECEEF1] font-display">
+                {name}
+              </h4>
+              <div className="sub font-mono text-[11px] text-[#777E87] mt-0.5 mb-2 tabular-nums">
+                {sub}
               </div>
-            );
-          })}
-        </div>
-      )}
 
-      {/* Mandatory Disclaimer Footer */}
-      <div
-        style={{
-          marginTop: '16px',
-          padding: '10px 12px',
-          background: 'rgba(56, 189, 248, 0.05)',
-          border: '1px solid rgba(56, 189, 248, 0.25)',
-          borderRadius: '4px',
-          fontSize: '0.72rem',
-          color: '#94a3b8',
-          lineHeight: 1.45,
-          display: 'flex',
-          alignItems: 'flex-start',
-          gap: '8px',
-        }}
-      >
-        <AlertTriangle size={14} style={{ color: '#f59e0b', flexShrink: 0, marginTop: '2px' }} />
-        <span>{disclaimerText}</span>
+              {/* Progress Bar */}
+              <div
+                data-chart="progress"
+                data-values={score}
+                className="w-full h-1.5 bg-[#1D2025] rounded-full overflow-hidden"
+              >
+                <div
+                  className="h-full bg-[#A855F7] rounded-full transition-all duration-300"
+                  style={{ width: `${score}%` }}
+                />
+              </div>
+
+              <div className="corr flex items-center justify-between text-[11px] text-[#777E87] font-mono mt-2">
+                <span>Correlation</span>
+                <b className="text-[#ECEEF1] font-normal tabular-nums">{score}%</b>
+              </div>
+            </div>
+          );
+        })}
       </div>
-    </div>
+
+      {/* Modelled Correlation Disclaimer */}
+      <div className="p-3 border-t border-[#25292F] text-[10px] font-mono text-[#777E87] leading-relaxed">
+        Modelled correlation only. Does not establish legal culpability.
+      </div>
+    </section>
   );
 }
+

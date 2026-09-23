@@ -9,6 +9,7 @@ export default function LayerControls({
     forecast: true,
     vessels: true,
     tracks: true,
+    grid: false,
   },
   onToggleLayer,
   style = {},
@@ -16,31 +17,31 @@ export default function LayerControls({
   const [isExpanded, setIsExpanded] = useState(false);
 
   const layerConfigs = [
-    { key: 'slick', label: 'Potential Oil Slick', color: '#f43f5e' },
-    { key: 'origin', label: 'Modeled Origin', color: '#f59e0b' },
-    { key: 'hindcast', label: 'Backward Hindcast', color: '#38bdf8' },
-    { key: 'forecast', label: 'Forward Forecast', color: '#10b981' },
-    { key: 'vessels', label: 'Candidate Vessels', color: '#0284c7' },
-    { key: 'tracks', label: 'AIS Telemetry Track', color: '#a855f7' },
+    { key: 'slick', label: 'Potential Oil Slick', color: '#49C6C8' },
+    { key: 'origin', label: 'Modeled Origin', color: '#E7A63A' },
+    { key: 'hindcast', label: 'Backward Hindcast', color: '#E7A63A' },
+    { key: 'forecast', label: 'Forward Forecast (Modelled)', color: '#4ADE80' },
+    { key: 'vessels', label: 'Candidate Vessels', color: '#A855F7' },
+    { key: 'tracks', label: 'AIS Telemetry Track', color: '#A855F7' },
+    { key: 'grid', label: 'Coordinate Graticule', color: '#777E87' },
   ];
+
+  const activeCount = layerConfigs.filter((c) => layers[c.key] !== false).length;
 
   return (
     <div
       style={{
-        position: 'absolute',
-        top: '12px',
-        right: '12px',
-        zIndex: 1000,
-        backgroundColor: 'rgba(15, 23, 42, 0.92)',
+        backgroundColor: 'rgba(11, 21, 19, 0.94)',
         backdropFilter: 'blur(8px)',
-        border: '1px solid #1e293b',
-        borderRadius: '8px',
-        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
-        color: '#f8fafc',
-        fontSize: '0.8rem',
+        border: '1px solid var(--og-border, #25292F)',
+        borderRadius: '6px',
+        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5)',
+        color: 'var(--og-text-primary, #ECEEF1)',
+        fontSize: '0.78rem',
         overflow: 'hidden',
         pointerEvents: 'auto',
-        minWidth: '180px',
+        minWidth: '170px',
+        maxWidth: '210px',
         ...style,
       }}
       aria-label="Map Layer Visibility Controls"
@@ -52,27 +53,29 @@ export default function LayerControls({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '8px 12px',
+          padding: '6px 10px',
           background: 'none',
           border: 'none',
           color: '#f8fafc',
           cursor: 'pointer',
           fontWeight: 600,
-          fontSize: '0.8rem',
+          fontSize: '0.75rem',
           borderBottom: isExpanded ? '1px solid #1e293b' : 'none',
         }}
         aria-expanded={isExpanded}
         aria-controls="layer-toggle-list"
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#38bdf8' }}>
-          <SlidersHorizontal size={14} />
-          <span style={{ color: '#f8fafc' }}>Layer Toggles</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: 'var(--og-teal, #49C6C8)' }}>
+          <SlidersHorizontal size={13} />
+          <span style={{ color: '#f8fafc' }}>
+            {isExpanded ? 'Layer Toggles' : `Layers (${activeCount})`}
+          </span>
         </div>
-        {isExpanded ? <ChevronUp size={14} style={{ color: '#94a3b8' }} /> : <ChevronDown size={14} style={{ color: '#94a3b8' }} />}
+        {isExpanded ? <ChevronUp size={13} style={{ color: '#94a3b8' }} /> : <ChevronDown size={13} style={{ color: '#94a3b8' }} />}
       </button>
 
       {isExpanded && (
-        <div id="layer-toggle-list" style={{ padding: '8px 12px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+        <div id="layer-toggle-list" style={{ padding: '6px 10px', display: 'flex', flexDirection: 'column', gap: '4px', maxHeight: '220px', overflowY: 'auto' }}>
           {layerConfigs.map(({ key, label, color }) => {
             const isVisible = layers[key] !== false;
             return (

@@ -1,0 +1,65 @@
+{
+  "audit_name": "Phase 5A RGB Dataset & Split Leakage Audit",
+  "timestamp": "2026-09-20T15:15:00Z",
+  "status": "PASS",
+  "summary": {
+    "total_cataloged_images": 3529,
+    "sealed_external_test_count": 130,
+    "benchmark_evaluation_count": 833,
+    "train_count": 2053,
+    "val_count": 514,
+    "total_available_training_pool": 2567
+  },
+  "leakage_checks": {
+    "exact_sha256_duplicates_across_splits": 0,
+    "perceptual_hash_collisions_across_splits": 0,
+    "sealed_test_in_train": 0,
+    "sealed_test_in_val": 0,
+    "sealed_test_in_benchmark": 0,
+    "benchmark_in_train": 0,
+    "benchmark_in_val": 0,
+    "train_val_scene_leakage": 0
+  },
+  "historical_v2_baseline_overlap_disclosure": {
+    "description": "Baseline V2 was trained on the historical 1,961-sample training split. Because Phase 4 benchmark evaluated all 832 hard cases across the dataset, 599 benchmark samples were in the historical training set. For all future Phase 5 fine-tuning experiments, these benchmark samples are strictly quarantined to EVALUATION ONLY.",
+    "benchmark_samples_in_historical_train": 599,
+    "benchmark_samples_in_historical_val": 153,
+    "benchmark_samples_in_historical_internal_test": 80,
+    "benchmark_samples_in_sealed_external_test": 0
+  },
+  "dataset_breakdown": {
+    "train": {
+      "total": 2053,
+      "sources": {
+        "MADOS_Sentinel2": 2053
+      },
+      "oil_positive": 0,
+      "non_oil": 2053
+    },
+    "val": {
+      "total": 514,
+      "sources": {
+        "MADOS_Sentinel2": 320,
+        "Kerf_Drone_Oil_Spill": 194
+      },
+      "oil_positive": 5,
+      "non_oil": 509
+    },
+    "benchmark": {
+      "total": 833,
+      "sources": {
+        "Representative_Failure": 1,
+        "MADOS_Sentinel2": 361,
+        "Kerf_Drone_Oil_Spill": 471
+      },
+      "with_ground_truth": 832
+    },
+    "sealed_external_test": {
+      "total": 130,
+      "status": "LOCKED",
+      "sources": {
+        "Kerf_Drone_Oil_Spill": 130
+      }
+    }
+  }
+}

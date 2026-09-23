@@ -11,6 +11,10 @@ class MLClient {
   async runHindcast(params) {
     return (await this.http.post('/api/v1/hindcast/simulate', params)).data;
   }
+  async synthesizeDossier(payload) {
+    return (await this.http.post('/api/v1/dossier/synthesize', payload)).data;
+  }
 }
 
 module.exports = new MLClient();
+

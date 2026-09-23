@@ -1,0 +1,74 @@
+{
+  "audit_phase": "PART_0_10_COMPREHENSIVE_SYNTHESIS_AUDIT",
+  "status": "COMPLETE",
+  "ablation_answers": {
+    "QUESTION_A_V6_to_V09C": {
+      "question": "What changed from V6 -> V09C?",
+      "experimental_variable": "Architecture: Standard DoubleConv -> 2-layer ResidualBlock with 1x1 projection shortcuts.",
+      "controlled_elements": "Identical CombinedLoss (fg=5.0), AdamW, lr=1e-4, seed=42, 28 train / 7 val split, sentinel1_sigma0_db_v1.",
+      "observed_differences_at_0_50": {
+        "micro_iou": "0.052088 (V6) -> 0.046280 (V09C)",
+        "micro_dice": "0.099018 (V6) -> 0.088466 (V09C)",
+        "precision": "0.054818 (V6) -> 0.048593 (V09C)",
+        "recall": "0.511252 (V6) -> 0.492995 (V09C)",
+        "clean_ocean_fpr": "0.000023 (V6) -> 0.000000 (V09C)",
+        "look_alike_fpr": "0.161488 (V6) -> 0.176611 (V09C)",
+        "oil_scenes_iou": "0.444747 (V6) -> 0.440793 (V09C)"
+      },
+      "scientific_conclusion": "Under identical baseline loss, the Residual U-Net architecture produced very similar segmentation metrics to standard U-Net (preserving high ~49-51% recall and ~44% oil-scene IoU), with a slight increase in look-alike FPR (+1.51% absolute). The residual shortcuts facilitate gradient flow and high sensitivity to low-backscatter features, but architecture alone did not suppress look-alike ambiguity."
+    },
+    "QUESTION_B_V09C_to_V09D": {
+      "question": "What changed from V09C -> V09D?",
+      "experimental_variable": "Loss: CombinedLoss fg_weight=5.0 -> CombinedLoss fg_weight=10.0 (keeping UNetResidual frozen).",
+      "controlled_elements": "Identical UNetResidual architecture (1,114,338 params), AdamW, lr=1e-4, seed=42, 28 train / 7 val split.",
+      "observed_differences_at_0_50": {
+        "micro_iou": "0.046280 (V09C) -> 0.152376 (V09D) [+229.3% relative]",
+        "micro_dice": "0.088466 (V09C) -> 0.264455 (V09D) [+198.9% relative]",
+        "precision": "0.048593 (V09C) -> 0.207887 (V09D) [+327.8% relative]",
+        "recall": "0.492995 (V09C) -> 0.363318 (V09D) [-12.97% absolute]",
+        "clean_ocean_fpr": "0.000000 (V09C) -> 0.001355 (V09D)",
+        "look_alike_fpr": "0.176611 (V09C) -> 0.022586 (V09D) [-87.2% relative reduction]",
+        "oil_scenes_iou": "0.440793 (V09C) -> 0.332730 (V09D)"
+      },
+      "scientific_conclusion": "Synthesizing the Residual U-Net with a 10.0x foreground cross-entropy penalty dramatically improved overall segmentation precision (from 4.86% to 20.79%) and drastically reduced look-alike false alarms (from 17.66% down to 2.26%), producing the highest validation Dice (0.2645) across all experiments. The trade-off is more conservative boundary delineation and lower recall on faint/thin slick fringes (36.33% vs 49.30%)."
+    },
+    "QUESTION_C_V8A_to_V8D": {
+      "question": "What changed from V8A -> V8D?",
+      "experimental_variable": "Loss foreground weighting on Standard U-Net: fg=5.0 (V8A) -> fg=10.0 (V8D).",
+      "controlled_elements": "Standard U-Net (1,080,802 params), AdamW, lr=1e-4, seed=42, 28 train / 7 val split.",
+      "observed_differences_at_0_50": {
+        "micro_iou": "0.027216 (V8A) -> 0.031019 (V8D)",
+        "micro_dice": "0.052990 (V8A) -> 0.060172 (V8D)",
+        "precision": "0.029927 (V8A) -> 0.033212 (V8D)",
+        "recall": "0.231008 (V8A) -> 0.319635 (V8D)",
+        "clean_ocean_fpr": "0.000000 (V8A) -> 0.000262 (V8D)",
+        "look_alike_fpr": "0.138709 (V8A) -> 0.171746 (V8D)",
+        "oil_scenes_iou": "0.231008 (V8A) -> 0.313702 (V8D)"
+      },
+      "scientific_conclusion": "On the standard U-Net architecture, increasing foreground weight from 5.0x to 10.0x boosted recall (from 23.10% to 31.96%) and Dice (from 0.0530 to 0.0602), with a slight increase in look-alike FPR (13.87% to 17.17%)."
+    },
+    "QUESTION_D_V09A_vs_V09B_vs_V09C": {
+      "question": "How do V09A, V09B, and V09C compare?",
+      "experimental_setting": "All three were trained under identical conditions: CombinedLoss (fg=5.0), AdamW, lr=1e-4, seed=42, batch=2, AMP FP16, 28 train / 7 val scenes.",
+      "comparison_nature": "Direct causal architectural comparison.",
+      "trade_off_summary": {
+        "V09A_MultiScale": "Receptive field expansion via bottleneck dilated convs (1.24M params). Achieved 0.0862 Dice, 42.96% Recall, 15.71% Look-Alike FPR.",
+        "V09B_Attention": "Spatial attention gates on skip connections (1.10M params). Achieved strong look-alike false positive suppression (6.50% Look-Alike FPR), but severely depressed recall (15.71% Recall, 0.0663 Dice).",
+        "V09C_Residual": "Residual convolution blocks with 1x1 projection shortcuts (1.11M params). Preserved high oil sensitivity and boundary detail (49.30% Recall, 0.4408 Oil Scenes IoU), but retained higher look-alike FPR (17.66%)."
+      },
+      "scientific_conclusion": "Each architectural mechanism targets a distinct failure mode: Attention gates suppress background look-alike false alarms at the cost of sensitivity; Residual blocks maximize feature reuse and gradient flow to preserve thin boundary recall; Multi-scale context provides an intermediate spatial balance."
+    },
+    "QUESTION_E_V09D_Causality": {
+      "question": "Does the evidence support the conclusion that V09D's lower look-alike FPR is associated with the combined residual architecture + foreground penalty?",
+      "causality_assessment": "PARTIALLY_ESTABLISHED_ASSOCIATION",
+      "reasoning": "The evidence shows that UNetResidual with fg=5.0 (V09C) had 17.66% look-alike FPR, and Standard UNet with fg=10.0 (V8D) had 17.17% look-alike FPR. When UNetResidual was trained with fg=10.0 (V09D), the look-alike FPR dropped dramatically to 2.26%, while Micro Dice rose to 0.2645. This strong synergistic effect is empirically documented on the 7-scene validation set, but true statistical causality across all ocean regions cannot be claimed until evaluated on the held-out benchmark."
+    }
+  },
+  "candidate_identification": {
+    "primary_candidate": "unet-dual-pol-sar-v09d-residual-loss",
+    "reason": "Achieved the highest Micro IoU (0.1524), highest Micro Dice (0.2645), highest Precision (20.79%), and lowest Look-Alike FPR (2.26%) on the controlled validation split among all evaluated architectures and loss functions.",
+    "secondary_reference": "unet-dual-pol-sar-v6",
+    "secondary_reason": "Standard U-Net baseline providing the benchmark reference for sensitivity and recall (51.13% recall, 16.15% look-alike FPR)."
+  },
+  "readiness_recommendation": "The experimental evidence across Parts 0.6 through 0.9D provides sufficient controlled evidence to proceed to PART 0.11 FORMAL HELD-OUT BENCHMARK EVALUATION on the locked Part III test set."
+}

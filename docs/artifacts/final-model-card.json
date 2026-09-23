@@ -1,0 +1,93 @@
+{
+  "model_id": "unet-dual-pol-sar-v4",
+  "model_name": "Dual-Polarimetric Sentinel-1 U-Net (Corrected Input dB Normalization)",
+  "version": "4.0.0-experimental",
+  "status": "EXPERIMENTAL",
+  "production_ready": false,
+  "registration_date": "2026-09-14",
+  "scientific_classification": "Experimental candidate oil-spill anomaly detection model",
+  "architecture": {
+    "model_type": "UNet",
+    "input_channels": 2,
+    "polarizations": ["VV", "VH"],
+    "base_channels": 16,
+    "output_classes": 2,
+    "activation": "Softmax",
+    "parameter_count": 1937938
+  },
+  "radiometric_normalization": {
+    "type": "Decibel_Calibrated_Clipping",
+    "vv_decibel_range": [-35.0, -5.0],
+    "vh_decibel_range": [-45.0, -15.0],
+    "scaling_target": [0.0, 1.0],
+    "validity_mask_formula": "np.isfinite(arr) & (arr != nodata)",
+    "pre_v4_defect_resolved": "Eliminated positive-value rejection bug (arr > 0) that produced zero-tensors for negative dB SAR inputs"
+  },
+  "training_configuration": {
+    "epochs": 15,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "loss_function": "Focal-Tversky (alpha=0.30, beta=0.70, gamma=1.33)",
+    "positive_tile_weighting": "2.5x",
+    "random_seed": 42,
+    "batch_size": 4
+  },
+  "dataset_splits": {
+    "protocol": "Strict scene-level partitioning (Zero geographical or temporal leakage)",
+    "train_scenes_count": 28,
+    "validation_scenes_count": 7,
+    "held_out_test_scenes_count": 5,
+    "train_diagnostic_scene": "real_part1_oil_00000"
+  },
+  "threshold_selection": {
+    "selected_threshold": 0.50,
+    "selection_dataset": "7 Validation Scenes strictly (Zero test scene leakage)",
+    "selection_rule": "Deterministic maximization of validation Dice score while minimizing validation FPR",
+    "validation_metrics_at_0_50": {
+      "dice_pct": 3.90,
+      "recall_pct": 95.84,
+      "precision_pct": 2.01,
+      "fpr_pct": 25.26
+    },
+    "operational_safety_note": "Threshold 0.50 retains a 25.26% validation FPR and is not safe for standalone alerting."
+  },
+  "probability_separation": {
+    "true_oil_pixels": {
+      "mean": 0.7730,
+      "median": 0.9779,
+      "p90": 0.9996,
+      "p95": 0.9999,
+      "p99": 1.0000,
+      "max": 1.0000
+    },
+    "clean_ocean_pixels": {
+      "mean": 0.0888,
+      "median": 0.0199,
+      "p90": 0.2891,
+      "p95": 0.4912,
+      "p99": 0.8115,
+      "max": 0.9984
+    },
+    "lookalike_pixels": {
+      "mean": 0.5873,
+      "median": 0.8489,
+      "p90": 0.9981,
+      "p95": 0.9997,
+      "p99": 1.0000,
+      "max": 1.0000
+    }
+  },
+  "strengths": [
+    "Corrected SAR dB normalization successfully restored spatial gradient flow and feature learning.",
+    "True positive pixel discovery on held-out test benchmark increased from 0 in V2 to 73,886 in V4.",
+    "Strong selectivity against uniform clean ocean water (Clean-Ocean FPR < 0.3%).",
+    "Clear separation in output probability distribution between true oil (median 0.978) and clean water (median 0.020)."
+  ],
+  "limitations": [
+    "Severe false alarm rate on low-wind and biogenic look-alike regions (Look-Alike FPR ≈ 59.55%).",
+    "Low positive predictive value / precision (≈ 1.6%–1.8%) on unconstrained satellite scenes.",
+    "Physical inability of standalone single-sensor dual-pol backscatter to distinguish biological surfactant films from crude oil without meteorological context."
+  ],
+  "operational_recommendation": "Maintain Model V2 as baseline in demo / UI; classify Model V4 as an experimental candidate requiring multimodal MetOcean wind conditioning and AIS reverse-drift trajectory fusion."
+}

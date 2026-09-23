@@ -1,0 +1,25 @@
+{
+  "audit_date": "2026-09-14",
+  "alignment_status": "BLOCKED_PHASE_20_STOP_CONDITION",
+  "reason": "Static Zenodo benchmark GeoTIFFs do not embed authoritative ESA Sentinel-1 SAFE UTC acquisition timestamps.",
+  "total_benchmark_scenes_evaluated": 40,
+  "scenes_with_valid_metocean_alignment": 0,
+  "scenes_with_missing_timestamps": 40,
+  "required_parameters_for_era5_hourly": [
+    "latitude_bounds_epsg4326",
+    "longitude_bounds_epsg4326",
+    "exact_acquisition_year",
+    "exact_acquisition_month",
+    "exact_acquisition_day",
+    "exact_acquisition_utc_hour"
+  ],
+  "spatial_alignment_readiness": {
+    "target_crs": "EPSG:4326",
+    "target_shape": [2048, 2048],
+    "resampling_protocol": "Bilinear spatial interpolation to exact SAR bounding box"
+  },
+  "temporal_alignment_readiness": {
+    "maximum_allowed_temporal_tolerance_minutes": 180,
+    "nearest_observation_rounding": "Nearest integer UTC hour"
+  }
+}

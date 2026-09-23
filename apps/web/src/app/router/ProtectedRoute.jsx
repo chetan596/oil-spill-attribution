@@ -1,6 +1,7 @@
 import React from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
+import AppShell from '../../components/layout/AppShell';
 
 export default function ProtectedRoute() {
   const { isAuthenticated } = useAuthStore();
@@ -9,5 +10,6 @@ export default function ProtectedRoute() {
     return <Navigate to="/login" replace />;
   }
 
-  return <Outlet />;
+  return <AppShell />;
 }
+

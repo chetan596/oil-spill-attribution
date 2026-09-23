@@ -1,0 +1,65 @@
+{
+  "dataset": "INTERNAL_TEST",
+  "total_pairs": 708,
+  "operating_threshold": 0.8,
+  "metrics": {
+    "mean_iou": 0.4993685598427293,
+    "foreground_iou": 0.0,
+    "background_iou": 0.9987371196854586,
+    "dice": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "fpr": 0.0,
+    "pixel_accuracy": 0.9987371196854586,
+    "tp": 0,
+    "fp": 0,
+    "tn": 46340891,
+    "fn": 58597
+  },
+  "source_breakdown": {
+    "MADOS_Sentinel2": {
+      "total_samples": 708,
+      "oil_positive_samples": 80,
+      "mean_iou": 0.4993685598427293,
+      "foreground_iou": 0.0,
+      "background_iou": 0.9987371196854586,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "fpr": 0.0
+    }
+  },
+  "oil_size_stratification": {
+    "VERY_SMALL (<0.1%)": {
+      "sample_count": 11,
+      "foreground_iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "SMALL (0.1%-1%)": {
+      "sample_count": 45,
+      "foreground_iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "MEDIUM (1%-10%)": {
+      "sample_count": 24,
+      "foreground_iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "LARGE (10%-50%)": {
+      "sample_count": 0,
+      "status": "INSUFFICIENT_SAMPLE_SIZE"
+    },
+    "VERY_LARGE (>50%)": {
+      "sample_count": 0,
+      "status": "INSUFFICIENT_SAMPLE_SIZE"
+    }
+  }
+}

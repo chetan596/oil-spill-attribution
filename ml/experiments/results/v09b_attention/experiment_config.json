@@ -1,0 +1,67 @@
+{
+  "experiment_id": "PART_0_9B_ATTENTION_ARCHITECTURE",
+  "model_id": "unet-dual-pol-sar-v09b-attention",
+  "status": "EXPERIMENTAL",
+  "architecture": {
+    "name": "UNetAttention",
+    "in_channels": 2,
+    "num_classes": 2,
+    "base_channels": 16,
+    "bilinear": true,
+    "attention_mechanism": "Additive Spatial Attention Gate (Oktay et al.)",
+    "attention_gates": [
+      {
+        "gate": "att1",
+        "in_channels_x": 128,
+        "in_channels_g": 128,
+        "inter_channels": 64
+      },
+      {
+        "gate": "att2",
+        "in_channels_x": 64,
+        "in_channels_g": 64,
+        "inter_channels": 32
+      },
+      {
+        "gate": "att3",
+        "in_channels_x": 32,
+        "in_channels_g": 32,
+        "inter_channels": 16
+      },
+      {
+        "gate": "att4",
+        "in_channels_x": 16,
+        "in_channels_g": 16,
+        "inter_channels": 8
+      }
+    ]
+  },
+  "parameter_comparison": {
+    "v6_parameters": 1080802,
+    "v09b_parameters": 1103174,
+    "parameter_difference": 22372,
+    "percentage_increase": 2.07
+  },
+  "training": {
+    "loss": "CombinedLoss",
+    "loss_params": {
+      "ce_weight": 1.0,
+      "dice_weight": 1.0,
+      "foreground_weight": 5.0
+    },
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 2,
+    "amp": true,
+    "max_epochs": 30,
+    "patience": 7,
+    "seed": 42
+  },
+  "preprocessing": "sentinel1_sigma0_db_v1",
+  "hardware": {
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "torch_version": "2.11.0+cu128"
+  }
+}

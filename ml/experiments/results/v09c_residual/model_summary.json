@@ -1,0 +1,8 @@
+{
+  "model_id": "unet-dual-pol-sar-v09c-residual",
+  "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v09c_residual.pth",
+  "checkpoint_sha256": "861fe810f8fc1e8bba3ff5cd0365628a5009f4261d904f1ddbb6264c8f2cc174",
+  "checkpoint_size_bytes": 13510147,
+  "parameter_count": 1114338,
+  "architecture": "UNetResidual"
+}

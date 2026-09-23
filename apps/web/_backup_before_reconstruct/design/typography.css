@@ -1,0 +1,110 @@
+/* ==========================================================================
+   OCEAN GUARD AI — SCOPE DARK TYPOGRAPHY SYSTEM
+   Hanken Grotesk (Display/Headings) + Schibsted Grotesk (Body/Data/Chrome)
+   ========================================================================== */
+
+:root {
+  --gesso-font-display: 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --gesso-font-body: 'Schibsted Grotesk', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --gesso-font-mono: 'Schibsted Grotesk', ui-monospace, "JetBrains Mono", monospace;
+
+  --gesso-leading-tight: 1.1;
+  --gesso-leading-snug: 1.25;
+  --gesso-leading-normal: 1.5;
+  --gesso-leading-relaxed: 1.7;
+
+  --gesso-tracking-tight: -0.02em;
+  --gesso-tracking-normal: 0em;
+  --gesso-tracking-wide: 0.04em;
+  --gesso-tracking-wider: 0.08em;
+}
+
+.font-display {
+  font-family: var(--gesso-font-display) !important;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  letter-spacing: var(--gesso-tracking-tight);
+}
+
+.font-body {
+  font-family: var(--gesso-font-body) !important;
+}
+
+.font-mono,
+.mono,
+.tabular-nums {
+  font-family: var(--gesso-font-mono) !important;
+  font-variant-numeric: tabular-nums lining-nums;
+  -moz-font-feature-settings: "tnum";
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
+}
+
+/* Page Titles and Major Display Specimens */
+.page-title {
+  font-family: var(--gesso-font-display);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #e8e8ea;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+.section-title {
+  font-family: var(--gesso-font-display);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #e8e8ea;
+  letter-spacing: -0.01em;
+}
+
+.panel-header-title {
+  font-family: var(--gesso-font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: #e8e8ea;
+}
+
+.metric-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gesso-fg-muted, #5C5C63);
+  font-weight: 500;
+}
+
+.metric-value {
+  font-family: var(--gesso-font-display);
+  font-size: 28px;
+  line-height: 32px;
+  color: #e8e8ea;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-unit {
+  font-size: 13px;
+  color: var(--gesso-fg-muted, #5C5C63);
+  margin-left: 2px;
+  font-weight: 400;
+}
+
+.caption {
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--gesso-fg-muted, #5C5C63);
+}
+
+.meta-text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--gesso-fg-muted, #5C5C63);
+  font-variant-numeric: tabular-nums;
+}

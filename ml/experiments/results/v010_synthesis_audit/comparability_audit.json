@@ -1,0 +1,23 @@
+{
+  "controlled_experiments": [
+    "unet-dual-pol-sar-v6",
+    "unet-dual-pol-sar-v8a",
+    "unet-dual-pol-sar-v8b",
+    "unet-dual-pol-sar-v8c",
+    "unet-dual-pol-sar-v8d",
+    "unet-dual-pol-sar-v09a-multiscale",
+    "unet-dual-pol-sar-v09b-attention",
+    "unet-dual-pol-sar-v09c-residual",
+    "unet-dual-pol-sar-v09d-residual-loss"
+  ],
+  "partially_controlled_experiments": [
+    "unet-dual-pol-sar-v4"
+  ],
+  "non_comparable_historical_experiments": [
+    "unet-dual-pol-sar-v1",
+    "unet-dual-pol-sar-v2",
+    "unet-dual-pol-sar-v3"
+  ],
+  "primary_experimental_candidate": "unet-dual-pol-sar-v09d-residual-loss",
+  "secondary_reference_baseline": "unet-dual-pol-sar-v6"
+}

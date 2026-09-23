@@ -1,0 +1,19 @@
+{
+  "model_id": "optical-oil-seg-unet-resnet18-v2",
+  "version": "2.0.0",
+  "task": "OPTICAL_OIL_SPILL_SEGMENTATION",
+  "seed": 42,
+  "architecture": "OpticalUNetResNet18V2",
+  "encoder": "ResNet-18 ImageNet (Pretrained)",
+  "bridge": "Atrous Spatial Pyramid Pooling (ASPP)",
+  "auxiliary_head": "Deep Supervision at Stage 2 (aux_weight=0.3)",
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "scheduler": "ReduceLROnPlateau(mode='max', factor=0.5, patience=3)",
+  "batch_size": 16,
+  "batch_sampling_strategy": "DomainBalancedBatchSampler (50% MADOS Sentinel-2, 50% KERF Drone RGB per batch)",
+  "loss_function": "DomainAdaptiveLossV2 (MADOS: FocalTversky(alpha=0.3, beta=0.7, gamma=1.33) + KERF: 0.5*BCE + 0.5*SoftDice)",
+  "operating_threshold": 0.80,
+  "threshold_selection_criterion": "Domain-Balanced Macro Score (0.6 * Macro_Dice + 0.4 * Macro_IoU on VALIDATION ONLY)"
+}

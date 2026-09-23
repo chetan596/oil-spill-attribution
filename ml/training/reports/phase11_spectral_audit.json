@@ -1,0 +1,92 @@
+{
+  "protocol": "PHASE_11_MADOS_SPECTRAL_AUDIT",
+  "dataset": "MADOS_Sentinel2",
+  "total_train_crops": 2036,
+  "total_val_crops": 698,
+  "spectral_channels": {
+    "b4": {
+      "band_id": "B4",
+      "description": "B4 (Red 665nm, 10m)",
+      "spatial_resolution_m": 10,
+      "data_type": "Float32 (Rayleigh-corrected surface reflectance rho_rc)",
+      "train_mean": 0.036931183981182426,
+      "train_std": 0.03550145565884183,
+      "min_reflectance": -0.01689912937581539,
+      "max_reflectance": 1.9531464576721191,
+      "median_reflectance": 0.029569273814558983,
+      "nodata_pixel_count": 310185,
+      "invalid_pixel_percentage": 0.2644968688605108,
+      "resampling_strategy": "Direct 10m grid native"
+    },
+    "b3": {
+      "band_id": "B3",
+      "description": "B3 (Green 559/560nm, 10m)",
+      "spatial_resolution_m": 10,
+      "data_type": "Float32 (Rayleigh-corrected surface reflectance rho_rc)",
+      "train_mean": 0.046213841765136654,
+      "train_std": 0.034394370480961806,
+      "min_reflectance": 0.0,
+      "max_reflectance": 1.510464072227478,
+      "median_reflectance": 0.0397177767008543,
+      "nodata_pixel_count": 306978,
+      "invalid_pixel_percentage": 0.26176223804846105,
+      "resampling_strategy": "Direct 10m grid native"
+    },
+    "b2": {
+      "band_id": "B2",
+      "description": "B2 (Blue 490/492nm, 10m)",
+      "spatial_resolution_m": 10,
+      "data_type": "Float32 (Rayleigh-corrected surface reflectance rho_rc)",
+      "train_mean": 0.05378980999689283,
+      "train_std": 0.032941564707359976,
+      "min_reflectance": -0.03177400305867195,
+      "max_reflectance": 1.26598060131073,
+      "median_reflectance": 0.04951351135969162,
+      "nodata_pixel_count": 304016,
+      "invalid_pixel_percentage": 0.25923652041039075,
+      "resampling_strategy": "Direct 10m grid native"
+    },
+    "b8": {
+      "band_id": "B8",
+      "description": "B8 (NIR 832/833nm, 10m)",
+      "spatial_resolution_m": 10,
+      "data_type": "Float32 (Rayleigh-corrected surface reflectance rho_rc)",
+      "train_mean": 0.03806353609417755,
+      "train_std": 0.057895480043261394,
+      "min_reflectance": -0.007191484794020653,
+      "max_reflectance": 2.3779959678649902,
+      "median_reflectance": 0.023270202800631523,
+      "nodata_pixel_count": 305400,
+      "invalid_pixel_percentage": 0.26041666666666663,
+      "resampling_strategy": "Direct 10m grid native"
+    },
+    "b11": {
+      "band_id": "B11",
+      "description": "B11 (SWIR-1 1610/1614nm, 20m)",
+      "spatial_resolution_m": 20,
+      "data_type": "Float32 (Rayleigh-corrected surface reflectance rho_rc)",
+      "train_mean": 0.02833825177187171,
+      "train_std": 0.04291102003836669,
+      "min_reflectance": -0.00042481120908632874,
+      "max_reflectance": 1.5347752571105957,
+      "median_reflectance": 0.015218795742839575,
+      "nodata_pixel_count": 80229,
+      "invalid_pixel_percentage": 0.27364726588081206,
+      "resampling_strategy": "Bilinear continuous resampling 20m -> 10m (120x120 -> 240x240)"
+    },
+    "b12": {
+      "band_id": "B12",
+      "description": "B12 (SWIR-2 2186/2202nm, 20m)",
+      "spatial_resolution_m": 20,
+      "data_type": "Float32 (Rayleigh-corrected surface reflectance rho_rc)",
+      "train_mean": 0.020597634730908164,
+      "train_std": 0.02975439072053993,
+      "min_reflectance": -0.001747467671521008,
+      "max_reflectance": 1.3858999013900757,
+      "median_reflectance": 0.011462975293397903,
+      "nodata_pixel_count": 81106,
+      "invalid_pixel_percentage": 0.2766385614494652,
+      "resampling_strategy": "Bilinear continuous resampling 20m -> 10m (120x120 -> 240x240)"
+    }
+  }
+}

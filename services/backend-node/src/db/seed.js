@@ -19,26 +19,13 @@ const path = require("path");
 
 const prisma = new PrismaClient();
 
+const { DEMO_SCENARIOS } = require("../data/demo-scenarios");
+
 const DEMO_USER = {
   email: "analyst@oil-spill.dev",
   name: "Lead Marine Analyst",
   role: "ANALYST",
   password: "Password@123",
-};
-
-const DEMO_SCENE = {
-  id: "demo-scene-001",
-  sceneId: "DEMO-SAR-SENTINEL1-MUMBAI-2026-001",
-  satellite: "DEMO-Sentinel-1 (Simulated C-Band SAR)",
-  acquisitionAt: new Date("2026-03-10T12:00:00.000Z"),
-  fileUrl: "https://demo.oil-spill.dev/data/scenes/demo-scene-001.tif",
-  geomWkt: "POLYGON((72.500 18.500, 73.200 18.500, 73.200 19.200, 72.500 19.200, 72.500 18.500))",
-  bandInfo: {
-    polarisation: "VV+VH",
-    resolutionMeters: 10,
-    isDemoScene: true,
-    description: "Deterministic SAR scene covering Mumbai offshore waters (18.9°N, 72.8°E)"
-  },
 };
 
 async function runSeed() {
@@ -60,13 +47,30 @@ async function runSeed() {
   });
   console.log(`[Seed] User ready: ${user.email} (${user.role})`);
 
-  // 2. Seed demo satellite scene
-  const scene = await prisma.satelliteScene.upsert({
-    where: { id: DEMO_SCENE.id },
-    update: {},
-    create: DEMO_SCENE,
-  });
-  console.log(`[Seed] Scene ready: ${scene.sceneId}`);
+  // 2. Seed demo satellite scenes (4 distinct demonstration scenarios)
+  for (const [sceneKey, sc] of Object.entries(DEMO_SCENARIOS)) {
+    const scene = await prisma.satelliteScene.upsert({
+      where: { id: sc.id },
+      update: {
+        sceneId: sc.sceneId,
+        satellite: sc.satellite,
+        acquisitionAt: sc.acquisitionAt,
+        fileUrl: sc.fileUrl,
+        geomWkt: sc.sceneGeomWkt,
+        bandInfo: sc.bandInfo,
+      },
+      create: {
+        id: sc.id,
+        sceneId: sc.sceneId,
+        satellite: sc.satellite,
+        acquisitionAt: sc.acquisitionAt,
+        fileUrl: sc.fileUrl,
+        geomWkt: sc.sceneGeomWkt,
+        bandInfo: sc.bandInfo,
+      },
+    });
+    console.log(`[Seed] Scene ready: ${scene.sceneId} (${sc.id})`);
+  }
 
   // 3. Load demo vessels from JSON
   const vesselsPath = path.join(__dirname, "..", "data", "demo-vessels.json");

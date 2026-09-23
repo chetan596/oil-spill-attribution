@@ -1,0 +1,106 @@
+{
+  "hardware": {
+    "device_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "compute_capability": "12.0",
+    "total_vram_mib": 8150.56,
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8"
+  },
+  "step6_tensor_test": {
+    "status": "PASSED",
+    "device_type": "cuda",
+    "shape": [
+      1024,
+      1024
+    ]
+  },
+  "step7_forward_backward": {
+    "status": "PASSED",
+    "initial_loss": 1.153192,
+    "gradients_valid": true,
+    "optimizer_step": "PASSED"
+  },
+  "step8_amp_test": {
+    "status": "PASSED",
+    "amp_loss": 1.29715,
+    "nan_inf_free": true,
+    "grad_scaler_updated": true
+  },
+  "step9_memory_test": {
+    "batch_size_1": {
+      "status": "PASSED",
+      "peak_allocated_mib": 69.74,
+      "peak_reserved_mib": 82.0,
+      "safe": true
+    },
+    "batch_size_2": {
+      "status": "PASSED",
+      "peak_allocated_mib": 112.18,
+      "peak_reserved_mib": 158.0,
+      "safe": true
+    }
+  },
+  "step10_unet_forward_test": {
+    "status": "PASSED",
+    "input_shape": [
+      1,
+      2,
+      512,
+      512
+    ],
+    "output_shape": [
+      1,
+      2,
+      512,
+      512
+    ],
+    "peak_allocated_mib": 333.0,
+    "peak_reserved_mib": 420.0
+  },
+  "step11_packages": {
+    "status": "PASSED",
+    "details": {
+      "torch": {
+        "status": "PASSED",
+        "version": "2.11.0+cu128"
+      },
+      "torchvision": {
+        "status": "PASSED",
+        "version": "0.26.0+cu128"
+      },
+      "numpy": {
+        "status": "PASSED",
+        "version": "2.4.6"
+      },
+      "rasterio": {
+        "status": "PASSED",
+        "version": "1.4.4"
+      },
+      "geopandas": {
+        "status": "PASSED",
+        "version": "1.1.4"
+      },
+      "shapely": {
+        "status": "PASSED",
+        "version": "2.1.2"
+      },
+      "scipy": {
+        "status": "PASSED",
+        "version": "1.17.1"
+      },
+      "cv2": {
+        "status": "PASSED",
+        "version": "5.0.0"
+      },
+      "fastapi": {
+        "status": "PASSED",
+        "version": "0.141.1"
+      },
+      "pydantic": {
+        "status": "PASSED",
+        "version": "2.13.5"
+      }
+    }
+  },
+  "overall_status": "ALL_CHECKS_PASSED"
+}

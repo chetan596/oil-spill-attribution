@@ -1,0 +1,136 @@
+{
+  "audit_name": "PART 0.5 \u2014 REPRODUCIBLE BASELINE EVALUATION AUDIT",
+  "status": "BASELINE_EVALUATION_COMPLETE",
+  "generated_at": "2026-09-19T05:24:56.332954+00:00",
+  "disclaimer": "These results are empirical benchmark measurements on the available 40-scene subset and are not a production performance guarantee.",
+  "dataset_scope": {
+    "manifest": "ml/datasets/manifest.json",
+    "total_available_scenes": 40,
+    "train_scenes_isolated": 28,
+    "validation_scenes_evaluated": 7,
+    "held_out_test_scenes_evaluated": 5,
+    "part3_test_scenes": [
+      "real_part3_test_00060",
+      "real_part3_test_00062",
+      "real_part3_test_00063",
+      "real_part3_test_00064",
+      "real_part3_test_00080"
+    ],
+    "zenodo_full_dataset_status": "NOT_DOWNLOADED (40-scene verified subset only)"
+  },
+  "models_evaluated": [
+    {
+      "model_id": "unet-dual-pol-sar-v2",
+      "role": "ACTIVE_BASELINE",
+      "version": "V2",
+      "checkpoint": {
+        "path": "ml/model_registry/versions/unet_dual_pol_sar_v2.pth",
+        "sha256": "905ef8e47c1f4b12eb490b33f1726fb91714b3dfcdf5184d8dfd96ec312f0dbd",
+        "size_bytes": 13066175
+      },
+      "preprocessing": {
+        "name": "Historical_Uncorrected_Positive_Mask",
+        "vv_range_db": "NOT_CALIBRATED (clipped > 0)",
+        "vh_range_db": "NOT_CALIBRATED (clipped > 0)",
+        "formula": "arr * (arr > 0)",
+        "channel_order": [
+          "VV",
+          "VH"
+        ],
+        "invalid_handling": "clipped_to_zero",
+        "verified": true,
+        "note": "Historical baseline with negative dB truncation."
+      }
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v4",
+      "role": "EXPERIMENTAL",
+      "version": "V4",
+      "checkpoint": {
+        "path": "ml/model_registry/versions/unet_dual_pol_sar_v4.pth",
+        "sha256": "c1395f1deae819b222f9e1034472d18a84f502fd89d4076981d3291f4af4fd63",
+        "size_bytes": 4367239
+      },
+      "preprocessing": {
+        "name": "Decibel_Calibrated_Clipping",
+        "vv_range_db": [
+          -35.0,
+          -5.0
+        ],
+        "vh_range_db": [
+          -45.0,
+          -15.0
+        ],
+        "formula": "clip((value_db - min_db) / (max_db - min_db), 0, 1)",
+        "channel_order": [
+          "VV",
+          "VH"
+        ],
+        "invalid_handling": "fill_zero",
+        "verified": true
+      }
+    }
+  ],
+  "default_threshold_0_50_comparison": {
+    "validation_split": {
+      "v2": {
+        "tp": 0,
+        "fp": 1256,
+        "fn": 155393,
+        "tn": 29203479,
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fpr": 4.3e-05
+      },
+      "v4": {
+        "tp": 149282,
+        "fp": 7336670,
+        "fn": 6111,
+        "tn": 21868065,
+        "iou": 0.019925,
+        "dice": 0.039072,
+        "precision": 0.019942,
+        "recall": 0.960674,
+        "fpr": 0.251215
+      }
+    },
+    "held_out_test_split": {
+      "v2": {
+        "tp": 0,
+        "fp": 156,
+        "fn": 205257,
+        "tn": 20766107,
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fpr": 8e-06
+      },
+      "v4": {
+        "tp": 76131,
+        "fp": 4184282,
+        "fn": 129126,
+        "tn": 16581981,
+        "iou": 0.017344,
+        "dice": 0.034096,
+        "precision": 0.017869,
+        "recall": 0.370906,
+        "fpr": 0.201494
+      }
+    }
+  },
+  "clean_ocean_fpr_at_0_50": {
+    "validation": {
+      "v2": 0.0,
+      "v4": 0.00246
+    }
+  },
+  "look_alike_fpr_at_0_50": {
+    "validation": {
+      "v2": 0.000125,
+      "v4": 0.868254
+    }
+  }
+}

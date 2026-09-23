@@ -1,0 +1,70 @@
+{
+  "validation": {
+    "VERY_SMALL (<0.1%)": {
+      "sample_count": 13,
+      "foreground_iou": 0.02083628632175762,
+      "dice": 0.040821993890585946,
+      "precision": 0.021058663419525822,
+      "recall": 0.6636568848758465
+    },
+    "SMALL (0.1%-1%)": {
+      "sample_count": 44,
+      "foreground_iou": 0.07768429177923582,
+      "dice": 0.14416892288738953,
+      "precision": 0.08396882874163565,
+      "recall": 0.5093117408906883
+    },
+    "MEDIUM (1%-10%)": {
+      "sample_count": 27,
+      "foreground_iou": 0.35814084410931796,
+      "dice": 0.527398679838968,
+      "precision": 0.43716876815593014,
+      "recall": 0.6645615701171257
+    },
+    "LARGE (10%-50%)": {
+      "sample_count": 35,
+      "foreground_iou": 0.8282295326413011,
+      "dice": 0.9060454585751403,
+      "precision": 0.9365803316269345,
+      "recall": 0.8774387497539952
+    },
+    "VERY_LARGE (>50%)": {
+      "sample_count": 34,
+      "foreground_iou": 0.9455052857268689,
+      "dice": 0.9719894288270868,
+      "precision": 0.9797073302358908,
+      "recall": 0.9643921765575737
+    }
+  },
+  "internal_test": {
+    "VERY_SMALL (<0.1%)": {
+      "sample_count": 11,
+      "foreground_iou": 0.047471300031026994,
+      "dice": 0.09063981042654029,
+      "precision": 0.050779953534683044,
+      "recall": 0.4214876033057851
+    },
+    "SMALL (0.1%-1%)": {
+      "sample_count": 45,
+      "foreground_iou": 0.1323254447352957,
+      "dice": 0.23372334402717493,
+      "precision": 0.13938046872801957,
+      "recall": 0.7233172725945394
+    },
+    "MEDIUM (1%-10%)": {
+      "sample_count": 24,
+      "foreground_iou": 0.21482168855894918,
+      "dice": 0.35366785196891876,
+      "precision": 0.2502143043494465,
+      "recall": 0.602972875875696
+    },
+    "LARGE (10%-50%)": {
+      "sample_count": 0,
+      "status": "INSUFFICIENT_SAMPLE_SIZE"
+    },
+    "VERY_LARGE (>50%)": {
+      "sample_count": 0,
+      "status": "INSUFFICIENT_SAMPLE_SIZE"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "model_id": "unet-dual-pol-sar-v5b-wind",
+  "audit_date": "2026-09-14",
+  "status": "NOT_EVALUATED_STOP_CONDITION_ACTIVE",
+  "sweep_range": {
+    "min": 0.10,
+    "max": 0.50,
+    "step": 0.01
+  },
+  "validation_results": [],
+  "selection_rule": "Deterministic minimization of validation look-alike FPR while maintaining validation Dice >= 3.0%",
+  "stop_condition_explanation": "Threshold sweep not executed because training data alignment is held under Phase 20 Stop Conditions."
+}

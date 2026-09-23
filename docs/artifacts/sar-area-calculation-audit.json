@@ -1,0 +1,16 @@
+{
+  "scene_id": "real_part1_oil_00000",
+  "ground_truth_pixel_count": 14539,
+  "mean_latitude_deg": 55.24197759762258,
+  "angular_resolution_deg": [
+    8.983152841195215e-05,
+    8.983152841195215e-05
+  ],
+  "geodesic_dx_meters_at_latitude": 5.714042148609635,
+  "geodesic_dy_meters_at_latitude": 10.000762654873602,
+  "geodesic_single_pixel_area_m2": 57.14477932818895,
+  "exact_geodesic_total_area_km2": 0.8308279466525391,
+  "naive_flat_10m_square_area_km2": 1.4539,
+  "convergence_factor_cos_lat": 0.5701118018234705,
+  "discrepancy_explanation": "At 55.24\u00b0N latitude, Earth meridians converge by cos(55.24\u00b0) \u2248 0.5701. A pixel of 0.00008983\u00b0 longitude is 5.701 meters wide (not 10.0m). Thus each pixel occupies 57.08 m\u00b2 (not 100 m\u00b2). 14,539 pixels \u00d7 57.08 m\u00b2 = 0.8303 km\u00b2, which matches exact geodesic ellipsoidal polygon area."
+}

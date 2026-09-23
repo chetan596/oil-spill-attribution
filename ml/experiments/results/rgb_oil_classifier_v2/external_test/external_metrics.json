@@ -1,0 +1,48 @@
+{
+  "total_images": 130,
+  "threshold": 0.3,
+  "3_class": {
+    "accuracy": 0.9538461538461539,
+    "macro_precision": 0.95406162464986,
+    "macro_recall": 0.9378670425182053,
+    "macro_f1": 0.9449686307271447,
+    "weighted_precision": 0.9554234001292824,
+    "weighted_recall": 0.9538461538461539,
+    "weighted_f1": 0.9542292760559015
+  },
+  "oil_spill": {
+    "precision": 0.9764705882352941,
+    "recall": 0.9651162790697675,
+    "f1": 0.9707602339181286,
+    "specificity": 0.9545454545454546,
+    "fpr": 0.045454545454545456,
+    "tp": 83,
+    "fp": 2,
+    "tn": 42,
+    "fn": 3
+  },
+  "binary_oil_vs_non_oil": {
+    "accuracy": 0.9615384615384616,
+    "precision": 0.9764705882352941,
+    "recall": 0.9651162790697675,
+    "f1": 0.9707602339181286,
+    "specificity": 0.9545454545454546,
+    "fpr": 0.045454545454545456,
+    "roc_auc": 0.9963002114164905,
+    "pr_auc": 0.9980848519008074
+  },
+  "class_specific_fpr": {
+    "clean_ocean_fpr": 0.0,
+    "clean_fp_count": 0,
+    "clean_total": 11,
+    "look_alike_fpr": 0.06060606060606061,
+    "lookalike_fp_count": 2,
+    "lookalike_total": 33
+  },
+  "transitions": {
+    "clean_to_oil": 0,
+    "lookalike_to_oil": 2,
+    "oil_to_clean": 0,
+    "oil_to_lookalike": 3
+  }
+}

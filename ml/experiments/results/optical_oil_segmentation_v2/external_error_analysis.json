@@ -1,0 +1,9 @@
+{
+  "false_positive_image_count": 2,
+  "false_negative_image_count": 4,
+  "true_positive_image_count": 82,
+  "true_negative_image_count": 42,
+  "false_positive_pixel_count": 157128,
+  "false_positive_rate": 0.026470720530627365,
+  "inspected_error_cases": []
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ModelEvaluationReport",
+  "type": "object",
+  "required": [
+    "evaluation_status",
+    "model_id",
+    "model_version",
+    "model_status",
+    "checkpoint",
+    "preprocessing",
+    "dataset",
+    "device",
+    "thresholds"
+  ],
+  "properties": {
+    "evaluation_status": {
+      "type": "string",
+      "enum": ["COMPLETE", "DATASET_NOT_AVAILABLE", "CHECKPOINT_NOT_FOUND", "FAILED"]
+    },
+    "model_id": {
+      "type": "string"
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "model_status": {
+      "type": "string"
+    },
+    "checkpoint": {
+      "type": "object",
+      "required": ["path", "sha256", "load_status"],
+      "properties": {
+        "path": { "type": ["string", "null"] },
+        "sha256": { "type": ["string", "null"] },
+        "size_bytes": { "type": ["integer", "null"] },
+        "load_status": { "type": "string" }
+      }
+    },
+    "preprocessing": {
+      "type": "object",
+      "required": ["name", "verified"],
+      "properties": {
+        "name": { "type": "string" },
+        "verified": { "type": "boolean" },
+        "vv_range_db": { "type": ["array", "string", "null"] },
+        "vh_range_db": { "type": ["array", "string", "null"] },
+        "formula": { "type": ["string", "null"] },
+        "channel_order": { "type": ["array", "null"] }
+      }
+    },
+    "dataset": {
+      "type": "object",
+      "required": ["name", "split", "availability", "leakage_status"],
+      "properties": {
+        "name": { "type": "string" },
+        "split": { "type": "string" },
+        "availability": { "type": "boolean" },
+        "leakage_status": { "type": "string" },
+        "total_scenes_evaluated": { "type": "integer" },
+        "categories_present": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "device": {
+      "type": "string"
+    },
+    "evaluation_parameters": {
+      "type": "object",
+      "properties": {
+        "tile_size": { "type": "integer" },
+        "stride": { "type": "integer" }
+      }
+    },
+    "thresholds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["threshold"],
+        "properties": {
+          "threshold": { "type": "number" },
+          "iou": { "type": ["number", "null"] },
+          "dice": { "type": ["number", "null"] },
+          "precision": { "type": ["number", "null"] },
+          "recall": { "type": ["number", "null"] },
+          "overall_fpr": { "type": ["number", "null"] },
+          "clean_ocean_fpr": { "type": ["number", "string", "null"] },
+          "look_alike_fpr": { "type": ["number", "string", "null"] },
+          "confusion_matrix": {
+            "type": ["object", "null"],
+            "properties": {
+              "tp": { "type": "integer" },
+              "fp": { "type": "integer" },
+              "fn": { "type": "integer" },
+              "tn": { "type": "integer" }
+            }
+          }
+        }
+      }
+    },
+    "execution_metadata": {
+      "type": "object",
+      "properties": {
+        "evaluated_at": { "type": "string" },
+        "duration_seconds": { "type": "number" }
+      }
+    }
+  }
+}

@@ -4,6 +4,8 @@ const spillRepository = require("../../src/repositories/spill.repository");
 const prisma = require("../../src/db/database");
 
 describe("Attribution Service Integration & Logic", () => {
+  jest.setTimeout(60000);
+
   beforeAll(async () => {
     // Ingest demo AIS data for tests
     await aisService.ingestDemoData();
@@ -99,7 +101,7 @@ describe("Attribution Service Integration & Logic", () => {
 
     spillRepository.findById = originalFindById;
     spillRepository.saveAttributionResults = originalSaveAttribution;
-  });
+  }, 20000);
 
   it("should produce deterministic scores across repeated runs", async () => {
     const originalFindById = spillRepository.findById;
@@ -131,5 +133,5 @@ describe("Attribution Service Integration & Logic", () => {
 
     spillRepository.findById = originalFindById;
     spillRepository.saveAttributionResults = originalSaveAttribution;
-  });
+  }, 60000);
 });

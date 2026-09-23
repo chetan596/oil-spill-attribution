@@ -1,0 +1,23 @@
+{
+  "snapshot_name": "PART_0_7_EXPERIMENT_BASELINE_SNAPSHOT",
+  "frozen_at": "2026-09-19T05:57:00.164279+00:00",
+  "baseline_models": {
+    "v2": {
+      "checkpoint": "ml/model_registry/versions/unet_dual_pol_sar_v2.pth",
+      "sha256": "905ef8e47c1f4b12eb490b33f1726fb91714b3dfcdf5184d8dfd96ec312f0dbd",
+      "role": "ACTIVE_BASELINE"
+    },
+    "v4": {
+      "checkpoint": "ml/model_registry/versions/unet_dual_pol_sar_v4.pth",
+      "sha256": "c1395f1deae819b222f9e1034472d18a84f502fd89d4076981d3291f4af4fd63",
+      "role": "EXPERIMENTAL"
+    }
+  },
+  "dataset_manifest_sha256": "9d4cf3f6755976c72bfdb1172bbc03616efeba8e15869ba893665db506dc621d",
+  "environment": {
+    "device": "cuda:0",
+    "device_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "pytorch_version": "2.11.0+cu128",
+    "cuda_version": "12.8"
+  }
+}

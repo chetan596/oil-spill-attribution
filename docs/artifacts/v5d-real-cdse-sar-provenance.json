@@ -1,0 +1,41 @@
+{
+  "audit_phase": "V5-D_CDSE_SAR_EXTRACTION_AUDIT",
+  "audit_timestamp": "2026-09-14T09:57:00Z",
+  "target_product": {
+    "product_id": "S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG",
+    "product_uuid": "3f5c4ba1-ed70-4065-91b9-2bbeb7ebfb79",
+    "acquisition_start_utc": "2024-02-18T01:03:29.872826Z",
+    "acquisition_end_utc": "2024-02-18T01:03:54.871034Z",
+    "geographic_bounds": [
+      71.124001,
+      17.870647,
+      73.81562,
+      19.813993
+    ],
+    "crs": "EPSG:4326"
+  },
+  "disk_inspection_findings": {
+    "local_safe_archive_present": false,
+    "local_raw_measurement_geotiff_present": false,
+    "staged_tiff_path": "data/raw/satellite/cdse/S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\s1a-iw-grd-dual-pol.tiff",
+    "staged_tiff_classification": "SYNTHETIC/REPRESENTATIVE \u2014 NOT SCIENTIFIC OBSERVATION"
+  },
+  "remote_download_audit": {
+    "cdse_stac_endpoint": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-1-grd/items/S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG",
+    "cdse_download_endpoint": "https://download.dataspace.copernicus.eu/odata/v1/Products(3f5c4ba1-ed70-4065-91b9-2bbeb7ebfb79)/",
+    "authentication_mechanism": "OAuth2 Keycloak Bearer Token via https://identity.dataspace.copernicus.eu",
+    "auth_credentials_configured": false,
+    "technical_blocker": "CDSE_USERNAME and CDSE_PASSWORD are not configured in the workspace environment, blocking automated remote streaming download of the full-swath Level-1 GRD SAFE measurement archive."
+  },
+  "metocean_and_sst_status": {
+    "era5_wind_status": "REAL_ERA5_REANALYSIS_VERIFIED (persisted in data/raw/weather/era5/S1A_IW_20240218T010329_era5_wind.npz)",
+    "noaa_sst_status": "REAL_NOAA_SST_VERIFIED (persisted in data/raw/weather/sst/S1A_IW_20240218_noaa_crw_sst.npz)"
+  },
+  "final_decision": "REAL_CDSE_SAR_EXTRACTION_BLOCKED",
+  "scientific_constraints": {
+    "v5d_supervised_training": "PERMANENTLY HELD",
+    "sealed_test_set": "UNTOUCHED",
+    "performance_claim": "NOT CLAIMED",
+    "model_weights": "NOT CREATED"
+  }
+}

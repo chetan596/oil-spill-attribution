@@ -1,0 +1,120 @@
+{
+  "timestamp": "2026-09-16T10:12:18.263Z",
+  "totalErrors": 0,
+  "consoleLogs": [],
+  "auditRecords": [
+    {
+      "scenario": "demo-scene-001",
+      "name": "demo-scene-001 (Mumbai Offshore)",
+      "isReal": false,
+      "view": "Composite Overlay",
+      "channel": "Default",
+      "images": [
+        {
+          "alt": "Calibrated SAR Raster",
+          "src": "http://localhost:4000/api/v1/scenes/S1A_IW_GRDH_1SDV_20260912T061500_MUMBAI_DEMO/sar-preview?channel=vv_vh",
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "complete": true
+        },
+        {
+          "alt": "U-Net Prediction Mask Overlay",
+          "src": "http://localhost:4000/api/v1/scenes/S1A_IW_GRDH_1SDV_20260912T061500_MUMBAI_DEMO/sar-preview?channel=mask",
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "complete": true
+        }
+      ],
+      "screenshot": "demo-scene-001_01_default.png"
+    },
+    {
+      "scenario": "demo-scene-002",
+      "name": "demo-scene-002 (Gulf of Kutch)",
+      "isReal": false,
+      "view": "Composite Overlay",
+      "channel": "Default",
+      "images": [
+        {
+          "alt": "Calibrated SAR Raster",
+          "src": "http://localhost:4000/api/v1/scenes/S1A_IW_GRDH_1SDV_20260911T120000_KUTCH_DEMO/sar-preview?channel=vv_vh",
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "complete": true
+        },
+        {
+          "alt": "U-Net Prediction Mask Overlay",
+          "src": "http://localhost:4000/api/v1/scenes/S1A_IW_GRDH_1SDV_20260911T120000_KUTCH_DEMO/sar-preview?channel=mask",
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "complete": true
+        }
+      ],
+      "screenshot": "demo-scene-002_01_default.png"
+    },
+    {
+      "scenario": "demo-scene-003",
+      "name": "demo-scene-003 (Paradip Port)",
+      "isReal": false,
+      "view": "Composite Overlay",
+      "channel": "Default",
+      "images": [
+        {
+          "alt": "Calibrated SAR Raster",
+          "src": "http://localhost:4000/api/v1/scenes/S1A_IW_GRDH_1SDV_20260910T183000_PARADIP_DEMO/sar-preview?channel=vv_vh",
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "complete": true
+        },
+        {
+          "alt": "U-Net Prediction Mask Overlay",
+          "src": "http://localhost:4000/api/v1/scenes/S1A_IW_GRDH_1SDV_20260910T183000_PARADIP_DEMO/sar-preview?channel=mask",
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "complete": true
+        }
+      ],
+      "screenshot": "demo-scene-003_01_default.png"
+    },
+    {
+      "scenario": "demo-scene-004",
+      "name": "demo-scene-004 (Goa Coast)",
+      "isReal": false,
+      "view": "Composite Overlay",
+      "channel": "Default",
+      "images": [
+        {
+          "alt": "Calibrated SAR Raster",
+          "src": "http://localhost:4000/api/v1/scenes/S1A_IW_GRDH_1SDV_20260909T084500_GOA_DEMO/sar-preview?channel=vv_vh",
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "complete": true
+        },
+        {
+          "alt": "U-Net Prediction Mask Overlay",
+          "src": "http://localhost:4000/api/v1/scenes/S1A_IW_GRDH_1SDV_20260909T084500_GOA_DEMO/sar-preview?channel=mask",
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "complete": true
+        }
+      ],
+      "screenshot": "demo-scene-004_01_default.png"
+    },
+    {
+      "scenario": "REAL_CDSE",
+      "name": "REAL_CDSE (Copernicus Sentinel-1A)",
+      "isReal": true,
+      "view": "4-Panel Analysis",
+      "channel": "Default",
+      "images": [
+        {
+          "alt": "Real CDSE Sentinel-1 SAR Multi-Panel Analysis",
+          "src": "http://localhost:4000/api/v1/real-scenes/cdse-s1a-mumbai-20240218/sar-preview?channel=vv_vh&view=four_panel",
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "complete": true
+        }
+      ],
+      "screenshot": "REAL_CDSE_01_default.png"
+    }
+  ]
+}

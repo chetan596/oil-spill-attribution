@@ -1,0 +1,44 @@
+{
+  "comparison_threshold": 0.5,
+  "models": {
+    "v6_baseline": {
+      "model_id": "unet-dual-pol-sar-v6",
+      "architecture": "UNet",
+      "loss": "CombinedLoss (fg=5.0)",
+      "parameters": 1080802,
+      "micro_iou": 0.052088,
+      "micro_dice": 0.099018,
+      "precision": 0.054818,
+      "recall": 0.511252,
+      "clean_ocean_fpr": 2.3e-05,
+      "look_alike_fpr": 0.161488,
+      "oil_scenes_iou": 0.466344
+    },
+    "v09c_residual": {
+      "model_id": "unet-dual-pol-sar-v09c-residual",
+      "architecture": "UNetResidual",
+      "loss": "CombinedLoss (fg=5.0)",
+      "parameters": 1114338,
+      "micro_iou": 0.04628,
+      "micro_dice": 0.088466,
+      "precision": 0.048593,
+      "recall": 0.492995,
+      "clean_ocean_fpr": 0.0,
+      "look_alike_fpr": 0.176611,
+      "oil_scenes_iou": 0.440793
+    },
+    "v09d_residual_loss": {
+      "model_id": "unet-dual-pol-sar-v09d-residual-loss",
+      "architecture": "UNetResidual",
+      "loss": "CombinedLoss (fg=10.0)",
+      "parameters": 1114338,
+      "micro_iou": 0.152376,
+      "micro_dice": 0.264455,
+      "precision": 0.207887,
+      "recall": 0.363318,
+      "clean_ocean_fpr": 0.001355,
+      "look_alike_fpr": 0.022586,
+      "oil_scenes_iou": 0.33273
+    }
+  }
+}

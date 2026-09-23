@@ -1,0 +1,88 @@
+{
+  "experiment_id": "EXP_A_FINETUNE_V2_DOMAIN_ADAPTATION",
+  "model_name": "optical-oil-seg-unet-resnet18-v2-finetuned",
+  "base_model": {
+    "architecture": "UNet",
+    "backbone": "resnet18",
+    "checkpoint_path": "ml/model_registry/versions/optical-oil-seg-unet-resnet18-v2.pth",
+    "checkpoint_sha256": "e3d44f7e480daedf42ef5e96fd0e650193f5763f8dac38630fd21a034e5ea398",
+    "parameters": 15903058,
+    "input_channels": 3,
+    "num_classes": 1
+  },
+  "experiment_purpose": "Fine-tune baseline V2 architecture to improve domain robustness across multi-sensor RGB imagery (Sentinel-2 satellite + drone aerial) while maintaining high KERF baseline performance (IoU 0.8588) and preventing vessel/wake confusion.",
+  "data_manifests": {
+    "train_manifest": "ml/training/manifests/train_manifest.json",
+    "val_manifest": "ml/training/manifests/val_manifest.json",
+    "benchmark_manifest": "ml/training/manifests/benchmark_manifest.json",
+    "sealed_test_manifest": "ml/training/manifests/sealed_test_manifest.json"
+  },
+  "class_mapping": {
+    "0": "background_non_oil",
+    "1": "oil_spill"
+  },
+  "preprocessing": {
+    "strategy": "ASPECT_PRESERVING_LETTERBOX",
+    "target_width": 256,
+    "target_height": 256,
+    "interpolation_image": "BILINEAR",
+    "interpolation_mask": "NEAREST",
+    "pad_mode": "CONSTANT",
+    "pad_value": 0,
+    "normalize": {
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225]
+    }
+  },
+  "augmentations": {
+    "horizontal_flip": {"probability": 0.5},
+    "vertical_flip": {"probability": 0.3},
+    "random_rotation": {"probability": 0.4, "max_angle_degrees": 15.0},
+    "color_jitter": {
+      "probability": 0.4,
+      "brightness": 0.15,
+      "contrast": 0.15,
+      "saturation": 0.10
+    },
+    "gaussian_blur": {
+      "probability": 0.2,
+      "kernel_size": 3,
+      "sigma_range": [0.1, 1.0]
+    }
+  },
+  "training_hyperparameters": {
+    "epochs": 40,
+    "batch_size": 16,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "lr_scheduler": "CosineAnnealingLR",
+    "min_lr": 1e-6,
+    "warmup_epochs": 3,
+    "loss_function": "BCEWithLogits_Dice_ComboLoss",
+    "loss_weights": {
+      "bce_weight": 0.5,
+      "dice_weight": 0.5
+    },
+    "gradient_clipping_max_norm": 1.0,
+    "mixed_precision": true,
+    "device": "cuda"
+  },
+  "sampling_strategy": {
+    "pos_neg_balance_ratio": 0.5,
+    "oversample_hard_cases": true,
+    "hard_case_weight_multiplier": 2.0
+  },
+  "validation_metrics": [
+    "IoU",
+    "Dice",
+    "Precision",
+    "Recall",
+    "F1"
+  ],
+  "success_criteria": {
+    "kerf_target_iou": ">= 0.8500",
+    "mados_target_iou": ">= 0.3500",
+    "representative_failure_response": "clean vessel separation with diffuse tail preservation"
+  }
+}

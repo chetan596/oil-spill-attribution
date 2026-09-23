@@ -1,0 +1,1567 @@
+{
+  "model_id": "unet-dual-pol-sar-v4",
+  "validation_sweep": {
+    "model_id": "unet-dual-pol-sar-v4",
+    "model_version": "V4",
+    "split": "val",
+    "scene_count": 7,
+    "checkpoint": {
+      "path": "ml/model_registry/versions/unet_dual_pol_sar_v4.pth",
+      "sha256": "c1395f1deae819b222f9e1034472d18a84f502fd89d4076981d3291f4af4fd63",
+      "size_bytes": 4367239
+    },
+    "preprocessing": {
+      "name": "Decibel_Calibrated_Clipping",
+      "vv_range_db": [
+        -35.0,
+        -5.0
+      ],
+      "vh_range_db": [
+        -45.0,
+        -15.0
+      ],
+      "formula": "clip((value_db - min_db) / (max_db - min_db), 0, 1)",
+      "channel_order": [
+        "VV",
+        "VH"
+      ],
+      "invalid_handling": "fill_zero",
+      "verified": true
+    },
+    "environment": {
+      "device": "cuda:0",
+      "device_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "pytorch_version": "2.11.0+cu128",
+      "cuda_version": "12.8",
+      "tile_size": 512,
+      "stride": 448,
+      "evaluated_at": "2026-09-19T05:33:44.534439+00:00"
+    },
+    "threshold_aggregates": [
+      {
+        "threshold": 0.1,
+        "micro_pixel_aggregate": {
+          "tp": 155393,
+          "fp": 10475242,
+          "fn": 0,
+          "tn": 18729493,
+          "iou": 0.014617,
+          "dice": 0.028814,
+          "precision": 0.014617,
+          "recall": 1.0,
+          "fpr": 0.358683
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.148347,
+          "mean_dice": 0.20471,
+          "mean_precision": 0.148347,
+          "mean_recall": 0.428571,
+          "mean_fpr": 0.357138
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 1981251,
+              "fn": 0,
+              "tn": 6407357
+            },
+            "fpr": 0.236184,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7691856,
+              "fn": 0,
+              "tn": 696752
+            },
+            "fpr": 0.916941,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 155393,
+              "fp": 802135,
+              "fn": 0,
+              "tn": 11625384
+            },
+            "iou": 0.162286,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.15,
+        "micro_pixel_aggregate": {
+          "tp": 155342,
+          "fp": 10138878,
+          "fn": 51,
+          "tn": 19065857,
+          "iou": 0.01509,
+          "dice": 0.029732,
+          "precision": 0.01509,
+          "recall": 0.999672,
+          "fpr": 0.347166
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.161428,
+          "mean_dice": 0.217317,
+          "mean_precision": 0.161429,
+          "mean_recall": 0.428426,
+          "mean_fpr": 0.345619
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 1797699,
+              "fn": 0,
+              "tn": 6590909
+            },
+            "fpr": 0.214302,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7673560,
+              "fn": 0,
+              "tn": 715048
+            },
+            "fpr": 0.91476,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 155342,
+              "fp": 667619,
+              "fn": 51,
+              "tn": 11759900
+            },
+            "iou": 0.188748,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.2,
+        "micro_pixel_aggregate": {
+          "tp": 155064,
+          "fp": 9672204,
+          "fn": 329,
+          "tn": 19532531,
+          "iou": 0.015778,
+          "dice": 0.031067,
+          "precision": 0.015779,
+          "recall": 0.997883,
+          "fpr": 0.331186
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.182426,
+          "mean_dice": 0.236177,
+          "mean_precision": 0.182435,
+          "mean_recall": 0.427631,
+          "mean_fpr": 0.329645
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 1534057,
+              "fn": 0,
+              "tn": 6854551
+            },
+            "fpr": 0.182874,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7642179,
+              "fn": 0,
+              "tn": 746429
+            },
+            "fpr": 0.911019,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 155064,
+              "fp": 495968,
+              "fn": 329,
+              "tn": 11931551
+            },
+            "iou": 0.238062,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.25,
+        "micro_pixel_aggregate": {
+          "tp": 154484,
+          "fp": 9091685,
+          "fn": 909,
+          "tn": 20113050,
+          "iou": 0.016706,
+          "dice": 0.032863,
+          "precision": 0.016708,
+          "recall": 0.99415,
+          "fpr": 0.311309
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.201856,
+          "mean_dice": 0.255693,
+          "mean_precision": 0.201916,
+          "mean_recall": 0.425973,
+          "mean_fpr": 0.309795
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 1174051,
+              "fn": 0,
+              "tn": 7214557
+            },
+            "fpr": 0.139958,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7599928,
+              "fn": 0,
+              "tn": 788680
+            },
+            "fpr": 0.905982,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 154484,
+              "fp": 317706,
+              "fn": 909,
+              "tn": 12109813
+            },
+            "iou": 0.326536,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.3,
+        "micro_pixel_aggregate": {
+          "tp": 153494,
+          "fp": 8188186,
+          "fn": 1899,
+          "tn": 21016549,
+          "iou": 0.018397,
+          "dice": 0.036129,
+          "precision": 0.018401,
+          "recall": 0.987779,
+          "fpr": 0.280372
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.238684,
+          "mean_dice": 0.297712,
+          "mean_precision": 0.239392,
+          "mean_recall": 0.423142,
+          "mean_fpr": 0.278939
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 538308,
+              "fn": 0,
+              "tn": 7850300
+            },
+            "fpr": 0.064171,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7528164,
+              "fn": 0,
+              "tn": 860444
+            },
+            "fpr": 0.897427,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 153494,
+              "fp": 121714,
+              "fn": 1899,
+              "tn": 12305805
+            },
+            "iou": 0.553916,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.35,
+        "micro_pixel_aggregate": {
+          "tp": 152503,
+          "fp": 7638768,
+          "fn": 2890,
+          "tn": 21565967,
+          "iou": 0.019566,
+          "dice": 0.038382,
+          "precision": 0.019574,
+          "recall": 0.981402,
+          "fpr": 0.261559
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.297595,
+          "mean_dice": 0.34699,
+          "mean_precision": 0.302546,
+          "mean_recall": 0.420309,
+          "mean_fpr": 0.260194
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 131943,
+              "fn": 0,
+              "tn": 8256665
+            },
+            "fpr": 0.015729,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7461233,
+              "fn": 0,
+              "tn": 927375
+            },
+            "fpr": 0.889448,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 152503,
+              "fp": 45592,
+              "fn": 2890,
+              "tn": 12381927
+            },
+            "iou": 0.758778,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.4,
+        "micro_pixel_aggregate": {
+          "tp": 151360,
+          "fp": 7470100,
+          "fn": 4033,
+          "tn": 21734635,
+          "iou": 0.019849,
+          "dice": 0.038926,
+          "precision": 0.01986,
+          "recall": 0.974046,
+          "fpr": 0.255784
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.307218,
+          "mean_dice": 0.353195,
+          "mean_precision": 0.315515,
+          "mean_recall": 0.417041,
+          "mean_fpr": 0.254446
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 40704,
+              "fn": 0,
+              "tn": 8347904
+            },
+            "fpr": 0.004852,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7391219,
+              "fn": 0,
+              "tn": 997389
+            },
+            "fpr": 0.881102,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 151360,
+              "fp": 38177,
+              "fn": 4033,
+              "tn": 12389342
+            },
+            "iou": 0.781939,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.45,
+        "micro_pixel_aggregate": {
+          "tp": 150375,
+          "fp": 7401976,
+          "fn": 5018,
+          "tn": 21802759,
+          "iou": 0.019898,
+          "dice": 0.039019,
+          "precision": 0.019911,
+          "recall": 0.967708,
+          "fpr": 0.253451
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.309759,
+          "mean_dice": 0.354844,
+          "mean_precision": 0.32059,
+          "mean_recall": 0.414232,
+          "mean_fpr": 0.252124
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 28680,
+              "fn": 0,
+              "tn": 8359928
+            },
+            "fpr": 0.003419,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7338127,
+              "fn": 0,
+              "tn": 1050481
+            },
+            "fpr": 0.874773,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 150375,
+              "fp": 35169,
+              "fn": 5018,
+              "tn": 12392350
+            },
+            "iou": 0.789113,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.5,
+        "micro_pixel_aggregate": {
+          "tp": 149282,
+          "fp": 7336670,
+          "fn": 6111,
+          "tn": 21868065,
+          "iou": 0.019925,
+          "dice": 0.039072,
+          "precision": 0.019942,
+          "recall": 0.960674,
+          "fpr": 0.251215
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.311345,
+          "mean_dice": 0.355944,
+          "mean_precision": 0.325001,
+          "mean_recall": 0.411124,
+          "mean_fpr": 0.249898
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 20632,
+              "fn": 0,
+              "tn": 8367976
+            },
+            "fpr": 0.00246,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7283441,
+              "fn": 0,
+              "tn": 1105167
+            },
+            "fpr": 0.868254,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 149282,
+              "fp": 32597,
+              "fn": 6111,
+              "tn": 12394922
+            },
+            "iou": 0.794095,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.55,
+        "micro_pixel_aggregate": {
+          "tp": 148186,
+          "fp": 7268334,
+          "fn": 7207,
+          "tn": 21936401,
+          "iou": 0.019961,
+          "dice": 0.039141,
+          "precision": 0.019981,
+          "recall": 0.953621,
+          "fpr": 0.248875
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.312317,
+          "mean_dice": 0.356633,
+          "mean_precision": 0.328819,
+          "mean_recall": 0.408014,
+          "mean_fpr": 0.247569
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 14772,
+              "fn": 0,
+              "tn": 8373836
+            },
+            "fpr": 0.001761,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7223222,
+              "fn": 0,
+              "tn": 1165386
+            },
+            "fpr": 0.861075,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 148186,
+              "fp": 30340,
+              "fn": 7207,
+              "tn": 12397179
+            },
+            "iou": 0.797844,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.6,
+        "micro_pixel_aggregate": {
+          "tp": 147031,
+          "fp": 7194454,
+          "fn": 8362,
+          "tn": 22010281,
+          "iou": 0.020005,
+          "dice": 0.039225,
+          "precision": 0.020027,
+          "recall": 0.946188,
+          "fpr": 0.246345
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.312471,
+          "mean_dice": 0.356704,
+          "mean_precision": 0.331961,
+          "mean_recall": 0.404755,
+          "mean_fpr": 0.245052
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 10531,
+              "fn": 0,
+              "tn": 8378077
+            },
+            "fpr": 0.001255,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 7155501,
+              "fn": 0,
+              "tn": 1233107
+            },
+            "fpr": 0.853002,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 147031,
+              "fp": 28422,
+              "fn": 8362,
+              "tn": 12399097
+            },
+            "iou": 0.799886,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.7,
+        "micro_pixel_aggregate": {
+          "tp": 144273,
+          "fp": 7004086,
+          "fn": 11120,
+          "tn": 22200649,
+          "iou": 0.020151,
+          "dice": 0.039507,
+          "precision": 0.020183,
+          "recall": 0.92844,
+          "fpr": 0.239827
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.311692,
+          "mean_dice": 0.355992,
+          "mean_precision": 0.338123,
+          "mean_recall": 0.397079,
+          "mean_fpr": 0.238566
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 6047,
+              "fn": 0,
+              "tn": 8382561
+            },
+            "fpr": 0.000721,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 6973531,
+              "fn": 0,
+              "tn": 1415077
+            },
+            "fpr": 0.83131,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 144273,
+              "fp": 24508,
+              "fn": 11120,
+              "tn": 12403011
+            },
+            "iou": 0.801958,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.8,
+        "micro_pixel_aggregate": {
+          "tp": 139717,
+          "fp": 6681294,
+          "fn": 15676,
+          "tn": 22523441,
+          "iou": 0.020436,
+          "dice": 0.040054,
+          "precision": 0.020483,
+          "recall": 0.89912,
+          "fpr": 0.228774
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.307135,
+          "mean_dice": 0.352529,
+          "mean_precision": 0.343988,
+          "mean_recall": 0.385068,
+          "mean_fpr": 0.227569
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 3769,
+              "fn": 0,
+              "tn": 8384839
+            },
+            "fpr": 0.000449,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 6657029,
+              "fn": 0,
+              "tn": 1731579
+            },
+            "fpr": 0.79358,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 139717,
+              "fp": 20496,
+              "fn": 15676,
+              "tn": 12407023
+            },
+            "iou": 0.794348,
+            "status": "EVALUATED"
+          }
+        }
+      },
+      {
+        "threshold": 0.9,
+        "micro_pixel_aggregate": {
+          "tp": 128801,
+          "fp": 5922157,
+          "fn": 26592,
+          "tn": 23282578,
+          "iou": 0.021193,
+          "dice": 0.041506,
+          "precision": 0.021286,
+          "recall": 0.828873,
+          "fpr": 0.202781
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.432585,
+          "mean_dice": 0.483095,
+          "mean_precision": 0.349284,
+          "mean_recall": 0.35926,
+          "mean_fpr": 0.201711
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 2294,
+              "fn": 0,
+              "tn": 8386314
+            },
+            "fpr": 0.000273,
+            "status": "EVALUATED"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 5903073,
+              "fn": 0,
+              "tn": 2485535
+            },
+            "fpr": 0.703701,
+            "status": "EVALUATED"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 128801,
+              "fp": 16790,
+              "fn": 26592,
+              "tn": 12410729
+            },
+            "iou": 0.748047,
+            "status": "EVALUATED"
+          }
+        }
+      }
+    ]
+  },
+  "held_out_test_sweep": {
+    "model_id": "unet-dual-pol-sar-v4",
+    "model_version": "V4",
+    "split": "test",
+    "scene_count": 5,
+    "checkpoint": {
+      "path": "ml/model_registry/versions/unet_dual_pol_sar_v4.pth",
+      "sha256": "c1395f1deae819b222f9e1034472d18a84f502fd89d4076981d3291f4af4fd63",
+      "size_bytes": 4367239
+    },
+    "preprocessing": {
+      "name": "Decibel_Calibrated_Clipping",
+      "vv_range_db": [
+        -35.0,
+        -5.0
+      ],
+      "vh_range_db": [
+        -45.0,
+        -15.0
+      ],
+      "formula": "clip((value_db - min_db) / (max_db - min_db), 0, 1)",
+      "channel_order": [
+        "VV",
+        "VH"
+      ],
+      "invalid_handling": "fill_zero",
+      "verified": true
+    },
+    "environment": {
+      "device": "cuda:0",
+      "device_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "pytorch_version": "2.11.0+cu128",
+      "cuda_version": "12.8",
+      "tile_size": 512,
+      "stride": 448,
+      "evaluated_at": "2026-09-19T05:33:48.865958+00:00"
+    },
+    "threshold_aggregates": [
+      {
+        "threshold": 0.1,
+        "micro_pixel_aggregate": {
+          "tp": 186672,
+          "fp": 17701540,
+          "fn": 18585,
+          "tn": 3064723,
+          "iou": 0.010425,
+          "dice": 0.020634,
+          "precision": 0.010435,
+          "recall": 0.909455,
+          "fpr": 0.852418
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.00987,
+          "mean_dice": 0.019294,
+          "mean_precision": 0.009884,
+          "mean_recall": 0.506244,
+          "mean_fpr": 0.85293
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.15,
+        "micro_pixel_aggregate": {
+          "tp": 184926,
+          "fp": 17369936,
+          "fn": 20331,
+          "tn": 3396327,
+          "iou": 0.010522,
+          "dice": 0.020825,
+          "precision": 0.010534,
+          "recall": 0.900949,
+          "fpr": 0.83645
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.009835,
+          "mean_dice": 0.019226,
+          "mean_precision": 0.00985,
+          "mean_recall": 0.497278,
+          "mean_fpr": 0.837062
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.2,
+        "micro_pixel_aggregate": {
+          "tp": 182677,
+          "fp": 16999136,
+          "fn": 22580,
+          "tn": 3767127,
+          "iou": 0.010618,
+          "dice": 0.021013,
+          "precision": 0.010632,
+          "recall": 0.889992,
+          "fpr": 0.818594
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.00979,
+          "mean_dice": 0.01914,
+          "mean_precision": 0.009808,
+          "mean_recall": 0.486751,
+          "mean_fpr": 0.819308
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.25,
+        "micro_pixel_aggregate": {
+          "tp": 170585,
+          "fp": 15388385,
+          "fn": 34672,
+          "tn": 5377878,
+          "iou": 0.010939,
+          "dice": 0.021642,
+          "precision": 0.010964,
+          "recall": 0.83108,
+          "fpr": 0.741028
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.009609,
+          "mean_dice": 0.018794,
+          "mean_precision": 0.009641,
+          "mean_recall": 0.443526,
+          "mean_fpr": 0.742068
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.3,
+        "micro_pixel_aggregate": {
+          "tp": 132817,
+          "fp": 10327851,
+          "fn": 72440,
+          "tn": 10438412,
+          "iou": 0.012609,
+          "dice": 0.024905,
+          "precision": 0.012697,
+          "recall": 0.647077,
+          "fpr": 0.497338
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.008859,
+          "mean_dice": 0.017352,
+          "mean_precision": 0.008945,
+          "mean_recall": 0.305598,
+          "mean_fpr": 0.499396
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.35,
+        "micro_pixel_aggregate": {
+          "tp": 106385,
+          "fp": 7108726,
+          "fn": 98872,
+          "tn": 13657537,
+          "iou": 0.014545,
+          "dice": 0.028674,
+          "precision": 0.014745,
+          "recall": 0.518301,
+          "fpr": 0.342321
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.00802,
+          "mean_dice": 0.015719,
+          "mean_precision": 0.008156,
+          "mean_recall": 0.216664,
+          "mean_fpr": 0.344879
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.4,
+        "micro_pixel_aggregate": {
+          "tp": 89000,
+          "fp": 5284879,
+          "fn": 116257,
+          "tn": 15481384,
+          "iou": 0.016211,
+          "dice": 0.031905,
+          "precision": 0.016562,
+          "recall": 0.433603,
+          "fpr": 0.254494
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.007454,
+          "mean_dice": 0.014609,
+          "mean_precision": 0.007638,
+          "mean_recall": 0.168436,
+          "mean_fpr": 0.257078
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.45,
+        "micro_pixel_aggregate": {
+          "tp": 82119,
+          "fp": 4681313,
+          "fn": 123138,
+          "tn": 16084950,
+          "iou": 0.016805,
+          "dice": 0.033055,
+          "precision": 0.017239,
+          "recall": 0.400079,
+          "fpr": 0.225429
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.007195,
+          "mean_dice": 0.014103,
+          "mean_precision": 0.007403,
+          "mean_recall": 0.151176,
+          "mean_fpr": 0.227964
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.5,
+        "micro_pixel_aggregate": {
+          "tp": 76131,
+          "fp": 4184282,
+          "fn": 129126,
+          "tn": 16581981,
+          "iou": 0.017344,
+          "dice": 0.034096,
+          "precision": 0.017869,
+          "recall": 0.370906,
+          "fpr": 0.201494
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.006882,
+          "mean_dice": 0.013486,
+          "mean_precision": 0.007105,
+          "mean_recall": 0.135937,
+          "mean_fpr": 0.203962
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.55,
+        "micro_pixel_aggregate": {
+          "tp": 70788,
+          "fp": 3733595,
+          "fn": 134469,
+          "tn": 17032668,
+          "iou": 0.017972,
+          "dice": 0.035309,
+          "precision": 0.018607,
+          "recall": 0.344875,
+          "fpr": 0.179791
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.006609,
+          "mean_dice": 0.012945,
+          "mean_precision": 0.006844,
+          "mean_recall": 0.122993,
+          "mean_fpr": 0.182168
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.6,
+        "micro_pixel_aggregate": {
+          "tp": 65759,
+          "fp": 3317783,
+          "fn": 139498,
+          "tn": 17448480,
+          "iou": 0.018665,
+          "dice": 0.036647,
+          "precision": 0.019435,
+          "recall": 0.320374,
+          "fpr": 0.159768
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.006424,
+          "mean_dice": 0.012577,
+          "mean_precision": 0.006679,
+          "mean_recall": 0.111821,
+          "mean_fpr": 0.16203
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.7,
+        "micro_pixel_aggregate": {
+          "tp": 57652,
+          "fp": 2597276,
+          "fn": 147605,
+          "tn": 18168987,
+          "iou": 0.020571,
+          "dice": 0.040313,
+          "precision": 0.021715,
+          "recall": 0.280877,
+          "fpr": 0.125072
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.006305,
+          "mean_dice": 0.012324,
+          "mean_precision": 0.006622,
+          "mean_recall": 0.094611,
+          "mean_fpr": 0.127042
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.8,
+        "micro_pixel_aggregate": {
+          "tp": 51037,
+          "fp": 1961197,
+          "fn": 154220,
+          "tn": 18805066,
+          "iou": 0.023558,
+          "dice": 0.046031,
+          "precision": 0.025363,
+          "recall": 0.248649,
+          "fpr": 0.094441
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.006669,
+          "mean_dice": 0.012996,
+          "mean_precision": 0.00712,
+          "mean_recall": 0.082085,
+          "mean_fpr": 0.096036
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      },
+      {
+        "threshold": 0.9,
+        "micro_pixel_aggregate": {
+          "tp": 45507,
+          "fp": 1378306,
+          "fn": 159750,
+          "tn": 19387957,
+          "iou": 0.028737,
+          "dice": 0.055869,
+          "precision": 0.031961,
+          "recall": 0.221707,
+          "fpr": 0.066372
+        },
+        "macro_scene_average": {
+          "mean_iou": 0.007719,
+          "mean_dice": 0.014956,
+          "mean_precision": 0.008457,
+          "mean_recall": 0.072386,
+          "mean_fpr": 0.067545
+        },
+        "category_breakdown": {
+          "clean_ocean": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "look_alike": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "fpr": "CLASS_NOT_AVAILABLE",
+            "status": "CLASS_NOT_AVAILABLE"
+          },
+          "oil_scenes": {
+            "confusion_matrix": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 0
+            },
+            "iou": 0.0,
+            "status": "CLASS_NOT_AVAILABLE"
+          }
+        }
+      }
+    ]
+  }
+}

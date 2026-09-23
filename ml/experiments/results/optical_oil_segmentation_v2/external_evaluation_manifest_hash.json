@@ -1,0 +1,8 @@
+{
+  "manifest": "segmentation_external_test_manifest.json",
+  "sha256": "848720ec7b8c511905736f403bbdee02cb05374012309056fb63ee8ba5070df9",
+  "evaluated_pairs": 130,
+  "v2_checkpoint_sha256": "e3d44f7e480daedf42ef5e96fd0e650193f5763f8dac38630fd21a034e5ea398",
+  "v1_checkpoint_sha256": "0b6629c1daf94933904b59c50049811fc5110f658b3eee633d509dc145dddc26",
+  "timestamp": "2026-09-20T05:11:13Z"
+}

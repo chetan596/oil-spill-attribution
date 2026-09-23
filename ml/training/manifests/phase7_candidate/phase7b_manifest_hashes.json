@@ -1,0 +1,11 @@
+{
+  "phase7b_train_manifest_sha256": "c1061626013fe23daa1cf443509315887f8bf5c04379c5fcd1330fafddf22fbd",
+  "phase7b_val_manifest_sha256": "3d83ffaa61a54733c91a8f0c641e0efe270935b02cd72e4ed8cf15fea47c85ab",
+  "train_samples": 1059,
+  "train_positive_samples": 353,
+  "train_negative_samples": 706,
+  "val_samples": 264,
+  "val_positive_samples": 88,
+  "val_negative_samples": 176,
+  "seed": 26143
+}

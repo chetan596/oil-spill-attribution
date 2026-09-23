@@ -1,0 +1,28 @@
+{
+  "feasibility_phase": "V5-D",
+  "audit_timestamp": "2026-09-14T09:20:00Z",
+  "sst_source_selected": "NOAA Coral Reef Watch Daily Global 5km Sea Surface Temperature Analysis (CoralTemp v3.1)",
+  "provenance_authority": "NOAA / NESDIS / Coral Reef Watch & NOAA PIFSC OceanWatch",
+  "dataset_url": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1",
+  "variable_name": "analysed_sst",
+  "physical_unit": "degrees_Celsius",
+  "native_spatial_resolution": "0.05 degrees (~5 km at equator)",
+  "native_temporal_resolution": "Daily foundation composite (12:00:00 UTC)",
+  "observation_timestamp_utc": "2024-02-18T12:00:00Z",
+  "sentinel1_acquisition_utc": "2024-02-18T01:03:29.872826Z",
+  "temporal_difference_hours": 10.94,
+  "temporal_tolerance_hours": 24.0,
+  "temporal_alignment_status": "ALIGNED",
+  "feasibility_status": "FEASIBLE_AND_VALIDATED",
+  "exact_normalization_formula": "normalized = clip(sst_celsius, 0.0, 40.0) / 40.0",
+  "proposed_v5d_channels": [
+    "SAR_VV",
+    "SAR_VH",
+    "ERA5_WindSpeed",
+    "ERA5_WindSin",
+    "ERA5_WindCos",
+    "NOAA_CRW_SST"
+  ],
+  "supervised_training_status": "HELD",
+  "scientific_claim_boundary": "V5-D feasibility audit validates only the availability and co-registration of real SST data. No supervised V5-D performance claim is made."
+}

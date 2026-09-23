@@ -1,13 +1,16 @@
 import React from 'react';
 import { CircleMarker, Circle, Popup } from 'react-leaflet';
-import { Target, AlertCircle } from 'lucide-react';
+import { Target } from 'lucide-react';
 
-export default function OriginLayer({ driftData }) {
-  if (!driftData) return null;
+export default function OriginLayer({ origin, driftData, showUncertainty = true }) {
+  const data = origin || driftData;
+  if (!data) return null;
 
-  const lat = Number(driftData.originLat ?? driftData.latitude);
-  const lng = Number(driftData.originLng ?? driftData.longitude);
-  const uncertaintyRadiusKm = Number(driftData.uncertaintyRadiusKm ?? driftData.simulationMeta?.uncertaintyRadiusKm ?? 2.5);
+  const lat = Number(data.originLat ?? data.latitude);
+  const lng = Number(data.originLng ?? data.longitude);
+  const uncertaintyRadiusKm = Number(
+    data.uncertaintyRadiusKm ?? data.uncertaintyKm ?? data.simulationMeta?.uncertaintyRadiusKm ?? 2.5
+  );
 
   if (isNaN(lat) || isNaN(lng)) return null;
 
@@ -15,28 +18,30 @@ export default function OriginLayer({ driftData }) {
 
   return (
     <>
-      {/* Modelled Origin Uncertainty Radius Circle */}
-      <Circle
-        center={[lat, lng]}
-        radius={uncertaintyRadiusMeters}
-        pathOptions={{
-          color: '#f59e0b',
-          weight: 1.5,
-          fillColor: '#f59e0b',
-          fillOpacity: 0.15,
-          dashArray: '4, 4',
-        }}
-      />
+      {/* Modelled Origin Uncertainty Radius Circle (Analysis mode) */}
+      {showUncertainty && (
+        <Circle
+          center={[lat, lng]}
+          radius={uncertaintyRadiusMeters}
+          pathOptions={{
+            color: '#E7A63A',
+            weight: 1.5,
+            fillColor: '#E7A63A',
+            fillOpacity: 0.12,
+            dashArray: '4, 4',
+          }}
+        />
+      )}
 
-      {/* Outer Pulse Ring */}
+      {/* Origin Outer Target Ring */}
       <CircleMarker
         center={[lat, lng]}
-        radius={14}
+        radius={10}
         pathOptions={{
-          color: '#f59e0b',
+          color: '#E7A63A',
           weight: 1.5,
-          fillColor: '#f59e0b',
-          fillOpacity: 0.25,
+          fillColor: '#E7A63A',
+          fillOpacity: 0.15,
           dashArray: '2, 4',
         }}
       />
@@ -44,37 +49,58 @@ export default function OriginLayer({ driftData }) {
       {/* Origin Center Point */}
       <CircleMarker
         center={[lat, lng]}
-        radius={7}
+        radius={6}
         pathOptions={{
-          color: '#ffffff',
+          color: '#FFFFFF',
           weight: 2,
-          fillColor: '#f59e0b',
+          fillColor: '#E7A63A',
           fillOpacity: 1,
         }}
       >
-        <Popup>
-          <div style={{ color: '#f8fafc', padding: '4px', minWidth: '220px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#f59e0b', fontWeight: 700 }}>
-              <Target size={16} />
-              <span>Modelled Spill Origin</span>
+        <Popup autoPan={true} autoPanPadding={[24, 24]} maxWidth={220} minWidth={160}>
+          <div style={{ color: '#FFFFFF', padding: '6px 8px', fontFamily: "'Schibsted Grotesk', -apple-system, sans-serif", minWidth: '220px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '6px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', paddingBottom: '4px', marginBottom: '6px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#E7A63A', fontWeight: 700, fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.03em' }}>
+                <Target size={13} />
+                <span>MODELLED SPILL ORIGIN</span>
+              </div>
+              <span style={{ fontSize: '9px', fontWeight: 700, color: '#E7A63A', background: 'rgba(231, 166, 58, 0.15)', padding: '1px 5px', borderRadius: '3px' }}>
+                MODELLED
+              </span>
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#94a3b8', margin: '3px 0' }}>
-              Classification: <strong style={{ color: '#f59e0b' }}>MODELLED ESTIMATE</strong>
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10.5px', marginBottom: '3px' }}>
+              <span style={{ color: '#B1B6BD' }}>Origin Coordinates:</span>
+              <span style={{ color: '#FFFFFF', fontFamily: 'monospace', fontWeight: 600 }}>
+                {lat.toFixed(4)}°N, {lng.toFixed(4)}°E
+              </span>
             </div>
-            <p style={{ margin: '4px 0', fontSize: '0.82rem', color: '#e2e8f0' }}>
-              <strong>Origin Coords:</strong> {lat.toFixed(4)}°N, {lng.toFixed(4)}°E
-            </p>
-            {driftData.originTimestamp && (
-              <p style={{ margin: '4px 0', fontSize: '0.82rem', color: '#e2e8f0' }}>
-                <strong>Estimated Time:</strong> {new Date(driftData.originTimestamp).toUTCString()}
-              </p>
+
+            {(data.dischargeTime || data.originTimestamp || data.estimatedDischargeTime) && (
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10.5px', marginBottom: '4px' }}>
+                <span style={{ color: '#B1B6BD' }}>Discharge Time:</span>
+                <span style={{ color: '#FFFFFF', fontSize: '10px' }}>
+                  {new Date(data.dischargeTime || data.originTimestamp || data.estimatedDischargeTime).toUTCString()}
+                </span>
+              </div>
             )}
-            <div style={{ margin: '6px 0', padding: '4px 8px', background: '#1e293b', borderRadius: '4px', fontSize: '0.78rem' }}>
-              <strong>Modelled Origin Uncertainty Radius:</strong>{' '}
-              <span style={{ color: '#f59e0b', fontWeight: 700 }}>±{uncertaintyRadiusKm.toFixed(1)} km</span>
+
+            <div style={{ background: 'rgba(231, 166, 58, 0.08)', border: '1px solid rgba(231, 166, 58, 0.25)', borderRadius: '4px', padding: '5px 8px', margin: '5px 0' }}>
+              <div style={{ fontSize: '9.5px', color: '#B1B6BD' }}>Modelled Origin Uncertainty Radius</div>
+              <strong style={{ color: '#E7A63A', fontSize: '11px' }}>&plusmn;{uncertaintyRadiusKm.toFixed(1)} km</strong>
             </div>
-            <div style={{ fontSize: '0.70rem', color: '#94a3b8', marginTop: '4px' }}>
-              Lagrangian Reverse Hindcast ({driftData.timeWindowHours || 24}h backward)
+
+            <div style={{ fontSize: '9px', color: '#828282', marginTop: '4px', lineHeight: 1.3 }}>
+              Engine: {data.engine || data.simulationMeta?.engine || 'BUILT-IN DEMONSTRATION LAGRANGIAN MODEL (24h Reverse Trace)'}
+            </div>
+
+            <div style={{ marginTop: '6px', paddingTop: '4px', borderTop: '1px solid rgba(255, 255, 255, 0.08)' }}>
+              <a
+                href={`/analysis/${data.scenarioId || 'demo-scene-001'}?tab=drift`}
+                style={{ color: '#E7A63A', fontSize: '11px', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '3px' }}
+              >
+                View Drift & Forecast →
+              </a>
             </div>
           </div>
         </Popup>

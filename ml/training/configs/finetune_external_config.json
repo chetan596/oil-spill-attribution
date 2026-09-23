@@ -1,0 +1,96 @@
+{
+  "experiment_id": "EXP_B_FINETUNE_EXTERNAL_RESNET34_UNET",
+  "model_name": "unet-resnet34-oil-finetuned",
+  "base_model": {
+    "architecture": "UNet",
+    "backbone": "resnet34",
+    "checkpoint_path": "ml/external_models/optical/unet_resnet34_oil/model.pth",
+    "checkpoint_sha256": "9aab3f6de981ad73810d3b909603d430aafd94e35f143a2d3e80aa7336521576",
+    "parameters": 24455858,
+    "input_channels": 3,
+    "num_classes": 4,
+    "original_classes": {
+      "0": "Background",
+      "1": "Oil",
+      "2": "Others",
+      "3": "Water"
+    }
+  },
+  "experiment_purpose": "Fine-tune external ResNet-34 U-Net architecture. Phase 4 empirical benchmark demonstrated this architecture achieved the highest recall on drone imagery (0.9609), 0.8151 IoU on KERF, low inference latency (17.56 ms on RTX 5050), and balanced segmentation on the representative failure image (46.58% oil across 3 clean components) without wave oversegmentation.",
+  "data_manifests": {
+    "train_manifest": "ml/training/manifests/train_manifest.json",
+    "val_manifest": "ml/training/manifests/val_manifest.json",
+    "benchmark_manifest": "ml/training/manifests/benchmark_manifest.json",
+    "sealed_test_manifest": "ml/training/manifests/sealed_test_manifest.json"
+  },
+  "class_mapping": {
+    "target_mode": "BINARY_OIL_EXTRACTION",
+    "foreground_classes": [1],
+    "background_classes": [0, 2, 3]
+  },
+  "preprocessing": {
+    "strategy": "ASPECT_PRESERVING_LETTERBOX",
+    "target_width": 512,
+    "target_height": 512,
+    "interpolation_image": "BILINEAR",
+    "interpolation_mask": "NEAREST",
+    "pad_mode": "CONSTANT",
+    "pad_value": 0,
+    "normalize": {
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225]
+    }
+  },
+  "augmentations": {
+    "horizontal_flip": {"probability": 0.5},
+    "vertical_flip": {"probability": 0.3},
+    "random_rotation": {"probability": 0.4, "max_angle_degrees": 15.0},
+    "color_jitter": {
+      "probability": 0.4,
+      "brightness": 0.15,
+      "contrast": 0.15,
+      "saturation": 0.10
+    },
+    "gaussian_blur": {
+      "probability": 0.2,
+      "kernel_size": 3,
+      "sigma_range": [0.1, 1.0]
+    }
+  },
+  "training_hyperparameters": {
+    "epochs": 40,
+    "batch_size": 8,
+    "optimizer": "AdamW",
+    "backbone_learning_rate": 0.00005,
+    "head_learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "lr_scheduler": "CosineAnnealingLR",
+    "min_lr": 1e-6,
+    "warmup_epochs": 3,
+    "loss_function": "Focal_Dice_Loss",
+    "loss_weights": {
+      "focal_weight": 0.5,
+      "dice_weight": 0.5
+    },
+    "gradient_clipping_max_norm": 1.0,
+    "mixed_precision": true,
+    "device": "cuda"
+  },
+  "sampling_strategy": {
+    "pos_neg_balance_ratio": 0.5,
+    "oversample_hard_cases": true,
+    "hard_case_weight_multiplier": 2.0
+  },
+  "validation_metrics": [
+    "IoU",
+    "Dice",
+    "Precision",
+    "Recall",
+    "F1"
+  ],
+  "success_criteria": {
+    "kerf_target_iou": ">= 0.8600",
+    "mados_target_iou": ">= 0.3000",
+    "representative_failure_response": "high recall oil filament extraction with low open water false positive rate"
+  }
+}

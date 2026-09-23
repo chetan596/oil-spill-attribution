@@ -1,0 +1,30 @@
+{
+  "error_categories": {
+    "missed_oil_pixels": {
+      "description": "True oil pixels predicted as background.",
+      "v6_rate": "48.87% FN rate (51.13% recall)",
+      "v09c_rate": "50.70% FN rate (49.30% recall)",
+      "v09d_rate": "63.67% FN rate (36.33% recall at 0.50; 55.26% FN at 0.30)",
+      "analysis": "V09D misses diffuse outer edges of oil slicks where backscatter damping is low-contrast."
+    },
+    "look_alike_false_positives": {
+      "description": "Low-wind calm sea regions predicted as oil.",
+      "v6_rate": "16.15% FPR (1.35M FP pixels)",
+      "v09c_rate": "17.66% FPR (1.48M FP pixels)",
+      "v09b_rate": "6.50% FPR (545K FP pixels)",
+      "v09d_rate": "2.26% FPR (190K FP pixels)",
+      "analysis": "V09D achieves the lowest look-alike false alarm rate across all evaluated models."
+    },
+    "clean_ocean_false_positives": {
+      "description": "False alarms on unpolluted open ocean.",
+      "v6_rate": "0.0023% FPR (289 FP pixels)",
+      "v09c_rate": "0.0000% FPR (0 FP pixels)",
+      "v09d_rate": "0.1355% FPR (17,043 FP pixels)",
+      "analysis": "Clean-ocean false alarm rate remains well below 0.2% for all controlled models."
+    },
+    "boundary_under_segmentation": {
+      "description": "Conservative prediction concentrated on core slick region.",
+      "analysis": "V09D produces tight, coherent detections on the thickest slick core rather than sprawling into ambiguous low-wind boundaries."
+    }
+  }
+}

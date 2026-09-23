@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-19T11:17:27.648672+00:00",
+  "v6_checkpoint": {
+    "path": "ml/model_registry/versions/unet_dual_pol_sar_v6.pth",
+    "sha256": "bcf3d6bc988b910fa67c0c31c89cb2c861da73f0b02159c579cb28e5039920e3",
+    "status": "EXPERIMENTAL_FROZEN_BASELINE"
+  },
+  "dataset_manifest": {
+    "path": "ml/datasets/manifest.json",
+    "sha256": "9d4cf3f6755976c72bfdb1172bbc03616efeba8e15869ba893665db506dc621d",
+    "total_scenes": 40,
+    "train_scenes": 28,
+    "val_scenes": 7,
+    "held_out_test_scenes": 5,
+    "held_out_status": "STRICTLY_LOCKED (Quarantined)"
+  },
+  "hardware_environment": {
+    "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8"
+  },
+  "fixed_experimental_invariants": {
+    "architecture": "UNet(in_channels=2, num_classes=2, base_channels=16, bilinear=True)",
+    "preprocessing": "sentinel1_sigma0_db_v1",
+    "tile_size": 512,
+    "batch_size": 2,
+    "amp": "FP16 GradScaler",
+    "optimizer": "AdamW (lr=1e-4, wd=1e-4)",
+    "seed": 42,
+    "epoch_budget": 30,
+    "early_stopping_patience": 7
+  }
+}

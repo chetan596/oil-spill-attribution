@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-09-19T05:18:58.791965+00:00",
+  "total_samples": 40,
+  "total_scenes": 40,
+  "categories": {
+    "oil": 15,
+    "look_alike": 10,
+    "no_oil": 10,
+    "test_set": 5
+  },
+  "splits": {
+    "train": 28,
+    "validation": 7,
+    "test": 5
+  },
+  "dimensions": {
+    "unique_dimensions": [
+      "2048x2048"
+    ],
+    "common_dimension": "2048x2048"
+  },
+  "sar_numerical_distribution": {
+    "vv_db": {
+      "overall_min": -103.02851867675781,
+      "overall_max": 14.835772514343262,
+      "average_scene_mean": -32.78024272918701,
+      "standard_operating_range_db": [
+        -35.0,
+        -5.0
+      ]
+    },
+    "vh_db": {
+      "overall_min": -86.13795471191406,
+      "overall_max": 25.42379379272461,
+      "average_scene_mean": -21.29555320739746,
+      "standard_operating_range_db": [
+        -45.0,
+        -15.0
+      ]
+    }
+  },
+  "mask_summary": {
+    "scenes_with_masks": 40,
+    "scenes_without_masks": 0,
+    "binary_mask_conformity": true
+  },
+  "leakage_verification": {
+    "scene_leakage": false,
+    "spatial_leakage": "VERIFIED_DISJOINT"
+  }
+}

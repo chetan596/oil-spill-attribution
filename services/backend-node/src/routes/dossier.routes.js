@@ -8,10 +8,22 @@ const router = Router();
 router.use(authenticate);
 
 /**
+ * GET /api/v1/dossier
+ * List all persisted investigation dossiers in archive.
+ */
+router.get("/", dossierController.list);
+
+/**
  * POST /api/v1/dossier/:analysisId/generate
- * Synthesize and persist an Analytical Investigation Dossier.
+ * Synthesize and persist an Analytical Investigation Dossier via Python 0.13F.
  */
 router.post("/:analysisId/generate", dossierController.generate);
+
+/**
+ * GET /api/v1/dossier/:analysisId/pdf
+ * Export a formal investigation report PDF from persisted OG-DOSSIER-V1.
+ */
+router.get("/:analysisId/pdf", dossierController.exportPdf);
 
 /**
  * GET /api/v1/dossier/:analysisId

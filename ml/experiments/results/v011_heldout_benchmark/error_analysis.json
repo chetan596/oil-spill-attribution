@@ -1,0 +1,34 @@
+{
+  "per_scene_diagnostics": [
+    {
+      "scene_id": "real_part3_test_00060",
+      "ground_truth": "0 oil pixels (Negative clean ocean scene)",
+      "v09d_behavior": "2716 false positive pixels (FPR: 0.000648)",
+      "v6_behavior": "1877 false positive pixels (FPR: 0.000448)"
+    },
+    {
+      "scene_id": "real_part3_test_00062",
+      "ground_truth": "24,162 oil pixels (Moderate slick)",
+      "v09d_behavior": "Recall: 0.0000, Prec: 0.0000, IoU: 0.0000",
+      "v6_behavior": "Recall: 0.0000, Prec: 0.0000, IoU: 0.0000"
+    },
+    {
+      "scene_id": "real_part3_test_00063",
+      "ground_truth": "0 oil pixels (Negative clean ocean scene)",
+      "v09d_behavior": "615 false positive pixels (FPR: 0.000147)",
+      "v6_behavior": "1240 false positive pixels (FPR: 0.000296)"
+    },
+    {
+      "scene_id": "real_part3_test_00064",
+      "ground_truth": "52,620 oil pixels (Large slick)",
+      "v09d_behavior": "Recall: 0.0000, Prec: 0.0000, IoU: 0.0000",
+      "v6_behavior": "Recall: 0.0440, Prec: 0.0421, IoU: 0.0220"
+    },
+    {
+      "scene_id": "real_part3_test_00080",
+      "ground_truth": "128,475 oil pixels (Extensive slick)",
+      "v09d_behavior": "Recall: 0.0241, Prec: 0.0574, IoU: 0.0172",
+      "v6_behavior": "Recall: 0.0026, Prec: 0.0157, IoU: 0.0022"
+    }
+  ]
+}

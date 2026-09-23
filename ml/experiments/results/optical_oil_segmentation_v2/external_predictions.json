@@ -1,0 +1,1172 @@
+[
+  {
+    "image_id": "kerf_test_0001",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 7521,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 7504,
+    "mean_oil_confidence": 0.9468889236450195
+  },
+  {
+    "image_id": "kerf_test_0002",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 7192,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 7291,
+    "mean_oil_confidence": 0.9455292224884033
+  },
+  {
+    "image_id": "kerf_test_0003",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 7459,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 7452,
+    "mean_oil_confidence": 0.9463207125663757
+  },
+  {
+    "image_id": "kerf_test_0004",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 11554,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 11091,
+    "mean_oil_confidence": 0.9530255198478699
+  },
+  {
+    "image_id": "kerf_test_0005",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 12287,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 11591,
+    "mean_oil_confidence": 0.9525905251502991
+  },
+  {
+    "image_id": "kerf_test_0009",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 19505,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 18666,
+    "mean_oil_confidence": 0.9581989645957947
+  },
+  {
+    "image_id": "kerf_test_0013",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 24863,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 23109,
+    "mean_oil_confidence": 0.9461230039596558
+  },
+  {
+    "image_id": "kerf_test_0015",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 29661,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 24223,
+    "mean_oil_confidence": 0.9355142116546631
+  },
+  {
+    "image_id": "kerf_test_0019",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 79,
+    "mean_oil_confidence": 0.8189873099327087
+  },
+  {
+    "image_id": "kerf_test_0020",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 39998,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 32501,
+    "mean_oil_confidence": 0.9324858784675598
+  },
+  {
+    "image_id": "kerf_test_0021",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 34720,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 35372,
+    "mean_oil_confidence": 0.9324111342430115
+  },
+  {
+    "image_id": "kerf_test_0022",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0023",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 32957,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 31501,
+    "mean_oil_confidence": 0.9729948043823242
+  },
+  {
+    "image_id": "kerf_test_0024",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 33487,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 32218,
+    "mean_oil_confidence": 0.97638338804245
+  },
+  {
+    "image_id": "kerf_test_0025",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0026",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 31095,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 32078,
+    "mean_oil_confidence": 0.9659491777420044
+  },
+  {
+    "image_id": "kerf_test_0027",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 28610,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 24520,
+    "mean_oil_confidence": 0.9590854644775391
+  },
+  {
+    "image_id": "kerf_test_0028",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 3783,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 4503,
+    "mean_oil_confidence": 0.9256272912025452
+  },
+  {
+    "image_id": "kerf_test_0029",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 4031,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 4601,
+    "mean_oil_confidence": 0.9280411005020142
+  },
+  {
+    "image_id": "kerf_test_0030",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 15956,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 12337,
+    "mean_oil_confidence": 0.9392526745796204
+  },
+  {
+    "image_id": "kerf_test_0031",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0032",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 2066,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 2227,
+    "mean_oil_confidence": 0.938023567199707
+  },
+  {
+    "image_id": "kerf_test_0033",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 11548,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 10267,
+    "mean_oil_confidence": 0.9341778755187988
+  },
+  {
+    "image_id": "kerf_test_0034",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 9345,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 8000,
+    "mean_oil_confidence": 0.9338184595108032
+  },
+  {
+    "image_id": "kerf_test_0035",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 6441,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 7732,
+    "mean_oil_confidence": 0.9234225153923035
+  },
+  {
+    "image_id": "kerf_test_0036",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 11985,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 12534,
+    "mean_oil_confidence": 0.9491642117500305
+  },
+  {
+    "image_id": "kerf_test_0037",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 7377,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 10855,
+    "mean_oil_confidence": 0.9311298131942749
+  },
+  {
+    "image_id": "kerf_test_0038",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 16816,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 35122,
+    "mean_oil_confidence": 0.9471678733825684
+  },
+  {
+    "image_id": "kerf_test_0043",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 10899,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 12728,
+    "mean_oil_confidence": 0.938387930393219
+  },
+  {
+    "image_id": "kerf_test_0045",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 9895,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 10197,
+    "mean_oil_confidence": 0.954184889793396
+  },
+  {
+    "image_id": "kerf_test_0046",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 9559,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 9734,
+    "mean_oil_confidence": 0.9553480744361877
+  },
+  {
+    "image_id": "kerf_test_0047",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 7438,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 7764,
+    "mean_oil_confidence": 0.9465375542640686
+  },
+  {
+    "image_id": "kerf_test_0048",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 9883,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 11224,
+    "mean_oil_confidence": 0.9383032321929932
+  },
+  {
+    "image_id": "kerf_test_0049",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 8618,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 10352,
+    "mean_oil_confidence": 0.9295228123664856
+  },
+  {
+    "image_id": "kerf_test_0050",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 12460,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 11443,
+    "mean_oil_confidence": 0.9469221234321594
+  },
+  {
+    "image_id": "kerf_test_0051",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 2096,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 834,
+    "mean_oil_confidence": 0.8984089493751526
+  },
+  {
+    "image_id": "kerf_test_0052",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 3352,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0053",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 504,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0054",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0055",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 21419,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 13073,
+    "mean_oil_confidence": 0.8942210078239441
+  },
+  {
+    "image_id": "kerf_test_0056",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 18783,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 9565,
+    "mean_oil_confidence": 0.9057732224464417
+  },
+  {
+    "image_id": "kerf_test_0058",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0059",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0060",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0061",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0062",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0063",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0064",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0065",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0066",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0067",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0068",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0069",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0070",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0071",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0072",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0074",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0075",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0077",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0078",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0080",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0081",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0082",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0085",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0086",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0087",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0088",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0089",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0090",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0091",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 26262,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 29585,
+    "mean_oil_confidence": 0.9510783553123474
+  },
+  {
+    "image_id": "kerf_test_0092",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 25601,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 36300,
+    "mean_oil_confidence": 0.9453936219215393
+  },
+  {
+    "image_id": "kerf_test_0093",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 22170,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 19478,
+    "mean_oil_confidence": 0.9462997913360596
+  },
+  {
+    "image_id": "kerf_test_0094",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 38029,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 37500,
+    "mean_oil_confidence": 0.9532904028892517
+  },
+  {
+    "image_id": "kerf_test_0096",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0097",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 65274,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64964,
+    "mean_oil_confidence": 0.9780347347259521
+  },
+  {
+    "image_id": "kerf_test_0098",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 61726,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 62227,
+    "mean_oil_confidence": 0.9676939845085144
+  },
+  {
+    "image_id": "kerf_test_0099",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 65249,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64967,
+    "mean_oil_confidence": 0.9750524759292603
+  },
+  {
+    "image_id": "kerf_test_0100",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 64630,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64888,
+    "mean_oil_confidence": 0.9751725792884827
+  },
+  {
+    "image_id": "kerf_test_0103",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 23351,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 22616,
+    "mean_oil_confidence": 0.975683867931366
+  },
+  {
+    "image_id": "kerf_test_0109",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 56635,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 56405,
+    "mean_oil_confidence": 0.9495527744293213
+  },
+  {
+    "image_id": "kerf_test_0113",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 60059,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 59549,
+    "mean_oil_confidence": 0.9691280126571655
+  },
+  {
+    "image_id": "kerf_test_0115",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 32854,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 31415,
+    "mean_oil_confidence": 0.9677020311355591
+  },
+  {
+    "image_id": "kerf_test_0120",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 16878,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 17355,
+    "mean_oil_confidence": 0.9659079313278198
+  },
+  {
+    "image_id": "kerf_test_0121",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 20777,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 20770,
+    "mean_oil_confidence": 0.9692714214324951
+  },
+  {
+    "image_id": "kerf_test_0122",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 32556,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 31235,
+    "mean_oil_confidence": 0.9621134996414185
+  },
+  {
+    "image_id": "kerf_test_0123",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 32961,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 33162,
+    "mean_oil_confidence": 0.9592324495315552
+  },
+  {
+    "image_id": "kerf_test_0126",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 431,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0127",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 58948,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 59145,
+    "mean_oil_confidence": 0.9642589092254639
+  },
+  {
+    "image_id": "kerf_test_0128",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 64305,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64512,
+    "mean_oil_confidence": 0.9673189520835876
+  },
+  {
+    "image_id": "kerf_test_0129",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 64904,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64987,
+    "mean_oil_confidence": 0.9763294458389282
+  },
+  {
+    "image_id": "kerf_test_0130",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 64903,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64955,
+    "mean_oil_confidence": 0.9757492542266846
+  },
+  {
+    "image_id": "kerf_test_0131",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 64999,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64977,
+    "mean_oil_confidence": 0.9761325120925903
+  },
+  {
+    "image_id": "kerf_test_0132",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 65153,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64945,
+    "mean_oil_confidence": 0.9751592874526978
+  },
+  {
+    "image_id": "kerf_test_0133",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 65125,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64931,
+    "mean_oil_confidence": 0.9745057225227356
+  },
+  {
+    "image_id": "kerf_test_0134",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 64599,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64951,
+    "mean_oil_confidence": 0.9747419953346252
+  },
+  {
+    "image_id": "kerf_test_0135",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 65071,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64937,
+    "mean_oil_confidence": 0.9751594662666321
+  },
+  {
+    "image_id": "kerf_test_0136",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 64902,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64916,
+    "mean_oil_confidence": 0.9740363955497742
+  },
+  {
+    "image_id": "kerf_test_0137",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 64288,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 64899,
+    "mean_oil_confidence": 0.9715834856033325
+  },
+  {
+    "image_id": "kerf_test_0139",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 49399,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 54785,
+    "mean_oil_confidence": 0.9501388669013977
+  },
+  {
+    "image_id": "kerf_test_0140",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 49715,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 57580,
+    "mean_oil_confidence": 0.9485111236572266
+  },
+  {
+    "image_id": "kerf_test_0142",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0150",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 17018,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 14860,
+    "mean_oil_confidence": 0.9337227940559387
+  },
+  {
+    "image_id": "kerf_test_0151",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 17842,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 12672,
+    "mean_oil_confidence": 0.9206939339637756
+  },
+  {
+    "image_id": "kerf_test_0152",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 8979,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 8846,
+    "mean_oil_confidence": 0.9327822327613831
+  },
+  {
+    "image_id": "kerf_test_0162",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0167",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0169",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0173",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0176",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 37683,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 36683,
+    "mean_oil_confidence": 0.9665035605430603
+  },
+  {
+    "image_id": "kerf_test_0185",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0190",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0192",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 7224,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 7134,
+    "mean_oil_confidence": 0.947868287563324
+  },
+  {
+    "image_id": "kerf_test_0194",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 7679,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 6743,
+    "mean_oil_confidence": 0.9480741620063782
+  },
+  {
+    "image_id": "kerf_test_0197",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 7633,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 6962,
+    "mean_oil_confidence": 0.9468182921409607
+  },
+  {
+    "image_id": "kerf_test_0198",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 8255,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 7206,
+    "mean_oil_confidence": 0.9441854357719421
+  },
+  {
+    "image_id": "kerf_test_0199",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 47570,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 47873,
+    "mean_oil_confidence": 0.9690476059913635
+  },
+  {
+    "image_id": "kerf_test_0200",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 47564,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 47836,
+    "mean_oil_confidence": 0.9664739966392517
+  },
+  {
+    "image_id": "kerf_test_0201",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 63245,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 63584,
+    "mean_oil_confidence": 0.96564781665802
+  },
+  {
+    "image_id": "kerf_test_0204",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 22993,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 16477,
+    "mean_oil_confidence": 0.9386216402053833
+  },
+  {
+    "image_id": "kerf_test_0205",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 20426,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 18007,
+    "mean_oil_confidence": 0.9238436222076416
+  },
+  {
+    "image_id": "kerf_test_0208",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0243",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 23954,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 22973,
+    "mean_oil_confidence": 0.9625086188316345
+  },
+  {
+    "image_id": "kerf_test_0245",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 25879,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 24362,
+    "mean_oil_confidence": 0.9662970304489136
+  },
+  {
+    "image_id": "kerf_test_0246",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 48987,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 42411,
+    "mean_oil_confidence": 0.9492703080177307
+  },
+  {
+    "image_id": "kerf_test_0247",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 49963,
+    "mean_oil_confidence": 0.9355552196502686
+  },
+  {
+    "image_id": "kerf_test_0248",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 62026,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 59870,
+    "mean_oil_confidence": 0.9669326543807983
+  },
+  {
+    "image_id": "kerf_test_0249",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 64764,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 63087,
+    "mean_oil_confidence": 0.9699031710624695
+  },
+  {
+    "image_id": "kerf_test_0250",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 65249,
+    "predicted_oil_positive": true,
+    "predicted_oil_pixels": 62105,
+    "mean_oil_confidence": 0.9722062945365906
+  },
+  {
+    "image_id": "kerf_test_0251",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": true,
+    "ground_truth_oil_pixels": 1876,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  },
+  {
+    "image_id": "kerf_test_0252",
+    "source_dataset": "Kerf_Drone_Oil_Spill",
+    "ground_truth_oil_positive": false,
+    "ground_truth_oil_pixels": 0,
+    "predicted_oil_positive": false,
+    "predicted_oil_pixels": 0,
+    "mean_oil_confidence": 0.0
+  }
+]

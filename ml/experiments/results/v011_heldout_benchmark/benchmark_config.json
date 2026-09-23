@@ -1,0 +1,18 @@
+{
+  "benchmark_id": "PART_0_11_FORMAL_HELDOUT_BENCHMARK",
+  "dataset_split": "test",
+  "held_out_scenes": [
+    "real_part3_test_00060",
+    "real_part3_test_00062",
+    "real_part3_test_00063",
+    "real_part3_test_00064",
+    "real_part3_test_00080"
+  ],
+  "preregistered_operating_threshold": 0.5,
+  "executed_at": "2026-09-19T16:39:41.926168+00:00",
+  "hardware": {
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "torch_version": "2.11.0+cu128"
+  }
+}

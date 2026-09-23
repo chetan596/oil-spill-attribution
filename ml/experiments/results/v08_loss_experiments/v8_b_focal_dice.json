@@ -1,0 +1,857 @@
+{
+  "experiment_id": "V8_B_FOCAL_DICE",
+  "model_id": "unet-dual-pol-sar-v8b",
+  "status": "EXPERIMENTAL",
+  "loss_name": "FocalDiceLoss",
+  "loss_parameters": {
+    "alpha": 0.25,
+    "gamma": 2.0,
+    "dice_weight": 1.0
+  },
+  "description": "Focal Loss (alpha=0.25, gamma=2.0) + 1.0*SoftDice to suppress easy ocean background gradients.",
+  "architecture": "UNet(in_channels=2, num_classes=2, base_channels=16, bilinear=True)",
+  "preprocessing": "sentinel1_sigma0_db_v1",
+  "dataset_manifest_hash": "9d4cf3f6755976c72bfdb1172bbc03616efeba8e15869ba893665db506dc621d",
+  "seed": 42,
+  "optimizer": "AdamW (lr=1e-4, wd=1e-4)",
+  "total_epochs_trained": 11,
+  "best_epoch": 4,
+  "best_validation_dice_patch": 0.043026,
+  "total_training_duration_seconds": 144.44,
+  "checkpoint": {
+    "path": "ml/model_registry/versions/unet_dual_pol_sar_v8b.pth",
+    "sha256": "7171dd4983db09df47581b6d27aa0f9d218b84753e89973ffe15b34d1b57e455",
+    "size_bytes": 13070043
+  },
+  "last_checkpoint": {
+    "path": "ml/model_registry/versions/unet_dual_pol_sar_v8b_last.pth",
+    "sha256": "cc34da175b079a4d1aa2d4c82af8d94912fd93b7a272dba073eb6d9eb0ab2d29",
+    "size_bytes": 13071207
+  },
+  "validation_evaluation": {
+    "validation_scenes_count": 7,
+    "held_out_test_status": "STRICTLY_LOCKED",
+    "threshold_aggregates": [
+      {
+        "threshold": 0.3,
+        "micro_pixel_aggregate": {
+          "tp": 84941,
+          "fp": 4166191,
+          "fn": 70452,
+          "tn": 25038544,
+          "iou": 0.019655,
+          "dice": 0.038552,
+          "precision": 0.019981,
+          "recall": 0.546621,
+          "fpr": 0.142655
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 7e-06,
+          "look_alike_fpr": 0.496458,
+          "oil_scenes_iou": 0.541253,
+          "oil_scenes_dice": 0.702355
+        }
+      },
+      {
+        "threshold": 0.35,
+        "micro_pixel_aggregate": {
+          "tp": 78230,
+          "fp": 3730111,
+          "fn": 77163,
+          "tn": 25474624,
+          "iou": 0.020134,
+          "dice": 0.039473,
+          "precision": 0.020542,
+          "recall": 0.503433,
+          "fpr": 0.127723
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.0,
+          "look_alike_fpr": 0.444554,
+          "oil_scenes_iou": 0.500473,
+          "oil_scenes_dice": 0.667087
+        }
+      },
+      {
+        "threshold": 0.4,
+        "micro_pixel_aggregate": {
+          "tp": 73832,
+          "fp": 3386690,
+          "fn": 81561,
+          "tn": 25818045,
+          "iou": 0.020844,
+          "dice": 0.040837,
+          "precision": 0.021336,
+          "recall": 0.475131,
+          "fpr": 0.115964
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.0,
+          "look_alike_fpr": 0.403655,
+          "oil_scenes_iou": 0.473334,
+          "oil_scenes_dice": 0.642534
+        }
+      },
+      {
+        "threshold": 0.45,
+        "micro_pixel_aggregate": {
+          "tp": 69892,
+          "fp": 3093005,
+          "fn": 85501,
+          "tn": 26111730,
+          "iou": 0.021516,
+          "dice": 0.042125,
+          "precision": 0.022097,
+          "recall": 0.449776,
+          "fpr": 0.105908
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.0,
+          "look_alike_fpr": 0.368681,
+          "oil_scenes_iou": 0.448944,
+          "oil_scenes_dice": 0.619684
+        }
+      },
+      {
+        "threshold": 0.5,
+        "micro_pixel_aggregate": {
+          "tp": 65437,
+          "fp": 2807170,
+          "fn": 89956,
+          "tn": 26397565,
+          "iou": 0.022088,
+          "dice": 0.043221,
+          "precision": 0.02278,
+          "recall": 0.421106,
+          "fpr": 0.09612
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.0,
+          "look_alike_fpr": 0.334634,
+          "oil_scenes_iou": 0.420952,
+          "oil_scenes_dice": 0.592493
+        }
+      },
+      {
+        "threshold": 0.6,
+        "micro_pixel_aggregate": {
+          "tp": 53345,
+          "fp": 2165805,
+          "fn": 102048,
+          "tn": 27038930,
+          "iou": 0.022982,
+          "dice": 0.044931,
+          "precision": 0.024038,
+          "recall": 0.343291,
+          "fpr": 0.074159
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.0,
+          "look_alike_fpr": 0.258184,
+          "oil_scenes_iou": 0.343289,
+          "oil_scenes_dice": 0.511117
+        }
+      }
+    ],
+    "scene_breakdowns": [
+      {
+        "scene_id": "real_part1_oil_00006",
+        "category": "oil",
+        "ground_truth_pixels": 89378,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 79551,
+            "fp": 1500,
+            "fn": 9827,
+            "tn": 4103426,
+            "iou": 0.8753603732476507,
+            "dice": 0.933538306274167,
+            "precision": 0.9814931339526964,
+            "recall": 0.8900512430351988,
+            "fpr": 0.0003654146262319954
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 76275,
+            "fp": 918,
+            "fn": 13103,
+            "tn": 4104008,
+            "iou": 0.8447218038451315,
+            "dice": 0.915825683942583,
+            "precision": 0.9881077299755159,
+            "recall": 0.8533979279017208,
+            "fpr": 0.0002236337512539812
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 73186,
+            "fp": 590,
+            "fn": 16192,
+            "tn": 4104336,
+            "iou": 0.8134670104926196,
+            "dice": 0.8971401252804099,
+            "precision": 0.9920028193450444,
+            "recall": 0.8188368502316006,
+            "fpr": 0.00014372975298458486
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 69638,
+            "fp": 288,
+            "fn": 19740,
+            "tn": 4104638,
+            "iou": 0.7766377445185466,
+            "dice": 0.8742781097775323,
+            "precision": 0.9958813602951692,
+            "recall": 0.7791402806059656,
+            "fpr": 7.015960823654313e-05
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 65365,
+            "fp": 57,
+            "fn": 24013,
+            "tn": 4104869,
+            "iou": 0.7308659920612736,
+            "dice": 0.8445090439276486,
+            "precision": 0.9991287334535783,
+            "recall": 0.7313320951464566,
+            "fpr": 1.3885755796815825e-05
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 53345,
+            "fp": 1,
+            "fn": 36033,
+            "tn": 4104925,
+            "iou": 0.5968404211280055,
+            "dice": 0.7475266948796279,
+            "precision": 0.9999812544520676,
+            "recall": 0.5968470988386404,
+            "fpr": 2.4360975082133025e-07
+          }
+        }
+      },
+      {
+        "scene_id": "real_part1_oil_00011",
+        "category": "oil",
+        "ground_truth_pixels": 49967,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 5274,
+            "fp": 35,
+            "fn": 44693,
+            "tn": 4144302,
+            "iou": 0.10547578096876124,
+            "dice": 0.19082422751284464,
+            "precision": 0.9934074213599547,
+            "recall": 0.1055496627774331,
+            "fpr": 8.445259157254828e-06
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 1944,
+            "fp": 0,
+            "fn": 48023,
+            "tn": 4144337,
+            "iou": 0.038905677747313225,
+            "dice": 0.07489742058523241,
+            "precision": 1.0,
+            "recall": 0.038905677747313225,
+            "fpr": 0.0
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 646,
+            "fp": 0,
+            "fn": 49321,
+            "tn": 4144337,
+            "iou": 0.012928532831668902,
+            "dice": 0.02552703850789323,
+            "precision": 1.0,
+            "recall": 0.012928532831668902,
+            "fpr": 0.0
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 254,
+            "fp": 0,
+            "fn": 49713,
+            "tn": 4144337,
+            "iou": 0.005083355014309445,
+            "dice": 0.01011529041635969,
+            "precision": 1.0,
+            "recall": 0.005083355014309445,
+            "fpr": 0.0
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 72,
+            "fp": 0,
+            "fn": 49895,
+            "tn": 4144337,
+            "iou": 0.0014409510276782677,
+            "dice": 0.0028777553508263554,
+            "precision": 1.0,
+            "recall": 0.0014409510276782677,
+            "fpr": 0.0
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 0,
+            "fp": 0,
+            "fn": 49967,
+            "tn": 4144337,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          }
+        }
+      },
+      {
+        "scene_id": "real_part1_oil_00204",
+        "category": "oil",
+        "ground_truth_pixels": 16048,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 116,
+            "fp": 6,
+            "fn": 15932,
+            "tn": 4178250,
+            "iou": 0.007225613554254391,
+            "dice": 0.014347557204700061,
+            "precision": 0.9508196721311475,
+            "recall": 0.007228315054835494,
+            "fpr": 1.4360058359277173e-06
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 11,
+            "fp": 1,
+            "fn": 16037,
+            "tn": 4178255,
+            "iou": 0.0006854009595613434,
+            "dice": 0.0013698630136986301,
+            "precision": 0.9166666666666666,
+            "recall": 0.0006854436689930209,
+            "fpr": 2.393343059879529e-07
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 0,
+            "fp": 0,
+            "fn": 16048,
+            "tn": 4178256,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 0,
+            "fp": 0,
+            "fn": 16048,
+            "tn": 4178256,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 0,
+            "fn": 16048,
+            "tn": 4178256,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 0,
+            "fp": 0,
+            "fn": 16048,
+            "tn": 4178256,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          }
+        }
+      },
+      {
+        "scene_id": "real_part2_lookalike_00004",
+        "category": "look_alike",
+        "ground_truth_pixels": 0,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 0,
+            "fp": 3297132,
+            "fn": 0,
+            "tn": 897172,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.786097526550293
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 0,
+            "fp": 3076957,
+            "fn": 0,
+            "tn": 1117347,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.7336037158966064
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 0,
+            "fp": 2883240,
+            "fn": 0,
+            "tn": 1311064,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.6874179840087891
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 0,
+            "fp": 2699681,
+            "fn": 0,
+            "tn": 1494623,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.6436541080474854
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 2507227,
+            "fn": 0,
+            "tn": 1687077,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.5977694988250732
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 0,
+            "fp": 2016175,
+            "fn": 0,
+            "tn": 2178129,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.4806935787200928
+          }
+        }
+      },
+      {
+        "scene_id": "real_part2_lookalike_00090",
+        "category": "look_alike",
+        "ground_truth_pixels": 0,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 0,
+            "fp": 867456,
+            "fn": 0,
+            "tn": 3326848,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.206817626953125
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 0,
+            "fp": 652233,
+            "fn": 0,
+            "tn": 3542071,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.15550446510314941
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 0,
+            "fp": 502860,
+            "fn": 0,
+            "tn": 3691444,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.11989116668701172
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 0,
+            "fp": 393036,
+            "fn": 0,
+            "tn": 3801268,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.09370708465576172
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 299886,
+            "fn": 0,
+            "tn": 3894418,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.07149839401245117
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 0,
+            "fp": 149629,
+            "fn": 0,
+            "tn": 4044675,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.035674333572387695
+          }
+        }
+      },
+      {
+        "scene_id": "real_part2_no_oil_00004",
+        "category": "no_oil",
+        "ground_truth_pixels": 0,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 0,
+            "fp": 60,
+            "fn": 0,
+            "tn": 4194244,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 1.430511474609375e-05
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "tn": 4194303,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 2.384185791015625e-07
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          }
+        }
+      },
+      {
+        "scene_id": "real_part2_no_oil_00017",
+        "category": "no_oil",
+        "ground_truth_pixels": 0,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 0,
+            "fp": 2,
+            "fn": 0,
+            "tn": 4194302,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 4.76837158203125e-07
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "tn": 4194303,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 2.384185791015625e-07
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.013318,
+      "val_loss": 1.011352,
+      "val_dice": 0.022725,
+      "val_iou": 0.011493,
+      "val_precision": 0.013982,
+      "val_recall": 0.060659,
+      "val_fpr": 0.022762,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.78,
+      "peak_cuda_vram_mb": 464.63
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.993726,
+      "val_loss": 1.219726,
+      "val_dice": 0.039392,
+      "val_iou": 0.020092,
+      "val_precision": 0.020265,
+      "val_recall": 0.701177,
+      "val_fpr": 0.180368,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.49,
+      "peak_cuda_vram_mb": 464.63
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.987058,
+      "val_loss": 1.073461,
+      "val_dice": 0.039877,
+      "val_iou": 0.020344,
+      "val_precision": 0.020705,
+      "val_recall": 0.538892,
+      "val_fpr": 0.135622,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.74,
+      "peak_cuda_vram_mb": 464.63
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.979974,
+      "val_loss": 1.034477,
+      "val_dice": 0.043026,
+      "val_iou": 0.021986,
+      "val_precision": 0.022694,
+      "val_recall": 0.41332,
+      "val_fpr": 0.094707,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.3,
+      "peak_cuda_vram_mb": 464.63
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.976822,
+      "val_loss": 1.388872,
+      "val_dice": 0.024591,
+      "val_iou": 0.012449,
+      "val_precision": 0.012541,
+      "val_recall": 0.627448,
+      "val_fpr": 0.262866,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 12.64,
+      "peak_cuda_vram_mb": 464.63
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.968935,
+      "val_loss": 1.061509,
+      "val_dice": 0.039116,
+      "val_iou": 0.019948,
+      "val_precision": 0.020315,
+      "val_recall": 0.524592,
+      "val_fpr": 0.134606,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.23,
+      "peak_cuda_vram_mb": 464.63
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.967444,
+      "val_loss": 1.239872,
+      "val_dice": 0.038663,
+      "val_iou": 0.019713,
+      "val_precision": 0.019921,
+      "val_recall": 0.653472,
+      "val_fpr": 0.171063,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 12.2,
+      "peak_cuda_vram_mb": 464.63
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.960566,
+      "val_loss": 1.255805,
+      "val_dice": 0.038533,
+      "val_iou": 0.019645,
+      "val_precision": 0.019796,
+      "val_recall": 0.719749,
+      "val_fpr": 0.189625,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 12.88,
+      "peak_cuda_vram_mb": 464.63
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.952646,
+      "val_loss": 1.101636,
+      "val_dice": 0.039011,
+      "val_iou": 0.019893,
+      "val_precision": 0.020179,
+      "val_recall": 0.584782,
+      "val_fpr": 0.151088,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 12.99,
+      "peak_cuda_vram_mb": 464.63
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.946675,
+      "val_loss": 1.55464,
+      "val_dice": 0.040781,
+      "val_iou": 0.020815,
+      "val_precision": 0.020943,
+      "val_recall": 0.773014,
+      "val_fpr": 0.19228,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.36,
+      "peak_cuda_vram_mb": 464.63
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.937875,
+      "val_loss": 1.263987,
+      "val_dice": 0.033769,
+      "val_iou": 0.017175,
+      "val_precision": 0.017381,
+      "val_recall": 0.591732,
+      "val_fpr": 0.178002,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 12.62,
+      "peak_cuda_vram_mb": 464.63
+    }
+  ]
+}

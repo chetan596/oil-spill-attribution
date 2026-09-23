@@ -1,0 +1,21 @@
+{
+  "held_out_test_status": "LOCKED",
+  "quarantined_scenes": [
+    "real_part3_test_00064",
+    "real_part3_test_00080",
+    "real_part3_test_00063",
+    "real_part3_test_00062",
+    "real_part3_test_00060"
+  ],
+  "total_quarantined_scenes": 5,
+  "validation_evaluations_inspected": [
+    "v6_validation.json",
+    "v08_loss_experiments/loss_experiment_summary.json",
+    "v09a_multiscale/threshold_sweep.json",
+    "v09b_attention/threshold_sweep.json",
+    "v09c_residual/threshold_sweep.json",
+    "v09d_residual_loss/threshold_sweep.json"
+  ],
+  "violation_detected": false,
+  "notes": "Verified that zero Part III held-out test scenes were accessed for training, validation, threshold tuning, or model selection."
+}

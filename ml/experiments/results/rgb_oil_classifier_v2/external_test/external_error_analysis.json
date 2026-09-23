@@ -1,0 +1,48 @@
+{
+  "false_positive_count": 2,
+  "false_negative_count": 3,
+  "false_positives": [
+    {
+      "image_id": "kerf_test_0247",
+      "source": "Kerf_Drone_Oil_Spill",
+      "true_label": "LOOK_ALIKE",
+      "predicted_label": "OIL_SPILL",
+      "oil_probability": 0.9773731231689453,
+      "reason": "REVIEW_REQUIRED"
+    },
+    {
+      "image_id": "kerf_test_0252",
+      "source": "Kerf_Drone_Oil_Spill",
+      "true_label": "LOOK_ALIKE",
+      "predicted_label": "OIL_SPILL",
+      "oil_probability": 0.7771210670471191,
+      "reason": "REVIEW_REQUIRED"
+    }
+  ],
+  "false_negatives": [
+    {
+      "image_id": "kerf_test_0053",
+      "source": "Kerf_Drone_Oil_Spill",
+      "true_label": "OIL_SPILL",
+      "predicted_label": "LOOK_ALIKE",
+      "oil_probability": 0.12183719873428345,
+      "reason": "REVIEW_REQUIRED"
+    },
+    {
+      "image_id": "kerf_test_0055",
+      "source": "Kerf_Drone_Oil_Spill",
+      "true_label": "OIL_SPILL",
+      "predicted_label": "LOOK_ALIKE",
+      "oil_probability": 0.29327765107154846,
+      "reason": "REVIEW_REQUIRED"
+    },
+    {
+      "image_id": "kerf_test_0126",
+      "source": "Kerf_Drone_Oil_Spill",
+      "true_label": "OIL_SPILL",
+      "predicted_label": "LOOK_ALIKE",
+      "oil_probability": 0.04964696243405342,
+      "reason": "REVIEW_REQUIRED"
+    }
+  ]
+}

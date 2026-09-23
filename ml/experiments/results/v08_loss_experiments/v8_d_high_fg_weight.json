@@ -1,0 +1,1039 @@
+{
+  "experiment_id": "V8_D_HIGH_FG_WEIGHT",
+  "model_id": "unet-dual-pol-sar-v8d",
+  "status": "EXPERIMENTAL",
+  "loss_name": "CombinedLoss",
+  "loss_parameters": {
+    "ce_weight": 1.0,
+    "dice_weight": 1.0,
+    "foreground_weight": 10.0
+  },
+  "description": "High foreground penalty loss: Combined 1.0*Weighted_CE(fg=10.0) + 1.0*SoftDice for extreme 1:125 imbalance.",
+  "architecture": "UNet(in_channels=2, num_classes=2, base_channels=16, bilinear=True)",
+  "preprocessing": "sentinel1_sigma0_db_v1",
+  "dataset_manifest_hash": "9d4cf3f6755976c72bfdb1172bbc03616efeba8e15869ba893665db506dc621d",
+  "seed": 42,
+  "optimizer": "AdamW (lr=1e-4, wd=1e-4)",
+  "total_epochs_trained": 25,
+  "best_epoch": 18,
+  "best_validation_dice_patch": 0.063572,
+  "total_training_duration_seconds": 309.64,
+  "checkpoint": {
+    "path": "ml/model_registry/versions/unet_dual_pol_sar_v8d.pth",
+    "sha256": "2e7df8bc37b0cbe5e132b9d391898f6cc02aaa790fd02d0087eacfd1811cf4c4",
+    "size_bytes": 13070043
+  },
+  "last_checkpoint": {
+    "path": "ml/model_registry/versions/unet_dual_pol_sar_v8d_last.pth",
+    "sha256": "15e3e60e648ca1c8f52e269235c117f678786b447e554199d36286917f2a8d10",
+    "size_bytes": 13071271
+  },
+  "validation_evaluation": {
+    "validation_scenes_count": 7,
+    "held_out_test_status": "STRICTLY_LOCKED",
+    "threshold_aggregates": [
+      {
+        "threshold": 0.3,
+        "micro_pixel_aggregate": {
+          "tp": 64345,
+          "fp": 2019845,
+          "fn": 91048,
+          "tn": 27184890,
+          "iou": 0.029581,
+          "dice": 0.057462,
+          "precision": 0.030873,
+          "recall": 0.414079,
+          "fpr": 0.069162
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.000752,
+          "look_alike_fpr": 0.239402,
+          "oil_scenes_iou": 0.400454,
+          "oil_scenes_dice": 0.571892
+        }
+      },
+      {
+        "threshold": 0.35,
+        "micro_pixel_aggregate": {
+          "tp": 60785,
+          "fp": 1866103,
+          "fn": 94608,
+          "tn": 27338632,
+          "iou": 0.030069,
+          "dice": 0.058383,
+          "precision": 0.031546,
+          "recall": 0.391169,
+          "fpr": 0.063897
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.000591,
+          "look_alike_fpr": 0.221327,
+          "oil_scenes_iou": 0.380115,
+          "oil_scenes_dice": 0.550846
+        }
+      },
+      {
+        "threshold": 0.4,
+        "micro_pixel_aggregate": {
+          "tp": 56853,
+          "fp": 1716068,
+          "fn": 98540,
+          "tn": 27488667,
+          "iou": 0.030379,
+          "dice": 0.058967,
+          "precision": 0.032067,
+          "recall": 0.365866,
+          "fpr": 0.05876
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.000473,
+          "look_alike_fpr": 0.203633,
+          "oil_scenes_iou": 0.356904,
+          "oil_scenes_dice": 0.526056
+        }
+      },
+      {
+        "threshold": 0.45,
+        "micro_pixel_aggregate": {
+          "tp": 53061,
+          "fp": 1576476,
+          "fn": 102332,
+          "tn": 27628259,
+          "iou": 0.030638,
+          "dice": 0.059454,
+          "precision": 0.032562,
+          "recall": 0.341463,
+          "fpr": 0.05398
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.000365,
+          "look_alike_fpr": 0.187159,
+          "oil_scenes_iou": 0.334133,
+          "oil_scenes_dice": 0.500899
+        }
+      },
+      {
+        "threshold": 0.5,
+        "micro_pixel_aggregate": {
+          "tp": 49669,
+          "fp": 1445852,
+          "fn": 105724,
+          "tn": 27758883,
+          "iou": 0.031019,
+          "dice": 0.060172,
+          "precision": 0.033212,
+          "recall": 0.319635,
+          "fpr": 0.049507
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.000262,
+          "look_alike_fpr": 0.171746,
+          "oil_scenes_iou": 0.313702,
+          "oil_scenes_dice": 0.477584
+        }
+      },
+      {
+        "threshold": 0.6,
+        "micro_pixel_aggregate": {
+          "tp": 43628,
+          "fp": 1201022,
+          "fn": 111765,
+          "tn": 28003713,
+          "iou": 0.032164,
+          "dice": 0.062324,
+          "precision": 0.035052,
+          "recall": 0.280759,
+          "fpr": 0.041124
+        },
+        "category_breakdown": {
+          "clean_ocean_fpr": 0.000116,
+          "look_alike_fpr": 0.14282,
+          "oil_scenes_iou": 0.277223,
+          "oil_scenes_dice": 0.434103
+        }
+      }
+    ],
+    "scene_breakdowns": [
+      {
+        "scene_id": "real_part1_oil_00006",
+        "category": "oil",
+        "ground_truth_pixels": 89378,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 47610,
+            "fp": 2171,
+            "fn": 41768,
+            "tn": 4102755,
+            "iou": 0.5200493724672034,
+            "dice": 0.6842532642516833,
+            "precision": 0.9563889837488199,
+            "recall": 0.532681420483788,
+            "fpr": 0.000528876769033108
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 44616,
+            "fp": 1896,
+            "fn": 44762,
+            "tn": 4103030,
+            "iou": 0.48881390100138045,
+            "dice": 0.656648760026492,
+            "precision": 0.9592363261093911,
+            "recall": 0.4991832441987961,
+            "fpr": 0.0004618840875572422
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 41391,
+            "fp": 1692,
+            "fn": 47987,
+            "tn": 4103234,
+            "iou": 0.45449654112221366,
+            "dice": 0.6249537599746341,
+            "precision": 0.9607269688740339,
+            "recall": 0.46310053928259753,
+            "fpr": 0.0004121876983896908
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 37959,
+            "fp": 1571,
+            "fn": 51419,
+            "tn": 4103355,
+            "iou": 0.4173657764241498,
+            "dice": 0.5889316411704472,
+            "precision": 0.9602580318745256,
+            "recall": 0.42470182819038244,
+            "fpr": 0.00038271091854030987
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 34932,
+            "fp": 1422,
+            "fn": 54446,
+            "tn": 4103504,
+            "iou": 0.3847136563876652,
+            "dice": 0.5556580663633761,
+            "precision": 0.9608846344281234,
+            "recall": 0.3908344335295039,
+            "fpr": 0.00034641306566793166
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 29745,
+            "fp": 1088,
+            "fn": 59633,
+            "tn": 4103838,
+            "iou": 0.3287975593040479,
+            "dice": 0.49487983628786053,
+            "precision": 0.9647131320338598,
+            "recall": 0.332800017901497,
+            "fpr": 0.0002650474088936073
+          }
+        }
+      },
+      {
+        "scene_id": "real_part1_oil_00011",
+        "category": "oil",
+        "ground_truth_pixels": 49967,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 1429,
+            "fp": 600,
+            "fn": 48538,
+            "tn": 4143737,
+            "iou": 0.028259536852097217,
+            "dice": 0.05496576659743057,
+            "precision": 0.7042878265155249,
+            "recall": 0.02859887525767006,
+            "fpr": 0.0001447758712672256
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 961,
+            "fp": 433,
+            "fn": 49006,
+            "tn": 4143904,
+            "iou": 0.019067460317460316,
+            "dice": 0.03742138977044839,
+            "precision": 0.6893830703012912,
+            "recall": 0.019232693577761324,
+            "fpr": 0.00010447992043118116
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 390,
+            "fp": 304,
+            "fn": 49577,
+            "tn": 4144033,
+            "iou": 0.007757951900698216,
+            "dice": 0.015396458814472672,
+            "precision": 0.5619596541786743,
+            "recall": 0.00780515139992395,
+            "fpr": 7.335310810872765e-05
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 215,
+            "fp": 223,
+            "fn": 49752,
+            "tn": 4144114,
+            "iou": 0.004283721856943614,
+            "dice": 0.008530899712330125,
+            "precision": 0.4908675799086758,
+            "recall": 0.0043028398743170495,
+            "fpr": 5.3808365487652184e-05
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 132,
+            "fp": 162,
+            "fn": 49835,
+            "tn": 4144175,
+            "iou": 0.0026332063276745996,
+            "dice": 0.005252581524442411,
+            "precision": 0.4489795918367347,
+            "recall": 0.0026417435507434905,
+            "fpr": 3.9089485242150915e-05
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 4,
+            "fp": 62,
+            "fn": 49963,
+            "tn": 4144275,
+            "iou": 7.995362689640009e-05,
+            "dice": 0.00015989446965003097,
+            "precision": 0.06060606060606061,
+            "recall": 8.005283487101488e-05,
+            "fpr": 1.496017336427998e-05
+          }
+        }
+      },
+      {
+        "scene_id": "real_part1_oil_00204",
+        "category": "oil",
+        "ground_truth_pixels": 16048,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 15306,
+            "fp": 2516,
+            "fn": 742,
+            "tn": 4175740,
+            "iou": 0.8244990303813833,
+            "dice": 0.9038086802480071,
+            "precision": 0.8588261699023678,
+            "recall": 0.9537637088733799,
+            "fpr": 0.0006021651138656894
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 15208,
+            "fp": 2190,
+            "fn": 840,
+            "tn": 4176066,
+            "iou": 0.8338633622107687,
+            "dice": 0.9094062070202715,
+            "precision": 0.8741234624669503,
+            "recall": 0.9476570289132602,
+            "fpr": 0.0005241421301136168
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 15072,
+            "fp": 1906,
+            "fn": 976,
+            "tn": 4176350,
+            "iou": 0.8394786677063607,
+            "dice": 0.9127354205777266,
+            "precision": 0.8877370715042997,
+            "recall": 0.9391824526420738,
+            "fpr": 0.00045617118721303816
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 14887,
+            "fp": 1615,
+            "fn": 1161,
+            "tn": 4176641,
+            "iou": 0.8428353054407518,
+            "dice": 0.914715821812596,
+            "precision": 0.9021330747788147,
+            "recall": 0.9276545363908275,
+            "fpr": 0.0003865249041705439
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 14605,
+            "fp": 1355,
+            "fn": 1443,
+            "tn": 4176901,
+            "iou": 0.8392231224501523,
+            "dice": 0.9125843539115222,
+            "precision": 0.9151002506265664,
+            "recall": 0.9100822532402791,
+            "fpr": 0.00032429798461367616
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 13879,
+            "fp": 832,
+            "fn": 2169,
+            "tn": 4177424,
+            "iou": 0.8222156398104266,
+            "dice": 0.9024350596573361,
+            "precision": 0.9434436815988037,
+            "recall": 0.8648429710867398,
+            "fpr": 0.0001991261425819768
+          }
+        }
+      },
+      {
+        "scene_id": "real_part2_lookalike_00004",
+        "category": "look_alike",
+        "ground_truth_pixels": 0,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 0,
+            "fp": 1607534,
+            "fn": 0,
+            "tn": 2586770,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.38326597213745117
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 0,
+            "fp": 1481269,
+            "fn": 0,
+            "tn": 2713035,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.3531620502471924
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 0,
+            "fp": 1357060,
+            "fn": 0,
+            "tn": 2837244,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.3235483169555664
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 0,
+            "fp": 1241910,
+            "fn": 0,
+            "tn": 2952394,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.2960944175720215
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 1134188,
+            "fn": 0,
+            "tn": 3060116,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.27041149139404297
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 0,
+            "fp": 930100,
+            "fn": 0,
+            "tn": 3264204,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.22175312042236328
+          }
+        }
+      },
+      {
+        "scene_id": "real_part2_lookalike_00090",
+        "category": "look_alike",
+        "ground_truth_pixels": 0,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 0,
+            "fp": 400714,
+            "fn": 0,
+            "tn": 3793590,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.09553766250610352
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 0,
+            "fp": 375358,
+            "fn": 0,
+            "tn": 3818946,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0894923210144043
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 0,
+            "fp": 351140,
+            "fn": 0,
+            "tn": 3843164,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.08371829986572266
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 0,
+            "fp": 328093,
+            "fn": 0,
+            "tn": 3866211,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.07822346687316895
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 306524,
+            "fn": 0,
+            "tn": 3887780,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.07308101654052734
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 0,
+            "fp": 267965,
+            "fn": 0,
+            "tn": 3926339,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0638878345489502
+          }
+        }
+      },
+      {
+        "scene_id": "real_part2_no_oil_00004",
+        "category": "no_oil",
+        "ground_truth_pixels": 0,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 0,
+            "fp": 6310,
+            "fn": 0,
+            "tn": 4187994,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0015044212341308594
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 0,
+            "fp": 4957,
+            "fn": 0,
+            "tn": 4189347,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0011818408966064453
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 0,
+            "fp": 3966,
+            "fn": 0,
+            "tn": 4190338,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0009455680847167969
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 0,
+            "fp": 3064,
+            "fn": 0,
+            "tn": 4191240,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0007305145263671875
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 2201,
+            "fn": 0,
+            "tn": 4192103,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0005247592926025391
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 0,
+            "fp": 975,
+            "fn": 0,
+            "tn": 4193329,
+            "iou": 0.0,
+            "dice": 0.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.00023245811462402344
+          }
+        }
+      },
+      {
+        "scene_id": "real_part2_no_oil_00017",
+        "category": "no_oil",
+        "ground_truth_pixels": 0,
+        "metrics_by_threshold": {
+          "0.3": {
+            "threshold": 0.3,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.35": {
+            "threshold": 0.35,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.4": {
+            "threshold": 0.4,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.45": {
+            "threshold": 0.45,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.5": {
+            "threshold": 0.5,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          },
+          "0.6": {
+            "threshold": 0.6,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "tn": 4194304,
+            "iou": 1.0,
+            "dice": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "fpr": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.363703,
+      "val_loss": 1.444685,
+      "val_dice": 0.036968,
+      "val_iou": 0.018832,
+      "val_precision": 0.019105,
+      "val_recall": 0.568488,
+      "val_fpr": 0.155299,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.26,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.25385,
+      "val_loss": 2.127221,
+      "val_dice": 0.027529,
+      "val_iou": 0.013957,
+      "val_precision": 0.014,
+      "val_recall": 0.818982,
+      "val_fpr": 0.30691,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.43,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.192673,
+      "val_loss": 1.676491,
+      "val_dice": 0.038671,
+      "val_iou": 0.019717,
+      "val_precision": 0.019945,
+      "val_recall": 0.633124,
+      "val_fpr": 0.165535,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.14,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.145851,
+      "val_loss": 1.437108,
+      "val_dice": 0.036825,
+      "val_iou": 0.018758,
+      "val_precision": 0.019112,
+      "val_recall": 0.503369,
+      "val_fpr": 0.137462,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.08,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.125554,
+      "val_loss": 2.515539,
+      "val_dice": 0.033483,
+      "val_iou": 0.017027,
+      "val_precision": 0.017082,
+      "val_recall": 0.840128,
+      "val_fpr": 0.257219,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.19,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.084366,
+      "val_loss": 1.439532,
+      "val_dice": 0.036725,
+      "val_iou": 0.018706,
+      "val_precision": 0.018965,
+      "val_recall": 0.578083,
+      "val_fpr": 0.159111,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.04,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.068141,
+      "val_loss": 1.684147,
+      "val_dice": 0.039593,
+      "val_iou": 0.020197,
+      "val_precision": 0.020338,
+      "val_recall": 0.743489,
+      "val_fpr": 0.190552,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.13,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.038124,
+      "val_loss": 1.842886,
+      "val_dice": 0.041099,
+      "val_iou": 0.020981,
+      "val_precision": 0.021066,
+      "val_recall": 0.838307,
+      "val_fpr": 0.207278,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 12.93,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.018958,
+      "val_loss": 1.516389,
+      "val_dice": 0.035941,
+      "val_iou": 0.018299,
+      "val_precision": 0.018422,
+      "val_recall": 0.73253,
+      "val_fpr": 0.207673,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.05,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.00622,
+      "val_loss": 1.858523,
+      "val_dice": 0.040858,
+      "val_iou": 0.020855,
+      "val_precision": 0.020997,
+      "val_recall": 0.75506,
+      "val_fpr": 0.187319,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 13.05,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.981689,
+      "val_loss": 1.742041,
+      "val_dice": 0.039125,
+      "val_iou": 0.019953,
+      "val_precision": 0.020049,
+      "val_recall": 0.807192,
+      "val_fpr": 0.209931,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 12.09,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.986872,
+      "val_loss": 1.685922,
+      "val_dice": 0.041327,
+      "val_iou": 0.021099,
+      "val_precision": 0.021202,
+      "val_recall": 0.814014,
+      "val_fpr": 0.199956,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.36,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.956258,
+      "val_loss": 1.166804,
+      "val_dice": 0.03602,
+      "val_iou": 0.01834,
+      "val_precision": 0.019358,
+      "val_recall": 0.25859,
+      "val_fpr": 0.0697,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.97,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.956266,
+      "val_loss": 2.420723,
+      "val_dice": 0.034698,
+      "val_iou": 0.017656,
+      "val_precision": 0.017672,
+      "val_recall": 0.950062,
+      "val_fpr": 0.280998,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.99,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.960787,
+      "val_loss": 1.508824,
+      "val_dice": 0.042807,
+      "val_iou": 0.021872,
+      "val_precision": 0.022292,
+      "val_recall": 0.537045,
+      "val_fpr": 0.125328,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.83,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.943885,
+      "val_loss": 1.749457,
+      "val_dice": 0.042221,
+      "val_iou": 0.021566,
+      "val_precision": 0.021736,
+      "val_recall": 0.733662,
+      "val_fpr": 0.17569,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 12.07,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.933955,
+      "val_loss": 1.482194,
+      "val_dice": 0.041028,
+      "val_iou": 0.020943,
+      "val_precision": 0.021275,
+      "val_recall": 0.573082,
+      "val_fpr": 0.140275,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.85,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.915026,
+      "val_loss": 1.164888,
+      "val_dice": 0.063572,
+      "val_iou": 0.032829,
+      "val_precision": 0.035108,
+      "val_recall": 0.335922,
+      "val_fpr": 0.049124,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.72,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.927673,
+      "val_loss": 2.406002,
+      "val_dice": 0.039961,
+      "val_iou": 0.020388,
+      "val_precision": 0.020446,
+      "val_recall": 0.877922,
+      "val_fpr": 0.223801,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.91,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.901895,
+      "val_loss": 2.239152,
+      "val_dice": 0.040965,
+      "val_iou": 0.020911,
+      "val_precision": 0.020979,
+      "val_recall": 0.865438,
+      "val_fpr": 0.214891,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.82,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.940445,
+      "val_loss": 1.557569,
+      "val_dice": 0.040379,
+      "val_iou": 0.020605,
+      "val_precision": 0.020744,
+      "val_recall": 0.755304,
+      "val_fpr": 0.189717,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.89,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.910677,
+      "val_loss": 1.921826,
+      "val_dice": 0.040476,
+      "val_iou": 0.020656,
+      "val_precision": 0.020682,
+      "val_recall": 0.942404,
+      "val_fpr": 0.237435,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.95,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.917376,
+      "val_loss": 2.098846,
+      "val_dice": 0.041041,
+      "val_iou": 0.020951,
+      "val_precision": 0.021002,
+      "val_recall": 0.895748,
+      "val_fpr": 0.222172,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.92,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.910345,
+      "val_loss": 2.443943,
+      "val_dice": 0.043053,
+      "val_iou": 0.022,
+      "val_precision": 0.022067,
+      "val_recall": 0.878849,
+      "val_fpr": 0.207232,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.8,
+      "peak_cuda_vram_mb": 465.26
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.894569,
+      "val_loss": 2.246162,
+      "val_dice": 0.042586,
+      "val_iou": 0.021756,
+      "val_precision": 0.021898,
+      "val_recall": 0.770627,
+      "val_fpr": 0.183148,
+      "learning_rate": 0.0001,
+      "epoch_duration_seconds": 11.85,
+      "peak_cuda_vram_mb": 465.26
+    }
+  ]
+}

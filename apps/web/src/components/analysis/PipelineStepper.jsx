@@ -27,10 +27,10 @@ export default function PipelineStepper({ status = 'queued', progress = 0, error
     <div
       className="card"
       style={{
-        background: '#0a0f1d',
-        border: `1px solid ${isFailed ? 'rgba(239, 68, 68, 0.4)' : '#1e293b'}`,
+        background: 'var(--og-surface, #121417)',
+        border: `1px solid ${isFailed ? 'var(--og-error, #F87171)' : 'var(--og-border, #25292F)'}`,
         padding: '16px 20px',
-        borderRadius: '8px',
+        borderRadius: '6px',
       }}
       role="region"
       aria-label="Pipeline Execution Progress"
@@ -38,20 +38,20 @@ export default function PipelineStepper({ status = 'queued', progress = 0, error
       {/* Top Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--og-text-secondary, #B1B6BD)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             Analysis Pipeline Execution
           </span>
           <span
             style={{
               background: isFailed
-                ? 'rgba(239, 68, 68, 0.2)'
+                ? 'var(--og-error-soft, rgba(248, 113, 113, 0.15))'
                 : normalizedStatus === 'completed'
-                ? 'rgba(16, 185, 129, 0.2)'
-                : 'rgba(56, 189, 248, 0.2)',
-              color: isFailed ? '#ef4444' : normalizedStatus === 'completed' ? '#10b981' : '#38bdf8',
-              border: `1px solid ${isFailed ? 'rgba(239, 68, 68, 0.3)' : normalizedStatus === 'completed' ? 'rgba(16, 185, 129, 0.3)' : 'rgba(56, 189, 248, 0.3)'}`,
+                ? 'var(--og-green-soft, rgba(52, 211, 153, 0.15))'
+                : 'var(--og-violet-soft, rgba(168, 85, 247, 0.15))',
+              color: isFailed ? 'var(--og-error, #F87171)' : normalizedStatus === 'completed' ? 'var(--og-green, #34D399)' : 'var(--og-violet, #A855F7)',
+              border: `1px solid ${isFailed ? 'var(--og-error-border, rgba(248, 113, 113, 0.3))' : normalizedStatus === 'completed' ? 'var(--og-green-border, rgba(52, 211, 153, 0.3))' : 'var(--og-violet-border, rgba(168, 85, 247, 0.3))'}`,
               padding: '2px 8px',
-              borderRadius: '12px',
+              borderRadius: '4px',
               fontSize: '0.75rem',
               fontWeight: 700,
               textTransform: 'uppercase',
@@ -61,14 +61,14 @@ export default function PipelineStepper({ status = 'queued', progress = 0, error
           </span>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '0.8rem', color: '#64748b' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '0.8rem', color: 'var(--og-text-muted, #777E87)' }}>
           {createdAt && (
             <span>Started: {new Date(createdAt).toLocaleTimeString()}</span>
           )}
           {completedAt && (
             <span>Completed: {new Date(completedAt).toLocaleTimeString()}</span>
           )}
-          <span style={{ fontWeight: 700, color: '#f8fafc', fontFamily: 'var(--font-mono)' }}>
+          <span style={{ fontWeight: 700, color: 'var(--og-text-primary, #ECEEF1)', fontFamily: 'var(--font-mono)', fontVariantNumeric: 'tabular-nums' }}>
             {isFailed ? 'ERROR' : `${Math.round(progress)}%`}
           </span>
         </div>
@@ -79,7 +79,8 @@ export default function PipelineStepper({ status = 'queued', progress = 0, error
         style={{
           width: '100%',
           height: '6px',
-          background: '#1e293b',
+          background: 'var(--og-surface-recessed, #0C0E11)',
+          border: '1px solid var(--og-border, #25292F)',
           borderRadius: '3px',
           overflow: 'hidden',
           marginBottom: '20px',
@@ -94,10 +95,10 @@ export default function PipelineStepper({ status = 'queued', progress = 0, error
             width: isFailed ? '100%' : `${Math.max(progress, 5)}%`,
             height: '100%',
             background: isFailed
-              ? '#ef4444'
+              ? 'var(--og-error, #F87171)'
               : normalizedStatus === 'completed'
-              ? '#10b981'
-              : 'linear-gradient(90deg, #0284c7, #38bdf8)',
+              ? 'var(--og-green, #34D399)'
+              : 'var(--og-violet, #A855F7)',
             transition: 'width 0.4s ease-in-out',
           }}
         />
@@ -117,26 +118,26 @@ export default function PipelineStepper({ status = 'queued', progress = 0, error
           const isCurrent = idx === activeIndex && !isFailed && normalizedStatus !== 'completed';
           const isStageFailed = isFailed && idx === activeIndex;
 
-          let iconColor = '#475569';
-          let textColor = '#64748b';
-          let bgColor = '#0f172a';
-          let borderColor = '#1e293b';
+          let iconColor = 'var(--og-text-muted, #777E87)';
+          let textColor = 'var(--og-text-muted, #777E87)';
+          let bgColor = 'var(--og-surface-recessed, #0C0E11)';
+          let borderColor = 'var(--og-border, #25292F)';
 
           if (isDone) {
-            iconColor = '#10b981';
-            textColor = '#f8fafc';
-            bgColor = 'rgba(16, 185, 129, 0.05)';
-            borderColor = 'rgba(16, 185, 129, 0.3)';
+            iconColor = 'var(--og-green, #34D399)';
+            textColor = 'var(--og-text-primary, #ECEEF1)';
+            bgColor = 'rgba(52, 211, 153, 0.05)';
+            borderColor = 'rgba(52, 211, 153, 0.25)';
           } else if (isCurrent) {
-            iconColor = '#38bdf8';
-            textColor = '#f8fafc';
-            bgColor = 'rgba(56, 189, 248, 0.08)';
-            borderColor = 'rgba(56, 189, 248, 0.4)';
+            iconColor = 'var(--og-violet, #A855F7)';
+            textColor = 'var(--og-text-primary, #ECEEF1)';
+            bgColor = 'var(--og-surface-raised, #171A1E)';
+            borderColor = 'var(--og-violet, #A855F7)';
           } else if (isStageFailed) {
-            iconColor = '#ef4444';
-            textColor = '#ef4444';
-            bgColor = 'rgba(239, 68, 68, 0.1)';
-            borderColor = 'rgba(239, 68, 68, 0.4)';
+            iconColor = 'var(--og-error, #F87171)';
+            textColor = 'var(--og-error, #F87171)';
+            bgColor = 'rgba(248, 113, 113, 0.08)';
+            borderColor = 'rgba(248, 113, 113, 0.3)';
           }
 
           return (
@@ -151,28 +152,27 @@ export default function PipelineStepper({ status = 'queued', progress = 0, error
                 flexDirection: 'column',
                 gap: '4px',
                 position: 'relative',
-                transition: 'all 0.2s',
+                transition: 'all 0.15s',
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Icon size={16} style={{ color: iconColor }} />
                 {isDone ? (
-                  <CheckCircle2 size={14} style={{ color: '#10b981' }} />
+                  <CheckCircle2 size={14} style={{ color: 'var(--og-green, #34D399)' }} />
                 ) : isStageFailed ? (
-                  <AlertCircle size={14} style={{ color: '#ef4444' }} />
+                  <AlertCircle size={14} style={{ color: 'var(--og-error, #F87171)' }} />
                 ) : isCurrent ? (
                   <div
                     style={{
                       width: '8px',
                       height: '8px',
                       borderRadius: '50%',
-                      background: '#38bdf8',
-                      boxShadow: '0 0 8px #38bdf8',
+                      background: 'var(--og-violet, #A855F7)',
                       animation: 'pulse 1.5s infinite',
                     }}
                   />
                 ) : (
-                  <span style={{ fontSize: '0.7rem', color: '#475569', fontWeight: 600 }}>0{idx + 1}</span>
+                  <span style={{ fontSize: '0.7rem', color: 'var(--og-text-muted, #777E87)', fontWeight: 600 }}>0{idx + 1}</span>
                 )}
               </div>
 
@@ -180,7 +180,7 @@ export default function PipelineStepper({ status = 'queued', progress = 0, error
                 {stage.label}
               </div>
 
-              <div style={{ fontSize: '0.7rem', color: isCurrent ? '#94a3b8' : '#475569', lineHeight: 1.2 }}>
+              <div style={{ fontSize: '0.7rem', color: isCurrent ? 'var(--og-text-secondary, #B1B6BD)' : 'var(--og-text-muted, #777E87)', lineHeight: 1.2 }}>
                 {stage.description}
               </div>
             </div>
@@ -194,13 +194,13 @@ export default function PipelineStepper({ status = 'queued', progress = 0, error
           style={{
             marginTop: '12px',
             padding: '10px 14px',
-            background: 'rgba(239, 68, 68, 0.1)',
-            border: '1px solid rgba(239, 68, 68, 0.3)',
+            background: 'var(--og-error-soft, rgba(248, 113, 113, 0.15))',
+            border: '1px solid var(--og-error-border, rgba(248, 113, 113, 0.3))',
             borderRadius: '6px',
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
-            color: '#f87171',
+            color: 'var(--og-error, #F87171)',
             fontSize: '0.85rem',
           }}
         >

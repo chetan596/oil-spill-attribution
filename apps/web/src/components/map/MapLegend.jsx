@@ -1,123 +1,190 @@
 import React, { useState } from 'react';
 import { Layers, ChevronDown, ChevronUp, Info } from 'lucide-react';
 
-export default function MapLegend({ style = {} }) {
-  const [isExpanded, setIsExpanded] = useState(true);
+export default function MapLegend({ isReal = false, activeMode = 'investigation', style = {} }) {
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const legendItems = [
+  const allLegendItems = [
     {
+      id: 'slick',
+      modes: ['investigation', 'sar', 'drift', 'ais'],
       label: 'Observed Potential Oil Slick',
       description: 'Sentinel-1 SAR segmented slick polygon',
-      color: '#ef4444',
+      color: '#49C6C8',
       symbol: (
         <span
           style={{
             display: 'inline-block',
             width: '14px',
             height: '14px',
-            backgroundColor: 'rgba(239, 68, 68, 0.45)',
-            border: '2px solid #ef4444',
+            backgroundColor: 'rgba(73, 198, 200, 0.25)',
+            border: '2px solid #49C6C8',
             borderRadius: '2px',
           }}
         />
       ),
     },
     {
-      label: 'Modelled Spill Origin',
-      description: 'Lagrangian reverse hindcast origin',
-      color: '#f59e0b',
-      symbol: (
-        <span
-          style={{
-            display: 'inline-block',
-            width: '12px',
-            height: '12px',
-            backgroundColor: '#f59e0b',
-            border: '2px solid #ffffff',
-            borderRadius: '50%',
-            boxShadow: '0 0 6px #f59e0b',
-          }}
-        />
-      ),
-    },
-    {
-      label: 'Modelled Origin Uncertainty Radius',
-      description: '±2.6 km turbulent diffusion dispersion',
-      color: '#fbbf24',
+      id: 'footprint',
+      modes: ['sar'],
+      label: 'Sentinel-1 Scene Footprint',
+      description: 'Acquisition bounding geometry (IW GRDH)',
+      color: '#38BDF8',
       symbol: (
         <span
           style={{
             display: 'inline-block',
             width: '14px',
             height: '14px',
-            backgroundColor: 'rgba(245, 158, 11, 0.15)',
-            border: '2px dashed #f59e0b',
+            backgroundColor: 'rgba(56, 189, 248, 0.1)',
+            border: '1.5px dashed #38BDF8',
+            borderRadius: '2px',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'origin',
+      modes: ['investigation', 'drift', 'ais'],
+      label: isReal ? 'Spill Origin (Not Established)' : 'Modelled Spill Origin',
+      description: isReal ? 'Not run for authentic CDSE scene' : 'Lagrangian reverse hindcast origin',
+      color: '#E7A63A',
+      symbol: (
+        <span
+          style={{
+            display: 'inline-block',
+            width: '12px',
+            height: '12px',
+            backgroundColor: '#E7A63A',
+            border: '2px solid #ffffff',
+            borderRadius: '50%',
+            boxShadow: '0 0 6px rgba(231, 166, 58, 0.6)',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'uncertainty',
+      modes: ['drift'],
+      label: isReal ? 'Origin Uncertainty (N/A)' : 'Modelled Origin Uncertainty Radius',
+      description: isReal ? 'Not established' : '±2.6 km turbulent diffusion dispersion',
+      color: '#E7A63A',
+      symbol: (
+        <span
+          style={{
+            display: 'inline-block',
+            width: '14px',
+            height: '14px',
+            backgroundColor: 'rgba(231, 166, 58, 0.12)',
+            border: '2px dashed #E7A63A',
             borderRadius: '50%',
           }}
         />
       ),
     },
     {
-      label: 'Modelled Backward Trajectory',
-      description: '24h Lagrangian reverse hindcast',
-      color: '#38bdf8',
+      id: 'hindcast',
+      modes: ['investigation', 'drift'],
+      label: isReal ? 'Backward Trajectory (Not Run)' : 'Modelled Backward Trajectory',
+      description: isReal ? 'Not established' : '24h Lagrangian reverse hindcast',
+      color: '#E7A63A',
       symbol: (
         <span
           style={{
             display: 'inline-block',
             width: '18px',
             height: '0',
-            borderTop: '2px dashed #38bdf8',
+            borderTop: '2px dashed #E7A63A',
           }}
         />
       ),
     },
     {
-      label: 'Modelled Forward Forecast',
-      description: '6h forward drift projection',
-      color: '#10b981',
+      id: 'forecast',
+      modes: ['investigation', 'drift'],
+      label: isReal ? 'Forward Forecast (Not Run)' : 'Modelled Forward Forecast',
+      description: isReal ? 'Not established' : '6h forward numerical drift projection (Modelled)',
+      color: '#4ADE80',
       symbol: (
         <span
           style={{
             display: 'inline-block',
             width: '18px',
             height: '0',
-            borderTop: '2px solid #10b981',
+            borderTop: '2px dashed #4ADE80',
           }}
         />
       ),
     },
     {
-      label: 'Candidate Vessel AIS Tracks',
-      description: 'Historical vessel telemetry path',
-      color: '#a855f7',
+      id: 'vessels',
+      modes: ['investigation', 'ais'],
+      label: isReal ? 'Candidate Vessels (Not Established)' : 'Candidate Vessel AIS Tracks',
+      description: isReal ? 'Synthetic AIS isolated from CDSE' : 'Historical vessel telemetry path',
+      color: '#A855F7',
       symbol: (
         <span
           style={{
             display: 'inline-block',
             width: '18px',
             height: '0',
-            borderTop: '2px solid #a855f7',
+            borderTop: '2px dashed #A855F7',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'cpa',
+      modes: ['investigation', 'ais'],
+      label: isReal ? 'CPA (Not Established)' : 'Closest Point of Approach (CPA)',
+      description: isReal ? 'Authoritative CPA unavailable' : 'Authoritative closest approach vector',
+      color: '#A855F7',
+      symbol: (
+        <span
+          style={{
+            display: 'inline-block',
+            width: '18px',
+            height: '0',
+            borderTop: '2px dotted #A855F7',
+          }}
+        />
+      ),
+    },
+    {
+      id: 'grid',
+      modes: ['sar'],
+      label: 'Coordinate Graticule',
+      description: 'Geographic latitude / longitude grid',
+      color: '#777E87',
+      symbol: (
+        <span
+          style={{
+            display: 'inline-block',
+            width: '18px',
+            height: '0',
+            borderTop: '1px dashed #777E87',
           }}
         />
       ),
     },
   ];
 
+  const legendItems = allLegendItems.filter((item) => item.modes.includes(activeMode));
+
   return (
     <div
       style={{
         position: 'absolute',
-        bottom: '24px',
-        left: '24px',
+        bottom: '16px',
+        left: '16px',
         zIndex: 1000,
-        backgroundColor: 'rgba(15, 23, 42, 0.92)',
+        backgroundColor: 'rgba(11, 21, 19, 0.94)',
         backdropFilter: 'blur(8px)',
-        border: '1px solid #1e293b',
-        borderRadius: '8px',
-        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
-        color: '#f8fafc',
-        maxWidth: '240px',
+        border: '1px solid var(--og-border, #25292F)',
+        borderRadius: '6px',
+        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5)',
+        color: 'var(--og-text-primary, #ECEEF1)',
+        maxWidth: '255px',
         fontSize: '0.8rem',
         overflow: 'hidden',
         pointerEvents: 'auto',
@@ -133,38 +200,40 @@ export default function MapLegend({ style = {} }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '8px 12px',
+          padding: '7px 12px',
           background: 'none',
           border: 'none',
-          color: '#f8fafc',
+          color: 'var(--og-text-primary, #ECEEF1)',
           cursor: 'pointer',
           fontWeight: 600,
-          fontSize: '0.8rem',
-          borderBottom: isExpanded ? '1px solid #1e293b' : 'none',
+          fontSize: '0.78rem',
+          borderBottom: isExpanded ? '1px solid var(--og-border, #25292F)' : 'none',
         }}
         aria-expanded={isExpanded}
         aria-controls="map-legend-items"
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#38bdf8' }}>
-          <Layers size={14} />
-          <span style={{ color: '#f8fafc' }}>Map Legend</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--og-teal, #49C6C8)' }}>
+          <Layers size={13} />
+          <span style={{ color: 'var(--og-text-primary, #ECEEF1)' }}>
+            {isExpanded ? 'Map Legend' : `Legend (${legendItems.length})`}
+          </span>
         </div>
-        {isExpanded ? <ChevronDown size={14} style={{ color: '#94a3b8' }} /> : <ChevronUp size={14} style={{ color: '#94a3b8' }} />}
+        {isExpanded ? <ChevronDown size={13} style={{ color: 'var(--og-text-muted, #777E87)' }} /> : <ChevronUp size={13} style={{ color: 'var(--og-text-muted, #777E87)' }} />}
       </button>
 
       {/* Legend Items */}
       {isExpanded && (
-        <div id="map-legend-items" style={{ padding: '8px 12px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <div id="map-legend-items" style={{ padding: '8px 12px', display: 'flex', flexDirection: 'column', gap: '7px' }}>
           {legendItems.map((item) => (
             <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <div style={{ width: '20px', display: 'flex', justifyContent: 'center' }}>
                 {item.symbol}
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#f8fafc' }}>
+                <div style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--og-text-primary, #ECEEF1)' }}>
                   {item.label}
                 </div>
-                <div style={{ fontSize: '0.65rem', color: '#64748b', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                <div style={{ fontSize: '0.64rem', color: 'var(--og-text-muted, #777E87)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                   {item.description}
                 </div>
               </div>
@@ -175,17 +244,17 @@ export default function MapLegend({ style = {} }) {
             style={{
               marginTop: '4px',
               paddingTop: '6px',
-              borderTop: '1px solid #1e293b',
+              borderTop: '1px solid var(--og-border-subtle, #1B1E22)',
               fontSize: '0.65rem',
-              color: '#64748b',
+              color: 'var(--og-text-muted, #777E87)',
               display: 'flex',
               alignItems: 'flex-start',
               gap: '4px',
               lineHeight: 1.2,
             }}
           >
-            <Info size={10} style={{ color: '#38bdf8', flexShrink: 0, marginTop: '2px' }} />
-            <span>Deterministic demo scenario layers.</span>
+            <Info size={10} style={{ color: 'var(--og-teal, #49C6C8)', flexShrink: 0, marginTop: '2px' }} />
+            <span>{isReal ? 'Copernicus CDSE authentic acquisition context.' : 'Deterministic demo scenario layers.'}</span>
           </div>
         </div>
       )}

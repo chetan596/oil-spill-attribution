@@ -1,0 +1,17 @@
+{
+  "classes": [
+    "CLEAN_OCEAN",
+    "LOOK_ALIKE",
+    "OIL_SPILL"
+  ],
+  "class_to_idx": {
+    "CLEAN_OCEAN": 0,
+    "LOOK_ALIKE": 1,
+    "OIL_SPILL": 2
+  },
+  "binary_mapping": {
+    "OIL_SPILL": 1,
+    "CLEAN_OCEAN": 0,
+    "LOOK_ALIKE": 0
+  }
+}

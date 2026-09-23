@@ -1,0 +1,48 @@
+{
+  "event": "PART_0_11_TEST_LOCK_RELEASED_FOR_SEALED_BENCHMARK",
+  "timestamp": "2026-09-19T16:39:25.953467+00:00",
+  "reason": "One-time sealed held-out benchmark evaluation of pre-selected primary candidate V09D vs baseline V6 and historical V2.",
+  "held_out_test_scenes": [
+    "real_part3_test_00060",
+    "real_part3_test_00062",
+    "real_part3_test_00063",
+    "real_part3_test_00064",
+    "real_part3_test_00080"
+  ],
+  "dataset_manifest_sha256": "9d4cf3f6755976c72bfdb1172bbc03616efeba8e15869ba893665db506dc621d",
+  "model_checkpoints": {
+    "v09d_residual_loss": {
+      "model_id": "unet-dual-pol-sar-v09d-residual-loss",
+      "role": "PRIMARY_EXPERIMENTAL_CANDIDATE",
+      "sha256": "ab22ffa2fb1c3be99ff2bb99353db76ed4934bd00210f7bce21df74506ce827d"
+    },
+    "v6_baseline": {
+      "model_id": "unet-dual-pol-sar-v6",
+      "role": "CONTROLLED_BASELINE_REFERENCE",
+      "sha256": "bcf3d6bc988b910fa67c0c31c89cb2c861da73f0b02159c579cb28e5039920e3"
+    },
+    "v2_historical": {
+      "model_id": "unet-dual-pol-sar-v2",
+      "role": "HISTORICAL_REFERENCE_NON_COMPARABLE",
+      "sha256": "905ef8e47c1f4b12eb490b33f1726fb91714b3dfcdf5184d8dfd96ec312f0dbd"
+    }
+  },
+  "evaluation_protocol": {
+    "pre_registered_primary_threshold": 0.5,
+    "descriptive_threshold_sweep": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.6
+    ],
+    "tile_size": 512,
+    "stride": 448,
+    "blending": "hann_window",
+    "full_resolution": [
+      2048,
+      2048
+    ]
+  }
+}

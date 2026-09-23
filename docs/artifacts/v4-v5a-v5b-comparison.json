@@ -1,0 +1,74 @@
+{
+  "audit_timestamp": "2026-09-14T08:40:00Z",
+  "models": {
+    "v4": {
+      "model_id": "unet-dual-pol-sar-v4",
+      "architecture": "UNet (in_channels=2, base=16, classes=2)",
+      "input_modalities": ["SAR_VV", "SAR_VH"],
+      "status": "EXPERIMENTAL_BASELINE",
+      "validation_metrics": {
+        "threshold": 0.50,
+        "dice": 3.8993,
+        "recall": 95.84,
+        "precision": 2.01,
+        "fpr": 25.26,
+        "lookalike_fpr": 86.63,
+        "clean_ocean_fpr": 3.65
+      },
+      "sealed_test_metrics": {
+        "tp": 73886,
+        "fp": 4471489,
+        "fn": 131371,
+        "tn": 16294774,
+        "iou": 1.5799,
+        "dice": 3.1106,
+        "precision": 1.6255,
+        "recall": 35.9968,
+        "fpr": 21.5325,
+        "clean_ocean_fpr": 0.2812
+      }
+    },
+    "v5a": {
+      "model_id": "unet-dual-pol-sar-v5a",
+      "architecture": "UNet (in_channels=2, base=16, classes=2)",
+      "input_modalities": ["SAR_VV", "SAR_VH"],
+      "status": "SAR_ONLY_CONTROL",
+      "validation_metrics": {
+        "threshold": 0.50,
+        "dice": 3.7893,
+        "recall": 96.12,
+        "precision": 1.93,
+        "fpr": 25.95,
+        "lookalike_fpr": 86.29,
+        "clean_ocean_fpr": 3.48
+      },
+      "sealed_test_metrics": {
+        "tp": 128751,
+        "fp": 10008948,
+        "fn": 76506,
+        "tn": 10757315,
+        "iou": 1.2605,
+        "dice": 2.4896,
+        "precision": 1.2700,
+        "recall": 62.7267,
+        "fpr": 48.1981,
+        "clean_ocean_fpr": 37.2388
+      }
+    },
+    "v5b": {
+      "model_id": "unet-dual-pol-sar-v5b-wind",
+      "architecture": "UNet (in_channels=3, base=16, classes=2)",
+      "input_modalities": ["SAR_VV", "SAR_VH", "ERA5_10m_Wind_Speed"],
+      "status": "HELD_UNDER_STOP_CONDITIONS",
+      "reason": "Static Zenodo benchmark scenes lack authoritative UTC timestamps required for real ERA5 hourly alignment without temporal fabrication.",
+      "validation_metrics": null,
+      "sealed_test_metrics": null
+    }
+  },
+  "comparative_insights": [
+    "V4 and V5-A exhibit identical radiometric normalization and architecture, with nearly identical validation performance (~3.8%–3.9% Dice, ~25%–26% FPR).",
+    "On held-out test scenes, V5-A demonstrates higher true positive sensitivity (62.7% recall) at the expense of higher false alarm rate (48.2% FPR), illustrating decision boundary sensitivity on flat Focal-Tversky loss surfaces.",
+    "Both models confirm high look-alike vulnerability (~86% validation look-alike FPR), demonstrating the theoretical limit of monomodal dual-pol backscatter.",
+    "Model V5-B is held under Phase 20 Stop Conditions until verified scene timestamps or live CDSE products are incorporated."
+  ]
+}

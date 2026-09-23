@@ -78,11 +78,9 @@ def load_sar_raster(
 
             # Scrub nodata, NaN, Inf and normalize each band to [0.0, 1.0]
             processed_bands = []
-            for band in raw_bands:
-                clean_band = np.nan_to_num(band, nan=0.0, posinf=0.0, neginf=0.0)
-                if nodata is not None:
-                    clean_band = np.where(clean_band == nodata, 0.0, clean_band)
-                norm_band = normalize_sar_band(clean_band)
+            for idx, band in enumerate(raw_bands):
+                pol_name = selected_bands[idx] if idx < len(selected_bands) else "VV"
+                norm_band = normalize_sar_band(band, polarization=pol_name, nodata=nodata)
                 processed_bands.append(norm_band)
 
             tensor_array = np.stack(processed_bands, axis=0).astype(np.float32)

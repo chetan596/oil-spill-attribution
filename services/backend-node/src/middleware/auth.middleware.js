@@ -58,4 +58,32 @@ const requireRole = (...roles) => (req, res, next) => {
   next();
 };
 
-module.exports = { authenticate, requireRole };
+/**
+ * optionalAuthenticate — extracts user if token is valid, but does not block if missing or invalid.
+ */
+const optionalAuthenticate = (req, res, next) => {
+  try {
+    let authHeader = req.headers.authorization;
+    if (!authHeader && req.query?.token) {
+      authHeader = `Bearer ${req.query.token}`;
+    }
+    if (authHeader && authHeader.startsWith("Bearer ")) {
+      const token = authHeader.slice(7).trim();
+      if (token) {
+        const decoded = jwtService.verify(token);
+        req.user = {
+          id:    decoded.sub,
+          email: decoded.email,
+          role:  decoded.role,
+          name:  decoded.name,
+        };
+      }
+    }
+  } catch (_) {
+    // Ignore error in optional auth
+  }
+  next();
+};
+
+module.exports = { authenticate, optionalAuthenticate, requireRole };
+

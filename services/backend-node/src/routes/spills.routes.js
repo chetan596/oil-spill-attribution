@@ -14,6 +14,12 @@ router.use(authenticate);
 router.get("/", spillController.list);
 
 /**
+ * GET /api/v1/spills/by-analysis/:analysisId
+ * Get full details for a spill associated with a specific analysisId.
+ */
+router.get("/by-analysis/:analysisId", spillController.getByAnalysisId);
+
+/**
  * GET /api/v1/spills/:id
  * Get full details for a specific spill.
  */

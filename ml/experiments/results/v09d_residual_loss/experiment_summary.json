@@ -1,0 +1,29 @@
+{
+  "experiment_id": "PART_0_9D_RESIDUAL_UNET_LOSS_SYNTHESIS",
+  "model_id": "unet-dual-pol-sar-v09d-residual-loss",
+  "status": "EXPERIMENTAL",
+  "checkpoint_sha256": "ab22ffa2fb1c3be99ff2bb99353db76ed4934bd00210f7bce21df74506ce827d",
+  "best_epoch": 12,
+  "total_epochs": 19,
+  "validation_at_0_50": {
+    "threshold": 0.5,
+    "micro_pixel_aggregate": {
+      "tp": 56457,
+      "fp": 215118,
+      "fn": 98936,
+      "tn": 28989617,
+      "iou": 0.152376,
+      "dice": 0.264455,
+      "precision": 0.207887,
+      "recall": 0.363318,
+      "fpr": 0.007366
+    },
+    "category_breakdown": {
+      "clean_ocean_fpr": 0.001355,
+      "look_alike_fpr": 0.022586,
+      "oil_scenes_iou": 0.33273,
+      "oil_scenes_dice": 0.499321
+    }
+  },
+  "runtime_seconds": 216.7
+}

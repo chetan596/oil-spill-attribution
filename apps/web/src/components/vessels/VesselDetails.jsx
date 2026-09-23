@@ -6,7 +6,7 @@ import { Ship, Anchor, Activity, Navigation, Clock, Compass, ExternalLink, Shiel
 export default function VesselDetails({ candidate }) {
   if (!candidate) {
     return (
-      <div style={{ padding: '24px', textAlign: 'center', color: '#64748b', background: '#0f172a', borderRadius: '8px', border: '1px solid #1e293b' }}>
+      <div style={{ padding: '24px', textAlign: 'center', color: 'var(--og-text-muted, #777E87)', background: 'var(--og-surface, #121417)', borderRadius: '6px', border: '1px solid var(--og-border, #25292F)' }}>
         Select a candidate vessel from the ranking table to inspect evidentiary metrics.
       </div>
     );
@@ -19,11 +19,11 @@ export default function VesselDetails({ candidate }) {
   return (
     <div
       style={{
-        background: '#0f172a',
-        border: `1px solid ${isRank1 ? 'rgba(239, 71, 111, 0.4)' : '#1e293b'}`,
-        borderRadius: '8px',
+        background: 'var(--og-surface, #121417)',
+        border: `1px solid ${isRank1 ? 'var(--og-violet, #A855F7)' : 'var(--og-border, #25292F)'}`,
+        borderRadius: '6px',
         padding: '20px',
-        color: '#f8fafc',
+        color: 'var(--og-text-primary, #ECEEF1)',
       }}
       role="region"
       aria-label="Candidate Vessel Evidence Details"
@@ -35,11 +35,11 @@ export default function VesselDetails({ candidate }) {
           alignItems: 'center',
           gap: '6px',
           padding: '6px 10px',
-          background: 'rgba(245, 158, 11, 0.1)',
-          border: '1px solid rgba(245, 158, 11, 0.25)',
+          background: 'var(--og-amber-soft, rgba(231, 166, 58, 0.12))',
+          border: '1px solid var(--og-amber-border, rgba(231, 166, 58, 0.25))',
           borderRadius: '4px',
           fontSize: '0.72rem',
-          color: '#fbbf24',
+          color: 'var(--og-amber, #E7A63A)',
           marginBottom: '14px',
           fontWeight: 600,
         }}
@@ -55,36 +55,38 @@ export default function VesselDetails({ candidate }) {
             style={{
               width: '36px',
               height: '36px',
-              borderRadius: '8px',
-              background: isRank1 ? 'rgba(239, 71, 111, 0.15)' : 'rgba(56, 189, 248, 0.15)',
+              borderRadius: '6px',
+              background: isRank1 ? 'rgba(168, 85, 247, 0.15)' : 'var(--og-surface-elevated, #1D2025)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: isRank1 ? '#ef476f' : '#38bdf8',
+              color: isRank1 ? 'var(--og-violet, #A855F7)' : 'var(--og-text-secondary, #B1B6BD)',
             }}
           >
             <Ship size={20} />
           </div>
           <div>
-            <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#f8fafc' }}>
+            <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--og-text-primary, #ECEEF1)' }}>
               {vessel.name || 'Candidate Vessel'}
             </h3>
-            <div style={{ fontSize: '0.78rem', color: '#94a3b8' }}>
-              Flag: <strong style={{ color: '#cbd5e1' }}>{vessel.flag || 'Not available'}</strong> | Type: <strong style={{ color: '#cbd5e1' }}>{vessel.vesselType || 'Not available'}</strong>
-              {vessel.lengthM != null && <> | Length: <strong style={{ color: '#cbd5e1' }}>{vessel.lengthM}m</strong></>}
+            <div style={{ fontSize: '0.78rem', color: 'var(--og-text-muted, #777E87)' }}>
+              Flag: <strong style={{ color: 'var(--og-text-primary, #ECEEF1)' }}>{vessel.flag || 'Not available'}</strong> | Type: <strong style={{ color: 'var(--og-text-primary, #ECEEF1)' }}>{vessel.vesselType || 'Not available'}</strong>
+              {vessel.lengthM != null && <> | Length: <strong style={{ color: 'var(--og-text-primary, #ECEEF1)' }}>{vessel.lengthM}m</strong></>}
             </div>
           </div>
         </div>
 
         <span
           style={{
-            background: isRank1 ? '#ef476f' : '#1e293b',
-            color: '#ffffff',
-            padding: '3px 10px',
-            borderRadius: '12px',
+            background: isRank1 ? 'var(--og-violet, #A855F7)' : 'var(--og-surface-raised, #171A1E)',
+            color: isRank1 ? '#ffffff' : 'var(--og-text-secondary, #B1B6BD)',
+            border: isRank1 ? 'none' : '1px solid var(--og-border, #25292F)',
+            padding: '3px 8px',
+            borderRadius: '4px',
             fontSize: '0.75rem',
             fontWeight: 700,
             fontFamily: 'var(--font-mono)',
+            fontVariantNumeric: 'tabular-nums',
           }}
         >
           Rank #{candidate.rank || 1}
@@ -92,10 +94,10 @@ export default function VesselDetails({ candidate }) {
       </div>
 
       {/* Primary Attribution Score */}
-      <div style={{ background: '#020617', padding: '12px 16px', borderRadius: '6px', marginBottom: '16px', border: '1px solid #1e293b' }}>
-        <div style={{ fontSize: '0.78rem', color: '#94a3b8', marginBottom: '6px', display: 'flex', justifyContent: 'space-between' }}>
+      <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', padding: '12px 16px', borderRadius: '6px', marginBottom: '16px', border: '1px solid var(--og-border, #25292F)' }}>
+        <div style={{ fontSize: '0.78rem', color: 'var(--og-text-secondary, #B1B6BD)', marginBottom: '6px', display: 'flex', justifyContent: 'space-between' }}>
           <span>Modelled Attribution Score</span>
-          <span style={{ fontSize: '0.7rem', color: '#64748b' }}>4-Component Heuristic Synthesis</span>
+          <span style={{ fontSize: '0.7rem', color: 'var(--og-text-muted, #777E87)' }}>4-Component Heuristic Synthesis</span>
         </div>
         <VesselScore
           score={candidate.totalScore}
@@ -112,58 +114,58 @@ export default function VesselDetails({ candidate }) {
       {/* Evidentiary Metrics Breakdown */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '16px', fontSize: '0.78rem' }}>
         {/* Minimum Distance */}
-        <div style={{ background: '#1e293b', padding: '8px 12px', borderRadius: '6px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', marginBottom: '2px' }}>
-            <Navigation size={12} style={{ color: '#38bdf8' }} />
+        <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', border: '1px solid var(--og-border, #25292F)', padding: '8px 12px', borderRadius: '6px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-text-muted, #777E87)', marginBottom: '2px' }}>
+            <Navigation size={12} style={{ color: 'var(--og-violet, #A855F7)' }} />
             <span>Minimum Distance</span>
           </div>
-          <div style={{ fontWeight: 600, color: '#f8fafc' }}>
+          <div style={{ fontWeight: 600, color: 'var(--og-text-primary, #ECEEF1)', fontVariantNumeric: 'tabular-nums' }}>
             {evidence.distanceKm != null ? `${evidence.distanceKm} km to origin` : 'Not available'}
           </div>
         </div>
 
         {/* Time Difference */}
-        <div style={{ background: '#1e293b', padding: '8px 12px', borderRadius: '6px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', marginBottom: '2px' }}>
-            <Clock size={12} style={{ color: '#38bdf8' }} />
+        <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', border: '1px solid var(--og-border, #25292F)', padding: '8px 12px', borderRadius: '6px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-text-muted, #777E87)', marginBottom: '2px' }}>
+            <Clock size={12} style={{ color: 'var(--og-violet, #A855F7)' }} />
             <span>Time Difference (Δt)</span>
           </div>
-          <div style={{ fontWeight: 600, color: '#f8fafc' }}>
+          <div style={{ fontWeight: 600, color: 'var(--og-text-primary, #ECEEF1)', fontVariantNumeric: 'tabular-nums' }}>
             {evidence.timeDiffHours != null ? `${evidence.timeDiffHours} hours` : 'Not available'}
           </div>
         </div>
 
         {/* Passing Speed & Heading */}
-        <div style={{ background: '#1e293b', padding: '8px 12px', borderRadius: '6px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', marginBottom: '2px' }}>
-            <Activity size={12} style={{ color: '#38bdf8' }} />
+        <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', border: '1px solid var(--og-border, #25292F)', padding: '8px 12px', borderRadius: '6px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-text-muted, #777E87)', marginBottom: '2px' }}>
+            <Activity size={12} style={{ color: 'var(--og-violet, #A855F7)' }} />
             <span>Passing Speed / Heading</span>
           </div>
-          <div style={{ fontWeight: 600, color: '#f8fafc' }}>
+          <div style={{ fontWeight: 600, color: 'var(--og-text-primary, #ECEEF1)', fontVariantNumeric: 'tabular-nums' }}>
             {evidence.speedAtPassingKts != null ? `${evidence.speedAtPassingKts} kts` : 'N/A'}
             {evidence.headingAtPassingDeg != null ? ` @ ${evidence.headingAtPassingDeg}°` : ''}
           </div>
         </div>
 
         {/* AIS Gap */}
-        <div style={{ background: '#1e293b', padding: '8px 12px', borderRadius: '6px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', marginBottom: '2px' }}>
-            <Clock size={12} style={{ color: '#38bdf8' }} />
+        <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', border: '1px solid var(--og-border, #25292F)', padding: '8px 12px', borderRadius: '6px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-text-muted, #777E87)', marginBottom: '2px' }}>
+            <Clock size={12} style={{ color: 'var(--og-violet, #A855F7)' }} />
             <span>AIS Time Gap</span>
           </div>
-          <div style={{ fontWeight: 600, color: evidence.aisGapMinutes > 30 ? '#f59e0b' : '#f8fafc' }}>
+          <div style={{ fontWeight: 600, color: evidence.aisGapMinutes > 30 ? 'var(--og-amber, #E7A63A)' : 'var(--og-text-primary, #ECEEF1)', fontVariantNumeric: 'tabular-nums' }}>
             {evidence.aisGapMinutes != null ? `${evidence.aisGapMinutes} minutes` : '0 min'}
           </div>
         </div>
 
         {/* Closest Coordinate */}
         {evidence.passingLat != null && (
-          <div style={{ background: '#1e293b', padding: '8px 12px', borderRadius: '6px', gridColumn: 'span 2' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', marginBottom: '2px' }}>
-              <Compass size={12} style={{ color: '#38bdf8' }} />
+          <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', border: '1px solid var(--og-border, #25292F)', padding: '8px 12px', borderRadius: '6px', gridColumn: 'span 2' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-text-muted, #777E87)', marginBottom: '2px' }}>
+              <Compass size={12} style={{ color: 'var(--og-violet, #A855F7)' }} />
               <span>Closest Point Coordinate & Time</span>
             </div>
-            <div style={{ fontWeight: 600, color: '#f8fafc', fontSize: '0.75rem' }}>
+            <div style={{ fontWeight: 600, color: 'var(--og-text-primary, #ECEEF1)', fontSize: '0.75rem', fontVariantNumeric: 'tabular-nums' }}>
               {evidence.passingLat}°N, {evidence.passingLng}°E
               {evidence.closestTimestamp ? ` (${new Date(evidence.closestTimestamp).toUTCString()})` : ''}
             </div>
@@ -171,12 +173,12 @@ export default function VesselDetails({ candidate }) {
         )}
 
         {/* MMSI & IMO */}
-        <div style={{ background: '#1e293b', padding: '8px 12px', borderRadius: '6px', gridColumn: 'span 2' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', marginBottom: '2px' }}>
-            <Anchor size={12} style={{ color: '#38bdf8' }} />
+        <div style={{ background: 'var(--og-surface-recessed, #0C0E11)', border: '1px solid var(--og-border, #25292F)', padding: '8px 12px', borderRadius: '6px', gridColumn: 'span 2' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-text-muted, #777E87)', marginBottom: '2px' }}>
+            <Anchor size={12} style={{ color: 'var(--og-violet, #A855F7)' }} />
             <span>MMSI / IMO Identifier</span>
           </div>
-          <div style={{ fontWeight: 600, color: '#f8fafc', fontFamily: 'var(--font-mono)' }}>
+          <div style={{ fontWeight: 600, color: 'var(--og-text-primary, #ECEEF1)', fontFamily: 'var(--font-mono)', fontVariantNumeric: 'tabular-nums' }}>
             {vessel.mmsi || 'N/A'} {vessel.imo ? `/ IMO: ${vessel.imo}` : ''}
           </div>
         </div>
@@ -185,17 +187,17 @@ export default function VesselDetails({ candidate }) {
       {/* Mandatory Scientific Disclaimer */}
       <div
         style={{
-          background: 'rgba(15, 23, 42, 0.8)',
-          border: '1px solid #334155',
+          background: 'var(--og-surface-recessed, #0C0E11)',
+          border: '1px solid var(--og-border, #25292F)',
           borderRadius: '6px',
           padding: '8px 10px',
           marginBottom: '16px',
           fontSize: '0.70rem',
-          color: '#94a3b8',
+          color: 'var(--og-text-secondary, #B1B6BD)',
           lineHeight: 1.4,
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#38bdf8', fontWeight: 600, marginBottom: '2px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--og-violet, #A855F7)', fontWeight: 600, marginBottom: '2px' }}>
           <AlertCircle size={12} />
           <span>Scientific & Evidentiary Disclaimer</span>
         </div>

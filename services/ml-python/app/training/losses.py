@@ -69,21 +69,61 @@ class FocalDiceLoss(nn.Module):
 
     def __init__(
         self,
-        alpha: float = 0.75,
+        alpha: float = 0.25,
         gamma: float = 2.0,
         dice_weight: float = 1.0,
         smooth: float = 1e-6,
     ):
         super().__init__()
+        self.alpha = alpha
+        self.gamma = gamma
+        self.dice_weight = dice_weight
         self.focal = FocalLoss(alpha=alpha, gamma=gamma)
         self.dice = SoftDiceLoss(smooth=smooth, class_index=1)
-        self.dice_weight = dice_weight
 
     def forward(self, logits: torch.Tensor, targets: torch.Tensor) -> Tuple[torch.Tensor, Dict[str, float]]:
         focal = self.focal(logits, targets)
         dice = self.dice(logits, targets)
         total = focal + self.dice_weight * dice
         return total, {"loss_total": total.item(), "loss_focal": focal.item(), "loss_dice": dice.item()}
+
+
+class FocalTverskyLoss(nn.Module):
+    """
+    Focal-Tversky Loss for class-imbalanced marine segmentation.
+    Penalizes false positives (alpha) and false negatives (beta) with focal gamma parameter.
+    """
+
+    def __init__(
+        self,
+        alpha: float = 0.7,
+        beta: float = 0.3,
+        gamma: float = 0.75,
+        smooth: float = 1e-6,
+    ):
+        super().__init__()
+        self.alpha = alpha
+        self.beta = beta
+        self.gamma = gamma
+        self.smooth = smooth
+
+    def forward(self, logits: torch.Tensor, targets: torch.Tensor) -> Tuple[torch.Tensor, Dict[str, float]]:
+        probs = torch.softmax(logits, dim=1)[:, 1]  # foreground class prob
+        targets_f = targets.float()
+
+        dims = (1, 2)
+        tp = torch.sum(probs * targets_f, dim=dims)
+        fp = torch.sum(probs * (1.0 - targets_f), dim=dims)
+        fn = torch.sum((1.0 - probs) * targets_f, dim=dims)
+
+        tversky = (tp + self.smooth) / (tp + self.alpha * fp + self.beta * fn + self.smooth)
+        focal_tversky = torch.pow((1.0 - tversky).clamp(min=1e-7), self.gamma)
+        total = torch.mean(focal_tversky)
+        return total, {
+            "loss_total": total.item(),
+            "loss_focal_tversky": total.item(),
+            "mean_tversky": torch.mean(tversky).item(),
+        }
 
 
 class CombinedLoss(nn.Module):

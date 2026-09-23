@@ -1,0 +1,343 @@
+{
+  "analysis_name": "PREPROCESSING_DISTRIBUTION_DIAGNOSTIC",
+  "evaluated_splits": [
+    "val",
+    "test"
+  ],
+  "overall_raw_vv_distribution": {
+    "min": -54.024,
+    "p01": -42.884,
+    "p05": -38.337,
+    "p25": -33.658,
+    "median": -31.888,
+    "mean": -31.882,
+    "p75": -30.961,
+    "p95": -28.316,
+    "p99": 0.0,
+    "max": 0.0
+  },
+  "overall_raw_vh_distribution": {
+    "min": -45.439,
+    "p01": -34.661,
+    "p05": -30.868,
+    "p25": -23.61,
+    "median": -21.673,
+    "mean": -21.766,
+    "p75": -19.738,
+    "p95": -16.129,
+    "p99": 0.0,
+    "max": 3.184
+  },
+  "v2_overall_truncation": {
+    "vv_values_less_than_zero_pct": 100.0,
+    "vh_values_less_than_zero_pct": 100.0,
+    "root_cause_explanation": "Sentinel-1 calibrated sigma0 values in dB are strictly negative (typical sea surface: -35 to -10 dB). V2 historical preprocessing arr * (arr > 0) sets >99% of valid sea surface values to 0.0, starving the neural network of backscatter features."
+  },
+  "v4_overall_clipping": {
+    "vv_in_calibrated_range_pct": 81.69,
+    "vh_in_calibrated_range_pct": 96.55,
+    "root_cause_explanation": "V4 dB clipping scales the true sea backscatter range [0, 1]. However, low wind and look-alike formations share the low dB signature (-25 to -35 dB) of oil slicks, causing elevated false alarms when context is absent."
+  },
+  "scenes": [
+    {
+      "scene_id": "real_part1_oil_00006",
+      "split": "val",
+      "category": "oil",
+      "raw_vv_stats": {
+        "min": -54.78,
+        "mean": -38.0,
+        "max": 1.66
+      },
+      "raw_vh_stats": {
+        "min": -48.0,
+        "mean": -21.94,
+        "max": 9.05
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 99.9998,
+        "vh_negative_db_pct_zeroed": 99.9964
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 76.601,
+        "vv_clipped_above_max_pct": 0.0023,
+        "vh_clipped_below_min_pct": 0.0013,
+        "vh_clipped_above_max_pct": 0.0179
+      }
+    },
+    {
+      "scene_id": "real_part1_oil_00011",
+      "split": "val",
+      "category": "oil",
+      "raw_vv_stats": {
+        "min": -47.78,
+        "mean": -33.65,
+        "max": 0.48
+      },
+      "raw_vh_stats": {
+        "min": -36.58,
+        "mean": -21.14,
+        "max": 9.21
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 100.0,
+        "vh_negative_db_pct_zeroed": 99.9971
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 27.8032,
+        "vv_clipped_above_max_pct": 0.0006,
+        "vh_clipped_below_min_pct": 0.0,
+        "vh_clipped_above_max_pct": 0.0132
+      }
+    },
+    {
+      "scene_id": "real_part1_oil_00204",
+      "split": "val",
+      "category": "oil",
+      "raw_vv_stats": {
+        "min": -46.0,
+        "mean": -32.22,
+        "max": -23.88
+      },
+      "raw_vh_stats": {
+        "min": -33.79,
+        "mean": -18.39,
+        "max": -10.87
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 100.0,
+        "vh_negative_db_pct_zeroed": 100.0
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 10.2359,
+        "vv_clipped_above_max_pct": 0.0,
+        "vh_clipped_below_min_pct": 0.0,
+        "vh_clipped_above_max_pct": 1.065
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00004",
+      "split": "val",
+      "category": "look_alike",
+      "raw_vv_stats": {
+        "min": -74.74,
+        "mean": -34.23,
+        "max": 0.0
+      },
+      "raw_vh_stats": {
+        "min": -68.68,
+        "mean": -30.66,
+        "max": 0.0
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 100.0,
+        "vh_negative_db_pct_zeroed": 100.0
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 36.6268,
+        "vv_clipped_above_max_pct": 0.0097,
+        "vh_clipped_below_min_pct": 0.0114,
+        "vh_clipped_above_max_pct": 0.0097
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00090",
+      "split": "val",
+      "category": "look_alike",
+      "raw_vv_stats": {
+        "min": -48.24,
+        "mean": -31.5,
+        "max": 4.5
+      },
+      "raw_vh_stats": {
+        "min": -45.83,
+        "mean": -23.96,
+        "max": 10.5
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 99.9995,
+        "vh_negative_db_pct_zeroed": 99.9806
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 25.8293,
+        "vv_clipped_above_max_pct": 0.0023,
+        "vh_clipped_below_min_pct": 0.0001,
+        "vh_clipped_above_max_pct": 11.0828
+      }
+    },
+    {
+      "scene_id": "real_part2_no_oil_00004",
+      "split": "val",
+      "category": "no_oil",
+      "raw_vv_stats": {
+        "min": -47.29,
+        "mean": -31.52,
+        "max": -19.97
+      },
+      "raw_vh_stats": {
+        "min": -29.1,
+        "mean": -21.32,
+        "max": -6.55
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 100.0,
+        "vh_negative_db_pct_zeroed": 100.0
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 8.4282,
+        "vv_clipped_above_max_pct": 0.0,
+        "vh_clipped_below_min_pct": 0.0,
+        "vh_clipped_above_max_pct": 0.0053
+      }
+    },
+    {
+      "scene_id": "real_part2_no_oil_00017",
+      "split": "val",
+      "category": "no_oil",
+      "raw_vv_stats": {
+        "min": -47.73,
+        "mean": -32.13,
+        "max": -23.73
+      },
+      "raw_vh_stats": {
+        "min": -23.91,
+        "mean": -17.45,
+        "max": -10.47
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 100.0,
+        "vh_negative_db_pct_zeroed": 100.0
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 8.5307,
+        "vv_clipped_above_max_pct": 0.0,
+        "vh_clipped_below_min_pct": 0.0,
+        "vh_clipped_above_max_pct": 3.9074
+      }
+    },
+    {
+      "scene_id": "real_part3_test_00060",
+      "split": "test",
+      "category": "test_set",
+      "raw_vv_stats": {
+        "min": -37.55,
+        "mean": -31.45,
+        "max": 3.25
+      },
+      "raw_vh_stats": {
+        "min": -33.75,
+        "mean": -21.74,
+        "max": 12.01
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 99.9994,
+        "vh_negative_db_pct_zeroed": 99.9977
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 0.0198,
+        "vv_clipped_above_max_pct": 0.0016,
+        "vh_clipped_below_min_pct": 0.0,
+        "vh_clipped_above_max_pct": 0.0146
+      }
+    },
+    {
+      "scene_id": "real_part3_test_00062",
+      "split": "test",
+      "category": "test_set",
+      "raw_vv_stats": {
+        "min": -37.09,
+        "mean": -31.56,
+        "max": -24.84
+      },
+      "raw_vh_stats": {
+        "min": -33.41,
+        "mean": -21.79,
+        "max": -14.11
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 100.0,
+        "vh_negative_db_pct_zeroed": 100.0
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 0.0262,
+        "vv_clipped_above_max_pct": 0.0,
+        "vh_clipped_below_min_pct": 0.0,
+        "vh_clipped_above_max_pct": 0.0012
+      }
+    },
+    {
+      "scene_id": "real_part3_test_00063",
+      "split": "test",
+      "category": "test_set",
+      "raw_vv_stats": {
+        "min": -37.44,
+        "mean": -31.63,
+        "max": -25.03
+      },
+      "raw_vh_stats": {
+        "min": -35.3,
+        "mean": -22.06,
+        "max": -13.92
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 100.0,
+        "vh_negative_db_pct_zeroed": 100.0
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 0.0348,
+        "vv_clipped_above_max_pct": 0.0,
+        "vh_clipped_below_min_pct": 0.0,
+        "vh_clipped_above_max_pct": 0.0013
+      }
+    },
+    {
+      "scene_id": "real_part3_test_00064",
+      "split": "test",
+      "category": "test_set",
+      "raw_vv_stats": {
+        "min": -56.03,
+        "mean": -23.56,
+        "max": 0.0
+      },
+      "raw_vh_stats": {
+        "min": -47.5,
+        "mean": -16.94,
+        "max": 0.0
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 100.0,
+        "vh_negative_db_pct_zeroed": 100.0
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 0.0327,
+        "vv_clipped_above_max_pct": 25.4217,
+        "vh_clipped_below_min_pct": 0.0,
+        "vh_clipped_above_max_pct": 25.4218
+      }
+    },
+    {
+      "scene_id": "real_part3_test_00080",
+      "split": "test",
+      "category": "test_set",
+      "raw_vv_stats": {
+        "min": -37.4,
+        "mean": -31.14,
+        "max": -1.17
+      },
+      "raw_vh_stats": {
+        "min": -37.36,
+        "mean": -23.76,
+        "max": 8.76
+      },
+      "v2_truncation_effect": {
+        "vv_negative_db_pct_zeroed": 100.0,
+        "vh_negative_db_pct_zeroed": 99.9974
+      },
+      "v4_clipping_effect": {
+        "vv_clipped_below_min_pct": 0.0282,
+        "vv_clipped_above_max_pct": 0.0014,
+        "vh_clipped_below_min_pct": 0.0,
+        "vh_clipped_above_max_pct": 0.0162
+      }
+    }
+  ]
+}

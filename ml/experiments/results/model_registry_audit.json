@@ -1,0 +1,366 @@
+{
+  "generated_at": "2026-09-19T05:04:00.565197+00:00",
+  "registry_version": "1.0",
+  "active_model_id": "unet-dual-pol-sar-v2",
+  "total_models_audited": 6,
+  "cuda_environment": {
+    "cuda_available": true,
+    "device_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "compute_capability": "12.0"
+  },
+  "models": [
+    {
+      "model_id": "unet-sar-oil-spill-v1",
+      "version": "V1",
+      "status": "untrained",
+      "architecture": "UNet",
+      "in_channels": 1,
+      "num_classes": 2,
+      "checkpoint_path": "ml/model_registry/versions/unet_sar_oil_spill_v1.pth",
+      "checkpoint_exists": false,
+      "checkpoint_size_bytes": null,
+      "sha256": null,
+      "preprocessing": {
+        "name": "NOT_DOCUMENTED",
+        "verified": false
+      },
+      "load_test": "CHECKPOINT_NOT_FOUND",
+      "cuda_forward_test": "SKIPPED_NO_CHECKPOINT",
+      "notes": [
+        "Checkpoint file is absent from disk."
+      ]
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v1",
+      "version": "V1",
+      "status": "trained",
+      "architecture": "UNet",
+      "in_channels": 2,
+      "num_classes": 2,
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v1.pth",
+      "checkpoint_exists": true,
+      "checkpoint_size_bytes": 13066111,
+      "sha256": "801f37034f9a0bc64827dee59da661350090924525e985ca8c6035716a1eb593",
+      "preprocessing": {
+        "name": "Historical_Uncorrected_Positive_Mask",
+        "vv_range_db": "NOT_CALIBRATED (clipped > 0)",
+        "vh_range_db": "NOT_CALIBRATED (clipped > 0)",
+        "formula": "arr * (arr > 0)",
+        "channel_order": [
+          "VV",
+          "VH"
+        ],
+        "invalid_handling": "clipped_to_zero",
+        "verified": true,
+        "note": "Historical baseline with negative dB truncation."
+      },
+      "load_test": "PASSED",
+      "cuda_forward_test": "PASSED",
+      "notes": [],
+      "checkpoint_format": "dict_with_metadata",
+      "saved_hyperparameters": {
+        "in_channels": 2,
+        "num_classes": 2,
+        "base_channels": 16,
+        "tile_size": 512
+      },
+      "detected_base_channels": 16,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v2",
+      "version": "V2",
+      "status": "trained",
+      "architecture": "UNet",
+      "in_channels": 2,
+      "num_classes": 2,
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v2.pth",
+      "checkpoint_exists": true,
+      "checkpoint_size_bytes": 13066175,
+      "sha256": "905ef8e47c1f4b12eb490b33f1726fb91714b3dfcdf5184d8dfd96ec312f0dbd",
+      "preprocessing": {
+        "name": "Historical_Uncorrected_Positive_Mask",
+        "vv_range_db": "NOT_CALIBRATED (clipped > 0)",
+        "vh_range_db": "NOT_CALIBRATED (clipped > 0)",
+        "formula": "arr * (arr > 0)",
+        "channel_order": [
+          "VV",
+          "VH"
+        ],
+        "invalid_handling": "clipped_to_zero",
+        "verified": true,
+        "note": "Historical baseline with negative dB truncation."
+      },
+      "load_test": "PASSED",
+      "cuda_forward_test": "PASSED",
+      "notes": [],
+      "checkpoint_format": "dict_with_metadata",
+      "saved_hyperparameters": {
+        "base_channels": 16,
+        "in_channels": 2,
+        "num_classes": 2,
+        "loss": "FocalDiceLoss",
+        "alpha": 0.75,
+        "gamma": 2.0,
+        "dice_weight": 1.0,
+        "sampler": "WeightedRandomSampler",
+        "augment": true
+      },
+      "detected_base_channels": 16,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v3",
+      "version": "V3",
+      "status": "trained",
+      "architecture": "UNet",
+      "in_channels": 2,
+      "num_classes": 2,
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v3.pth",
+      "checkpoint_exists": true,
+      "checkpoint_size_bytes": 13066239,
+      "sha256": "41258458dfd911de1734e1b763b9ee64a91d8485039fabb338ae5d618726686e",
+      "preprocessing": {
+        "name": "Historical_Uncorrected_Positive_Mask",
+        "vv_range_db": "NOT_CALIBRATED (clipped > 0)",
+        "vh_range_db": "NOT_CALIBRATED (clipped > 0)",
+        "formula": "arr * (arr > 0)",
+        "channel_order": [
+          "VV",
+          "VH"
+        ],
+        "invalid_handling": "clipped_to_zero",
+        "verified": true,
+        "note": "Historical baseline with negative dB truncation."
+      },
+      "load_test": "PASSED",
+      "cuda_forward_test": "PASSED",
+      "notes": [],
+      "checkpoint_format": "dict_with_metadata",
+      "saved_hyperparameters": {
+        "base_channels": 16,
+        "in_channels": 2,
+        "num_classes": 2,
+        "loss": "FocalDiceLoss",
+        "alpha": 0.75,
+        "gamma": 2.0,
+        "dice_weight": 1.0,
+        "sampler": "WeightedRandomSampler_Positive_Balanced",
+        "augment": true,
+        "total_scenes": 40,
+        "train_scenes": 28
+      },
+      "detected_base_channels": 16,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v4",
+      "version": "V4",
+      "status": "experimental",
+      "architecture": "UNet",
+      "in_channels": 2,
+      "num_classes": 2,
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v4.pth",
+      "checkpoint_exists": true,
+      "checkpoint_size_bytes": 4367239,
+      "sha256": "c1395f1deae819b222f9e1034472d18a84f502fd89d4076981d3291f4af4fd63",
+      "preprocessing": {
+        "name": "Decibel_Calibrated_Clipping",
+        "vv_range_db": [
+          -35.0,
+          -5.0
+        ],
+        "vh_range_db": [
+          -45.0,
+          -15.0
+        ],
+        "formula": "clip((value_db - min_db) / (max_db - min_db), 0, 1)",
+        "channel_order": [
+          "VV",
+          "VH"
+        ],
+        "invalid_handling": "fill_zero",
+        "verified": true
+      },
+      "load_test": "PASSED",
+      "cuda_forward_test": "PASSED",
+      "notes": [],
+      "checkpoint_format": "raw_state_dict",
+      "detected_base_channels": 16,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v5a",
+      "version": "V5A",
+      "status": "UNREGISTERED_CHECKPOINT",
+      "architecture": "UNet",
+      "in_channels": 2,
+      "num_classes": 2,
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v5a.pth",
+      "checkpoint_exists": true,
+      "checkpoint_size_bytes": 4367355,
+      "sha256": "07267fd52382113417643b845ed54bdb4fd53521affd4756969e3b085ad9b067",
+      "preprocessing": {
+        "name": "Decibel_Calibrated_Clipping",
+        "vv_range_db": [
+          -35.0,
+          -5.0
+        ],
+        "vh_range_db": [
+          -45.0,
+          -15.0
+        ],
+        "formula": "clip((value_db - min_db) / (max_db - min_db), 0, 1)",
+        "channel_order": [
+          "VV",
+          "VH"
+        ],
+        "invalid_handling": "fill_zero",
+        "verified": true
+      },
+      "load_test": "PASSED",
+      "cuda_forward_test": "PASSED",
+      "notes": [],
+      "checkpoint_format": "raw_state_dict",
+      "detected_base_channels": 16,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "model_id": "rgb-oil-classifier-resnet18-v2",
+      "version": "2.0.0",
+      "modality": "OPTICAL_RGB",
+      "status": "EXPERIMENTAL",
+      "architecture": "ResNet-18 (ImageNet Transfer Learning + 3-Class Head)",
+      "checkpoint_path": "services/ml-python/app/models/rgb_oil_classifier_v2/rgb_oil_classifier_v2.pth",
+      "checkpoint_sha256": "6ccf88c8be6764384297005effedbaf047165ef20dc4148911bc66ddfc10dd84",
+      "decision_threshold": 0.3,
+      "validation_metrics": {
+        "accuracy_3class": 0.8178082191780822,
+        "macro_precision": 0.8248374590064543,
+        "macro_recall": 0.792640665170648,
+        "macro_f1": 0.8006161579190169,
+        "weighted_f1": 0.8211556606467528,
+        "confusion_matrix_3class": [
+          [
+            129,
+            35,
+            1
+          ],
+          [
+            54,
+            356,
+            2
+          ],
+          [
+            19,
+            22,
+            112
+          ]
+        ],
+        "oil_precision": 0.959349593495935,
+        "oil_recall": 0.7712418300653595,
+        "oil_f1": 0.855072463768116,
+        "oil_specificity": 0.9913344887348353,
+        "oil_fpr": 0.008665511265164644,
+        "clean_fpr": 0.012121212121212121,
+        "lookalike_fpr": 0.007281553398058253,
+        "roc_auc": 0.9330886600740816,
+        "pr_auc": 0.8951336618959544,
+        "binary_tp": 118,
+        "binary_fp": 5,
+        "binary_tn": 572,
+        "binary_fn": 35,
+        "decision_threshold": 0.3
+      },
+      "internal_test_metrics": {
+        "accuracy_3class": 0.8121468926553672,
+        "macro_precision": 0.8183719061395051,
+        "macro_recall": 0.7251962680372314,
+        "macro_f1": 0.757940259667925,
+        "weighted_f1": 0.8101031520789862,
+        "confusion_matrix_3class": [
+          [
+            113,
+            47,
+            2
+          ],
+          [
+            50,
+            415,
+            1
+          ],
+          [
+            7,
+            26,
+            47
+          ]
+        ],
+        "oil_precision": 0.9285714285714286,
+        "oil_recall": 0.65,
+        "oil_f1": 0.7647058823529412,
+        "oil_specificity": 0.9936305732484076,
+        "oil_fpr": 0.006369426751592357,
+        "clean_fpr": 0.018518518518518517,
+        "lookalike_fpr": 0.002145922746781116,
+        "roc_auc": 0.9047372611464969,
+        "pr_auc": 0.8016062741246065,
+        "binary_tp": 52,
+        "binary_fp": 4,
+        "binary_tn": 624,
+        "binary_fn": 28,
+        "decision_threshold": 0.3
+      },
+      "external_test_status": "SEALED \u2014 NOT EVALUATED",
+      "updated_at": "2026-09-20T03:16:41Z"
+    },
+    {
+      "model_id": "optical-oil-seg-unet-resnet18-v1",
+      "version": "1.0.0",
+      "modality": "OPTICAL_RGB",
+      "status": "EXPERIMENTAL",
+      "task": "OPTICAL_OIL_SPILL_SEGMENTATION",
+      "architecture": "OpticalUNetResNet18",
+      "encoder": "ResNet-18 (ImageNet Pretrained)",
+      "checkpoint_path": "services\\ml-python\\app\\models\\optical_oil_segmentation_v1\\optical_oil_seg_unet_resnet18_v1.pth",
+      "sha256": "0b6629c1daf94933904b59c50049811fc5110f658b3eee633d509dc145dddc26",
+      "operating_threshold": 0.8,
+      "validation_metrics": {
+        "mean_iou": 0.9388867435207731,
+        "foreground_iou": 0.8848798367588314,
+        "background_iou": 0.9928936502827148,
+        "dice": 0.9389244019718919,
+        "precision": 0.9331123603290946,
+        "recall": 0.944809299899491,
+        "specificity": 0.9960719285865993,
+        "fpr": 0.0039280714134006895,
+        "pixel_accuracy": 0.99326171875,
+        "tp": 2477906,
+        "fp": 177622,
+        "tn": 45041006,
+        "fn": 144746
+      },
+      "internal_test_metrics": {
+        "mean_iou": 0.4993685598427293,
+        "foreground_iou": 0.0,
+        "background_iou": 0.9987371196854586,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "fpr": 0.0,
+        "pixel_accuracy": 0.9987371196854586,
+        "tp": 0,
+        "fp": 0,
+        "tn": 46340891,
+        "fn": 58597
+      },
+      "external_test_status": "SEALED \u2014 NOT EVALUATED",
+      "registered_at": "2026-09-20T09:30:00Z"
+    }
+  ]
+}

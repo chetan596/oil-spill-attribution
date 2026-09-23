@@ -1,0 +1,8 @@
+{
+  "total_training_duration_seconds": 129.37,
+  "total_epochs_trained": 11,
+  "best_epoch": 4,
+  "best_epoch_dice": 0.061074,
+  "early_stopping_triggered": true,
+  "completed_at": "2026-09-19T12:20:07.338072+00:00"
+}

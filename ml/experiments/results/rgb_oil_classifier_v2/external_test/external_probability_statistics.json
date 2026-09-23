@@ -1,0 +1,26 @@
+{
+  "CLEAN_OCEAN": {
+    "count": 11,
+    "mean_oil_probability": 0.01172672864049673,
+    "median_oil_probability": 0.009041860699653625,
+    "min_oil_probability": 4.546525451587513e-05,
+    "max_oil_probability": 0.042153116315603256,
+    "std_oil_probability": 0.011817938648164272
+  },
+  "LOOK_ALIKE": {
+    "count": 33,
+    "mean_oil_probability": 0.05917244404554367,
+    "median_oil_probability": 0.003364940406754613,
+    "min_oil_probability": 0.00030563431209884584,
+    "max_oil_probability": 0.9773731231689453,
+    "std_oil_probability": 0.20947332680225372
+  },
+  "OIL_SPILL": {
+    "count": 86,
+    "mean_oil_probability": 0.9539157748222351,
+    "median_oil_probability": 0.9993290901184082,
+    "min_oil_probability": 0.04964696243405342,
+    "max_oil_probability": 0.9999992847442627,
+    "std_oil_probability": 0.17267601191997528
+  }
+}

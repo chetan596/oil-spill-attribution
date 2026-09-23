@@ -1,36 +1,186 @@
-/* Global Theme & Layout Styles */
+/* ==========================================================================
+   OCEAN GUARD AI — SCOPE DARK MASTER STYLESHEET
+   Ground Truth Design Tokens, Layout System & Component Primitives
+   ========================================================================== */
+
+@import './design/tokens.css';
+@import './design/typography.css';
+
 :root {
-  --bg-dark: #020617;
-  --bg-card: #0f172a;
-  --bg-card-hover: #1e293b;
-  --border-color: #1e293b;
-  --border-highlight: #334155;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --accent-cyan: #38bdf8;
-  --accent-blue: #0284c7;
-  --accent-emerald: #10b981;
-  --accent-amber: #f59e0b;
-  --accent-rose: #f43f5e;
-  --accent-purple: #a855f7;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  /* Scope Dark Palette Ground Truth (Maps directly to tokens.css canonical foundation) */
+  --gesso-canvas: var(--og-bg, #0A0B0D);
+  --gesso-surface: var(--og-surface, #121417);
+  --gesso-surface-elevated: var(--og-surface-raised, #171A1E);
+  --gesso-surface-recessed: var(--og-surface-recessed, #0C0E11);
+  --gesso-surface-highlight: var(--og-surface-elevated, #1D2025);
+  
+  --gesso-fg: var(--og-text-primary, #ECEEF1);
+  --gesso-fg-bright: var(--og-text-primary, #ECEEF1);
+  --gesso-fg-muted: var(--og-text-muted, #777E87);
+  --gesso-fg-subtle: var(--og-text-faint, #555C65);
+  
+  --gesso-divider: var(--og-border-subtle, rgba(255, 255, 255, 0.055));
+  --gesso-divider-strong: var(--og-border, #25292F);
+  --gesso-border: var(--og-border, #25292F);
+
+  --gesso-accent: var(--og-violet, #A855F7);
+  --gesso-primary: var(--og-violet, #A855F7);
+  --gesso-primary-hover: var(--og-violet-soft, #C084FC);
+  --gesso-accent-ink: var(--og-violet, #A855F7);
+  --gesso-accent-2: var(--og-magenta, #EC4899);
+  --gesso-accent-2-ink: var(--og-magenta, #EC4899);
+  --gesso-on-accent: #FFFFFF;
+
+  /* Semantics */
+  --gesso-success: var(--og-success, #4ADE80);
+  --gesso-warning: var(--og-amber, #E7A63A);
+  --gesso-error: var(--og-error, #F87171);
+  --gesso-info: var(--og-teal, #49C6C8);
+
+  /* Scientific / Geospatial */
+  --gesso-slick-observed: var(--og-teal, #49C6C8);
+  --gesso-origin-modelled: var(--og-amber, #E7A63A);
+  --gesso-hindcast: var(--og-amber, #E7A63A);
+  --gesso-forecast: var(--og-amber, #E7A63A);
+  --gesso-cpa: var(--og-violet, #A855F7);
+
+  /* Categorical Data Viz Series */
+  --gesso-data-1: #A855F7;
+  --gesso-data-2: #49C6C8;
+  --gesso-data-3: #E7A63A;
+  --gesso-data-4: #EC4899;
+  --gesso-data-5: #78DADD;
+  --gesso-data-6: #F2BC62;
+
+  /* Spacing */
+  --gesso-space-1: 4px;
+  --gesso-space-2: 8px;
+  --gesso-space-3: 12px;
+  --gesso-space-4: 16px;
+  --gesso-space-6: 24px;
+  --gesso-space-8: 32px;
+  --gesso-space-12: 48px;
+  --gesso-space-16: 64px;
+  --gesso-space-24: 96px;
+
+  /* Radii */
+  --gesso-radius-sm: 4px;
+  --gesso-radius-md: 8px;
+  --gesso-radius-lg: 12px;
+  --gesso-radius-full: 9999px;
+
+  /* Shadows (Subtle, no glow) */
+  --gesso-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --gesso-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --gesso-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --gesso-shadow-modal: 0 20px 48px rgba(0, 0, 0, 0.7);
+
+  /* Motion */
+  --gesso-duration-fast: 100ms;
+  --gesso-duration-base: 180ms;
+  --gesso-duration-slow: 300ms;
+  --gesso-easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --gesso-easing-emphasis: cubic-bezier(0.0, 0, 0.2, 1);
+
+  /* Backwards Compatibility Mapping for Existing Components */
+  --og-bg-base: var(--og-bg, #0A0B0D);
+  --og-bg-surface: var(--og-surface, #121417);
+  --og-bg-panel: var(--og-surface, #121417);
+  --og-bg-elevated: var(--og-surface-raised, #171A1E);
+  --og-bg-highlight: var(--og-surface-elevated, #1D2025);
+  --og-bg-glass: rgba(18, 20, 23, 0.95);
+  --og-bg-glass-panel: rgba(18, 20, 23, 0.98);
+  --og-border-subtle: var(--og-border-subtle, rgba(255, 255, 255, 0.055));
+  --og-border-default: var(--og-border, #25292F);
+  --og-border-strong: var(--og-border-strong, #343940);
+  --og-border-focus: var(--og-border-strong, #343940);
+  --og-text-primary: var(--og-text-primary, #ECEEF1);
+  --og-text-secondary: var(--og-text-secondary, #B1B6BD);
+  --og-text-muted: var(--og-text-muted, #777E87);
+  --og-observed: var(--og-teal, #49C6C8);
+  --og-observed-bg: rgba(73, 198, 200, 0.12);
+  --og-observed-border: rgba(73, 198, 200, 0.35);
+  --og-modelled: var(--og-amber, #E7A63A);
+  --og-modelled-bg: rgba(231, 166, 58, 0.12);
+  --og-modelled-border: rgba(231, 166, 58, 0.35);
+  --og-ais: var(--og-violet, #A855F7);
+  --og-ais-bg: rgba(168, 85, 247, 0.12);
+  --og-ais-border: rgba(168, 85, 247, 0.35);
+  --og-forecast: var(--og-amber, #E7A63A);
+  --og-forecast-bg: rgba(231, 166, 58, 0.12);
+  --og-forecast-border: rgba(231, 166, 58, 0.35);
+  --og-radius-sm: 4px;
+  --og-radius-md: 8px;
+  --og-radius-lg: 12px;
+  --og-shadow-sm: var(--gesso-shadow-sm);
+  --og-shadow-md: var(--gesso-shadow-md);
+  --og-shadow-lg: var(--gesso-shadow-lg);
+  --og-shadow-hud: var(--gesso-shadow-md);
+  --og-font-sans: var(--og-font-body);
+  --og-font-mono: var(--og-font-mono);
 }
 
-* {
+/* ==========================================================================
+   Base Reset & Layout Guard
+   ========================================================================== */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: var(--font-sans);
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
-  line-height: 1.5;
+html, body {
+  width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
+  max-width: 100%;
+  background-color: var(--gesso-canvas);
+  color: var(--gesso-fg);
+  font-family: var(--gesso-font-body);
+  font-size: 14px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img, svg, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Focus and Selection */
+:focus-visible {
+  outline: 2px solid var(--gesso-accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--gesso-accent);
+  color: var(--gesso-on-accent);
 }
 
 /* Custom Scrollbars */
@@ -38,154 +188,317 @@ body {
   width: 6px;
   height: 6px;
 }
-::-webkit-scrollbar-track {
-  background: #020617;
-}
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: var(--gesso-radius-full);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: rgba(255, 255, 255, 0.22);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-/* Common UI Utilities */
-.card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+/* ==========================================================================
+   Scope Dark Structural Panels & Inset Wells
+   ========================================================================== */
+.panel {
+  background: var(--gesso-surface);
+  border-radius: var(--gesso-radius-md);
+  border: 1px solid var(--gesso-border);
+  position: relative;
+}
+
+.panel-elevated {
+  background: var(--gesso-surface-elevated);
+  border-radius: var(--gesso-radius-md);
+  border: 1px solid var(--gesso-divider-strong);
+  box-shadow: var(--gesso-shadow-md);
+}
+
+.input-well {
+  background: var(--gesso-surface-recessed);
+  color: var(--gesso-fg);
+  border-radius: var(--gesso-radius-md);
+  border: 1px solid var(--gesso-border);
+  padding: 10px 14px;
+}
+
+.input-well:focus-within {
+  border-color: var(--gesso-accent);
+}
+
+/* Swatch Indicator Dot */
+.sw {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 8px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Button System
+   ========================================================================== */
+.button-primary,
+.cta {
+  background: var(--og-violet, #A855F7);
+  color: #FFFFFF;
   border-radius: 8px;
-  padding: 16px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.card:hover {
-  border-color: var(--border-highlight);
-}
-
-.btn-primary {
-  background: var(--accent-cyan);
-  color: #020617;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 0 16px;
+  height: 32px;
+  font-weight: 500;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   border: none;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: opacity 0.2s, transform 0.1s;
-}
-.btn-primary:hover {
-  opacity: 0.9;
-}
-.btn-primary:active {
-  transform: scale(0.98);
-}
-.btn-primary:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+  transition: background var(--gesso-duration-fast) var(--gesso-easing-default);
 }
 
-.btn-secondary {
-  background: #1e293b;
-  color: var(--text-primary);
+.button-primary:hover,
+.cta:hover {
+  background: var(--og-violet-soft, #C084FC);
+}
+
+.button-primary:active,
+.cta:active {
+  transform: translateY(1px);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--og-text-primary, #ECEEF1);
+  border: 1px solid var(--og-border-strong, #343940);
+  border-radius: 8px;
+  padding: 0 14px;
+  height: 32px;
+  font-size: 12px;
   font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: 1px solid var(--border-highlight);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   cursor: pointer;
+  transition: background var(--gesso-duration-fast) var(--gesso-easing-default), border-color var(--gesso-duration-fast) var(--gesso-easing-default);
+}
+
+.button-secondary:hover {
+  background: var(--og-surface-raised, #171A1E);
+  border-color: var(--og-border-strong, #343940);
+}
+
+.ghost-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--og-text-secondary, #B1B6BD);
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 28px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background var(--gesso-duration-fast) var(--gesso-easing-default), color var(--gesso-duration-fast) var(--gesso-easing-default);
+}
+
+.ghost-btn:hover {
+  background: var(--og-surface-raised, #171A1E);
+  color: var(--og-text-primary, #ECEEF1);
+}
+
+/* Synthesis CTA (Flat Magenta, no gradient, no glow) */
+.cta-synthesize {
+  background: var(--og-magenta, #EC4899);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0 16px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: background 0.2s;
-}
-.btn-secondary:hover {
-  background: #334155;
+  cursor: pointer;
+  transition: background var(--gesso-duration-fast) var(--gesso-easing-default), transform 80ms var(--gesso-easing-default);
 }
 
-/* Leaflet Container Overrides */
+.cta-synthesize:hover {
+  background: var(--og-magenta-soft, #F472B6);
+}
+
+.cta-synthesize:active {
+  transform: translateY(1px);
+}
+
+/* Segmented Layer Toggle Pills */
+.layer-pills {
+  display: flex;
+  gap: 4px;
+  background: var(--og-surface-recessed, #0C0E11);
+  padding: 3px;
+  border-radius: 6px;
+  border: 1px solid var(--og-border, #25292F);
+}
+
+.layer-pills button {
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--og-text-muted, #777E87);
+  transition: background var(--gesso-duration-fast) var(--gesso-easing-default), color var(--gesso-duration-fast) var(--gesso-easing-default);
+}
+
+.layer-pills button[aria-pressed="true"] {
+  background: var(--og-surface-elevated, #1D2025);
+  color: var(--og-text-primary, #ECEEF1);
+}
+
+.layer-pills button:hover:not([aria-pressed="true"]) {
+  color: var(--og-text-secondary, #B1B6BD);
+}
+
+/* ==========================================================================
+   Skeleton Shimmer System
+   ========================================================================== */
+@keyframes gesso-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  background-size: 200% 100%;
+  animation: gesso-shimmer 1.6s infinite ease-in-out;
+  border-radius: var(--gesso-radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-shimmer {
+    animation: none;
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* ==========================================================================
+   Leaflet Maritime Map Overrides
+   ========================================================================== */
 .leaflet-container {
   width: 100%;
   height: 100%;
-  background: #060d1f !important;
-  font-family: var(--font-sans);
+  background: #050508 !important;
+  font-family: var(--gesso-font-body) !important;
 }
 
 .leaflet-popup-content-wrapper {
-  background: #0f172a !important;
-  color: #f8fafc !important;
-  border: 1px solid #334155 !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+  background: var(--gesso-surface-elevated) !important;
+  color: var(--gesso-fg-bright) !important;
+  border: 1px solid var(--gesso-divider-strong) !important;
+  border-radius: var(--gesso-radius-md) !important;
+  box-shadow: var(--gesso-shadow-lg) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.45 !important;
+  font-size: 13px !important;
 }
 
 .leaflet-popup-tip {
-  background: #0f172a !important;
+  background: var(--gesso-surface-elevated) !important;
 }
 
-/* Pulse animation for spill origin */
-@keyframes pulse-ring {
-  0% {
-    transform: scale(0.8);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.6);
-    opacity: 0.2;
-  }
-  100% {
-    transform: scale(0.8);
-    opacity: 0.8;
-  }
+/* Blue Forensic Candidate Vessel Attribution Popup Card */
+.og-vessel-leaflet-popup .leaflet-popup-content-wrapper {
+  padding: 0 !important;
+  background: var(--og-surface, #0F1620) !important;
+  border: 1px solid var(--og-border-subtle, #1E2C3D) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.75) !important;
+  overflow: hidden !important;
+  max-width: min(380px, calc(100vw - 32px)) !important;
 }
 
-.pulse-marker {
-  animation: pulse-ring 2s infinite ease-in-out;
+.og-vessel-leaflet-popup .leaflet-popup-content {
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 360px !important;
+  line-height: 1.4 !important;
 }
 
-/* Print Styles for Analytical Dossiers & Reports */
+.leaflet-container a.leaflet-popup-close-button {
+  color: #94a3b8 !important;
+  padding: 4px 6px !important;
+  top: 8px !important;
+  right: 8px !important;
+  font-size: 16px !important;
+  border-radius: 4px !important;
+  transition: color 120ms, background-color 120ms !important;
+  z-index: 10 !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+  color: #f8fafc !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: var(--gesso-surface) !important;
+  color: var(--gesso-fg) !important;
+  border-color: var(--gesso-border) !important;
+  border-radius: var(--gesso-radius-sm) !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: var(--gesso-surface-elevated) !important;
+  color: var(--gesso-fg-bright) !important;
+}
+
+.leaflet-top.leaflet-left {
+  top: 96px !important;
+  left: 10px !important;
+}
+
+/* ==========================================================================
+   Print Stylesheet
+   ========================================================================== */
+@page {
+  size: A4 portrait;
+  margin: 12mm;
+}
+
 @media print {
-  header, nav, button, .btn-primary, .btn-secondary, a[href^="/dashboard"], a[href^="/reports"] {
-    display: none !important;
-  }
-
   body {
     background: #ffffff !important;
     color: #0f172a !important;
   }
 
-  .card, .report-container {
+  nav, header, aside, .no-print, button, .leaflet-control-container {
+    display: none !important;
+  }
+
+  .panel, .card {
     background: #ffffff !important;
     border: 1px solid #cbd5e1 !important;
     color: #0f172a !important;
     box-shadow: none !important;
-  }
-
-  .card * {
-    color: #0f172a !important;
-  }
-
-  code {
-    background: #f1f5f9 !important;
-    color: #0284c7 !important;
-  }
-}
-
-/* Responsive Media Queries */
-@media (max-width: 1024px) {
-  main {
-    padding: 16px !important;
-  }
-  section {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    padding: 0 12px !important;
-  }
-  header span {
-    display: none;
   }
 }

@@ -1,0 +1,149 @@
+{
+  "selected_threshold": 0.3,
+  "selection_criterion": "Oil F1 * 0.6 + Oil Recall * 0.2 + Specificity * 0.2 (Validation Only)",
+  "tuning_results": [
+    {
+      "threshold": 0.2,
+      "oil_recall": 0.7908496732026143,
+      "oil_precision": 0.9029850746268657,
+      "oil_f1": 0.843205574912892,
+      "oil_specificity": 0.9774696707105719,
+      "oil_fpr": 0.022530329289428077,
+      "clean_fpr": 0.03636363636363636,
+      "lookalike_fpr": 0.01699029126213592,
+      "criterion_score": 0.8595872137303724
+    },
+    {
+      "threshold": 0.25,
+      "oil_recall": 0.7712418300653595,
+      "oil_precision": 0.9291338582677166,
+      "oil_f1": 0.8428571428571429,
+      "oil_specificity": 0.9844020797227037,
+      "oil_fpr": 0.01559792027729636,
+      "clean_fpr": 0.024242424242424242,
+      "lookalike_fpr": 0.012135922330097087,
+      "criterion_score": 0.8568430676718983
+    },
+    {
+      "threshold": 0.3,
+      "oil_recall": 0.7712418300653595,
+      "oil_precision": 0.959349593495935,
+      "oil_f1": 0.855072463768116,
+      "oil_specificity": 0.9913344887348353,
+      "oil_fpr": 0.008665511265164644,
+      "clean_fpr": 0.012121212121212121,
+      "lookalike_fpr": 0.007281553398058253,
+      "criterion_score": 0.8655587420209085
+    },
+    {
+      "threshold": 0.35,
+      "oil_recall": 0.7516339869281046,
+      "oil_precision": 0.9583333333333334,
+      "oil_f1": 0.8424908424908425,
+      "oil_specificity": 0.9913344887348353,
+      "oil_fpr": 0.008665511265164644,
+      "clean_fpr": 0.012121212121212121,
+      "lookalike_fpr": 0.007281553398058253,
+      "criterion_score": 0.8540882006270935
+    },
+    {
+      "threshold": 0.4,
+      "oil_recall": 0.738562091503268,
+      "oil_precision": 0.9658119658119658,
+      "oil_f1": 0.837037037037037,
+      "oil_specificity": 0.9930675909878682,
+      "oil_fpr": 0.006932409012131715,
+      "clean_fpr": 0.006060606060606061,
+      "lookalike_fpr": 0.007281553398058253,
+      "criterion_score": 0.8485481587204495
+    },
+    {
+      "threshold": 0.45,
+      "oil_recall": 0.7320261437908496,
+      "oil_precision": 0.9739130434782609,
+      "oil_f1": 0.835820895522388,
+      "oil_specificity": 0.9948006932409013,
+      "oil_fpr": 0.005199306759098787,
+      "clean_fpr": 0.006060606060606061,
+      "lookalike_fpr": 0.0048543689320388345,
+      "criterion_score": 0.8468579047197831
+    },
+    {
+      "threshold": 0.5,
+      "oil_recall": 0.7320261437908496,
+      "oil_precision": 0.9911504424778761,
+      "oil_f1": 0.8421052631578947,
+      "oil_specificity": 0.9982668977469671,
+      "oil_fpr": 0.0017331022530329288,
+      "clean_fpr": 0.0,
+      "lookalike_fpr": 0.0024271844660194173,
+      "criterion_score": 0.8513217662023002
+    },
+    {
+      "threshold": 0.55,
+      "oil_recall": 0.7320261437908496,
+      "oil_precision": 0.9911504424778761,
+      "oil_f1": 0.8421052631578947,
+      "oil_specificity": 0.9982668977469671,
+      "oil_fpr": 0.0017331022530329288,
+      "clean_fpr": 0.0,
+      "lookalike_fpr": 0.0024271844660194173,
+      "criterion_score": 0.8513217662023002
+    },
+    {
+      "threshold": 0.6,
+      "oil_recall": 0.7254901960784313,
+      "oil_precision": 1.0,
+      "oil_f1": 0.8409090909090908,
+      "oil_specificity": 1.0,
+      "oil_fpr": 0.0,
+      "clean_fpr": 0.0,
+      "lookalike_fpr": 0.0,
+      "criterion_score": 0.8496434937611408
+    },
+    {
+      "threshold": 0.65,
+      "oil_recall": 0.7058823529411765,
+      "oil_precision": 1.0,
+      "oil_f1": 0.8275862068965517,
+      "oil_specificity": 1.0,
+      "oil_fpr": 0.0,
+      "clean_fpr": 0.0,
+      "lookalike_fpr": 0.0,
+      "criterion_score": 0.8377281947261663
+    },
+    {
+      "threshold": 0.7,
+      "oil_recall": 0.6862745098039216,
+      "oil_precision": 1.0,
+      "oil_f1": 0.813953488372093,
+      "oil_specificity": 1.0,
+      "oil_fpr": 0.0,
+      "clean_fpr": 0.0,
+      "lookalike_fpr": 0.0,
+      "criterion_score": 0.82562699498404
+    },
+    {
+      "threshold": 0.75,
+      "oil_recall": 0.673202614379085,
+      "oil_precision": 1.0,
+      "oil_f1": 0.8046875,
+      "oil_specificity": 1.0,
+      "oil_fpr": 0.0,
+      "clean_fpr": 0.0,
+      "lookalike_fpr": 0.0,
+      "criterion_score": 0.817453022875817
+    },
+    {
+      "threshold": 0.8,
+      "oil_recall": 0.6601307189542484,
+      "oil_precision": 1.0,
+      "oil_f1": 0.7952755905511811,
+      "oil_specificity": 1.0,
+      "oil_fpr": 0.0,
+      "clean_fpr": 0.0,
+      "lookalike_fpr": 0.0,
+      "criterion_score": 0.8091914981215584
+    }
+  ]
+}

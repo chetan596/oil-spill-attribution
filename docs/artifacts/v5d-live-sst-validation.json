@@ -1,0 +1,93 @@
+{
+  "validation_phase": "V5-D",
+  "validation_timestamp": "2026-09-14T09:20:00Z",
+  "product_id": "S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG",
+  "product_uuid": "3f5c4ba1-ed70-4065-91b9-2bbeb7ebfb79",
+  "platform": "Sentinel-1A",
+  "acquisition_start_utc": "2024-02-18T01:03:29.872826Z",
+  "acquisition_end_utc": "2024-02-18T01:03:54.871034Z",
+  "sst_source": "NOAA Daily Global 5km Geo-Polar Blended Night-only Sea Surface Temperature Analysis Version 3.1",
+  "sst_observation_timestamp_utc": "2024-02-18T12:00:00Z",
+  "temporal_difference_minutes": 656.5,
+  "temporal_tolerance_minutes": 1440.0,
+  "temporal_alignment_status": "ALIGNED",
+  "native_sst_spatial_resolution": "0.05 degrees (~5 km)",
+  "target_sar_crs": "EPSG:4326",
+  "target_sar_dimensions": [
+    512,
+    512
+  ],
+  "spatial_resampling_method": "Bilinear spatial interpolation to Sentinel-1 raster grid",
+  "terminology_statement": "NOAA CRW 5-km daily sea surface temperature field spatially resampled to the Sentinel-1 scene grid",
+  "sst_statistics_celsius": {
+    "min": 23.989999771118164,
+    "max": 27.969457626342773,
+    "mean": 26.342832565307617,
+    "median": 26.52202033996582,
+    "std": 0.9451273083686829
+  },
+  "multimodal_tensor_validation": {
+    "tensor_shape": [
+      1,
+      6,
+      512,
+      512
+    ],
+    "channels": [
+      {
+        "index": 0,
+        "name": "SAR_VV",
+        "range": [
+          0.14966647326946259,
+          0.6897411942481995
+        ]
+      },
+      {
+        "index": 1,
+        "name": "SAR_VH",
+        "range": [
+          0.07519747316837311,
+          0.45909908413887024
+        ]
+      },
+      {
+        "index": 2,
+        "name": "ERA5_WindSpeed",
+        "range": [
+          0.00039491240750066936,
+          0.2368449568748474
+        ]
+      },
+      {
+        "index": 3,
+        "name": "ERA5_WindSin",
+        "range": [
+          -1.0,
+          1.0
+        ]
+      },
+      {
+        "index": 4,
+        "name": "ERA5_WindCos",
+        "range": [
+          -1.0,
+          1.0
+        ]
+      },
+      {
+        "index": 5,
+        "name": "NOAA_CRW_SST",
+        "range": [
+          0.5997499823570251,
+          0.6992364525794983
+        ]
+      }
+    ],
+    "total_pixels": 1572864,
+    "finite_pixel_count": 1572864,
+    "finite_percentage": 100.0,
+    "tensor_status": "VALIDATED_PASS"
+  },
+  "supervised_training_status": "HELD",
+  "scientific_claim_boundary": "V5-D feasibility audit validates only the availability and co-registration of real SST data. No supervised V5-D performance claim is made."
+}

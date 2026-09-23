@@ -1,0 +1,404 @@
+{
+  "V09D_RESIDUAL_LOSS": [
+    {
+      "threshold": 0.3,
+      "micro_pixel_aggregate": {
+        "tp": 5250,
+        "fp": 76820,
+        "fn": 200007,
+        "tn": 20689443,
+        "iou": 0.018612,
+        "dice": 0.036544,
+        "precision": 0.06397,
+        "recall": 0.025578,
+        "fpr": 0.003699,
+        "total_predicted_pixels": 82070
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.019086,
+        "clean_ocean_fpr": 0.000836,
+        "clean_ocean_fp_pixels": 7010,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.35,
+      "micro_pixel_aggregate": {
+        "tp": 4662,
+        "fp": 70989,
+        "fn": 200595,
+        "tn": 20695274,
+        "iou": 0.016876,
+        "dice": 0.033192,
+        "precision": 0.061625,
+        "recall": 0.022713,
+        "fpr": 0.003418,
+        "total_predicted_pixels": 75651
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.017235,
+        "clean_ocean_fpr": 0.000685,
+        "clean_ocean_fp_pixels": 5749,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.4,
+      "micro_pixel_aggregate": {
+        "tp": 4054,
+        "fp": 66058,
+        "fn": 201203,
+        "tn": 20700205,
+        "iou": 0.014942,
+        "dice": 0.029444,
+        "precision": 0.057822,
+        "recall": 0.019751,
+        "fpr": 0.003181,
+        "total_predicted_pixels": 70112
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.015208,
+        "clean_ocean_fpr": 0.000566,
+        "clean_ocean_fp_pixels": 4746,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.45,
+      "micro_pixel_aggregate": {
+        "tp": 3528,
+        "fp": 61239,
+        "fn": 201729,
+        "tn": 20705024,
+        "iou": 0.013238,
+        "dice": 0.026131,
+        "precision": 0.054472,
+        "recall": 0.017188,
+        "fpr": 0.002949,
+        "total_predicted_pixels": 64767
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.01344,
+        "clean_ocean_fpr": 0.000476,
+        "clean_ocean_fp_pixels": 3994,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.5,
+      "micro_pixel_aggregate": {
+        "tp": 3090,
+        "fp": 56100,
+        "fn": 202167,
+        "tn": 20710163,
+        "iou": 0.011823,
+        "dice": 0.02337,
+        "precision": 0.052205,
+        "recall": 0.015054,
+        "fpr": 0.002701,
+        "total_predicted_pixels": 59190
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.011976,
+        "clean_ocean_fpr": 0.000397,
+        "clean_ocean_fp_pixels": 3331,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.6,
+      "micro_pixel_aggregate": {
+        "tp": 2499,
+        "fp": 47944,
+        "fn": 202758,
+        "tn": 20718319,
+        "iou": 0.00987,
+        "dice": 0.019546,
+        "precision": 0.049541,
+        "recall": 0.012175,
+        "fpr": 0.002309,
+        "total_predicted_pixels": 50443
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.00995,
+        "clean_ocean_fpr": 0.000244,
+        "clean_ocean_fp_pixels": 2045,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    }
+  ],
+  "V6_BASELINE": [
+    {
+      "threshold": 0.3,
+      "micro_pixel_aggregate": {
+        "tp": 4046,
+        "fp": 105031,
+        "fn": 201211,
+        "tn": 20661232,
+        "iou": 0.013039,
+        "dice": 0.025743,
+        "precision": 0.037093,
+        "recall": 0.019712,
+        "fpr": 0.005058,
+        "total_predicted_pixels": 109077
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.013269,
+        "clean_ocean_fpr": 0.00064,
+        "clean_ocean_fp_pixels": 5372,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.35,
+      "micro_pixel_aggregate": {
+        "tp": 3771,
+        "fp": 99797,
+        "fn": 201486,
+        "tn": 20666466,
+        "iou": 0.012362,
+        "dice": 0.024422,
+        "precision": 0.036411,
+        "recall": 0.018372,
+        "fpr": 0.004806,
+        "total_predicted_pixels": 103568
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.012559,
+        "clean_ocean_fpr": 0.000572,
+        "clean_ocean_fp_pixels": 4798,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.4,
+      "micro_pixel_aggregate": {
+        "tp": 3235,
+        "fp": 94378,
+        "fn": 202022,
+        "tn": 20671885,
+        "iou": 0.010796,
+        "dice": 0.021362,
+        "precision": 0.033141,
+        "recall": 0.015761,
+        "fpr": 0.004545,
+        "total_predicted_pixels": 97613
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.010949,
+        "clean_ocean_fpr": 0.000497,
+        "clean_ocean_fp_pixels": 4165,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.45,
+      "micro_pixel_aggregate": {
+        "tp": 2821,
+        "fp": 87755,
+        "fn": 202436,
+        "tn": 20678508,
+        "iou": 0.009628,
+        "dice": 0.019072,
+        "precision": 0.031145,
+        "recall": 0.013744,
+        "fpr": 0.004226,
+        "total_predicted_pixels": 90576
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.009745,
+        "clean_ocean_fpr": 0.000421,
+        "clean_ocean_fp_pixels": 3528,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.5,
+      "micro_pixel_aggregate": {
+        "tp": 2646,
+        "fp": 78558,
+        "fn": 202611,
+        "tn": 20687705,
+        "iou": 0.009323,
+        "dice": 0.018474,
+        "precision": 0.032585,
+        "recall": 0.012891,
+        "fpr": 0.003783,
+        "total_predicted_pixels": 81204
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.009427,
+        "clean_ocean_fpr": 0.000372,
+        "clean_ocean_fp_pixels": 3117,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.6,
+      "micro_pixel_aggregate": {
+        "tp": 2352,
+        "fp": 68816,
+        "fn": 202905,
+        "tn": 20697447,
+        "iou": 0.008582,
+        "dice": 0.017017,
+        "precision": 0.033049,
+        "recall": 0.011459,
+        "fpr": 0.003314,
+        "total_predicted_pixels": 71168
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.008662,
+        "clean_ocean_fpr": 0.000303,
+        "clean_ocean_fp_pixels": 2541,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    }
+  ],
+  "V2_HISTORICAL": [
+    {
+      "threshold": 0.3,
+      "micro_pixel_aggregate": {
+        "tp": 1942,
+        "fp": 39282,
+        "fn": 203315,
+        "tn": 20726981,
+        "iou": 0.007941,
+        "dice": 0.015758,
+        "precision": 0.047108,
+        "recall": 0.009461,
+        "fpr": 0.001892,
+        "total_predicted_pixels": 41224
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.008385,
+        "clean_ocean_fpr": 0.001543,
+        "clean_ocean_fp_pixels": 12944,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.35,
+      "micro_pixel_aggregate": {
+        "tp": 215,
+        "fp": 3916,
+        "fn": 205042,
+        "tn": 20762347,
+        "iou": 0.001028,
+        "dice": 0.002054,
+        "precision": 0.052046,
+        "recall": 0.001047,
+        "fpr": 0.000189,
+        "total_predicted_pixels": 4131
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.001036,
+        "clean_ocean_fpr": 0.000185,
+        "clean_ocean_fp_pixels": 1548,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.4,
+      "micro_pixel_aggregate": {
+        "tp": 1,
+        "fp": 260,
+        "fn": 205256,
+        "tn": 20766003,
+        "iou": 5e-06,
+        "dice": 1e-05,
+        "precision": 0.003831,
+        "recall": 5e-06,
+        "fpr": 1.3e-05,
+        "total_predicted_pixels": 261
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 5e-06,
+        "clean_ocean_fpr": 8e-06,
+        "clean_ocean_fp_pixels": 71,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.45,
+      "micro_pixel_aggregate": {
+        "tp": 0,
+        "fp": 180,
+        "fn": 205257,
+        "tn": 20766083,
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fpr": 9e-06,
+        "total_predicted_pixels": 180
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.0,
+        "clean_ocean_fpr": 8e-06,
+        "clean_ocean_fp_pixels": 65,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.5,
+      "micro_pixel_aggregate": {
+        "tp": 0,
+        "fp": 156,
+        "fn": 205257,
+        "tn": 20766107,
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fpr": 8e-06,
+        "total_predicted_pixels": 156
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.0,
+        "clean_ocean_fpr": 7e-06,
+        "clean_ocean_fp_pixels": 60,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    },
+    {
+      "threshold": 0.6,
+      "micro_pixel_aggregate": {
+        "tp": 0,
+        "fp": 119,
+        "fn": 205257,
+        "tn": 20766144,
+        "iou": 0.0,
+        "dice": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "fpr": 6e-06,
+        "total_predicted_pixels": 119
+      },
+      "category_breakdown": {
+        "oil_scenes_iou": 0.0,
+        "clean_ocean_fpr": 6e-06,
+        "clean_ocean_fp_pixels": 47,
+        "clean_ocean_total_pixels": 8388608,
+        "look_alike_fpr": "NOT_AVAILABLE (No verified look-alike scenes in Part III test partition)"
+      }
+    }
+  ]
+}

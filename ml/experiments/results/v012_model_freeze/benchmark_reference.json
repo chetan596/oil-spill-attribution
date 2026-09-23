@@ -1,0 +1,12 @@
+{
+  "part_0_11_report": "docs/model/PART_0_11_FORMAL_HELDOUT_BENCHMARK_REPORT.md",
+  "benchmark_results_dir": "ml/experiments/results/v011_heldout_benchmark",
+  "held_out_test_scenes": [
+    "real_part3_test_00060",
+    "real_part3_test_00062",
+    "real_part3_test_00063",
+    "real_part3_test_00064",
+    "real_part3_test_00080"
+  ],
+  "benchmark_status": "SEALED_AND_FROZEN"
+}

@@ -1,0 +1,329 @@
+{
+  "internal_test_total": 708,
+  "false_positives_count": 4,
+  "false_negatives_count": 28,
+  "false_positives": [
+    {
+      "image_id": "mados_Scene_144_crop2",
+      "true_category": "CLEAN_OCEAN",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_144",
+      "oil_probability": 0.7777554392814636,
+      "clean_probability": 0.0929706022143364,
+      "lookalike_probability": 0.1292739361524582,
+      "reason": "Clean water surface feature mistaken as oil"
+    },
+    {
+      "image_id": "mados_Scene_154_crop4",
+      "true_category": "CLEAN_OCEAN",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_154",
+      "oil_probability": 0.38348397612571716,
+      "clean_probability": 0.11600389331579208,
+      "lookalike_probability": 0.5005121231079102,
+      "reason": "Clean water surface feature mistaken as oil"
+    },
+    {
+      "image_id": "mados_Scene_154_crop7",
+      "true_category": "CLEAN_OCEAN",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_154",
+      "oil_probability": 0.5079198479652405,
+      "clean_probability": 0.026281090453267097,
+      "lookalike_probability": 0.46579912304878235,
+      "reason": "Clean water surface feature mistaken as oil"
+    },
+    {
+      "image_id": "mados_Scene_170_crop1",
+      "true_category": "LOOK_ALIKE",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_170",
+      "oil_probability": 0.9373433589935303,
+      "clean_probability": 0.008203817531466484,
+      "lookalike_probability": 0.05445283278822899,
+      "reason": "Look-alike LOOK_ALIKE mistaken as oil spill"
+    }
+  ],
+  "false_negatives": [
+    {
+      "image_id": "mados_Scene_132_crop11",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_132",
+      "oil_probability": 0.0003165493253618479,
+      "clean_probability": 0.0011914526112377644,
+      "lookalike_probability": 0.9984920024871826,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_132_crop19",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_132",
+      "oil_probability": 0.0064822775311768055,
+      "clean_probability": 0.12436282634735107,
+      "lookalike_probability": 0.8691549301147461,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_132_crop7",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_132",
+      "oil_probability": 0.002853283192962408,
+      "clean_probability": 0.08026009798049927,
+      "lookalike_probability": 0.916886568069458,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_134_crop11",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_134",
+      "oil_probability": 0.16215036809444427,
+      "clean_probability": 0.006770925596356392,
+      "lookalike_probability": 0.8310787677764893,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_136_crop10",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_136",
+      "oil_probability": 0.2663135230541229,
+      "clean_probability": 0.2354625016450882,
+      "lookalike_probability": 0.4982239007949829,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_136_crop11",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_136",
+      "oil_probability": 0.033259715884923935,
+      "clean_probability": 0.3615275025367737,
+      "lookalike_probability": 0.6052128076553345,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_136_crop12",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_136",
+      "oil_probability": 0.024840010330080986,
+      "clean_probability": 0.4381118416786194,
+      "lookalike_probability": 0.5370481014251709,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_136_crop17",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_136",
+      "oil_probability": 0.010026497766375542,
+      "clean_probability": 0.016872689127922058,
+      "lookalike_probability": 0.9731008410453796,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_136_crop18",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_136",
+      "oil_probability": 0.01963931880891323,
+      "clean_probability": 0.03212093189358711,
+      "lookalike_probability": 0.948239803314209,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_136_crop19",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_136",
+      "oil_probability": 0.019363339990377426,
+      "clean_probability": 0.02604498341679573,
+      "lookalike_probability": 0.954591691493988,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_136_crop22",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_136",
+      "oil_probability": 0.02745753340423107,
+      "clean_probability": 0.16323134303092957,
+      "lookalike_probability": 0.8093110918998718,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_136_crop28",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_136",
+      "oil_probability": 0.04925422742962837,
+      "clean_probability": 0.5044389963150024,
+      "lookalike_probability": 0.4463067650794983,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_136_crop29",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_136",
+      "oil_probability": 0.009493362158536911,
+      "clean_probability": 0.010629779659211636,
+      "lookalike_probability": 0.9798768162727356,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_136_crop8",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_136",
+      "oil_probability": 0.2072155773639679,
+      "clean_probability": 0.2775174081325531,
+      "lookalike_probability": 0.515267014503479,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_137_crop6",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_137",
+      "oil_probability": 0.02501928061246872,
+      "clean_probability": 0.0076948609203100204,
+      "lookalike_probability": 0.9672858715057373,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_138_crop1",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_138",
+      "oil_probability": 0.002432549837976694,
+      "clean_probability": 0.1352510154247284,
+      "lookalike_probability": 0.8623164296150208,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_138_crop2",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_138",
+      "oil_probability": 0.0035807909443974495,
+      "clean_probability": 0.8273599147796631,
+      "lookalike_probability": 0.16905926167964935,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_154_crop11",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_154",
+      "oil_probability": 0.00054992048535496,
+      "clean_probability": 0.0006134549039416015,
+      "lookalike_probability": 0.9988366961479187,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_154_crop12",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_154",
+      "oil_probability": 0.039959706366062164,
+      "clean_probability": 0.7469672560691833,
+      "lookalike_probability": 0.21307311952114105,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_155_crop5",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_155",
+      "oil_probability": 0.1230580285191536,
+      "clean_probability": 0.7887151837348938,
+      "lookalike_probability": 0.08822685480117798,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_156_crop3",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_156",
+      "oil_probability": 0.08431917428970337,
+      "clean_probability": 0.859152615070343,
+      "lookalike_probability": 0.05652818828821182,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_156_crop4",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_156",
+      "oil_probability": 0.2890564501285553,
+      "clean_probability": 0.10343843698501587,
+      "lookalike_probability": 0.6075051426887512,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_156_crop7",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_156",
+      "oil_probability": 0.06117604672908783,
+      "clean_probability": 0.3704792261123657,
+      "lookalike_probability": 0.5683447122573853,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_156_crop8",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_156",
+      "oil_probability": 0.23985181748867035,
+      "clean_probability": 0.03743962571024895,
+      "lookalike_probability": 0.722708523273468,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_171_crop10",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_171",
+      "oil_probability": 0.23607344925403595,
+      "clean_probability": 0.0029559852555394173,
+      "lookalike_probability": 0.7609705924987793,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_171_crop24",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_171",
+      "oil_probability": 0.049434222280979156,
+      "clean_probability": 0.013510254211723804,
+      "lookalike_probability": 0.9370555281639099,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_171_crop26",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_171",
+      "oil_probability": 0.01920909434556961,
+      "clean_probability": 0.077487051486969,
+      "lookalike_probability": 0.903303861618042,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    },
+    {
+      "image_id": "mados_Scene_172_crop5",
+      "true_category": "OIL_SPILL",
+      "source_dataset": "MADOS_Sentinel2",
+      "scene_id": "Scene_172",
+      "oil_probability": 0.07960189133882523,
+      "clean_probability": 0.06599296629428864,
+      "lookalike_probability": 0.8544051647186279,
+      "reason": "Diffuse or small optical oil signature below threshold"
+    }
+  ]
+}

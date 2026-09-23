@@ -1,0 +1,34 @@
+{
+  "VERY_SMALL (<0.1%)": {
+    "sample_count": 0,
+    "status": "INSUFFICIENT_SAMPLE_SIZE"
+  },
+  "SMALL (0.1%-1%)": {
+    "sample_count": 2,
+    "foreground_iou": 0.0,
+    "dice": 0.0,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "MEDIUM (1%-10%)": {
+    "sample_count": 7,
+    "foreground_iou": 0.48389735200899703,
+    "dice": 0.6521978779109825,
+    "precision": 0.7136251696235614,
+    "recall": 0.6005075068724889
+  },
+  "LARGE (10%-50%)": {
+    "sample_count": 43,
+    "foreground_iou": 0.8056006898981454,
+    "dice": 0.8923353811341196,
+    "precision": 0.9061261183999432,
+    "recall": 0.8789581256588808
+  },
+  "VERY_LARGE (>50%)": {
+    "sample_count": 34,
+    "foreground_iou": 0.954132868461623,
+    "dice": 0.97652814080422,
+    "precision": 0.9795200357930617,
+    "recall": 0.9735544673460159
+  }
+}

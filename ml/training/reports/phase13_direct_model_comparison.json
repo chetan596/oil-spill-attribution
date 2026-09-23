@@ -1,0 +1,69 @@
+{
+  "kerf_drone_model": {
+    "model_id": "kerf-resnet34-focaldice-v1",
+    "checkpoint_path": "ml/training/runs/resnet34_balanced_focaldice_pilot/checkpoints/best_val_iou.pt",
+    "checkpoint_sha256": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+    "parameter_weights_sha256": "f0af1634b338409704639c99ef94121495c5d328997ebacf284b057df7751405",
+    "in_channels": 3,
+    "preprocessing_version": "kerf-rgb-v1",
+    "operating_threshold": 0.5,
+    "input_tensor_sha256": "cfac899c94e58e3bfb0abdd68ff730d3e9c17a924cd3a5ed62d5ab17568c1e4f",
+    "raw_output_sha256": "48f553810a5e632cd846f8d94f1083feedf15a23d0a2dfa81a4931618337d99c",
+    "raw_output_stats": {
+      "min": -7.054863,
+      "max": 8.386379,
+      "mean": 0.233848,
+      "std": 3.514045
+    },
+    "probability_stats": {
+      "min": 0.0,
+      "max": 0.998904,
+      "mean": 0.046426
+    },
+    "binary_mask_sha256": "1d8ea0d96b1f633451461e9b461253d1ac3adfe00f45469717c365bf89a2b9a0",
+    "oil_pixels": 16516,
+    "oil_percentage": 10.4197,
+    "component_count": 2,
+    "mean_foreground_probability": 0.8955,
+    "max_image_probability": 0.9989,
+    "classification_label": "OIL_SPILL",
+    "classification_confidence": 0.8955
+  },
+  "mados_satellite_rgb_model": {
+    "model_id": "mados-resnet34-rgb-v1",
+    "checkpoint_path": "ml/training/runs/phase11_rgb_control/checkpoints/best_val_iou.pt",
+    "checkpoint_sha256": "a4c32de7177bc42c2f0298427ce8bef4a2bf8d4a35e25c3450a67eb16f8e099a",
+    "parameter_weights_sha256": "212c1094efffb267f41c57e1480b26cc20a4cf63ebf93e40dd2c8e2db5b2f312",
+    "in_channels": 3,
+    "preprocessing_version": "mados-rgb-v1",
+    "operating_threshold": 0.5,
+    "input_tensor_sha256": "fed673775cda093d8c50bfce8c6cdeed3795366e02113872ec0fd7e4fe3c377d",
+    "raw_output_sha256": "27ebcd8da0c80087353d07a21226b15885142d2512fb56844428aded6b9923ac",
+    "raw_output_stats": {
+      "min": -46.084255,
+      "max": 56.624138,
+      "mean": 1.322678,
+      "std": 9.956822
+    },
+    "probability_stats": {
+      "min": 0.0,
+      "max": 0.010874,
+      "mean": 3e-06
+    },
+    "binary_mask_sha256": "b41bddd147e571b069c1086c92087ed7ea125b0935cae043ddc12764dbf09e64",
+    "oil_pixels": 0,
+    "oil_percentage": 0.0,
+    "component_count": 0,
+    "mean_foreground_probability": 0.0,
+    "max_image_probability": 0.0017,
+    "classification_label": "CLEAN_OCEAN",
+    "classification_confidence": 1.0
+  },
+  "comparison_metrics": {
+    "checkpoint_shas_different": true,
+    "weights_shas_different": true,
+    "raw_outputs_different": true,
+    "masks_different": true,
+    "pixel_difference": 16516
+  }
+}

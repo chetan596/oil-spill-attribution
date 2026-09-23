@@ -1,0 +1,521 @@
+/* ==========================================================================
+   OCEAN GUARD AI — MARITIME SPILL INTELLIGENCE (v0.9 Beta)
+   Design System & Operational Stylesheet
+   ========================================================================== */
+
+:root {
+  /* Layered Dark Maritime Surfaces */
+  --og-bg-base: #07100d;
+  --og-bg-surface: #0b1513;
+  --og-bg-panel: #101b18;
+  --og-bg-elevated: #15221e;
+  --og-bg-highlight: #1a2924;
+  --og-bg-glass: rgba(11, 21, 19, 0.85);
+  --og-bg-glass-panel: rgba(16, 27, 24, 0.92);
+
+  /* Precise Technical Borders */
+  --og-border-subtle: #182722;
+  --og-border-default: #233831;
+  --og-border-strong: #334d44;
+  --og-border-focus: #2dd4bf;
+
+  /* Typography Colors */
+  --og-text-primary: #e6edea;
+  --og-text-secondary: #9cb1a9;
+  --og-text-muted: #5e746c;
+  --og-text-dim: #3a4d46;
+
+  /* Scientific Evidentiary Palette (Semantic Color System) */
+  --og-observed: #2dd4bf;
+  /* Muted Cyan / Teal (SAR Satellite Detection) */
+  --og-observed-bg: rgba(45, 212, 191, 0.12);
+  --og-observed-border: rgba(45, 212, 191, 0.35);
+
+  --og-modelled: #f59e0b;
+  /* Muted Amber (Lagrangian Hindcast & Origin) */
+  --og-modelled-bg: rgba(245, 158, 11, 0.12);
+  --og-modelled-border: rgba(245, 158, 11, 0.35);
+
+  --og-ais: #a78bfa;
+  /* Muted Violet / Amethyst (AIS Telemetry & Candidates) */
+  --og-ais-bg: rgba(167, 139, 250, 0.12);
+  --og-ais-border: rgba(167, 139, 250, 0.35);
+
+  --og-forecast: #10b981;
+  /* Muted Emerald (Forward Transport Forecast) */
+  --og-forecast-bg: rgba(16, 185, 129, 0.12);
+  --og-forecast-border: rgba(16, 185, 129, 0.35);
+
+  --og-spill-critical: #f43f5e;
+  /* Controlled Red / Crimson (Confirmed Slick) */
+  --og-spill-critical-bg: rgba(244, 63, 94, 0.12);
+  --og-spill-critical-border: rgba(244, 63, 94, 0.35);
+
+  --og-warning: #fb923c;
+  /* Warning Orange */
+  --og-operational: #34d399;
+  /* Operational Green */
+
+  /* Typography */
+  --og-font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --og-font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+
+  /* Radii & Shadows */
+  --og-radius-sm: 4px;
+  --og-radius-md: 6px;
+  --og-radius-lg: 8px;
+  --og-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --og-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5);
+  --og-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -4px rgba(0, 0, 0, 0.6);
+  --og-shadow-hud: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+/* Base Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--og-bg-base);
+  color: var(--og-text-primary);
+  font-family: var(--og-font-sans);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--og-bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--og-border-default);
+  border-radius: var(--og-radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--og-border-strong);
+}
+
+/* Monospace Utilities */
+.font-mono,
+code,
+kbd,
+samp {
+  font-family: var(--og-font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Component Foundations */
+.og-panel {
+  background: var(--og-bg-panel);
+  border: 1px solid var(--og-border-default);
+  border-radius: var(--og-radius-md);
+  box-shadow: var(--og-shadow-sm);
+}
+
+.og-panel-elevated {
+  background: var(--og-bg-elevated);
+  border: 1px solid var(--og-border-strong);
+  border-radius: var(--og-radius-md);
+  box-shadow: var(--og-shadow-md);
+}
+
+.og-panel-hud {
+  background: var(--og-bg-glass-panel);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--og-border-default);
+  border-radius: var(--og-radius-md);
+  box-shadow: var(--og-shadow-hud);
+}
+
+/* Buttons */
+.og-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--og-font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 7px 12px;
+  border-radius: var(--og-radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.og-btn-primary {
+  background: #14382e;
+  border-color: #2a6152;
+  color: #5eead4;
+}
+
+.og-btn-primary:hover:not(:disabled) {
+  background: #1a493c;
+  border-color: #38bdf8;
+  color: #e6edea;
+}
+
+.og-btn-secondary {
+  background: var(--og-bg-elevated);
+  border-color: var(--og-border-default);
+  color: var(--og-text-secondary);
+}
+
+.og-btn-secondary:hover:not(:disabled) {
+  background: var(--og-bg-highlight);
+  border-color: var(--og-border-strong);
+  color: var(--og-text-primary);
+}
+
+.og-btn-amber {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+}
+
+.og-btn-amber:hover:not(:disabled) {
+  background: rgba(245, 158, 11, 0.25);
+  color: #fef3c7;
+}
+
+.og-btn-danger {
+  background: rgba(244, 63, 94, 0.12);
+  border-color: rgba(244, 63, 94, 0.35);
+  color: #fb7185;
+}
+
+.og-btn-danger:hover:not(:disabled) {
+  background: rgba(244, 63, 94, 0.22);
+  color: #ffe4e6;
+}
+
+.og-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Form Inputs */
+.og-input {
+  width: 100%;
+  background: var(--og-bg-base);
+  border: 1px solid var(--og-border-default);
+  border-radius: var(--og-radius-sm);
+  color: var(--og-text-primary);
+  font-family: var(--og-font-mono);
+  font-size: 0.8125rem;
+  padding: 8px 10px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.og-input:focus {
+  border-color: var(--og-border-focus);
+}
+
+.og-select {
+  width: 100%;
+  background: var(--og-bg-base);
+  border: 1px solid var(--og-border-default);
+  border-radius: var(--og-radius-sm);
+  color: var(--og-text-primary);
+  font-family: var(--og-font-sans);
+  font-size: 0.8125rem;
+  padding: 8px 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.og-select:focus {
+  border-color: var(--og-border-focus);
+}
+
+/* Provenance & Evidence Badges */
+.og-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--og-font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: var(--og-radius-sm);
+  line-height: 1.2;
+}
+
+.og-badge-observed {
+  background: var(--og-observed-bg);
+  border: 1px solid var(--og-observed-border);
+  color: var(--og-observed);
+}
+
+.og-badge-modelled {
+  background: var(--og-modelled-bg);
+  border: 1px solid var(--og-modelled-border);
+  color: var(--og-modelled);
+}
+
+.og-badge-ais {
+  background: var(--og-ais-bg);
+  border: 1px solid var(--og-ais-border);
+  color: var(--og-ais);
+}
+
+.og-badge-forecast {
+  background: var(--og-forecast-bg);
+  border: 1px solid var(--og-forecast-border);
+  color: var(--og-forecast);
+}
+
+.og-badge-critical {
+  background: var(--og-spill-critical-bg);
+  border: 1px solid var(--og-spill-critical-border);
+  color: var(--og-spill-critical);
+}
+
+.og-badge-neutral {
+  background: var(--og-bg-elevated);
+  border: 1px solid var(--og-border-default);
+  color: var(--og-text-secondary);
+}
+
+/* Leaflet Container & Popup Overrides */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #050b09 !important;
+  font-family: var(--og-font-sans) !important;
+  font-size: 12px;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--og-bg-panel) !important;
+  color: var(--og-text-primary) !important;
+  border: 1px solid var(--og-border-strong) !important;
+  border-radius: var(--og-radius-md) !important;
+  box-shadow: var(--og-shadow-hud) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--og-bg-panel) !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: var(--og-bg-panel) !important;
+  color: var(--og-text-primary) !important;
+  border-color: var(--og-border-default) !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: var(--og-bg-elevated) !important;
+  color: var(--og-observed) !important;
+}
+
+/* Radar & Marker Animations */
+@keyframes og-radar-pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.4);
+    opacity: 0.25;
+  }
+
+  100% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+}
+
+.og-pulse-origin {
+  animation: og-radar-pulse 2.2s infinite ease-in-out;
+}
+
+/* Telemetry Micro-meter */
+.og-meter-track {
+  width: 100%;
+  height: 5px;
+  background: var(--og-bg-base);
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--og-border-subtle);
+}
+
+.og-meter-fill {
+  height: 100%;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.print-only-header {
+  display: none;
+}
+
+/* ==========================================================================
+   PROFESSIONAL PRINT OUTPUT (Formal Maritime Investigation Record)
+   ========================================================================== */
+@page {
+  size: A4 portrait;
+  margin: 15mm 12mm 15mm 12mm;
+}
+
+@media print {
+
+  /* Reset background and text for clean ink-saving print */
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 9.5pt !important;
+    line-height: 1.4 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Hide interactive controls, sidebars, topbars, buttons */
+  .og-sidebar,
+  .og-topbar,
+  .og-no-print,
+  .no-print,
+  nav,
+  aside,
+  header,
+  button,
+  .btn-primary,
+  .btn-secondary,
+  .og-btn,
+  .system-status-modal,
+  .leaflet-control-container,
+  input,
+  select {
+    display: none !important;
+  }
+
+  /* Unconstrain wrappers */
+  #root,
+  .reports-page-wrapper,
+  main,
+  div[style*="height: 100vh"] {
+    display: block !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Formal Print Document Layout */
+  .print-only-header {
+    display: block !important;
+    margin-bottom: 12pt !important;
+  }
+
+  .formal-print-document,
+  .report-container,
+  .og-panel,
+  .og-panel-elevated {
+    background: #ffffff !important;
+    border: 1px solid #94a3b8 !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    padding: 12pt !important;
+    margin-bottom: 12pt !important;
+    border-radius: 2px !important;
+  }
+
+  /* Ensure all text within reports is sharp and high-contrast */
+  .formal-print-document * {
+    color: #0f172a !important;
+    text-shadow: none !important;
+  }
+
+  /* Section breaks & hierarchy */
+  .report-section {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 10pt !important;
+    margin-bottom: 10pt !important;
+    border-radius: 2px !important;
+  }
+
+  .candidate-card-print {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 8pt !important;
+    margin-bottom: 8pt !important;
+  }
+
+  /* Provenance Badges in Print */
+  .og-badge,
+  .badge {
+    background: #f1f5f9 !important;
+    border: 1px solid #64748b !important;
+    color: #0f172a !important;
+    font-weight: 700 !important;
+    font-size: 7.5pt !important;
+    padding: 1px 5px !important;
+  }
+
+  /* Tables in Print */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    page-break-inside: auto !important;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+    page-break-after: auto !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  th,
+  td {
+    border: 1px solid #cbd5e1 !important;
+    padding: 6pt 8pt !important;
+    font-size: 8.5pt !important;
+    color: #0f172a !important;
+  }
+
+  th {
+    background: #f1f5f9 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "evaluated_at": "2026-09-19T05:24:56.331945+00:00",
+  "device": "cuda:0",
+  "device_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "pytorch_version": "2.11.0+cu128",
+  "cuda_version": "12.8",
+  "tile_configuration": {
+    "tile_size": 512,
+    "stride": 448,
+    "overlap_pixels": 64,
+    "tiles_per_2048_scene": 25
+  },
+  "runs": {
+    "v2_validation": {
+      "scenes": 7,
+      "total_tiles": 175,
+      "duration_seconds": 5.651,
+      "peak_cuda_vram_mb": 157.55
+    },
+    "v2_held_out_test": {
+      "scenes": 5,
+      "total_tiles": 125,
+      "duration_seconds": 3.205,
+      "peak_cuda_vram_mb": 156.68
+    },
+    "v4_validation": {
+      "scenes": 7,
+      "total_tiles": 175,
+      "duration_seconds": 5.171,
+      "peak_cuda_vram_mb": 156.68
+    },
+    "v4_held_out_test": {
+      "scenes": 5,
+      "total_tiles": 125,
+      "duration_seconds": 3.101,
+      "peak_cuda_vram_mb": 156.68
+    }
+  }
+}

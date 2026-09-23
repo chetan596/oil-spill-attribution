@@ -1,0 +1,23 @@
+{
+  "failure_modes_analyzed": [
+    {
+      "mode": "Thin Satellite Sheen & Sub-pixel Filaments",
+      "sensor": "Sentinel-2 (MADOS, 10m GSD)",
+      "v1_behavior": "0% recall at threshold 0.80 due to loss gradient suppression by large drone slicks.",
+      "v2_behavior": "Recovered 63.0% recall on internal test and 61.7% recall on validation through Domain-Balanced Batch Sampling + Focal Tversky Loss.",
+      "residual_challenge": "Lower precision (7.3% - 5.1%) due to faint contrast against coastal wave patterns and algae boundaries."
+    },
+    {
+      "mode": "Sun Glint & Coastal Reflectance",
+      "sensor": "Drone RGB (KERF)",
+      "v1_behavior": "High precision (94.0%), occasional false positive near bright vessel hulls.",
+      "v2_behavior": "Maintained 97.0% precision and 95.3% Dice through ASPP multi-scale context aggregation."
+    },
+    {
+      "mode": "Small Isolated Slicks (<0.1% Area)",
+      "sensor": "Both",
+      "v1_behavior": "0.0000 IoU / Dice on all small slicks.",
+      "v2_behavior": "Recovered 0.0906 Dice on VERY_SMALL (<0.1%) and 0.2337 Dice on SMALL (0.1%-1%) with 72.3% recall."
+    }
+  ]
+}

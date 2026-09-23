@@ -1,0 +1,72 @@
+{
+  "real_part3_test_00060": {
+    "vv_raw_min": -37.54520034790039,
+    "vv_raw_max": 3.248736619949341,
+    "vv_raw_mean": -31.45409393310547,
+    "vh_raw_min": -33.75447082519531,
+    "vh_raw_max": 12.010270118713379,
+    "vh_raw_mean": -21.744651794433594,
+    "vv_norm_min": 0.0,
+    "vv_norm_max": 1.0,
+    "vv_norm_mean": 0.11819720268249512,
+    "vh_norm_min": 0.37485095858573914,
+    "vh_norm_max": 1.0,
+    "vh_norm_mean": 0.7751471996307373
+  },
+  "real_part3_test_00062": {
+    "vv_raw_min": -37.09012222290039,
+    "vv_raw_max": -24.837358474731445,
+    "vv_raw_mean": -31.556678771972656,
+    "vh_raw_min": -33.408512115478516,
+    "vh_raw_max": -14.10585880279541,
+    "vh_raw_mean": -21.794631958007812,
+    "vv_norm_min": 0.0,
+    "vv_norm_max": 0.33875471353530884,
+    "vv_norm_mean": 0.11478046327829361,
+    "vh_norm_min": 0.38638293743133545,
+    "vh_norm_max": 1.0,
+    "vh_norm_mean": 0.7735121846199036
+  },
+  "real_part3_test_00063": {
+    "vv_raw_min": -37.44162368774414,
+    "vv_raw_max": -25.025556564331055,
+    "vv_raw_mean": -31.62822723388672,
+    "vh_raw_min": -35.303184509277344,
+    "vh_raw_max": -13.919366836547852,
+    "vh_raw_mean": -22.056724548339844,
+    "vv_norm_min": 0.0,
+    "vv_norm_max": 0.3324814438819885,
+    "vv_norm_mean": 0.11239658296108246,
+    "vh_norm_min": 0.323227196931839,
+    "vh_norm_max": 1.0,
+    "vh_norm_mean": 0.7647756934165955
+  },
+  "real_part3_test_00064": {
+    "vv_raw_min": -56.026939392089844,
+    "vv_raw_max": 0.0,
+    "vv_raw_mean": -23.563758850097656,
+    "vh_raw_min": -47.49684143066406,
+    "vh_raw_max": 0.0,
+    "vh_raw_mean": -16.938678741455078,
+    "vv_norm_min": 0.0,
+    "vv_norm_max": 1.0,
+    "vv_norm_mean": 0.3388514816761017,
+    "vh_norm_min": 0.0,
+    "vh_norm_max": 1.0,
+    "vh_norm_mean": 0.8082689046859741
+  },
+  "real_part3_test_00080": {
+    "vv_raw_min": -37.402767181396484,
+    "vv_raw_max": -1.173191785812378,
+    "vv_raw_mean": -31.13909912109375,
+    "vh_raw_min": -37.35990524291992,
+    "vh_raw_max": 8.75647258758545,
+    "vh_raw_mean": -23.764123916625977,
+    "vv_norm_min": 0.0,
+    "vv_norm_max": 1.0,
+    "vv_norm_mean": 0.12869927287101746,
+    "vh_norm_min": 0.25466981530189514,
+    "vh_norm_max": 1.0,
+    "vh_norm_mean": 0.7078214883804321
+  }
+}

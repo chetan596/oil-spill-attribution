@@ -1,132 +1,227 @@
-const fs = require("fs");
-const path = require("path");
 const prisma = require("../db/database");
 const evidenceService = require("./evidence.service");
-const llmService = require("./llm.service");
+const mlClient = require("../clients/ml.client");
+const dossierPdfService = require("./dossier-pdf.service");
 const AppError = require("../errors/AppError");
 const logger = require("../logger");
 
+const DOSSIER_SCHEMA_VERSION = "OG-DOSSIER-V1";
+const EVIDENCE_RELEASE = "OG-SAR-ML-RESEARCH-RELEASE-V0.12";
+
+const PROHIBITED_ATTRIBUTION_TERMS = [
+  "RESPONSIBLE_VESSEL",
+  "CONFIRMED_VESSEL",
+  "GUILTY_VESSEL",
+  "CAUSED_SPILL",
+  "PROBABILITY_OF_GUILT",
+  "ATTRIBUTION_CONFIDENCE_SCORE",
+  "DISCHARGE_PROBABILITY",
+];
+
 const MANDATORY_DISCLAIMER =
-  "Attribution scores represent modelled spatial, temporal, and trajectory correlations from available AIS and SAR-derived information. They do not establish legal responsibility, causation, or proof of pollution by any vessel. AIS records used in this demonstration are synthetic/demo records and do not represent actual historical vessel movements.";
+  "Attribution candidate ranking represents exploratory physical/spatial correlation with the " +
+  "modelled backward drift corridor. It does NOT constitute legal proof of spill discharge or vessel liability.";
 
 /**
- * DossierService — Orchestrates structured evidence extraction, LLM synthesis, validation, and persistence.
+ * Recursively scans data structure for prohibited attribution terms, ignoring definition keys.
  */
-class DossierService {
-  constructor() {
-    this.promptsDir = path.resolve(__dirname, "../../../../prompts");
+function scanNoProhibitedTerms(data, path = "") {
+  if (
+    path.endsWith("prohibitedAttributionTerms") ||
+    path.endsWith("strictlyProhibitedActions") ||
+    path.includes("prohibitedAttributionTerms") ||
+    path.includes("strictlyProhibitedActions")
+  ) {
+    return;
   }
 
-  /**
-   * Load prompt templates from markdown files.
-   */
-  _loadPrompts() {
-    try {
-      const systemPrompt = fs.existsSync(path.join(this.promptsDir, "dossier-system.md"))
-        ? fs.readFileSync(path.join(this.promptsDir, "dossier-system.md"), "utf8")
-        : "You are an analytical evidence synthesis assistant. Summarize only supplied evidence.";
-
-      const summaryPrompt = fs.existsSync(path.join(this.promptsDir, "dossier-summary.md"))
-        ? fs.readFileSync(path.join(this.promptsDir, "dossier-summary.md"), "utf8")
-        : "";
-
-      const candidatePrompt = fs.existsSync(path.join(this.promptsDir, "candidate-analysis.md"))
-        ? fs.readFileSync(path.join(this.promptsDir, "candidate-analysis.md"), "utf8")
-        : "";
-
-      const limitationsPrompt = fs.existsSync(path.join(this.promptsDir, "limitations.md"))
-        ? fs.readFileSync(path.join(this.promptsDir, "limitations.md"), "utf8")
-        : "";
-
-      return {
-        systemPrompt: [systemPrompt, summaryPrompt, candidatePrompt, limitationsPrompt].join("\n\n"),
-      };
-    } catch (err) {
-      logger.warn("Failed to load custom prompt files, using default prompts", { error: err.message });
-      return {
-        systemPrompt: "You are an analytical evidence synthesis assistant. Summarize only supplied evidence. Never invent missing data or infer legal responsibility.",
-      };
+  if (typeof data === "string") {
+    const upper = data.toUpperCase();
+    for (const term of PROHIBITED_ATTRIBUTION_TERMS) {
+      if (upper.includes(term)) {
+        throw new AppError(
+          502,
+          "GUARDRAIL_VIOLATION",
+          `Violation of Scientific Guardrails: Prohibited attribution term '${term}' found at '${path}'`
+        );
+      }
+    }
+  } else if (Array.isArray(data)) {
+    data.forEach((item, idx) => scanNoProhibitedTerms(item, `${path}[${idx}]`));
+  } else if (data && typeof data === "object") {
+    for (const [k, v] of Object.entries(data)) {
+      scanNoProhibitedTerms(v, path ? `${path}.${k}` : k);
     }
   }
+}
 
+/**
+ * DossierService — Orchestrates canonical evidence transmission to Python 0.13F,
+ * schema validation, persistence, and retrieval.
+ *
+ * MANDATORY ARCHITECTURAL RULES (Part 0.13G):
+ * 1. Python ML Service 0.13F is the SINGLE SOURCE OF TRUTH for dossier synthesis.
+ * 2. Node.js MUST NOT calculate scientific values or generate alternative deterministic narrative.
+ * 3. If Python service fails, Node returns a controlled error without fabricating a second dossier.
+ */
+class DossierService {
   /**
-   * Validate that the dossier object complies strictly with required schema.
+   * Validate that the dossier strictly complies with OG-DOSSIER-V1 contract.
    * @param {Object} dossier
    */
-  validateDossierSchema(dossier) {
+  validateDossierContract(dossier) {
     if (!dossier || typeof dossier !== "object") {
-      throw new AppError(502, "INVALID_DOSSIER_FORMAT", "LLM output is not a valid JSON object");
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier output is not a valid JSON object");
+    }
+
+    if (dossier.schemaVersion !== DOSSIER_SCHEMA_VERSION) {
+      throw new AppError(
+        502,
+        "INVALID_DOSSIER_SCHEMA",
+        `Dossier schemaVersion must be '${DOSSIER_SCHEMA_VERSION}', received '${dossier.schemaVersion}'`
+      );
+    }
+
+    if (dossier.evidenceRelease !== EVIDENCE_RELEASE) {
+      throw new AppError(
+        502,
+        "INVALID_DOSSIER_SCHEMA",
+        `Dossier evidenceRelease must be '${EVIDENCE_RELEASE}', received '${dossier.evidenceRelease}'`
+      );
+    }
+
+    if (!dossier.provenance || typeof dossier.provenance !== "object") {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'provenance' object");
+    }
+
+    if (!dossier.generationMode || !["LLM", "DETERMINISTIC"].includes(dossier.generationMode)) {
+      throw new AppError(
+        502,
+        "INVALID_DOSSIER_SCHEMA",
+        `Dossier generationMode must be 'LLM' or 'DETERMINISTIC', received '${dossier.generationMode}'`
+      );
     }
 
     if (!dossier.executiveSummary || typeof dossier.executiveSummary !== "string") {
-      throw new AppError(502, "INVALID_DOSSIER_FORMAT", "Dossier is missing 'executiveSummary' string");
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'executiveSummary' string");
     }
 
-    if (!Array.isArray(dossier.observedEvidence)) {
-      throw new AppError(502, "INVALID_DOSSIER_FORMAT", "Dossier is missing 'observedEvidence' array");
+    if (!dossier.spillDetection || typeof dossier.spillDetection !== "object") {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'spillDetection' object");
     }
 
-    if (!Array.isArray(dossier.modelledEvidence)) {
-      throw new AppError(502, "INVALID_DOSSIER_FORMAT", "Dossier is missing 'modelledEvidence' array");
+    if (!dossier.geospatialEvidence || typeof dossier.geospatialEvidence !== "object") {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'geospatialEvidence' object");
     }
 
-    if (!Array.isArray(dossier.candidateAssessments)) {
-      throw new AppError(502, "INVALID_DOSSIER_FORMAT", "Dossier is missing 'candidateAssessments' array");
+    if (!dossier.driftEvidence || typeof dossier.driftEvidence !== "object") {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'driftEvidence' object");
+    }
+
+    if (!dossier.aisEvidence || typeof dossier.aisEvidence !== "object") {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'aisEvidence' object");
+    }
+
+    if (!dossier.analyticalCorrelation || typeof dossier.analyticalCorrelation !== "object") {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'analyticalCorrelation' object");
     }
 
     if (!Array.isArray(dossier.timeline)) {
-      throw new AppError(502, "INVALID_DOSSIER_FORMAT", "Dossier is missing 'timeline' array");
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'timeline' array");
     }
 
-    if (!Array.isArray(dossier.limitations)) {
-      throw new AppError(502, "INVALID_DOSSIER_FORMAT", "Dossier is missing 'limitations' array");
+    if (!Array.isArray(dossier.scientificLimitations)) {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'scientificLimitations' array");
     }
 
-    if (!Array.isArray(dossier.recommendedFollowUp)) {
-      throw new AppError(502, "INVALID_DOSSIER_FORMAT", "Dossier is missing 'recommendedFollowUp' array");
+    if (!dossier.oilTypeAndVolume || typeof dossier.oilTypeAndVolume !== "object") {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'oilTypeAndVolume' object");
     }
 
-    // Always enforce the verbatim mandatory disclaimer
+    // Verify NOT_ESTABLISHED preservation
+    if (dossier.oilTypeAndVolume.oilTypeStatus !== "NOT_ESTABLISHED") {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "oilTypeStatus must remain NOT_ESTABLISHED");
+    }
+    if (dossier.oilTypeAndVolume.volumeStatus !== "NOT_ESTABLISHED") {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "volumeStatus must remain NOT_ESTABLISHED");
+    }
+
+    if (!dossier.legalResponsibility || typeof dossier.legalResponsibility !== "object") {
+      throw new AppError(502, "INVALID_DOSSIER_SCHEMA", "Dossier is missing 'legalResponsibility' object");
+    }
+
+    if (dossier.legalResponsibility.status !== "NOT_ESTABLISHED") {
+      throw new AppError(
+        502,
+        "LEGAL_GUARDRAIL_VIOLATION",
+        `legalResponsibility.status must be 'NOT_ESTABLISHED', received '${dossier.legalResponsibility.status}'`
+      );
+    }
+
+    // Scan for prohibited terminology across the entire dossier
+    scanNoProhibitedTerms(dossier);
+
+    // Enforce mandatory disclaimer
     dossier.disclaimer = MANDATORY_DISCLAIMER;
 
     return true;
   }
 
   /**
-   * Generate an Analytical Investigation Dossier for an analysis/spill.
+   * Synthesize and persist an Analytical Investigation Dossier for an analysis/spill.
+   * Calls Python ML Service Part 0.13F as the authoritative synthesis engine.
+   *
    * @param {string} identifier - analysisId or spillId
-   * @param {string} userId - Optional user ID requesting the dossier
-   * @returns {Promise<Object>} Formatted dossier and persisted report
+   * @param {string} userId - Optional user ID requesting synthesis
+   * @param {Object} options - Optional provider/model configuration
+   * @returns {Promise<Object>} Validated dossier and persisted report details
    */
-  async generateDossier(identifier, userId = null) {
-    logger.info("Generating Analytical Investigation Dossier", { identifier, userId });
+  async generateDossier(identifier, userId = null, options = {}) {
+    logger.info("Generating Analytical Investigation Dossier via Python 0.13F", { identifier, userId });
 
-    // 1. Obtain structured evidence
-    const evidence = await evidenceService.getStructuredEvidence(identifier);
+    // 1. Obtain authoritative canonical evidence package from database records
+    const canonicalEvidence = await evidenceService.getStructuredEvidence(identifier);
 
-    // 2. Load prompt templates
-    const promptContext = this._loadPrompts();
-
-    // 3. Synthesize narrative using LLM service
-    let dossier = await llmService.generateDossier(evidence, promptContext);
-
-    // 4. Validate output
+    // 2. Request synthesis from Python 0.13F service
+    let synthesisResponse;
     try {
-      this.validateDossierSchema(dossier);
-    } catch (validationErr) {
-      logger.error("Structured LLM validation failed, falling back to deterministic synthesis", {
-        error: validationErr.message,
+      synthesisResponse = await mlClient.synthesizeDossier({
+        canonical_evidence: canonicalEvidence,
+        provider: options.provider || process.env.LLM_PROVIDER || "mock",
+        model: options.model || process.env.LLM_MODEL || "gemini-1.5-pro",
+        temperature: options.temperature !== undefined ? options.temperature : 0.1,
       });
-      dossier = llmService._generateDeterministicMockDossier(evidence);
-      this.validateDossierSchema(dossier);
+    } catch (err) {
+      logger.error("Python 0.13F dossier synthesis service failed", {
+        error: err.message,
+        identifier,
+      });
+      throw new AppError(
+        502,
+        "DOSSIER_GENERATION_FAILED",
+        `Authoritative Python dossier synthesis service failed: ${err.message}`
+      );
     }
 
-    // Attach structured evidence metadata for complete traceability
-    dossier.analysisId = evidence.analysisId;
-    dossier.spillId = evidence.spillId;
-    dossier.evidence = evidence;
+    const dossier = synthesisResponse?.dossier;
+    if (!dossier) {
+      throw new AppError(502, "DOSSIER_GENERATION_FAILED", "Python service returned empty dossier response");
+    }
 
-    const title = `Analytical Investigation Dossier — Incident #${evidence.spillId.slice(0, 8)}`;
+    // 3. Validate OG-DOSSIER-V1 schema, provenance, generationMode, and legal guardrails
+    this.validateDossierContract(dossier);
+
+    // 4. Attach lineage metadata
+    const analysisId = canonicalEvidence.analysisId;
+    const spillId = canonicalEvidence.spillId;
+    const dossierId = `OG-DOSSIER-${analysisId.slice(0, 8).toUpperCase()}`;
+
+    dossier.dossierId = dossierId;
+    dossier.analysisId = analysisId;
+    dossier.spillId = spillId;
+    dossier.status = "READY";
+
+    const title = `Analytical Investigation Dossier — Incident #${spillId.slice(0, 8)}`;
     const content = JSON.stringify(dossier);
 
     const updateData = {
@@ -135,7 +230,7 @@ class DossierService {
     };
 
     const createData = {
-      analysis: { connect: { id: evidence.analysisId } },
+      analysis: { connect: { id: analysisId } },
       title,
       content,
     };
@@ -154,21 +249,26 @@ class DossierService {
 
     // 5. Persist to PostgreSQL Report model
     const report = await prisma.report.upsert({
-      where: { analysisId: evidence.analysisId },
+      where: { analysisId },
       update: updateData,
       create: createData,
     });
 
-    logger.info("Analytical Investigation Dossier successfully persisted", {
+    logger.info("Analytical Investigation Dossier successfully validated and persisted", {
       reportId: report.id,
-      analysisId: evidence.analysisId,
+      dossierId,
+      analysisId,
+      generationMode: dossier.generationMode,
+      provenance: dossier.provenance?.combinationStatus,
     });
 
     return {
       reportId: report.id,
-      analysisId: evidence.analysisId,
-      spillId: evidence.spillId,
+      dossierId,
+      analysisId,
+      spillId,
       title: report.title,
+      status: "READY",
       createdAt: report.createdAt,
       dossier,
     };
@@ -203,26 +303,90 @@ class DossierService {
     try {
       parsedDossier = JSON.parse(report.content);
     } catch {
-      // Fallback for raw text reports
-      parsedDossier = {
-        executiveSummary: report.content,
-        observedEvidence: [],
-        modelledEvidence: [],
-        candidateAssessments: [],
-        timeline: [],
-        limitations: [],
-        recommendedFollowUp: [],
-        disclaimer: MANDATORY_DISCLAIMER,
-      };
+      throw new AppError(500, "CORRUPT_DOSSIER_DATA", "Persisted dossier content is not valid JSON");
     }
+
+    const dossierId = parsedDossier.dossierId || `OG-DOSSIER-${analysisId.slice(0, 8).toUpperCase()}`;
 
     return {
       reportId: report.id,
+      dossierId,
       analysisId: report.analysisId,
       spillId: report.analysis?.spill?.id || null,
       title: report.title,
+      status: "READY",
       createdAt: report.createdAt,
       dossier: parsedDossier,
+    };
+  }
+
+  /**
+   * List all persisted investigation dossiers for archive view.
+   * @returns {Promise<Array<Object>>} List of dossier summary records
+   */
+  async listDossiers() {
+    const reports = await prisma.report.findMany({
+      include: {
+        analysis: {
+          include: {
+            spill: true,
+          },
+        },
+      },
+      orderBy: { createdAt: "desc" },
+    });
+
+    return reports.map((report) => {
+      let parsed = null;
+      try {
+        parsed = JSON.parse(report.content);
+      } catch {
+        parsed = {};
+      }
+
+      const dossierId = parsed?.dossierId || `OG-DOSSIER-${report.analysisId.slice(0, 8).toUpperCase()}`;
+
+      return {
+        dossierId,
+        reportId: report.id,
+        analysisId: report.analysisId,
+        spillId: report.analysis?.spill?.id || null,
+        title: report.title,
+        schemaVersion: parsed?.schemaVersion || DOSSIER_SCHEMA_VERSION,
+        evidenceRelease: parsed?.evidenceRelease || EVIDENCE_RELEASE,
+        generationMode: parsed?.generationMode || "DETERMINISTIC",
+        provenance: parsed?.provenance || { combinationStatus: "DEMO" },
+        status: "READY",
+        createdAt: report.createdAt,
+      };
+    });
+  }
+
+  /**
+   * Generate a formal PDF document from a persisted OG-DOSSIER-V1 artifact.
+   * @param {string} analysisId
+   * @returns {Promise<{ pdfBuffer: Buffer, filename: string, dossierId: string }>}
+   */
+  async generateDossierPdf(analysisId) {
+    if (!analysisId) {
+      throw new AppError(400, "INVALID_ANALYSIS_ID", "Analysis ID is required for PDF generation");
+    }
+
+    // 1. Retrieve authoritative persisted dossier
+    const dossierRecord = await this.getDossier(analysisId);
+
+    // 2. Validate contract before PDF rendering
+    this.validateDossierContract(dossierRecord.dossier);
+
+    // 3. Delegate to presentation layer PDF generator
+    const pdfBuffer = await dossierPdfService.generatePdf(dossierRecord);
+    const filename = `${dossierRecord.dossierId || `OG-DOSSIER-${analysisId.slice(0, 8)}`}.pdf`;
+
+    return {
+      pdfBuffer,
+      filename,
+      dossierId: dossierRecord.dossierId,
+      analysisId,
     };
   }
 }

@@ -1,0 +1,10 @@
+{
+  "checkpoint_sha256": "861fe810f8fc1e8bba3ff5cd0365628a5009f4261d904f1ddbb6264c8f2cc174",
+  "manifest_sha256": "9d4cf3f6755976c72bfdb1172bbc03616efeba8e15869ba893665db506dc621d",
+  "v6_baseline_sha256": "bcf3d6bc988b910fa67c0c31c89cb2c861da73f0b02159c579cb28e5039920e3",
+  "cpu_load_verified": true,
+  "cuda_load_verified": true,
+  "missing_keys": 0,
+  "unexpected_keys": 0,
+  "held_out_test_accessed": false
+}

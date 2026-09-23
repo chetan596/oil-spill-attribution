@@ -13,28 +13,28 @@ export default function Timeline({
   return (
     <div
       style={{
-        background: '#0a0f1d',
-        border: '1px solid #1e293b',
-        borderRadius: '8px',
+        background: 'var(--og-surface, #121417)',
+        border: '1px solid var(--og-border, #25292F)',
+        borderRadius: '6px',
         padding: '12px 16px',
-        color: '#f8fafc',
+        color: 'var(--og-text-primary, #ECEEF1)',
       }}
       role="region"
       aria-label="Drift Simulation Timeline"
     >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', fontSize: '0.85rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: isBackward ? '#38bdf8' : '#10b981', fontWeight: 600 }}>
-          {isBackward ? <History size={16} /> : <TrendingUp size={16} />}
-          <span>{isBackward ? 'Historical / Modelled Backward Hindcast' : 'Modelled Forward Forecast'}</span>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', fontSize: '0.82rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: isBackward ? 'var(--og-amber, #E7A63A)' : 'var(--og-green, #4ADE80)', fontWeight: 600 }}>
+          {isBackward ? <History size={15} /> : <TrendingUp size={15} />}
+          <span>{isBackward ? 'Modelled Backward Hindcast (T−24h → T0)' : 'Modelled Forward Forecast (T0 → T+6h)'}</span>
         </div>
-        <div style={{ fontSize: '0.78rem', color: '#94a3b8' }}>
+        <div style={{ fontSize: '0.75rem', color: 'var(--og-text-secondary, #B1B6BD)' }}>
           {isBackward ? (
             <span>
-              Step <strong style={{ color: '#38bdf8', fontFamily: 'var(--font-mono)' }}>T - {currentStep}h</strong> (Discharge Origin Trace)
+              Offset: <strong style={{ color: 'var(--og-amber, #E7A63A)', fontFamily: 'var(--font-mono)' }}>T − {currentStep}h</strong> (Discharge Origin Trace)
             </span>
           ) : (
             <span>
-              Step <strong style={{ color: '#10b981', fontFamily: 'var(--font-mono)' }}>T + {currentStep}h</strong> (Modelled Projection)
+              Offset: <strong style={{ color: 'var(--og-green, #4ADE80)', fontFamily: 'var(--font-mono)' }}>T + {currentStep}h</strong> (Modelled Forecast)
             </span>
           )}
         </div>
@@ -43,29 +43,29 @@ export default function Timeline({
       <input
         type="range"
         min="0"
-        max={maxSteps > 0 ? maxSteps : 1}
+        max={maxSteps > 0 ? maxSteps - 1 : 1}
         value={currentStep}
         onChange={(e) => onStepChange && onStepChange(Number(e.target.value))}
         aria-label="Drift Simulation Step Slider"
         style={{
           width: '100%',
-          accentColor: isBackward ? '#38bdf8' : '#10b981',
+          accentColor: isBackward ? 'var(--og-amber, #E7A63A)' : 'var(--og-green, #4ADE80)',
           cursor: 'pointer',
           height: '6px',
-          background: '#1e293b',
+          background: 'var(--og-surface-recessed, #0C0E11)',
           borderRadius: '3px',
           outline: 'none',
         }}
       />
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '6px', fontSize: '0.72rem', color: '#64748b' }}>
-        <span>Detection Time (T=0)</span>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '6px', fontSize: '0.72rem', color: 'var(--og-text-muted, #777E87)' }}>
+        <span>{isBackward ? 'T0 (Observed Detection)' : 'T0 (Observed Detection)'}</span>
         {currentTimestamp && (
-          <span style={{ color: '#cbd5e1', fontWeight: 500, fontFamily: 'var(--font-mono)' }}>
+          <span style={{ color: 'var(--og-text-primary, #ECEEF1)', fontWeight: 600, fontFamily: 'var(--font-mono)', background: 'rgba(255,255,255,0.05)', padding: '1px 6px', borderRadius: '3px' }}>
             {new Date(currentTimestamp).toUTCString()}
           </span>
         )}
-        <span>{isBackward ? `T - ${maxSteps}h (Modelled Origin)` : `T + ${maxSteps}h (Forecast)`}</span>
+        <span>{isBackward ? 'T − 24h (Modelled Origin)' : 'T + 6h (Modelled Forecast)'}</span>
       </div>
     </div>
   );

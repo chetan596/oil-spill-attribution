@@ -45,6 +45,19 @@ const spillController = {
   },
 
   /**
+   * GET /api/v1/spills/by-analysis/:analysisId
+   * Get spill record directly associated with an analysis ID.
+   */
+  async getByAnalysisId(req, res, next) {
+    try {
+      const spill = await spillService.getByAnalysisId(req.params.analysisId);
+      res.json({ success: true, data: spill, error: null });
+    } catch (err) {
+      next(err);
+    }
+  },
+
+  /**
    * GET /api/v1/spills/:id/drift
    * Get drift trajectory (backward + forward paths).
    */

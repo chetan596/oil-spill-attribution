@@ -1,0 +1,51 @@
+{
+  "REAL CDSE SAR PIXELS": {
+    "source_archive": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\satellite\\cdse\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG.zip",
+    "source_archive_sha256": "211a92723c50a313255933d08a8bd5130c9591443f35338347ad9d6752be0c7f",
+    "vv_measurement": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\satellite\\cdse\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG.SAFE\\measurement\\s1a-iw-grd-vv-20240218t010329-20240218t010354-052606-065d1d-001-cog.tiff",
+    "vv_measurement_sha256": "38c0f2d5f916bdf9a1d0d08394b8acb2584ea5c261f2f4d8b0adbad5f528dfd2",
+    "vh_measurement": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\satellite\\cdse\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG.SAFE\\measurement\\s1a-iw-grd-vh-20240218t010329-20240218t010354-052606-065d1d-002-cog.tiff",
+    "vh_measurement_sha256": "3d753a64c9eaa5b0bcf2659d1aea5f0eb9690c415fd3318fa1409104f48ce8c2",
+    "derived_raster": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\satellite\\cdse\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\derived\\real_cdse_vv_vh.tif",
+    "calibration_luts": [
+      "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\satellite\\cdse\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG.SAFE\\annotation\\calibration\\calibration-s1a-iw-grd-vv-20240218t010329-20240218t010354-052606-065d1d-001-cog.xml",
+      "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\satellite\\cdse\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG.SAFE\\annotation\\calibration\\calibration-s1a-iw-grd-vh-20240218t010329-20240218t010354-052606-065d1d-002-cog.xml"
+    ],
+    "geolocation_grid": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\satellite\\cdse\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG.SAFE\\annotation\\s1a-iw-grd-vv-20240218t010329-20240218t010354-052606-065d1d-001-cog.xml",
+    "physical_units": "Sigma0 backscatter (decibels dB)"
+  },
+  "REAL CDSE METADATA": {
+    "product_id": "S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG",
+    "product_uuid": "3f5c4ba1-ed70-4065-91b9-2bbeb7ebfb79",
+    "manifest_sha256": "ab80892ecb17d7fa751ff22f93a5948b17b0835d6515a327686d7134c9b523fc",
+    "sensing_start": "2024-02-18T01:03:29.872826Z",
+    "sensing_stop": "2024-02-18T01:03:54.871034Z"
+  },
+  "REAL ERA5": {
+    "file": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\weather\\era5\\S1A_IW_20240218T010329_era5_wind.npz",
+    "sha256": "1248c672106bffbc20dafe8f28783614fd30bbf8421d5419a422c36e06cc27a2",
+    "variables": [
+      "u10_ms",
+      "v10_ms",
+      "ws_ms"
+    ],
+    "timestamp": "2024-02-18T01:00:00Z"
+  },
+  "REAL NOAA CRW SST": {
+    "file": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\weather\\sst\\S1A_IW_20240218_noaa_crw_sst.npz",
+    "sha256": "9589825635d2f0cd6da418dcfd52f177b06b1359eef7b24453a6ae2401bfb63b",
+    "variable": "sst_deg_c_filled",
+    "timestamp": "2024-02-18T12:00:00Z"
+  },
+  "VALIDATION TENSOR": {
+    "file": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\satellite\\cdse\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\derived\\v5d_real_6ch_tensor.npy",
+    "file_sha256": "601f9d422762d50a0de5949a5be052cf31c3786b525fe9f5766d07f25a11122f",
+    "array_sha256": "5d0a2643dbfe11f515e7177a7cb1cf736a3aa1cd71ee53fbb0c96801325e368f",
+    "shape": [
+      1,
+      6,
+      512,
+      512
+    ]
+  }
+}

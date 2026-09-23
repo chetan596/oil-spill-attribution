@@ -1,0 +1,8 @@
+{
+  "model_id": "unet-dual-pol-sar-v09b-attention",
+  "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v09b_attention.pth",
+  "checkpoint_sha256": "8018ffaee53634c2fa7eb02f035dda7eccb8bcd408b22937eefaf51cf19885e8",
+  "checkpoint_size_bytes": 13397995,
+  "parameter_count": 1103174,
+  "architecture": "UNetAttention"
+}

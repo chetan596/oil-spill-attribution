@@ -1,0 +1,6 @@
+{
+  "segmentation_train_manifest.json": "6e903a42eb6be9a40552784ca1f26a57de9f8d38072ca735e5d3fa965f7cba6d",
+  "segmentation_validation_manifest.json": "c045b88220fbaef0a88efabf7cf53f47eecbf268f7f72297db9fb38ca44d2d4c",
+  "segmentation_internal_test_manifest.json": "6a9e144a9918a556b46ef0eb2957b98a00fcde040cb8f75c2eecbf3c16260a92",
+  "external_test_manifest.json": "SEALED — NEVER ACCESSED"
+}

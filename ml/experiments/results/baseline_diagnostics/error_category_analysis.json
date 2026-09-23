@@ -1,0 +1,65 @@
+{
+  "analysis_name": "ERROR_CATEGORY_ANALYSIS",
+  "category_summaries": {
+    "oil": {
+      "scene_count": 5,
+      "v4_behavior": {
+        "mean_scene_probability": 0.057749,
+        "median_scene_max_probability": 0.999973,
+        "average_predicted_positive_pct_at_0_50": 0.9656,
+        "error_nature": "HIGH_RECALL_VALID_SLICK_DETECTION"
+      },
+      "v2_behavior": {
+        "mean_scene_probability": 0.278713,
+        "median_scene_max_probability": 0.324236,
+        "average_predicted_positive_pct_at_0_50": 0.001,
+        "error_nature": "ZERO_DETECTION_NEGATIVE_DB_STARVATION"
+      }
+    },
+    "clean_ocean": {
+      "scene_count": 2,
+      "v4_behavior": {
+        "mean_scene_probability": 0.074404,
+        "median_scene_max_probability": 0.925998,
+        "average_predicted_positive_pct_at_0_50": 0.246,
+        "error_nature": "LOW_FALSE_POSITIVE_OCEAN_REJECTION"
+      },
+      "v2_behavior": {
+        "mean_scene_probability": 0.279075,
+        "median_scene_max_probability": 0.324236,
+        "average_predicted_positive_pct_at_0_50": 0.0,
+        "error_nature": "ZERO_DETECTION_NEGATIVE_DB_STARVATION"
+      }
+    },
+    "look_alike": {
+      "scene_count": 2,
+      "v4_behavior": {
+        "mean_scene_probability": 0.83147,
+        "median_scene_max_probability": 0.999994,
+        "average_predicted_positive_pct_at_0_50": 86.8254,
+        "error_nature": "HIGH_FALSE_POSITIVE_LOOKALIKE_CONFUSION"
+      },
+      "v2_behavior": {
+        "mean_scene_probability": 0.277153,
+        "median_scene_max_probability": 0.661512,
+        "average_predicted_positive_pct_at_0_50": 0.0125,
+        "error_nature": "ZERO_DETECTION_NEGATIVE_DB_STARVATION"
+      }
+    },
+    "test_set": {
+      "scene_count": 5,
+      "v4_behavior": {
+        "mean_scene_probability": 0.359465,
+        "median_scene_max_probability": 0.999533,
+        "average_predicted_positive_pct_at_0_50": 20.3152,
+        "error_nature": "LOW_FALSE_POSITIVE_OCEAN_REJECTION"
+      },
+      "v2_behavior": {
+        "mean_scene_probability": 0.278574,
+        "median_scene_max_probability": 0.324236,
+        "average_predicted_positive_pct_at_0_50": 0.0007,
+        "error_nature": "ZERO_DETECTION_NEGATIVE_DB_STARVATION"
+      }
+    }
+  }
+}

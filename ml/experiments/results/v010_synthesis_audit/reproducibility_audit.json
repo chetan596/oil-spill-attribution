@@ -1,0 +1,83 @@
+{
+  "dataset_manifest_sha256": "9d4cf3f6755976c72bfdb1172bbc03616efeba8e15869ba893665db506dc621d",
+  "dataset_manifest_path": "ml/datasets/manifest.json",
+  "checkpoints": {
+    "unet-dual-pol-sar-v2": {
+      "checkpoint_file": "unet_dual_pol_sar_v2.pth",
+      "file_size_bytes": 13066175,
+      "sha256": "905ef8e47c1f4b12eb490b33f1726fb91714b3dfcdf5184d8dfd96ec312f0dbd",
+      "parameter_count": 1080802,
+      "status": "VERIFIED_ON_DISK"
+    },
+    "unet-dual-pol-sar-v4": {
+      "checkpoint_file": "unet_dual_pol_sar_v4.pth",
+      "file_size_bytes": 4367239,
+      "sha256": "c1395f1deae819b222f9e1034472d18a84f502fd89d4076981d3291f4af4fd63",
+      "parameter_count": 361250,
+      "status": "VERIFIED_ON_DISK"
+    },
+    "unet-dual-pol-sar-v6": {
+      "checkpoint_file": "unet_dual_pol_sar_v6.pth",
+      "file_size_bytes": 13069567,
+      "sha256": "bcf3d6bc988b910fa67c0c31c89cb2c861da73f0b02159c579cb28e5039920e3",
+      "parameter_count": 1080802,
+      "status": "VERIFIED_ON_DISK"
+    },
+    "unet-dual-pol-sar-v8a": {
+      "checkpoint_file": "unet_dual_pol_sar_v8a.pth",
+      "file_size_bytes": 13070043,
+      "sha256": "502198f43bd74caf74f6497de4c5bce776fd337bc79a4d0c2b06ca9292ab04f2",
+      "parameter_count": 1080802,
+      "status": "VERIFIED_ON_DISK"
+    },
+    "unet-dual-pol-sar-v8b": {
+      "checkpoint_file": "unet_dual_pol_sar_v8b.pth",
+      "file_size_bytes": 13070043,
+      "sha256": "7171dd4983db09df47581b6d27aa0f9d218b84753e89973ffe15b34d1b57e455",
+      "parameter_count": 1080802,
+      "status": "VERIFIED_ON_DISK"
+    },
+    "unet-dual-pol-sar-v8c": {
+      "checkpoint_file": "unet_dual_pol_sar_v8c.pth",
+      "file_size_bytes": 13070043,
+      "sha256": "898afa87cc6e9751d1bdbb569e8cbc00e1f4f339c6d78451c8201566e03b44b2",
+      "parameter_count": 1080802,
+      "status": "VERIFIED_ON_DISK"
+    },
+    "unet-dual-pol-sar-v8d": {
+      "checkpoint_file": "unet_dual_pol_sar_v8d.pth",
+      "file_size_bytes": 13070043,
+      "sha256": "2e7df8bc37b0cbe5e132b9d391898f6cc02aaa790fd02d0087eacfd1811cf4c4",
+      "parameter_count": 1080802,
+      "status": "VERIFIED_ON_DISK"
+    },
+    "unet-dual-pol-sar-v09a-multiscale": {
+      "checkpoint_file": "unet_dual_pol_sar_v09a_multiscale.pth",
+      "file_size_bytes": 15030923,
+      "sha256": "de4202c61d88392b6f7e4f923f7ccaae16c4373fc57b8799128ae905779f808d",
+      "parameter_count": 1242590,
+      "status": "VERIFIED_ON_DISK"
+    },
+    "unet-dual-pol-sar-v09b-attention": {
+      "checkpoint_file": "unet_dual_pol_sar_v09b_attention.pth",
+      "file_size_bytes": 13397995,
+      "sha256": "8018ffaee53634c2fa7eb02f035dda7eccb8bcd408b22937eefaf51cf19885e8",
+      "parameter_count": 1103174,
+      "status": "VERIFIED_ON_DISK"
+    },
+    "unet-dual-pol-sar-v09c-residual": {
+      "checkpoint_file": "unet_dual_pol_sar_v09c_residual.pth",
+      "file_size_bytes": 13510147,
+      "sha256": "861fe810f8fc1e8bba3ff5cd0365628a5009f4261d904f1ddbb6264c8f2cc174",
+      "parameter_count": 1114338,
+      "status": "VERIFIED_ON_DISK"
+    },
+    "unet-dual-pol-sar-v09d-residual-loss": {
+      "checkpoint_file": "unet_dual_pol_sar_v09d_residual_loss.pth",
+      "file_size_bytes": 13512167,
+      "sha256": "ab22ffa2fb1c3be99ff2bb99353db76ed4934bd00210f7bce21df74506ce827d",
+      "parameter_count": 1114338,
+      "status": "VERIFIED_ON_DISK"
+    }
+  }
+}

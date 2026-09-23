@@ -1,0 +1,13 @@
+{
+  "accuracy": 0.9538461538461539,
+  "precision": 0.9761904761904762,
+  "recall": 0.9534883720930233,
+  "f1_score": 0.9647058823529412,
+  "specificity": 0.9545454545454546,
+  "fpr": 0.045454545454545456,
+  "tp_images": 82,
+  "fp_images": 2,
+  "tn_images": 42,
+  "fn_images": 4,
+  "total_images": 130
+}

@@ -1,0 +1,46 @@
+{
+  "class_labels": [
+    "CLEAN_OCEAN",
+    "LOOK_ALIKE",
+    "OIL_SPILL"
+  ],
+  "matrix_3class": [
+    [
+      10,
+      1,
+      0
+    ],
+    [
+      0,
+      31,
+      2
+    ],
+    [
+      0,
+      3,
+      83
+    ]
+  ],
+  "matrix_rows": [
+    "TRUE_CLEAN_OCEAN",
+    "TRUE_LOOK_ALIKE",
+    "TRUE_OIL_SPILL"
+  ],
+  "matrix_cols": [
+    "PRED_CLEAN_OCEAN",
+    "PRED_LOOK_ALIKE",
+    "PRED_OIL_SPILL"
+  ],
+  "binary_oil_vs_non_oil": {
+    "true_positive": 83,
+    "false_positive": 2,
+    "true_negative": 42,
+    "false_negative": 3
+  },
+  "class_transitions": {
+    "clean_to_oil": 0,
+    "lookalike_to_oil": 2,
+    "oil_to_clean": 0,
+    "oil_to_lookalike": 3
+  }
+}

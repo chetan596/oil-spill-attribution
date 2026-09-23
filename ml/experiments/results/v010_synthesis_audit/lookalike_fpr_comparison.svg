@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 500" width="850" height="500" style="background:#0f172a; font-family:sans-serif;">
+<text x="425" y="36" text-anchor="middle" fill="#f8fafc" font-size="18" font-weight="bold">Look-Alike False Positive Rate (FPR) vs Threshold</text>
+<text x="425" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">False alarm susceptibility across all controlled model variants</text>
+<rect x="80" y="80" width="680" height="340" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<line x1="80" y1="148" x2="760" y2="148" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="80" y1="216" x2="760" y2="216" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="80" y1="284" x2="760" y2="284" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="80" y1="352" x2="760" y2="352" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="80,347 193,352 306,357 420,362 533,366 760,374" fill="none" stroke="#94a3b8" stroke-width="3.2"/>
+<circle cx="80" cy="347" r="3.5" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<circle cx="193" cy="352" r="3.5" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<circle cx="306" cy="357" r="3.5" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<circle cx="420" cy="362" r="3.5" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<circle cx="533" cy="366" r="3.5" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<circle cx="760" cy="374" r="3.5" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,232 193,262 306,292 420,336 533,373 760,413" fill="none" stroke="#3b82f6" stroke-width="1.8"/>
+<circle cx="80" cy="232" r="3.5" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="193" cy="262" r="3.5" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="306" cy="292" r="3.5" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="420" cy="336" r="3.5" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="533" cy="373" r="3.5" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="760" cy="413" r="3.5" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,252 193,269 306,283 420,295 533,307 760,333" fill="none" stroke="#10b981" stroke-width="1.8"/>
+<circle cx="80" cy="252" r="3.5" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="193" cy="269" r="3.5" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="306" cy="283" r="3.5" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="420" cy="295" r="3.5" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="533" cy="307" r="3.5" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="760" cy="333" r="3.5" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,82 193,82 306,157 420,162 533,166 760,172" fill="none" stroke="#f59e0b" stroke-width="1.8"/>
+<circle cx="80" cy="82" r="3.5" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<circle cx="193" cy="82" r="3.5" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<circle cx="306" cy="157" r="3.5" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<circle cx="420" cy="162" r="3.5" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<circle cx="533" cy="166" r="3.5" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<circle cx="760" cy="172" r="3.5" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,339 193,345 306,351 420,357 533,362 760,372" fill="none" stroke="#ec4899" stroke-width="1.8"/>
+<circle cx="80" cy="339" r="3.5" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<circle cx="193" cy="345" r="3.5" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<circle cx="306" cy="351" r="3.5" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<circle cx="420" cy="357" r="3.5" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<circle cx="533" cy="362" r="3.5" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<circle cx="760" cy="372" r="3.5" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,359 193,361 306,363 420,365 533,367 760,371" fill="none" stroke="#06b6d4" stroke-width="1.8"/>
+<circle cx="80" cy="359" r="3.5" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="193" cy="361" r="3.5" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="306" cy="363" r="3.5" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="420" cy="365" r="3.5" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="533" cy="367" r="3.5" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="760" cy="371" r="3.5" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,334 193,357 306,375 420,388 533,398 760,411" fill="none" stroke="#a855f7" stroke-width="3.2"/>
+<circle cx="80" cy="334" r="3.5" fill="#a855f7" stroke="#0f172a" stroke-width="1"/>
+<circle cx="193" cy="357" r="3.5" fill="#a855f7" stroke="#0f172a" stroke-width="1"/>
+<circle cx="306" cy="375" r="3.5" fill="#a855f7" stroke="#0f172a" stroke-width="1"/>
+<circle cx="420" cy="388" r="3.5" fill="#a855f7" stroke="#0f172a" stroke-width="1"/>
+<circle cx="533" cy="398" r="3.5" fill="#a855f7" stroke="#0f172a" stroke-width="1"/>
+<circle cx="760" cy="411" r="3.5" fill="#a855f7" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,341 193,347 306,352 420,356 533,360 760,368" fill="none" stroke="#eab308" stroke-width="1.8"/>
+<circle cx="80" cy="341" r="3.5" fill="#eab308" stroke="#0f172a" stroke-width="1"/>
+<circle cx="193" cy="347" r="3.5" fill="#eab308" stroke="#0f172a" stroke-width="1"/>
+<circle cx="306" cy="352" r="3.5" fill="#eab308" stroke="#0f172a" stroke-width="1"/>
+<circle cx="420" cy="356" r="3.5" fill="#eab308" stroke="#0f172a" stroke-width="1"/>
+<circle cx="533" cy="360" r="3.5" fill="#eab308" stroke="#0f172a" stroke-width="1"/>
+<circle cx="760" cy="368" r="3.5" fill="#eab308" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,410 193,411 306,411 420,412 533,413 760,414" fill="none" stroke="#ef4444" stroke-width="3.2"/>
+<circle cx="80" cy="410" r="3.5" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<circle cx="193" cy="411" r="3.5" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<circle cx="306" cy="411" r="3.5" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<circle cx="420" cy="412" r="3.5" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<circle cx="533" cy="413" r="3.5" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<circle cx="760" cy="414" r="3.5" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<text x="72" y="424" text-anchor="end" fill="#94a3b8" font-size="11">0.00</text>
+<text x="72" y="356" text-anchor="end" fill="#94a3b8" font-size="11">0.20</text>
+<text x="72" y="288" text-anchor="end" fill="#94a3b8" font-size="11">0.40</text>
+<text x="72" y="220" text-anchor="end" fill="#94a3b8" font-size="11">0.60</text>
+<text x="72" y="152" text-anchor="end" fill="#94a3b8" font-size="11">0.80</text>
+<text x="72" y="84" text-anchor="end" fill="#94a3b8" font-size="11">1.00</text>
+<text x="80" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.30</text>
+<text x="193" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.35</text>
+<text x="306" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.40</text>
+<text x="420" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.45</text>
+<text x="533" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.50</text>
+<text x="760" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.60</text>
+<line x1="95" y1="94" x2="113" y2="94" stroke="#94a3b8" stroke-width="2.5"/>
+<text x="119" y="98" fill="#e2e8f0" font-size="11">V6_BASELINE</text>
+<line x1="95" y1="111" x2="113" y2="111" stroke="#3b82f6" stroke-width="2.5"/>
+<text x="119" y="115" fill="#e2e8f0" font-size="11">V8_A_BASELINE_LOSS</text>
+<line x1="95" y1="128" x2="113" y2="128" stroke="#10b981" stroke-width="2.5"/>
+<text x="119" y="132" fill="#e2e8f0" font-size="11">V8_B_FOCAL_DICE</text>
+<line x1="95" y1="145" x2="113" y2="145" stroke="#f59e0b" stroke-width="2.5"/>
+<text x="119" y="149" fill="#e2e8f0" font-size="11">V8_C_FOCAL_TVERSKY</text>
+<line x1="95" y1="162" x2="113" y2="162" stroke="#ec4899" stroke-width="2.5"/>
+<text x="119" y="166" fill="#e2e8f0" font-size="11">V8_D_HIGH_FG_WEIGHT</text>
+<line x1="95" y1="179" x2="113" y2="179" stroke="#06b6d4" stroke-width="2.5"/>
+<text x="119" y="183" fill="#e2e8f0" font-size="11">V09A_MULTISCALE</text>
+<line x1="95" y1="196" x2="113" y2="196" stroke="#a855f7" stroke-width="2.5"/>
+<text x="119" y="200" fill="#e2e8f0" font-size="11">V09B_ATTENTION</text>
+<line x1="95" y1="213" x2="113" y2="213" stroke="#eab308" stroke-width="2.5"/>
+<text x="119" y="217" fill="#e2e8f0" font-size="11">V09C_RESIDUAL</text>
+<line x1="95" y1="230" x2="113" y2="230" stroke="#ef4444" stroke-width="2.5"/>
+<text x="119" y="234" fill="#e2e8f0" font-size="11">V09D_RESIDUAL_LOSS</text>
+</svg>

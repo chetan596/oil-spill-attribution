@@ -1,0 +1,380 @@
+{
+  "audit_date": "2026-09-14",
+  "total_benchmark_scenes": 40,
+  "train_scenes_count": 28,
+  "validation_scenes_count": 7,
+  "test_scenes_count": 5,
+  "timestamp_verified_count": 0,
+  "metocean_eligible_count": 0,
+  "stop_condition_status": "PHASE_19_STOP_CONDITION_ACTIVE: Zenodo benchmark scenes lack authoritative UTC timestamps. Real ERA5 wind vectors cannot be matched without data fabrication.",
+  "real_cdse_pipeline_eligibility": {
+    "product_id": "S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG",
+    "acquisition_start_utc": "2024-02-18T01:03:29.872826Z",
+    "acquisition_end_utc": "2024-02-18T01:03:54.871034Z",
+    "timestamp_verified": true,
+    "metocean_eligible": true,
+    "notes": "Eligible for live/near-real-time CDSE multimodal branch, but segregated from static Zenodo benchmark."
+  },
+  "scenes": [
+    {
+      "scene_id": "real_part1_oil_00000",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00002",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00003",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00004",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00006",
+      "split": "val",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00007",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00008",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00009",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00010",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00011",
+      "split": "val",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00013",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00015",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00017",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00203",
+      "split": "train",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part1_oil_00204",
+      "split": "val",
+      "category": "oil_spill",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_no_oil_00000",
+      "split": "train",
+      "category": "no_oil",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_no_oil_00001",
+      "split": "train",
+      "category": "no_oil",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_no_oil_00002",
+      "split": "train",
+      "category": "no_oil",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_no_oil_00003",
+      "split": "train",
+      "category": "no_oil",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_no_oil_00004",
+      "split": "val",
+      "category": "no_oil",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_no_oil_00005",
+      "split": "train",
+      "category": "no_oil",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_no_oil_00006",
+      "split": "train",
+      "category": "no_oil",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_no_oil_00007",
+      "split": "train",
+      "category": "no_oil",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_no_oil_00008",
+      "split": "train",
+      "category": "no_oil",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_no_oil_00017",
+      "split": "val",
+      "category": "no_oil",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_lookalike_00000",
+      "split": "train",
+      "category": "lookalike",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_lookalike_00001",
+      "split": "train",
+      "category": "lookalike",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_lookalike_00002",
+      "split": "train",
+      "category": "lookalike",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_lookalike_00003",
+      "split": "train",
+      "category": "lookalike",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_lookalike_00004",
+      "split": "val",
+      "category": "lookalike",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_lookalike_00005",
+      "split": "train",
+      "category": "lookalike",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_lookalike_00006",
+      "split": "train",
+      "category": "lookalike",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_lookalike_00007",
+      "split": "train",
+      "category": "lookalike",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_lookalike_00008",
+      "split": "train",
+      "category": "lookalike",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part2_lookalike_00090",
+      "split": "val",
+      "category": "lookalike",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part3_test_00060",
+      "split": "test",
+      "category": "test_set",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part3_test_00062",
+      "split": "test",
+      "category": "test_set",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part3_test_00063",
+      "split": "test",
+      "category": "test_set",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part3_test_00064",
+      "split": "test",
+      "category": "test_set",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    },
+    {
+      "scene_id": "real_part3_test_00080",
+      "split": "test",
+      "category": "test_set",
+      "sar_timestamp": null,
+      "timestamp_verified": false,
+      "metocean_eligible": false,
+      "reason": "METOCEAN_ALIGNMENT_UNAVAILABLE: Zenodo benchmark archive does not contain authoritative ESA SAFE UTC acquisition timestamps in GeoTIFF metadata or manifest."
+    }
+  ]
+}

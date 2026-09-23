@@ -1,0 +1,549 @@
+{
+  "model_id": "unet-dual-pol-sar-v4",
+  "model_version": "V4",
+  "checkpoint": {
+    "model_id": "unet-dual-pol-sar-v4",
+    "version": "V4",
+    "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v4.pth",
+    "sha256": "c1395f1deae819b222f9e1034472d18a84f502fd89d4076981d3291f4af4fd63",
+    "size_bytes": 4367239,
+    "base_channels": 16,
+    "preprocessing": {
+      "name": "Decibel_Calibrated_Clipping",
+      "vv_range_db": [
+        -35.0,
+        -5.0
+      ],
+      "vh_range_db": [
+        -45.0,
+        -15.0
+      ],
+      "formula": "clip((value_db - min_db) / (max_db - min_db), 0, 1)",
+      "channel_order": [
+        "VV",
+        "VH"
+      ],
+      "invalid_handling": "fill_zero",
+      "verified": true
+    }
+  },
+  "total_scenes": 12,
+  "scenes": [
+    {
+      "scene_id": "real_part1_oil_00006",
+      "split": "val",
+      "category": "oil",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.00722585,
+        "median_probability": 0.02270242,
+        "p90_probability": 0.03138358,
+        "p95_probability": 0.0520494,
+        "p99_probability": 0.9928472,
+        "p99_9_probability": 0.99892762,
+        "max_probability": 0.99997306,
+        "mean_probability": 0.04864388,
+        "std_probability": 0.14373094,
+        "pixel_counts_above_threshold": {
+          "ge_10": 177905,
+          "ge_20": 128480,
+          "ge_30": 107520,
+          "ge_35": 104190,
+          "ge_40": 102586,
+          "ge_45": 101263,
+          "ge_50": 100066,
+          "ge_60": 97665,
+          "ge_70": 94762,
+          "ge_80": 90808,
+          "ge_90": 84080
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 4.241586,
+          "ge_20_pct": 3.063202,
+          "ge_30_pct": 2.563477,
+          "ge_35_pct": 2.484083,
+          "ge_40_pct": 2.445841,
+          "ge_45_pct": 2.414298,
+          "ge_50_pct": 2.385759,
+          "ge_60_pct": 2.328515,
+          "ge_70_pct": 2.259302,
+          "ge_80_pct": 2.165031,
+          "ge_90_pct": 2.004623
+        }
+      }
+    },
+    {
+      "scene_id": "real_part1_oil_00011",
+      "split": "val",
+      "category": "oil",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.0073909,
+        "median_probability": 0.03072625,
+        "p90_probability": 0.22157599,
+        "p95_probability": 0.27862996,
+        "p99_probability": 0.73421097,
+        "p99_9_probability": 0.98969967,
+        "max_probability": 0.99998552,
+        "mean_probability": 0.07339422,
+        "std_probability": 0.11898717,
+        "pixel_counts_above_threshold": {
+          "ge_10": 745406,
+          "ge_20": 489112,
+          "ge_30": 134794,
+          "ge_35": 61226,
+          "ge_40": 54497,
+          "ge_45": 52086,
+          "ge_50": 49967,
+          "ge_60": 46474,
+          "ge_70": 43135,
+          "ge_80": 39136,
+          "ge_90": 32491
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 17.771864,
+          "ge_20_pct": 11.661339,
+          "ge_30_pct": 3.213739,
+          "ge_35_pct": 1.459742,
+          "ge_40_pct": 1.29931,
+          "ge_45_pct": 1.241827,
+          "ge_50_pct": 1.191306,
+          "ge_60_pct": 1.108027,
+          "ge_70_pct": 1.028419,
+          "ge_80_pct": 0.933075,
+          "ge_90_pct": 0.774646
+        }
+      }
+    },
+    {
+      "scene_id": "real_part1_oil_00204",
+      "split": "val",
+      "category": "oil",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.00395358,
+        "median_probability": 0.0100866,
+        "p90_probability": 0.01350258,
+        "p95_probability": 0.01496917,
+        "p99_probability": 0.02354992,
+        "p99_9_probability": 1.0,
+        "max_probability": 1.0,
+        "mean_probability": 0.01789907,
+        "std_probability": 0.0840572,
+        "pixel_counts_above_threshold": {
+          "ge_10": 34217,
+          "ge_20": 33440,
+          "ge_30": 32894,
+          "ge_35": 32679,
+          "ge_40": 32454,
+          "ge_45": 32195,
+          "ge_50": 31846,
+          "ge_60": 31314,
+          "ge_70": 30884,
+          "ge_80": 30269,
+          "ge_90": 29020
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 0.815797,
+          "ge_20_pct": 0.797272,
+          "ge_30_pct": 0.784254,
+          "ge_35_pct": 0.779128,
+          "ge_40_pct": 0.773764,
+          "ge_45_pct": 0.767589,
+          "ge_50_pct": 0.759268,
+          "ge_60_pct": 0.746584,
+          "ge_70_pct": 0.736332,
+          "ge_80_pct": 0.721669,
+          "ge_90_pct": 0.691891
+        }
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00004",
+      "split": "val",
+      "category": "look_alike",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.02001376,
+        "median_probability": 0.9844839,
+        "p90_probability": 0.99719727,
+        "p95_probability": 0.99827582,
+        "p99_probability": 0.99934673,
+        "p99_9_probability": 0.99980557,
+        "max_probability": 0.99998724,
+        "mean_probability": 0.96128553,
+        "std_probability": 0.0728209,
+        "pixel_counts_above_threshold": {
+          "ge_10": 4194205,
+          "ge_20": 4192278,
+          "ge_30": 4186125,
+          "ge_35": 4181822,
+          "ge_40": 4178200,
+          "ge_45": 4174558,
+          "ge_50": 4170177,
+          "ge_60": 4157143,
+          "ge_70": 4131055,
+          "ge_80": 4065180,
+          "ge_90": 3827021
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 99.99764,
+          "ge_20_pct": 99.951696,
+          "ge_30_pct": 99.804997,
+          "ge_35_pct": 99.702406,
+          "ge_40_pct": 99.616051,
+          "ge_45_pct": 99.529219,
+          "ge_50_pct": 99.424767,
+          "ge_60_pct": 99.114013,
+          "ge_70_pct": 98.492026,
+          "ge_80_pct": 96.921444,
+          "ge_90_pct": 91.243291
+        }
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00090",
+      "split": "val",
+      "category": "look_alike",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.00419724,
+        "median_probability": 0.89731669,
+        "p90_probability": 0.99891406,
+        "p95_probability": 0.99999785,
+        "p99_probability": 1.0,
+        "p99_9_probability": 1.0,
+        "max_probability": 1.0,
+        "mean_probability": 0.70165348,
+        "std_probability": 0.36358523,
+        "pixel_counts_above_threshold": {
+          "ge_10": 3497651,
+          "ge_20": 3449901,
+          "ge_30": 3342039,
+          "ge_35": 3279411,
+          "ge_40": 3213019,
+          "ge_45": 3163569,
+          "ge_50": 3113264,
+          "ge_60": 2998358,
+          "ge_70": 2842476,
+          "ge_80": 2591849,
+          "ge_90": 2076052
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 83.390498,
+          "ge_20_pct": 82.252049,
+          "ge_30_pct": 79.680419,
+          "ge_35_pct": 78.187251,
+          "ge_40_pct": 76.604342,
+          "ge_45_pct": 75.425363,
+          "ge_50_pct": 74.225998,
+          "ge_60_pct": 71.486425,
+          "ge_70_pct": 67.769909,
+          "ge_80_pct": 61.794496,
+          "ge_90_pct": 49.496937
+        }
+      }
+    },
+    {
+      "scene_id": "real_part2_no_oil_00004",
+      "split": "val",
+      "category": "no_oil",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.00479644,
+        "median_probability": 0.07462041,
+        "p90_probability": 0.30971914,
+        "p95_probability": 0.33314127,
+        "p99_probability": 0.39569277,
+        "p99_9_probability": 0.77449949,
+        "max_probability": 0.99991643,
+        "mean_probability": 0.14049017,
+        "std_probability": 0.1255379,
+        "pixel_counts_above_threshold": {
+          "ge_10": 1980486,
+          "ge_20": 1533578,
+          "ge_30": 537983,
+          "ge_35": 131664,
+          "ge_40": 40467,
+          "ge_45": 28471,
+          "ge_50": 20449,
+          "ge_60": 10373,
+          "ge_70": 5943,
+          "ge_80": 3734,
+          "ge_90": 2294
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 47.218466,
+          "ge_20_pct": 36.563349,
+          "ge_30_pct": 12.826514,
+          "ge_35_pct": 3.139114,
+          "ge_40_pct": 0.964808,
+          "ge_45_pct": 0.678802,
+          "ge_50_pct": 0.487542,
+          "ge_60_pct": 0.247312,
+          "ge_70_pct": 0.141692,
+          "ge_80_pct": 0.089025,
+          "ge_90_pct": 0.054693
+        }
+      }
+    },
+    {
+      "scene_id": "real_part2_no_oil_00017",
+      "split": "val",
+      "category": "no_oil",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.00352639,
+        "median_probability": 0.00805601,
+        "p90_probability": 0.01069795,
+        "p95_probability": 0.01174718,
+        "p99_probability": 0.01460338,
+        "p99_9_probability": 0.02385544,
+        "max_probability": 0.85207933,
+        "mean_probability": 0.00831808,
+        "std_probability": 0.00592397,
+        "pixel_counts_above_threshold": {
+          "ge_10": 765,
+          "ge_20": 479,
+          "ge_30": 325,
+          "ge_35": 279,
+          "ge_40": 237,
+          "ge_45": 209,
+          "ge_50": 183,
+          "ge_60": 158,
+          "ge_70": 104,
+          "ge_80": 35,
+          "ge_90": 0
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 0.018239,
+          "ge_20_pct": 0.01142,
+          "ge_30_pct": 0.007749,
+          "ge_35_pct": 0.006652,
+          "ge_40_pct": 0.005651,
+          "ge_45_pct": 0.004983,
+          "ge_50_pct": 0.004363,
+          "ge_60_pct": 0.003767,
+          "ge_70_pct": 0.00248,
+          "ge_80_pct": 0.000834,
+          "ge_90_pct": 0.0
+        }
+      }
+    },
+    {
+      "scene_id": "real_part3_test_00060",
+      "split": "test",
+      "category": "test_set",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.00696725,
+        "median_probability": 0.28031121,
+        "p90_probability": 0.37814655,
+        "p95_probability": 0.49041561,
+        "p99_probability": 0.75434621,
+        "p99_9_probability": 0.98820097,
+        "max_probability": 1.0,
+        "mean_probability": 0.26606295,
+        "std_probability": 0.14280464,
+        "pixel_counts_above_threshold": {
+          "ge_10": 3473103,
+          "ge_20": 3250486,
+          "ge_30": 1533036,
+          "ge_35": 718157,
+          "ge_40": 351009,
+          "ge_45": 263022,
+          "ge_50": 198420,
+          "ge_60": 107625,
+          "ge_70": 57284,
+          "ge_80": 32628,
+          "ge_90": 16932
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 82.805228,
+          "ge_20_pct": 77.497625,
+          "ge_30_pct": 36.550426,
+          "ge_35_pct": 17.122197,
+          "ge_40_pct": 8.368707,
+          "ge_45_pct": 6.270933,
+          "ge_50_pct": 4.730701,
+          "ge_60_pct": 2.56598,
+          "ge_70_pct": 1.365757,
+          "ge_80_pct": 0.777912,
+          "ge_90_pct": 0.40369
+        }
+      }
+    },
+    {
+      "scene_id": "real_part3_test_00062",
+      "split": "test",
+      "category": "test_set",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.00911378,
+        "median_probability": 0.27966724,
+        "p90_probability": 0.38086795,
+        "p95_probability": 0.49102948,
+        "p99_probability": 0.74466661,
+        "p99_9_probability": 0.97248739,
+        "max_probability": 0.99510515,
+        "mean_probability": 0.26926836,
+        "std_probability": 0.13908365,
+        "pixel_counts_above_threshold": {
+          "ge_10": 3541598,
+          "ge_20": 3325141,
+          "ge_30": 1507070,
+          "ge_35": 710629,
+          "ge_40": 359897,
+          "ge_45": 266149,
+          "ge_50": 198758,
+          "ge_60": 105048,
+          "ge_70": 54667,
+          "ge_80": 30601,
+          "ge_90": 17183
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 84.438276,
+          "ge_20_pct": 79.277539,
+          "ge_30_pct": 35.931349,
+          "ge_35_pct": 16.942716,
+          "ge_40_pct": 8.580613,
+          "ge_45_pct": 6.345487,
+          "ge_50_pct": 4.73876,
+          "ge_60_pct": 2.504539,
+          "ge_70_pct": 1.303363,
+          "ge_80_pct": 0.729585,
+          "ge_90_pct": 0.409675
+        }
+      }
+    },
+    {
+      "scene_id": "real_part3_test_00063",
+      "split": "test",
+      "category": "test_set",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.00765982,
+        "median_probability": 0.28838611,
+        "p90_probability": 0.48441063,
+        "p95_probability": 0.62201229,
+        "p99_probability": 0.92747084,
+        "p99_9_probability": 0.98639713,
+        "max_probability": 0.99824941,
+        "mean_probability": 0.30381632,
+        "std_probability": 0.16236342,
+        "pixel_counts_above_threshold": {
+          "ge_10": 3714616,
+          "ge_20": 3537616,
+          "ge_30": 1797910,
+          "ge_35": 1017164,
+          "ge_40": 620078,
+          "ge_45": 490857,
+          "ge_50": 389939,
+          "ge_60": 235309,
+          "ge_70": 139565,
+          "ge_80": 85477,
+          "ge_90": 50920
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 88.563347,
+          "ge_20_pct": 84.343338,
+          "ge_30_pct": 42.865515,
+          "ge_35_pct": 24.25108,
+          "ge_40_pct": 14.783812,
+          "ge_45_pct": 11.702943,
+          "ge_50_pct": 9.29687,
+          "ge_60_pct": 5.610204,
+          "ge_70_pct": 3.327489,
+          "ge_80_pct": 2.03793,
+          "ge_90_pct": 1.214027
+        }
+      }
+    },
+    {
+      "scene_id": "real_part3_test_00064",
+      "split": "test",
+      "category": "test_set",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.00908943,
+        "median_probability": 0.292256,
+        "p90_probability": 0.68700038,
+        "p95_probability": 0.83023972,
+        "p99_probability": 0.97666782,
+        "p99_9_probability": 0.9947468,
+        "max_probability": 0.999533,
+        "mean_probability": 0.3108837,
+        "std_probability": 0.25216588,
+        "pixel_counts_above_threshold": {
+          "ge_10": 2984425,
+          "ge_20": 2912590,
+          "ge_30": 1990276,
+          "ge_35": 1477830,
+          "ge_40": 1101873,
+          "ge_45": 951543,
+          "ge_50": 822124,
+          "ge_60": 589343,
+          "ge_70": 396720,
+          "ge_80": 245899,
+          "ge_90": 146592
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 71.154237,
+          "ge_20_pct": 69.441557,
+          "ge_30_pct": 47.451878,
+          "ge_35_pct": 35.234213,
+          "ge_40_pct": 26.2707,
+          "ge_45_pct": 22.686553,
+          "ge_50_pct": 19.600964,
+          "ge_60_pct": 14.051032,
+          "ge_70_pct": 9.458542,
+          "ge_80_pct": 5.862689,
+          "ge_90_pct": 3.495026
+        }
+      }
+    },
+    {
+      "scene_id": "real_part3_test_00080",
+      "split": "test",
+      "category": "test_set",
+      "distribution": {
+        "total_pixels": 4194304,
+        "min_probability": 0.00814351,
+        "median_probability": 0.67417204,
+        "p90_probability": 0.9868592,
+        "p95_probability": 0.99575794,
+        "p99_probability": 0.99949163,
+        "p99_9_probability": 0.99992841,
+        "max_probability": 0.99998844,
+        "mean_probability": 0.64729244,
+        "std_probability": 0.27336988,
+        "pixel_counts_above_threshold": {
+          "ge_10": 4174470,
+          "ge_20": 4155980,
+          "ge_30": 3632376,
+          "ge_35": 3291331,
+          "ge_40": 2941022,
+          "ge_45": 2791861,
+          "ge_50": 2651172,
+          "ge_60": 2346217,
+          "ge_70": 2006692,
+          "ge_80": 1617629,
+          "ge_90": 1192186
+        },
+        "pixel_fractions_above_threshold_pct": {
+          "ge_10_pct": 99.527121,
+          "ge_20_pct": 99.086285,
+          "ge_30_pct": 86.602592,
+          "ge_35_pct": 78.471446,
+          "ge_40_pct": 70.119429,
+          "ge_45_pct": 66.563153,
+          "ge_50_pct": 63.208866,
+          "ge_60_pct": 55.938172,
+          "ge_70_pct": 47.843266,
+          "ge_80_pct": 38.567281,
+          "ge_90_pct": 28.423929
+        }
+      }
+    }
+  ]
+}

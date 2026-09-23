@@ -1,0 +1,62 @@
+{
+  "evaluation_timestamp": "2026-09-14T00:30:00Z",
+  "selected_validation_threshold": 0.5,
+  "models": {
+    "v2_baseline": {
+      "model_id": "unet-dual-pol-sar-v2",
+      "threshold": 0.35,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 0.00021188212823847988,
+      "tp": 0,
+      "fp": 44,
+      "fn": 205257,
+      "tn": 20766219
+    },
+    "v3_experimental": {
+      "model_id": "unet-dual-pol-sar-v3",
+      "threshold": 0.25,
+      "iou": 0.004342057652876611,
+      "dice": 0.00868373825283186,
+      "precision": 0.4440059200789125,
+      "recall": 0.004384746927023194,
+      "fpr": 0.009717684881483009,
+      "tp": 9,
+      "fp": 2018,
+      "fn": 205248,
+      "tn": 20764245
+    },
+    "v4_corrected_baseline_stride512": {
+      "model_id": "unet-dual-pol-sar-v4",
+      "threshold": 0.5,
+      "inference_strategy": "stride_512_non_overlapping",
+      "iou": 1.57985915848327,
+      "dice": 3.1105756034144507,
+      "precision": 1.6255204466078157,
+      "recall": 35.99682349444841,
+      "fpr": 21.53246831170346,
+      "lookalike_fpr": 59.54707622528076,
+      "clean_ocean_fpr": 0.2811598777770996,
+      "tp": 73886,
+      "fp": 4471489,
+      "fn": 131371,
+      "tn": 16294774
+    },
+    "v4_corrected_overlapping_stride256": {
+      "model_id": "unet-dual-pol-sar-v4",
+      "threshold": 0.5,
+      "inference_strategy": "stride_256_50pct_overlap_gaussian_blending",
+      "iou": 1.7372392024998837,
+      "dice": 3.415149096078865,
+      "precision": 1.799881380911597,
+      "recall": 33.29581938740212,
+      "fpr": 17.955498300296014,
+      "tp": 68342,
+      "fp": 3728686,
+      "fn": 136915,
+      "tn": 17037577
+    }
+  }
+}

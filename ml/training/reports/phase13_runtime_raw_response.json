@@ -1,0 +1,268 @@
+{
+  "test_runs": [
+    {
+      "run_id": 1,
+      "requested_domain": "DRONE",
+      "job_id": "b2c9350f-9a9e-45e4-8b22-3796e8791dea",
+      "analysis_id": "595c984b-f64a-4910-8b4e-b20fdd5fba30",
+      "api_status_code": 200,
+      "model_id": "kerf-resnet34-focaldice-v1",
+      "model_version": "1.0.0",
+      "checkpoint_sha256": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+      "source_type": "DRONE",
+      "bands_used": [
+        "R",
+        "G",
+        "B"
+      ],
+      "preprocessing_version": "kerf-rgb-v1",
+      "threshold": 0.5,
+      "routing_reason": "Validated drone/aerial high-resolution optical RGB photography",
+      "output_fingerprint": {
+        "checkpoint_sha256": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+        "input_tensor_sha256": "cfac899c94e58e3bfb0abdd68ff730d3e9c17a924cd3a5ed62d5ab17568c1e4f",
+        "raw_output_sha256": "48f553810a5e632cd846f8d94f1083feedf15a23d0a2dfa81a4931618337d99c",
+        "binary_mask_sha256": "1d8ea0d96b1f633451461e9b461253d1ac3adfe00f45469717c365bf89a2b9a0",
+        "raw_output_stats": {
+          "min": -7.054863,
+          "max": 8.386379,
+          "mean": 0.233848,
+          "std": 3.514045
+        },
+        "probability_stats": {
+          "min": 0,
+          "max": 0.998904,
+          "mean": 0.046426
+        }
+      },
+      "segmentation": {
+        "performed": true,
+        "mask_available": true,
+        "mask_sha256": "1d8ea0d96b1f633451461e9b461253d1ac3adfe00f45469717c365bf89a2b9a0",
+        "oil_detected": true,
+        "foreground_pixels": 16516,
+        "foreground_fraction": 0.104197,
+        "confidence_threshold": 0.5,
+        "connected_component_count": 2,
+        "largest_component_pixels": 14255,
+        "mean_foreground_probability": 0.8955,
+        "max_image_probability": 0.9989
+      },
+      "classification": {
+        "label": "OIL_SPILL",
+        "is_oil_spill": true,
+        "confidence": 0.8955,
+        "probabilities": {
+          "CLEAN_OCEAN": 0.0011,
+          "LOOK_ALIKE": 0,
+          "OIL_SPILL": 0.9989
+        },
+        "probability_label": "MODEL_PROBABILITY"
+      },
+      "artifacts": {
+        "original": "/api/v1/manual-analysis/b2c9350f-9a9e-45e4-8b22-3796e8791dea/original",
+        "mask": "/api/v1/manual-analysis/b2c9350f-9a9e-45e4-8b22-3796e8791dea/mask",
+        "annotated": "/api/v1/manual-analysis/b2c9350f-9a9e-45e4-8b22-3796e8791dea/annotated",
+        "overlay": "/api/v1/manual-analysis/b2c9350f-9a9e-45e4-8b22-3796e8791dea/annotated"
+      }
+    },
+    {
+      "run_id": 2,
+      "requested_domain": "RGB_SATELLITE",
+      "job_id": "16ef2bdc-4f76-47b6-9ad5-90f3f553d1e4",
+      "analysis_id": "28b5fd18-8347-4382-be3e-27b31fa816f3",
+      "api_status_code": 200,
+      "model_id": "mados-resnet34-rgb-v1",
+      "model_version": "1.0.0",
+      "checkpoint_sha256": "a4c32de7177bc42c2f0298427ce8bef4a2bf8d4a35e25c3450a67eb16f8e099a",
+      "source_type": "RGB_SATELLITE",
+      "bands_used": [
+        "B4",
+        "B3",
+        "B2"
+      ],
+      "preprocessing_version": "mados-rgb-v1",
+      "threshold": 0.5,
+      "routing_reason": "Validated RGB satellite imagery without multispectral SWIR bands",
+      "output_fingerprint": {
+        "checkpoint_sha256": "a4c32de7177bc42c2f0298427ce8bef4a2bf8d4a35e25c3450a67eb16f8e099a",
+        "input_tensor_sha256": "fed673775cda093d8c50bfce8c6cdeed3795366e02113872ec0fd7e4fe3c377d",
+        "raw_output_sha256": "27ebcd8da0c80087353d07a21226b15885142d2512fb56844428aded6b9923ac",
+        "binary_mask_sha256": "b41bddd147e571b069c1086c92087ed7ea125b0935cae043ddc12764dbf09e64",
+        "raw_output_stats": {
+          "min": -46.084255,
+          "max": 56.624138,
+          "mean": 1.322678,
+          "std": 9.956822
+        },
+        "probability_stats": {
+          "min": 0,
+          "max": 0.010874,
+          "mean": 3e-06
+        }
+      },
+      "segmentation": {
+        "performed": true,
+        "mask_available": true,
+        "mask_sha256": "b41bddd147e571b069c1086c92087ed7ea125b0935cae043ddc12764dbf09e64",
+        "oil_detected": false,
+        "foreground_pixels": 0,
+        "foreground_fraction": 0,
+        "confidence_threshold": 0.5,
+        "connected_component_count": 0,
+        "largest_component_pixels": 0,
+        "mean_foreground_probability": 0,
+        "max_image_probability": 0.0017
+      },
+      "classification": {
+        "label": "CLEAN_OCEAN",
+        "is_oil_spill": false,
+        "confidence": 1,
+        "probabilities": {
+          "CLEAN_OCEAN": 0.9983,
+          "LOOK_ALIKE": 0,
+          "OIL_SPILL": 0.0017
+        },
+        "probability_label": "MODEL_PROBABILITY"
+      },
+      "artifacts": {
+        "original": "/api/v1/manual-analysis/16ef2bdc-4f76-47b6-9ad5-90f3f553d1e4/original",
+        "mask": "/api/v1/manual-analysis/16ef2bdc-4f76-47b6-9ad5-90f3f553d1e4/mask",
+        "annotated": "/api/v1/manual-analysis/16ef2bdc-4f76-47b6-9ad5-90f3f553d1e4/annotated",
+        "overlay": "/api/v1/manual-analysis/16ef2bdc-4f76-47b6-9ad5-90f3f553d1e4/annotated"
+      }
+    },
+    {
+      "run_id": 3,
+      "requested_domain": "DRONE",
+      "job_id": "c108595b-2799-472b-8dd6-e0ab4855d6d2",
+      "analysis_id": "b70dbab1-0e9b-406d-8651-978ea35a2d80",
+      "api_status_code": 200,
+      "model_id": "kerf-resnet34-focaldice-v1",
+      "model_version": "1.0.0",
+      "checkpoint_sha256": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+      "source_type": "DRONE",
+      "bands_used": [
+        "R",
+        "G",
+        "B"
+      ],
+      "preprocessing_version": "kerf-rgb-v1",
+      "threshold": 0.5,
+      "routing_reason": "Validated drone/aerial high-resolution optical RGB photography",
+      "output_fingerprint": {
+        "checkpoint_sha256": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+        "input_tensor_sha256": "cfac899c94e58e3bfb0abdd68ff730d3e9c17a924cd3a5ed62d5ab17568c1e4f",
+        "raw_output_sha256": "48f553810a5e632cd846f8d94f1083feedf15a23d0a2dfa81a4931618337d99c",
+        "binary_mask_sha256": "1d8ea0d96b1f633451461e9b461253d1ac3adfe00f45469717c365bf89a2b9a0",
+        "raw_output_stats": {
+          "min": -7.054863,
+          "max": 8.386379,
+          "mean": 0.233848,
+          "std": 3.514045
+        },
+        "probability_stats": {
+          "min": 0,
+          "max": 0.998904,
+          "mean": 0.046426
+        }
+      },
+      "segmentation": {
+        "performed": true,
+        "mask_available": true,
+        "mask_sha256": "1d8ea0d96b1f633451461e9b461253d1ac3adfe00f45469717c365bf89a2b9a0",
+        "oil_detected": true,
+        "foreground_pixels": 16516,
+        "foreground_fraction": 0.104197,
+        "confidence_threshold": 0.5,
+        "connected_component_count": 2,
+        "largest_component_pixels": 14255,
+        "mean_foreground_probability": 0.8955,
+        "max_image_probability": 0.9989
+      },
+      "classification": {
+        "label": "OIL_SPILL",
+        "is_oil_spill": true,
+        "confidence": 0.8955,
+        "probabilities": {
+          "CLEAN_OCEAN": 0.0011,
+          "LOOK_ALIKE": 0,
+          "OIL_SPILL": 0.9989
+        },
+        "probability_label": "MODEL_PROBABILITY"
+      },
+      "artifacts": {
+        "original": "/api/v1/manual-analysis/c108595b-2799-472b-8dd6-e0ab4855d6d2/original",
+        "mask": "/api/v1/manual-analysis/c108595b-2799-472b-8dd6-e0ab4855d6d2/mask",
+        "annotated": "/api/v1/manual-analysis/c108595b-2799-472b-8dd6-e0ab4855d6d2/annotated",
+        "overlay": "/api/v1/manual-analysis/c108595b-2799-472b-8dd6-e0ab4855d6d2/annotated"
+      }
+    }
+  ],
+  "latest_complete_response": {
+    "run_id": 3,
+    "requested_domain": "DRONE",
+    "job_id": "c108595b-2799-472b-8dd6-e0ab4855d6d2",
+    "analysis_id": "b70dbab1-0e9b-406d-8651-978ea35a2d80",
+    "api_status_code": 200,
+    "model_id": "kerf-resnet34-focaldice-v1",
+    "model_version": "1.0.0",
+    "checkpoint_sha256": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+    "source_type": "DRONE",
+    "bands_used": [
+      "R",
+      "G",
+      "B"
+    ],
+    "preprocessing_version": "kerf-rgb-v1",
+    "threshold": 0.5,
+    "routing_reason": "Validated drone/aerial high-resolution optical RGB photography",
+    "output_fingerprint": {
+      "checkpoint_sha256": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+      "input_tensor_sha256": "cfac899c94e58e3bfb0abdd68ff730d3e9c17a924cd3a5ed62d5ab17568c1e4f",
+      "raw_output_sha256": "48f553810a5e632cd846f8d94f1083feedf15a23d0a2dfa81a4931618337d99c",
+      "binary_mask_sha256": "1d8ea0d96b1f633451461e9b461253d1ac3adfe00f45469717c365bf89a2b9a0",
+      "raw_output_stats": {
+        "min": -7.054863,
+        "max": 8.386379,
+        "mean": 0.233848,
+        "std": 3.514045
+      },
+      "probability_stats": {
+        "min": 0,
+        "max": 0.998904,
+        "mean": 0.046426
+      }
+    },
+    "segmentation": {
+      "performed": true,
+      "mask_available": true,
+      "mask_sha256": "1d8ea0d96b1f633451461e9b461253d1ac3adfe00f45469717c365bf89a2b9a0",
+      "oil_detected": true,
+      "foreground_pixels": 16516,
+      "foreground_fraction": 0.104197,
+      "confidence_threshold": 0.5,
+      "connected_component_count": 2,
+      "largest_component_pixels": 14255,
+      "mean_foreground_probability": 0.8955,
+      "max_image_probability": 0.9989
+    },
+    "classification": {
+      "label": "OIL_SPILL",
+      "is_oil_spill": true,
+      "confidence": 0.8955,
+      "probabilities": {
+        "CLEAN_OCEAN": 0.0011,
+        "LOOK_ALIKE": 0,
+        "OIL_SPILL": 0.9989
+      },
+      "probability_label": "MODEL_PROBABILITY"
+    },
+    "artifacts": {
+      "original": "/api/v1/manual-analysis/c108595b-2799-472b-8dd6-e0ab4855d6d2/original",
+      "mask": "/api/v1/manual-analysis/c108595b-2799-472b-8dd6-e0ab4855d6d2/mask",
+      "annotated": "/api/v1/manual-analysis/c108595b-2799-472b-8dd6-e0ab4855d6d2/annotated",
+      "overlay": "/api/v1/manual-analysis/c108595b-2799-472b-8dd6-e0ab4855d6d2/annotated"
+    }
+  }
+}

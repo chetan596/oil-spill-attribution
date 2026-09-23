@@ -1,0 +1,20 @@
+{
+  "protocol": "SCENE_DISJOINT_MADOS_PARTITIONING",
+  "status": "PROPOSAL_ONLY_NO_TRAINING",
+  "total_mados_scenes": 174,
+  "total_10m_crops": 2803,
+  "current_locked_benchmark_positives": 361,
+  "current_eligible_positives_outside_benchmark": 0,
+  "eligible_negatives": 2442,
+  "proposed_alternative_scene_split": {
+    "train_scenes_oil": 45,
+    "train_pos_crops": 270,
+    "val_scenes_oil": 16,
+    "val_pos_crops": 91,
+    "train_scenes_neg": 80,
+    "train_neg_crops": 1700,
+    "val_scenes_neg": 33,
+    "val_neg_crops": 742,
+    "scene_leakage": 0
+  }
+}

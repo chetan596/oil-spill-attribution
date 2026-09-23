@@ -1,0 +1,52 @@
+{
+  "status": "COMPLETE",
+  "preregistered_threshold": 0.5,
+  "aggregate_results_at_0_50": {
+    "V09D_RESIDUAL_LOSS": {
+      "tp": 3090,
+      "fp": 56100,
+      "fn": 202167,
+      "tn": 20710163,
+      "iou": 0.011823,
+      "dice": 0.02337,
+      "precision": 0.052205,
+      "recall": 0.015054,
+      "fpr": 0.002701,
+      "total_predicted_pixels": 59190
+    },
+    "V6_BASELINE": {
+      "tp": 2646,
+      "fp": 78558,
+      "fn": 202611,
+      "tn": 20687705,
+      "iou": 0.009323,
+      "dice": 0.018474,
+      "precision": 0.032585,
+      "recall": 0.012891,
+      "fpr": 0.003783,
+      "total_predicted_pixels": 81204
+    },
+    "V2_HISTORICAL": {
+      "tp": 0,
+      "fp": 156,
+      "fn": 205257,
+      "tn": 20766107,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 8e-06,
+      "total_predicted_pixels": 156
+    }
+  },
+  "generalization_summary": {
+    "v09d_test_iou": 0.011823,
+    "v09d_test_dice": 0.02337,
+    "v09d_test_precision": 0.052205,
+    "v09d_test_recall": 0.015054,
+    "v6_test_iou": 0.009323,
+    "v6_test_dice": 0.018474,
+    "v6_test_precision": 0.032585,
+    "v6_test_recall": 0.012891
+  }
+}

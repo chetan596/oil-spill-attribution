@@ -169,6 +169,931 @@
         "train_scenes": 28
       },
       "trained_at": "2026-09-12T14:15:00Z"
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v4",
+      "architecture": "UNet",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v4.pth",
+      "training_dataset": "zenodo_sentinel1_verified_real_expanded_40_scenes_corrected_db",
+      "status": "experimental",
+      "normalization": {
+        "type": "Decibel_Calibrated_Clipping",
+        "vv_range_db": [
+          -35.0,
+          -5.0
+        ],
+        "vh_range_db": [
+          -45.0,
+          -15.0
+        ],
+        "formula": "clip((value_db - min_db) / (max_db - min_db), 0, 1)"
+      },
+      "hyperparameters": {
+        "epochs": 15,
+        "batch_size": 8,
+        "learning_rate": 0.0005,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "FocalTverskyLoss_alpha0.3_beta0.7_gamma1.33",
+        "sampler": "WeightedRandomSampler_Positive_2.5x",
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "total_scenes": 40,
+        "train_scenes": 28,
+        "val_scenes": 7,
+        "test_scenes": 5,
+        "seed": 42
+      },
+      "created_at": "2026-09-14T00:00:00Z",
+      "description": "Dual-pol U-Net trained on corrected decibel-normalized Sentinel-1 SAR imagery with Focal-Tversky loss."
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v6",
+      "architecture": "UNet",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v6.pth",
+      "training_dataset": "sentinel1_oil_spill_verified_real_subset_28_train",
+      "status": "experimental",
+      "metrics": {
+        "val_dice_at_0_50": 0.099018,
+        "val_iou_at_0_50": 0.052088,
+        "val_recall_at_0_50": 0.511252,
+        "val_precision_at_0_50": 0.054818,
+        "clean_ocean_fpr_at_0_50": 2.3e-05,
+        "look_alike_fpr_at_0_50": 0.161488
+      },
+      "created_at": "2026-09-19T06:01:49.316530+00:00",
+      "description": "Retrained U-Net baseline on 28 real Sentinel-1 SAR scenes with sentinel1_sigma0_db_v1 calibrated decibel preprocessing.",
+      "hyperparameters": {
+        "epochs": 23,
+        "best_epoch": 16,
+        "batch_size": 2,
+        "learning_rate": 0.0001,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "Combined_CrossEntropy_SoftDice",
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "seed": 42,
+        "preprocessing": "sentinel1_sigma0_db_v1"
+      }
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v8a",
+      "architecture": "UNet",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v8a.pth",
+      "training_dataset": "sentinel1_oil_spill_verified_real_subset_28_train",
+      "status": "experimental",
+      "metrics": {
+        "val_dice_at_0_50": 0.05299,
+        "val_iou_at_0_50": 0.027216,
+        "val_recall_at_0_50": 0.231008,
+        "val_precision_at_0_50": 0.029927,
+        "clean_ocean_fpr_at_0_50": 0.0,
+        "look_alike_fpr_at_0_50": 0.138709
+      },
+      "created_at": "2026-09-19T11:31:22.260200+00:00",
+      "description": "Exact V6 baseline reproduction loss: Combined 1.0*Weighted_CE(fg=5.0) + 1.0*SoftDice.",
+      "hyperparameters": {
+        "experiment_id": "V8_A_BASELINE_LOSS",
+        "epochs": 8,
+        "best_epoch": 1,
+        "batch_size": 2,
+        "learning_rate": 0.0001,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "CombinedLoss",
+        "loss_params": {
+          "ce_weight": 1.0,
+          "dice_weight": 1.0,
+          "foreground_weight": 5.0
+        },
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "seed": 42,
+        "preprocessing": "sentinel1_sigma0_db_v1"
+      }
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v8b",
+      "architecture": "UNet",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v8b.pth",
+      "training_dataset": "sentinel1_oil_spill_verified_real_subset_28_train",
+      "status": "experimental",
+      "metrics": {
+        "val_dice_at_0_50": 0.043221,
+        "val_iou_at_0_50": 0.022088,
+        "val_recall_at_0_50": 0.421106,
+        "val_precision_at_0_50": 0.02278,
+        "clean_ocean_fpr_at_0_50": 0.0,
+        "look_alike_fpr_at_0_50": 0.334634
+      },
+      "created_at": "2026-09-19T11:31:22.260200+00:00",
+      "description": "Focal Loss (alpha=0.25, gamma=2.0) + 1.0*SoftDice to suppress easy ocean background gradients.",
+      "hyperparameters": {
+        "experiment_id": "V8_B_FOCAL_DICE",
+        "epochs": 11,
+        "best_epoch": 4,
+        "batch_size": 2,
+        "learning_rate": 0.0001,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "FocalDiceLoss",
+        "loss_params": {
+          "alpha": 0.25,
+          "gamma": 2.0,
+          "dice_weight": 1.0
+        },
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "seed": 42,
+        "preprocessing": "sentinel1_sigma0_db_v1"
+      }
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v8c",
+      "architecture": "UNet",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v8c.pth",
+      "training_dataset": "sentinel1_oil_spill_verified_real_subset_28_train",
+      "status": "experimental",
+      "metrics": {
+        "val_dice_at_0_50": 0.044446,
+        "val_iou_at_0_50": 0.022728,
+        "val_recall_at_0_50": 0.951446,
+        "val_precision_at_0_50": 0.022754,
+        "clean_ocean_fpr_at_0_50": 9.3e-05,
+        "look_alike_fpr_at_0_50": 0.748957
+      },
+      "created_at": "2026-09-19T11:31:22.260200+00:00",
+      "description": "Focal-Tversky Loss with alpha=0.7 (heavy FP look-alike penalty), beta=0.3 (FN penalty), gamma=0.75.",
+      "hyperparameters": {
+        "experiment_id": "V8_C_FOCAL_TVERSKY",
+        "epochs": 11,
+        "best_epoch": 4,
+        "batch_size": 2,
+        "learning_rate": 0.0001,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "FocalTverskyLoss",
+        "loss_params": {
+          "alpha": 0.7,
+          "beta": 0.3,
+          "gamma": 0.75
+        },
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "seed": 42,
+        "preprocessing": "sentinel1_sigma0_db_v1"
+      }
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v8d",
+      "architecture": "UNet",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v8d.pth",
+      "training_dataset": "sentinel1_oil_spill_verified_real_subset_28_train",
+      "status": "experimental",
+      "metrics": {
+        "val_dice_at_0_50": 0.060172,
+        "val_iou_at_0_50": 0.031019,
+        "val_recall_at_0_50": 0.319635,
+        "val_precision_at_0_50": 0.033212,
+        "clean_ocean_fpr_at_0_50": 0.000262,
+        "look_alike_fpr_at_0_50": 0.171746
+      },
+      "created_at": "2026-09-19T11:31:22.260200+00:00",
+      "description": "High foreground penalty loss: Combined 1.0*Weighted_CE(fg=10.0) + 1.0*SoftDice for extreme 1:125 imbalance.",
+      "hyperparameters": {
+        "experiment_id": "V8_D_HIGH_FG_WEIGHT",
+        "epochs": 25,
+        "best_epoch": 18,
+        "batch_size": 2,
+        "learning_rate": 0.0001,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "CombinedLoss",
+        "loss_params": {
+          "ce_weight": 1.0,
+          "dice_weight": 1.0,
+          "foreground_weight": 10.0
+        },
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "seed": 42,
+        "preprocessing": "sentinel1_sigma0_db_v1"
+      }
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v09a-multiscale",
+      "architecture": "UNetMultiScaleContext",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v09a_multiscale.pth",
+      "training_dataset": "sentinel1_oil_spill_verified_real_subset_28_train",
+      "status": "experimental",
+      "metrics": {
+        "val_dice_at_0_50": 0.086231,
+        "val_iou_at_0_50": 0.045058,
+        "val_recall_at_0_50": 0.429582,
+        "val_precision_at_0_50": 0.047926,
+        "clean_ocean_fpr_at_0_50": 0.0,
+        "look_alike_fpr_at_0_50": 0.157122,
+        "oil_scenes_iou_at_0_50": 0.408369
+      },
+      "created_at": "2026-09-19T12:02:47.699753+00:00",
+      "description": "Multi-Scale Context U-Net with parallel dilated convolution branches at the bottleneck (dilation=1, 2, 4) for dual-pol SAR.",
+      "hyperparameters": {
+        "experiment_id": "PART_0_9A_MULTISCALE_ARCHITECTURE",
+        "epochs": 30,
+        "best_epoch": 30,
+        "batch_size": 2,
+        "learning_rate": 0.0001,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "CombinedLoss",
+        "loss_params": {
+          "ce_weight": 1.0,
+          "dice_weight": 1.0,
+          "foreground_weight": 5.0
+        },
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "seed": 42,
+        "preprocessing": "sentinel1_sigma0_db_v1",
+        "parameters": 1242590
+      }
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v09b-attention",
+      "architecture": "UNetAttention",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v09b_attention.pth",
+      "training_dataset": "sentinel1_oil_spill_verified_real_subset_28_train",
+      "status": "experimental",
+      "metrics": {
+        "val_dice_at_0_50": 0.066288,
+        "val_iou_at_0_50": 0.03428,
+        "val_recall_at_0_50": 0.157066,
+        "val_precision_at_0_50": 0.042009,
+        "clean_ocean_fpr_at_0_50": 0.0,
+        "look_alike_fpr_at_0_50": 0.06503,
+        "oil_scenes_iou_at_0_50": 0.146615
+      },
+      "created_at": "2026-09-19T12:20:07.340013+00:00",
+      "description": "Attention U-Net with additive spatial attention gates on all skip connections for dual-pol SAR.",
+      "hyperparameters": {
+        "experiment_id": "PART_0_9B_ATTENTION_ARCHITECTURE",
+        "epochs": 11,
+        "best_epoch": 4,
+        "batch_size": 2,
+        "learning_rate": 0.0001,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "CombinedLoss",
+        "loss_params": {
+          "ce_weight": 1.0,
+          "dice_weight": 1.0,
+          "foreground_weight": 5.0
+        },
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "seed": 42,
+        "preprocessing": "sentinel1_sigma0_db_v1",
+        "parameters": 1103174
+      }
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v09c-residual",
+      "architecture": "UNetResidual",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v09c_residual.pth",
+      "training_dataset": "sentinel1_oil_spill_verified_real_subset_28_train",
+      "status": "experimental",
+      "metrics": {
+        "val_dice_at_0_50": 0.088466,
+        "val_iou_at_0_50": 0.04628,
+        "val_recall_at_0_50": 0.492995,
+        "val_precision_at_0_50": 0.048593,
+        "clean_ocean_fpr_at_0_50": 0.0,
+        "look_alike_fpr_at_0_50": 0.176611,
+        "oil_scenes_iou_at_0_50": 0.440793
+      },
+      "created_at": "2026-09-19T13:23:39.852235+00:00",
+      "description": "Residual U-Net replacing standard DoubleConv blocks with residual convolutional blocks for dual-pol SAR.",
+      "hyperparameters": {
+        "experiment_id": "PART_0_9C_RESIDUAL_ARCHITECTURE",
+        "epochs": 22,
+        "best_epoch": 15,
+        "batch_size": 2,
+        "learning_rate": 0.0001,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "CombinedLoss",
+        "loss_params": {
+          "ce_weight": 1.0,
+          "dice_weight": 1.0,
+          "foreground_weight": 5.0
+        },
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "seed": 42,
+        "preprocessing": "sentinel1_sigma0_db_v1",
+        "parameters": 1114338
+      }
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v09d-residual-loss",
+      "architecture": "UNetResidual",
+      "framework": "PyTorch",
+      "in_channels": 2,
+      "num_classes": 2,
+      "classes": [
+        "Clean Sea Surface",
+        "Potential Oil Spill"
+      ],
+      "input_shape": [
+        2,
+        512,
+        512
+      ],
+      "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v09d_residual_loss.pth",
+      "training_dataset": "sentinel1_oil_spill_verified_real_subset_28_train",
+      "status": "experimental",
+      "metrics": {
+        "val_dice_at_0_50": 0.264455,
+        "val_iou_at_0_50": 0.152376,
+        "val_recall_at_0_50": 0.363318,
+        "val_precision_at_0_50": 0.207887,
+        "clean_ocean_fpr_at_0_50": 0.001355,
+        "look_alike_fpr_at_0_50": 0.022586,
+        "oil_scenes_iou_at_0_50": 0.33273
+      },
+      "created_at": "2026-09-19T15:11:07.772373+00:00",
+      "description": "Residual U-Net synthesized with high foreground cross-entropy loss (CombinedLoss fg=10.0) from Part 0.8.",
+      "hyperparameters": {
+        "experiment_id": "PART_0_9D_RESIDUAL_UNET_LOSS_SYNTHESIS",
+        "epochs": 19,
+        "best_epoch": 12,
+        "batch_size": 2,
+        "learning_rate": 0.0001,
+        "base_channels": 16,
+        "optimizer": "AdamW",
+        "loss": "CombinedLoss",
+        "loss_params": {
+          "ce_weight": 1.0,
+          "dice_weight": 1.0,
+          "foreground_weight": 10.0
+        },
+        "tile_size": 512,
+        "polarization": "VV+VH",
+        "seed": 42,
+        "preprocessing": "sentinel1_sigma0_db_v1",
+        "parameters": 1114338
+      }
+    },
+    {
+      "model_id": "rgb-oil-classifier-resnet18-v1",
+      "architecture": "ResNet-18 (Transfer Learning + Binary Classifier)",
+      "framework": "PyTorch",
+      "in_channels": 3,
+      "num_classes": 1,
+      "classes": [
+        "Non-Oil (Clean Ocean / Lookalike)",
+        "Oil Spill"
+      ],
+      "input_shape": [
+        3,
+        224,
+        224
+      ],
+      "checkpoint_path": "ml/model_registry/versions/rgb_oil_classifier_v1.pth",
+      "training_dataset": "rgb_oil_spill_dataset_v1",
+      "status": "trained",
+      "decision_threshold": 0.8,
+      "metrics": {
+        "val_accuracy": 0.7957,
+        "val_precision": 0.825,
+        "val_recall": 0.7333,
+        "val_specificity": 0.8542,
+        "val_fpr": 0.1458,
+        "val_f1": 0.7765,
+        "val_roc_auc": 0.881,
+        "test_accuracy": 0.4912,
+        "test_precision": 0.8095,
+        "test_recall": 0.4048,
+        "test_specificity": 0.7333,
+        "test_fpr": 0.2667,
+        "test_f1": 0.5397,
+        "test_roc_auc": 0.6266,
+        "test_pr_auc": 0.8562
+      },
+      "created_at": "2026-09-19T21:17:09Z",
+      "description": "RGB Oil Spill vs Non-Oil binary classification model trained with ResNet-18 transfer learning on 410 training images with deterministic preprocessing.",
+      "hyperparameters": {
+        "epochs": 20,
+        "best_epoch": 12,
+        "batch_size": 16,
+        "learning_rate": 0.0001,
+        "optimizer": "AdamW",
+        "loss": "BCEWithLogitsLoss",
+        "input_resolution": [
+          224,
+          224,
+          3
+        ],
+        "seed": 42
+      }
+    },
+    {
+      "model_id": "optical-oil-seg-unet-resnet18-v2",
+      "version": "2.0.0",
+      "modality": "OPTICAL_RGB",
+      "status": "EXPERIMENTAL",
+      "task": "OPTICAL_OIL_SPILL_SEGMENTATION",
+      "architecture": "OpticalUNetResNet18V2",
+      "encoder": "ResNet-18 ImageNet (ASPP + Multi-Scale Feature Fusion)",
+      "checkpoint_path": "services\\ml-python\\app\\models\\optical_oil_segmentation_v2\\optical_oil_segmentation_v2.pth",
+      "sha256": "e3d44f7e480daedf42ef5e96fd0e650193f5763f8dac38630fd21a034e5ea398",
+      "operating_threshold": 0.8,
+      "validation_metrics": {
+        "dataset": "VALIDATION",
+        "total_pairs": 730,
+        "selected_threshold": 0.8,
+        "global_metrics": {
+          "mean_iou": 0.8674009522160315,
+          "foreground_iou": 0.7524790828110655,
+          "background_iou": 0.9823228216209977,
+          "dice": 0.858759559747841,
+          "precision": 0.797434466899178,
+          "recall": 0.9303026097248129,
+          "specificity": 0.9862937681346723,
+          "fpr": 0.013706231865327713,
+          "pixel_accuracy": 0.9832243409875321,
+          "tp": 2439860,
+          "fp": 619777,
+          "tn": 44598851,
+          "fn": 182792
+        },
+        "source_breakdown": {
+          "Kerf_Drone_Oil_Spill": {
+            "total_samples": 105,
+            "oil_positive_samples": 76,
+            "mean_iou": 0.9284034857876613,
+            "foreground_iou": 0.9100716843712664,
+            "background_iou": 0.9467352872040561,
+            "dice": 0.9529188792417835,
+            "precision": 0.9702932070807718,
+            "recall": 0.9361558244419179,
+            "specificity": 0.9828668338599046,
+            "fpr": 0.017133166140095427
+          },
+          "MADOS_Sentinel2": {
+            "total_samples": 625,
+            "oil_positive_samples": 77,
+            "mean_iou": 0.5181315567709849,
+            "foreground_iou": 0.05005276418700234,
+            "background_iou": 0.9862103493549674,
+            "dice": 0.09533380777442249,
+            "precision": 0.051654690504353624,
+            "recall": 0.6174400498287138,
+            "specificity": 0.9866545218516842,
+            "fpr": 0.013345478148315762
+          }
+        },
+        "oil_size_stratification": {
+          "VERY_SMALL (<0.1%)": {
+            "sample_count": 13,
+            "foreground_iou": 0.02083628632175762,
+            "dice": 0.040821993890585946,
+            "precision": 0.021058663419525822,
+            "recall": 0.6636568848758465
+          },
+          "SMALL (0.1%-1%)": {
+            "sample_count": 44,
+            "foreground_iou": 0.07768429177923582,
+            "dice": 0.14416892288738953,
+            "precision": 0.08396882874163565,
+            "recall": 0.5093117408906883
+          },
+          "MEDIUM (1%-10%)": {
+            "sample_count": 27,
+            "foreground_iou": 0.35814084410931796,
+            "dice": 0.527398679838968,
+            "precision": 0.43716876815593014,
+            "recall": 0.6645615701171257
+          },
+          "LARGE (10%-50%)": {
+            "sample_count": 35,
+            "foreground_iou": 0.8282295326413011,
+            "dice": 0.9060454585751403,
+            "precision": 0.9365803316269345,
+            "recall": 0.8774387497539952
+          },
+          "VERY_LARGE (>50%)": {
+            "sample_count": 34,
+            "foreground_iou": 0.9455052857268689,
+            "dice": 0.9719894288270868,
+            "precision": 0.9797073302358908,
+            "recall": 0.9643921765575737
+          }
+        },
+        "threshold_sweep_results": [
+          {
+            "threshold": 0.1,
+            "global_dice": 0.11090867765284024,
+            "global_iou": 0.0587100667611126,
+            "mados_dice": 0.0023492918773836942,
+            "mados_iou": 0.0011760273544475393,
+            "mados_recall": 1.0,
+            "mados_precision": 0.0011760273544475393,
+            "kerf_dice": 0.9280254378369468,
+            "kerf_iou": 0.8657159139712767,
+            "kerf_recall": 0.9818542490212613,
+            "kerf_precision": 0.8797920467668542,
+            "macro_dice": 0.4651873648571652,
+            "score": 0.45249080717944395
+          },
+          {
+            "threshold": 0.15,
+            "global_dice": 0.11078893346475016,
+            "global_iou": 0.058642962359908984,
+            "mados_dice": 0.0023493380003043675,
+            "mados_iou": 0.0011760504701821212,
+            "mados_recall": 1.0,
+            "mados_precision": 0.0011760504701821212,
+            "kerf_dice": 0.9448519177423337,
+            "kerf_iou": 0.8954685447758806,
+            "kerf_recall": 0.9782461515633989,
+            "kerf_precision": 0.9136623702279982,
+            "macro_dice": 0.473600627871319,
+            "score": 0.46348929577200393
+          },
+          {
+            "threshold": 0.2,
+            "global_dice": 0.11069269719407235,
+            "global_iou": 0.05858903791335361,
+            "mados_dice": 0.002349359945137214,
+            "mados_iou": 0.001176061468422072,
+            "mados_recall": 1.0,
+            "mados_precision": 0.001176061468422072,
+            "kerf_dice": 0.9480810922026163,
+            "kerf_iou": 0.9012872429375818,
+            "kerf_recall": 0.9768144100164421,
+            "kerf_precision": 0.920989871585652,
+            "macro_dice": 0.47521522607387673,
+            "score": 0.4656217965255268
+          },
+          {
+            "threshold": 0.25,
+            "global_dice": 0.11062516386003778,
+            "global_iou": 0.05855119997578015,
+            "mados_dice": 0.002349379311935991,
+            "mados_iou": 0.0011760711746114936,
+            "mados_recall": 1.0,
+            "mados_precision": 0.0011760711746114936,
+            "kerf_dice": 0.9497025137025137,
+            "kerf_iou": 0.9042223999320512,
+            "kerf_recall": 0.975898499390364,
+            "kerf_precision": 0.924876118759601,
+            "macro_dice": 0.47602594650722485,
+            "score": 0.4666952621256675
+          },
+          {
+            "threshold": 0.3,
+            "global_dice": 0.11055452277842379,
+            "global_iou": 0.058511623707180944,
+            "mados_dice": 0.0023494047528314255,
+            "mados_iou": 0.0011760839249972713,
+            "mados_recall": 1.0,
+            "mados_precision": 0.0011760839249972713,
+            "kerf_dice": 0.9509035724676332,
+            "kerf_iou": 0.9064024502535978,
+            "kerf_recall": 0.9750066712319775,
+            "kerf_precision": 0.9279634277399528,
+            "macro_dice": 0.4766264886102323,
+            "score": 0.4674916000018584
+          },
+          {
+            "threshold": 0.35,
+            "global_dice": 0.11047759697415137,
+            "global_iou": 0.05846852982385096,
+            "mados_dice": 0.002349451223997504,
+            "mados_iou": 0.0011761072152669826,
+            "mados_recall": 1.0,
+            "mados_precision": 0.0011761072152669826,
+            "kerf_dice": 0.9519581728048068,
+            "kerf_iou": 0.9083207827234063,
+            "kerf_recall": 0.9740627938692252,
+            "kerf_precision": 0.9308345400061692,
+            "macro_dice": 0.47715381201440216,
+            "score": 0.468191665196376
+          },
+          {
+            "threshold": 0.4,
+            "global_dice": 0.5312380714142547,
+            "global_iou": 0.3616910685626077,
+            "mados_dice": 0.018717598276541035,
+            "mados_iou": 0.00944721371383461,
+            "mados_recall": 0.8388041108688882,
+            "mados_precision": 0.00946439636098282,
+            "kerf_dice": 0.9536840638070171,
+            "kerf_iou": 0.911468544842195,
+            "kerf_recall": 0.9700538398523667,
+            "kerf_precision": 0.9378576031556953,
+            "macro_dice": 0.4862008310417791,
+            "score": 0.47590365033627335
+          },
+          {
+            "threshold": 0.45,
+            "global_dice": 0.7183959347472064,
+            "global_iou": 0.5605443632901589,
+            "mados_dice": 0.04134599765562234,
+            "mados_iou": 0.021109393290562776,
+            "mados_recall": 0.7821239489255684,
+            "mados_precision": 0.021234260036402233,
+            "kerf_dice": 0.9553664687657861,
+            "kerf_iou": 0.9145470063908819,
+            "kerf_recall": 0.9660048778649882,
+            "kerf_precision": 0.9449598244258828,
+            "macro_dice": 0.4983562332107042,
+            "score": 0.48614501986271147
+          },
+          {
+            "threshold": 0.5,
+            "global_dice": 0.752939361408065,
+            "global_iou": 0.6037712506572368,
+            "mados_dice": 0.04912032858157657,
+            "mados_iou": 0.025178553706422458,
+            "mados_recall": 0.7637703726772552,
+            "mados_precision": 0.025376172596879146,
+            "kerf_dice": 0.9560107495418769,
+            "kerf_iou": 0.9157285375518576,
+            "kerf_recall": 0.963867753070806,
+            "kerf_precision": 0.9482808036062311,
+            "macro_dice": 0.5025655390617267,
+            "score": 0.48972074168869206
+          },
+          {
+            "threshold": 0.55,
+            "global_dice": 0.7793396629132613,
+            "global_iou": 0.6384574309781005,
+            "mados_dice": 0.056737789928592935,
+            "mados_iou": 0.029197186892502815,
+            "mados_recall": 0.7471400394477318,
+            "mados_precision": 0.029488575696713284,
+            "kerf_dice": 0.956352956761974,
+            "kerf_iou": 0.9163566964122154,
+            "kerf_recall": 0.9617935534341405,
+            "kerf_precision": 0.9509735657288887,
+            "macro_dice": 0.5065453733452835,
+            "score": 0.49303800066811376
+          },
+          {
+            "threshold": 0.6,
+            "global_dice": 0.8007963109883373,
+            "global_iou": 0.6677733885628075,
+            "mados_dice": 0.06425070444712573,
+            "mados_iou": 0.0331916455269973,
+            "mados_recall": 0.7285788435586007,
+            "mados_precision": 0.03360720028424191,
+            "kerf_dice": 0.956583262755431,
+            "kerf_iou": 0.9167796802661554,
+            "kerf_recall": 0.9594688184481025,
+            "kerf_precision": 0.9537150113570595,
+            "macro_dice": 0.5104169836012784,
+            "score": 0.4962444553193976
+          },
+          {
+            "threshold": 0.65,
+            "global_dice": 0.8185712313543813,
+            "global_iou": 0.6928654973357262,
+            "mados_dice": 0.07169026573806135,
+            "mados_iou": 0.037177775159394105,
+            "mados_recall": 0.7075054500155715,
+            "mados_precision": 0.03775811405549868,
+            "kerf_dice": 0.9564836696493587,
+            "kerf_iou": 0.9165967429833725,
+            "kerf_recall": 0.9563920889870486,
+            "kerf_precision": 0.9565752678522172,
+            "macro_dice": 0.51408696769371,
+            "score": 0.49920708424477933
+          },
+          {
+            "threshold": 0.7,
+            "global_dice": 0.8338663820159847,
+            "global_iou": 0.7150693275248797,
+            "mados_dice": 0.07901289895875875,
+            "mados_iou": 0.04113140526343516,
+            "mados_recall": 0.6808470881345375,
+            "mados_precision": 0.04194003852145154,
+            "kerf_dice": 0.9560514754647568,
+            "kerf_iou": 0.9158032728580966,
+            "kerf_recall": 0.9521780455679132,
+            "kerf_precision": 0.9599565480614624,
+            "macro_dice": 0.5175321872117578,
+            "score": 0.501906247951361
+          },
+          {
+            "threshold": 0.75,
+            "global_dice": 0.8469177910417817,
+            "global_iou": 0.7344817086432641,
+            "mados_dice": 0.08674743415588669,
+            "mados_iou": 0.04534029416948115,
+            "mados_recall": 0.6516557666355237,
+            "mados_precision": 0.04646649177765013,
+            "kerf_dice": 0.9548217592006847,
+            "kerf_iou": 0.9135492128792031,
+            "kerf_recall": 0.945362318784286,
+            "kerf_precision": 0.9644724182040962,
+            "macro_dice": 0.5207845966782857,
+            "score": 0.5042486594167083
+          },
+          {
+            "threshold": 0.8,
+            "global_dice": 0.858759559747841,
+            "global_iou": 0.7524790828110655,
+            "mados_dice": 0.09533380777442249,
+            "mados_iou": 0.05005276418700234,
+            "mados_recall": 0.6174400498287138,
+            "mados_precision": 0.051654690504353624,
+            "kerf_dice": 0.9529188792417835,
+            "kerf_iou": 0.9100716843712664,
+            "kerf_recall": 0.9361558244419179,
+            "kerf_precision": 0.9702932070807718,
+            "macro_dice": 0.524126343508103,
+            "score": 0.5065006958165156
+          }
+        ]
+      },
+      "internal_test_metrics": {
+        "dataset": "INTERNAL_TEST",
+        "total_pairs": 708,
+        "operating_threshold": 0.8,
+        "global_metrics": {
+          "mean_iou": 0.5299658568811934,
+          "foreground_iou": 0.07043919789188065,
+          "background_iou": 0.9894925158705061,
+          "dice": 0.1316080316016143,
+          "precision": 0.07347921025026523,
+          "recall": 0.6299810570507023,
+          "specificity": 0.9899554801395597,
+          "fpr": 0.010044519860440318,
+          "pixel_accuracy": 0.9895008755269024,
+          "tp": 36915,
+          "fp": 465472,
+          "tn": 45875419,
+          "fn": 21682
+        },
+        "source_breakdown": {
+          "MADOS_Sentinel2": {
+            "total_samples": 708,
+            "oil_positive_samples": 80,
+            "mean_iou": 0.5299658568811934,
+            "foreground_iou": 0.07043919789188065,
+            "background_iou": 0.9894925158705061,
+            "dice": 0.1316080316016143,
+            "precision": 0.07347921025026523,
+            "recall": 0.6299810570507023,
+            "specificity": 0.9899554801395597,
+            "fpr": 0.010044519860440318
+          }
+        },
+        "oil_size_stratification": {
+          "VERY_SMALL (<0.1%)": {
+            "sample_count": 11,
+            "foreground_iou": 0.047471300031026994,
+            "dice": 0.09063981042654029,
+            "precision": 0.050779953534683044,
+            "recall": 0.4214876033057851
+          },
+          "SMALL (0.1%-1%)": {
+            "sample_count": 45,
+            "foreground_iou": 0.1323254447352957,
+            "dice": 0.23372334402717493,
+            "precision": 0.13938046872801957,
+            "recall": 0.7233172725945394
+          },
+          "MEDIUM (1%-10%)": {
+            "sample_count": 24,
+            "foreground_iou": 0.21482168855894918,
+            "dice": 0.35366785196891876,
+            "precision": 0.2502143043494465,
+            "recall": 0.602972875875696
+          },
+          "LARGE (10%-50%)": {
+            "sample_count": 0,
+            "status": "INSUFFICIENT_SAMPLE_SIZE"
+          },
+          "VERY_LARGE (>50%)": {
+            "sample_count": 0,
+            "status": "INSUFFICIENT_SAMPLE_SIZE"
+          }
+        }
+      },
+      "external_test_status": "SEALED \u2014 NOT EVALUATED",
+      "registered_at": "2026-09-20T10:15:00Z"
     }
   ]
 }

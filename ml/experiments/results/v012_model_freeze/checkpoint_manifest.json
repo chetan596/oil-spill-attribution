@@ -1,0 +1,53 @@
+{
+  "V09D_RESIDUAL_LOSS": {
+    "model_id": "unet-dual-pol-sar-v09d-residual-loss",
+    "role": "PRIMARY_EXPERIMENTAL_CANDIDATE",
+    "scientific_status": "EXPERIMENTAL_VALIDATED_WITH_LIMITATIONS",
+    "checkpoint_path": "ml\\model_registry\\versions\\unet_dual_pol_sar_v09d_residual_loss.pth",
+    "sha256": "ab22ffa2fb1c3be99ff2bb99353db76ed4934bd00210f7bce21df74506ce827d",
+    "size_bytes": 13512167,
+    "parameter_count": 1114338,
+    "architecture": "UNetResidual",
+    "input_channels": 2,
+    "num_classes": 2,
+    "base_channels": 16,
+    "loss_function": "CombinedLoss_ForegroundWeight10.0",
+    "preprocessing": "sentinel1_sigma0_db_v1",
+    "state_dict_verified": true,
+    "freeze_status": "FROZEN_IMMUTABLE"
+  },
+  "V6_BASELINE": {
+    "model_id": "unet-dual-pol-sar-v6",
+    "role": "CONTROLLED_BASELINE_REFERENCE",
+    "scientific_status": "EXPERIMENTAL",
+    "checkpoint_path": "ml\\model_registry\\versions\\unet_dual_pol_sar_v6.pth",
+    "sha256": "bcf3d6bc988b910fa67c0c31c89cb2c861da73f0b02159c579cb28e5039920e3",
+    "size_bytes": 13069567,
+    "parameter_count": 1080802,
+    "architecture": "UNet",
+    "input_channels": 2,
+    "num_classes": 2,
+    "base_channels": 16,
+    "loss_function": "CombinedLoss_ForegroundWeight5.0",
+    "preprocessing": "sentinel1_sigma0_db_v1",
+    "state_dict_verified": true,
+    "freeze_status": "FROZEN_IMMUTABLE"
+  },
+  "V2_HISTORICAL": {
+    "model_id": "unet-dual-pol-sar-v2",
+    "role": "HISTORICAL_ACTIVE_BASELINE",
+    "scientific_status": "HISTORICAL_NON_COMPARABLE_CORRUPTED_PREPROCESSING",
+    "checkpoint_path": "ml\\model_registry\\versions\\unet_dual_pol_sar_v2.pth",
+    "sha256": "905ef8e47c1f4b12eb490b33f1726fb91714b3dfcdf5184d8dfd96ec312f0dbd",
+    "size_bytes": 13066175,
+    "parameter_count": 1080802,
+    "architecture": "UNet",
+    "input_channels": 2,
+    "num_classes": 2,
+    "base_channels": 16,
+    "loss_function": "FocalDiceLoss",
+    "preprocessing": "historical_positive_db_zero_clipping",
+    "state_dict_verified": true,
+    "freeze_status": "FROZEN_IMMUTABLE"
+  }
+}

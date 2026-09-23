@@ -1,0 +1,138 @@
+{
+  "status": "REAL_CDSE_SAR_PIXELS_EXTRACTED",
+  "product_id": "S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG",
+  "product_uuid": "3f5c4ba1-ed70-4065-91b9-2bbeb7ebfb79",
+  "source_provider": "Copernicus Data Space Ecosystem (CDSE)",
+  "source_archive_sha256": "211a92723c50a313255933d08a8bd5130c9591443f35338347ad9d6752be0c7f",
+  "raw_vv_measurement_sha256": "38c0f2d5f916bdf9a1d0d08394b8acb2584ea5c261f2f4d8b0adbad5f528dfd2",
+  "raw_vh_measurement_sha256": "3d753a64c9eaa5b0bcf2659d1aea5f0eb9690c415fd3318fa1409104f48ce8c2",
+  "sensor": "Sentinel-1A C-SAR",
+  "acquisition_mode": "IW (Interferometric Wide Swath)",
+  "product_type": "GRD (Ground Range Detected High Resolution)",
+  "polarizations": [
+    "VV",
+    "VH"
+  ],
+  "acquisition_start": "2024-02-18T01:03:29.872826Z",
+  "acquisition_end": "2024-02-18T01:03:54.871034Z",
+  "relative_orbit": 65,
+  "absolute_orbit": 52606,
+  "native_measurement_dtype": "uint16 (linear digital numbers)",
+  "calibration_applied": {
+    "standard": "ESA Sentinel-1 Radiometric Calibration",
+    "equation": "Sigma0_linear = DN^2 / A_sigma^2, Sigma0_dB = 10 * log10(Sigma0_linear)",
+    "lut_source": "annotation/calibration/calibration-s1a-iw-grd-*.xml",
+    "physical_unit": "Sigma0 decibels (dB)"
+  },
+  "subscene_window": {
+    "lines": [
+      6000,
+      6512
+    ],
+    "pixels": [
+      10000,
+      10512
+    ],
+    "shape": [
+      512,
+      512
+    ],
+    "crs": "EPSG:4326",
+    "bounds": [
+      72.71698533141581,
+      18.965879160508283,
+      72.77399821488896,
+      19.020798197953575
+    ]
+  },
+  "raw_dn_statistics": {
+    "vv": {
+      "min": 7,
+      "max": 143,
+      "mean": 56.67535400390625,
+      "median": 56.0,
+      "std": 14.599231068356954
+    },
+    "vh": {
+      "min": 5,
+      "max": 78,
+      "mean": 32.224639892578125,
+      "median": 32.0,
+      "std": 7.6304590428620545
+    }
+  },
+  "calibrated_db_statistics": {
+    "vv": {
+      "min_db": -38.75290298461914,
+      "max_db": -12.560649871826172,
+      "mean_db": -20.884916305541992,
+      "median_db": -20.697071075439453,
+      "std_db": 2.320138931274414
+    },
+    "vh": {
+      "min_db": -41.659488677978516,
+      "max_db": -17.820648193359375,
+      "mean_db": -25.743457794189453,
+      "median_db": -25.556550979614258,
+      "std_db": 2.1326863765716553
+    }
+  },
+  "normalized_tensor_statistics": {
+    "shape": [
+      1,
+      6,
+      512,
+      512
+    ],
+    "channels": {
+      "0_SAR_VV": {
+        "min": 0.0,
+        "max": 0.7479783296585083,
+        "mean": 0.4705033302307129,
+        "std": 0.07733415067195892
+      },
+      "1_SAR_VH": {
+        "min": 0.11135037988424301,
+        "max": 0.9059783816337585,
+        "mean": 0.6418848037719727,
+        "std": 0.07108954340219498
+      },
+      "2_ERA5_WindSpeed": {
+        "min": 0.08226999640464783,
+        "max": 0.10435421764850616,
+        "mean": 0.09089461714029312,
+        "std": 0.0050508067943155766
+      },
+      "3_ERA5_WindSin": {
+        "min": 0.0025646090507507324,
+        "max": 0.008268624544143677,
+        "mean": 0.006169972009956837,
+        "std": 0.0012279202928766608
+      },
+      "4_ERA5_WindCos": {
+        "min": 0.5505771040916443,
+        "max": 0.5905553102493286,
+        "mean": 0.5778621435165405,
+        "std": 0.008238967508077621
+      },
+      "5_NOAA_SST": {
+        "min": 0.6481671333312988,
+        "max": 0.6515845656394958,
+        "mean": 0.649919867515564,
+        "std": 0.0007920968346297741
+      }
+    }
+  },
+  "multimodal_provenance": {
+    "era5_wind": {
+      "source": "ECMWF ERA5 Reanalysis (10m u/v wind)",
+      "observation_time": "2024-02-18T01:00:00Z",
+      "file": "data/raw/weather/era5/S1A_IW_20240218T010329_era5_wind.npz"
+    },
+    "noaa_crw_sst": {
+      "source": "NOAA Coral Reef Watch CoralTemp v3.1 5km Daily Composite",
+      "observation_time": "2024-02-18T12:00:00Z",
+      "file": "data/raw/weather/sst/S1A_IW_20240218_noaa_crw_sst.npz"
+    }
+  }
+}

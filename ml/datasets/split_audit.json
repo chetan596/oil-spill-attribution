@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-09-19T05:18:58.791965+00:00",
+  "total_samples": 40,
+  "total_scenes": 40,
+  "train": {
+    "samples": 28,
+    "scenes": 28,
+    "categories": {
+      "oil": 12,
+      "no_oil": 8,
+      "look_alike": 8
+    }
+  },
+  "validation": {
+    "samples": 7,
+    "scenes": 7,
+    "categories": {
+      "oil": 3,
+      "no_oil": 2,
+      "look_alike": 2
+    }
+  },
+  "test": {
+    "samples": 5,
+    "scenes": 5,
+    "categories": {
+      "test_set": 5
+    }
+  },
+  "leakage_audit": {
+    "scene_leakage_detected": false,
+    "scene_leakage_status": "VERIFIED_NO_LEAKAGE",
+    "spatial_leakage_status": "VERIFIED_DISJOINT_SCENE_LEVEL_ACQUISITIONS",
+    "train_val_scene_overlap": [],
+    "train_test_scene_overlap": [],
+    "val_test_scene_overlap": []
+  }
+}

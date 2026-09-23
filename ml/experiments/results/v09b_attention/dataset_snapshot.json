@@ -1,0 +1,9 @@
+{
+  "manifest_path": "ml/datasets/manifest.json",
+  "manifest_sha256": "9d4cf3f6755976c72bfdb1172bbc03616efeba8e15869ba893665db506dc621d",
+  "total_scenes": 40,
+  "train_scenes": 28,
+  "val_scenes": 7,
+  "held_out_test_scenes": 5,
+  "held_out_test_status": "STRICTLY_LOCKED_QUARANTINED"
+}

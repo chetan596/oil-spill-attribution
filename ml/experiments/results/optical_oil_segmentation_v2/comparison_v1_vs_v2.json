@@ -1,0 +1,15 @@
+{
+  "validation": {
+    "v1_mados_dice": 0.00799800782222743,
+    "v2_mados_dice": 0.09533380777442249,
+    "mados_dice_delta": 0.08733579995219506,
+    "v1_kerf_dice": 0.9511226003198134,
+    "v2_kerf_dice": 0.9529188792417835,
+    "kerf_dice_delta": 0.0017962789219700959
+  },
+  "internal_test": {
+    "v1_mados_dice": 0.0,
+    "v2_mados_dice": 0.1316080316016143,
+    "mados_dice_delta": 0.1316080316016143
+  }
+}

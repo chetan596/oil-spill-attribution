@@ -1,0 +1,188 @@
+/* ==========================================================================
+   BLUE FORENSIC AI — MARITIME INTELLIGENCE VISUAL TOKEN SYSTEM
+   Second Visual Refinement — Restrained Editorial Dark System (SIH 26143)
+   ========================================================================== */
+
+:root {
+  /* ── 1. Core Surfaces ─────────────────────────────────────────────────── */
+  --og-bg: #0A0B0D;
+  --og-surface: #121417;
+  --og-surface-raised: #171A1E;
+  --og-surface-elevated: #1D2025;
+  --og-surface-recessed: #0C0E11;
+
+  /* ── 2. Structural Borders ────────────────────────────────────────────── */
+  --og-border-subtle: rgba(255, 255, 255, 0.055);
+  --og-border: #25292F;
+  --og-border-strong: #343940;
+
+  /* ── 3. Text Hierarchy ────────────────────────────────────────────────── */
+  --og-text-primary: #ECEEF1;
+  --og-text-secondary: #B1B6BD;
+  --og-text-muted: #777E87;
+  --og-text-faint: #555C65;
+
+  /* ── 4. Primary Brand / Analytical Accent ──────────────────────────────── */
+  --og-violet: #A855F7;
+  --og-violet-soft: #C084FC;
+  --og-violet-subtle: rgba(168, 85, 247, 0.10);
+  --og-violet-border: rgba(168, 85, 247, 0.24);
+
+  /* ── 5. High-Emphasis Action ──────────────────────────────────────────── */
+  --og-magenta: #EC4899;
+  --og-magenta-soft: #F472B6;
+  --og-magenta-subtle: rgba(236, 72, 153, 0.10);
+  --og-magenta-border: rgba(236, 72, 153, 0.24);
+
+  /* ── 6. Maritime Sensor / Observed Evidence ───────────────────────────── */
+  --og-teal: #49C6C8;
+  --og-teal-soft: #78DADD;
+  --og-teal-subtle: rgba(73, 198, 200, 0.10);
+  --og-teal-border: rgba(73, 198, 200, 0.24);
+
+  /* ── 7. Drift / Modelled / Origin / Attention ─────────────────────────── */
+  --og-amber: #E7A63A;
+  --og-amber-soft: #F2BC62;
+  --og-amber-subtle: rgba(231, 166, 58, 0.10);
+  --og-amber-border: rgba(231, 166, 58, 0.24);
+
+  /* ── 8. Semantic Only ─────────────────────────────────────────────────── */
+  --og-success: #4ADE80;
+  --og-success-subtle: rgba(74, 222, 128, 0.10);
+  --og-success-border: rgba(74, 222, 128, 0.22);
+
+  --og-error: #F87171;
+  --og-error-subtle: rgba(248, 113, 113, 0.10);
+  --og-error-border: rgba(248, 113, 113, 0.24);
+
+  /* ── 9. Timeline & Data Tracks ────────────────────────────────────────── */
+  --og-track: #292E34;
+  --og-track-active: #464C54;
+
+  /* ── 10. Radius Vocabulary (8px Base Standard) ────────────────────────── */
+  --og-radius-none: 0px;
+  --og-radius-sm: 4px;
+  --og-radius-base: 8px;
+  --og-radius-md: 8px;
+  --og-radius-lg: 12px;
+  --og-radius-full: 9999px;
+
+  /* ── 11. Typography Font Families ─────────────────────────────────────── */
+  --og-font-display: 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --og-font-body: 'Schibsted Grotesk', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --og-font-mono: 'Schibsted Grotesk', ui-monospace, "JetBrains Mono", monospace;
+
+  /* ========================================================================
+     LEGACY / PREVIOUS VALUES (PRESERVED FOR ONE-SWITCH REVERSIBILITY)
+     ======================================================================== */
+  --og-legacy-bg: #0A0A0B;
+  --og-legacy-surface: #141416;
+  --og-legacy-surface-elevated: #222224;
+  --og-legacy-border: #252529;
+  --og-legacy-primary: #1AE8A0;
+  --og-legacy-accent: #67D9E8;
+}
+
+/* ==========================================================================
+   Utility Classes for Token-Based Panels & Buttons
+   ========================================================================== */
+.og-card {
+  background: var(--og-surface);
+  border: 1px solid var(--og-border-subtle);
+  border-radius: var(--og-radius-base);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.og-card-raised {
+  background: var(--og-surface-raised);
+  border: 1px solid var(--og-border);
+  border-radius: var(--og-radius-base);
+}
+
+.og-card-elevated {
+  background: var(--og-surface-elevated);
+  border: 1px solid var(--og-border-strong);
+  border-radius: var(--og-radius-base);
+}
+
+.og-card-selected {
+  background: var(--og-surface-raised);
+  border: 1px solid var(--og-border-strong);
+  border-radius: var(--og-radius-base);
+}
+
+.og-input-recessed {
+  background: var(--og-surface-recessed);
+  border: 1px solid var(--og-border);
+  border-radius: var(--og-radius-sm);
+  color: var(--og-text-primary);
+  font-family: var(--og-font-body);
+}
+
+/* Button System */
+.og-btn-primary {
+  background: var(--og-violet);
+  color: #FFFFFF;
+  border-radius: var(--og-radius-base);
+  height: 34px;
+  padding: 0 16px;
+  font-family: var(--og-font-body);
+  font-weight: 500;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.og-btn-primary:hover {
+  background: var(--og-violet-soft);
+}
+
+.og-btn-secondary {
+  background: transparent;
+  border: 1px solid var(--og-border-strong);
+  color: #D6DADE;
+  border-radius: var(--og-radius-base);
+  height: 34px;
+  padding: 0 14px;
+  font-family: var(--og-font-body);
+  font-weight: 500;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.og-btn-secondary:hover {
+  background: var(--og-surface-raised);
+  border-color: #464C54;
+  color: var(--og-text-primary);
+}
+
+.og-btn-tertiary {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--og-text-muted);
+  border-radius: var(--og-radius-base);
+  padding: 5px 10px;
+  font-family: var(--og-font-body);
+  font-weight: 500;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.og-btn-tertiary:hover {
+  background: var(--og-surface-raised);
+  color: var(--og-text-primary);
+}

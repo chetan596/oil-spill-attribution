@@ -1,0 +1,31 @@
+{
+  "models_evaluated": [
+    {
+      "model_id": "unet-dual-pol-sar-v09d-residual-loss",
+      "role": "PRIMARY_EXPERIMENTAL_CANDIDATE",
+      "checkpoint": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\ml/model_registry/versions/unet_dual_pol_sar_v09d_residual_loss.pth",
+      "sha256": "ab22ffa2fb1c3be99ff2bb99353db76ed4934bd00210f7bce21df74506ce827d",
+      "parameters": 1114338,
+      "preprocessing": "sentinel1_sigma0_db_v1",
+      "status": "EXPERIMENTAL"
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v6",
+      "role": "CONTROLLED_BASELINE_REFERENCE",
+      "checkpoint": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\ml/model_registry/versions/unet_dual_pol_sar_v6.pth",
+      "sha256": "bcf3d6bc988b910fa67c0c31c89cb2c861da73f0b02159c579cb28e5039920e3",
+      "parameters": 1080802,
+      "preprocessing": "sentinel1_sigma0_db_v1",
+      "status": "EXPERIMENTAL"
+    },
+    {
+      "model_id": "unet-dual-pol-sar-v2",
+      "role": "HISTORICAL_REFERENCE_NON_COMPARABLE",
+      "checkpoint": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\ml/model_registry/versions/unet_dual_pol_sar_v2.pth",
+      "sha256": "905ef8e47c1f4b12eb490b33f1726fb91714b3dfcdf5184d8dfd96ec312f0dbd",
+      "parameters": 1080802,
+      "preprocessing": "historical_zero_clipping",
+      "status": "ACTIVE_BASELINE (Historical Artifact)"
+    }
+  ]
+}

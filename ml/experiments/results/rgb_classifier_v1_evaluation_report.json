@@ -1,0 +1,89 @@
+{
+  "model_id": "rgb-oil-classifier-resnet18-v1",
+  "model_name": "Ocean Guard AI RGB Oil vs Non-Oil Classifier",
+  "release": "OG-RGB-ML-RESEARCH-RELEASE-V0.14B",
+  "version": "1.0.0",
+  "architecture": "ResNet-18 (ImageNet Pretrained Transfer Learning + Custom Binary Head)",
+  "checkpoint_file": "rgb_oil_classifier_v1.pth",
+  "checkpoint_sha256": "1e764a220bab83fc312e6b7f7872def29e429e6c5799ecefb016718d2fc8aabe",
+  "input_modality": [
+    "JPG",
+    "JPEG",
+    "PNG"
+  ],
+  "input_resolution": [
+    224,
+    224,
+    3
+  ],
+  "device_trained": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "training_config": {
+    "seed": 42,
+    "epochs": 20,
+    "best_epoch": 12,
+    "batch_size": 16,
+    "lr": 0.0001,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001,
+    "scheduler": "CosineAnnealingLR",
+    "loss": "BCEWithLogitsLoss"
+  },
+  "dataset_summary": {
+    "train": {
+      "total": 410,
+      "oil": 200,
+      "non_oil": 210,
+      "clean_ocean": 105,
+      "lookalike": 105
+    },
+    "val": {
+      "total": 93,
+      "oil": 45,
+      "non_oil": 48,
+      "clean_ocean": 24,
+      "lookalike": 24
+    },
+    "test": {
+      "total": 114,
+      "oil": 84,
+      "non_oil": 30,
+      "clean_ocean": 15,
+      "lookalike": 15
+    }
+  },
+  "decision_threshold": 0.8,
+  "threshold_selection_method": "Validation set composite F1 + Specificity optimization (Zero test set leakage)",
+  "validation_metrics": {
+    "accuracy": 0.7957,
+    "precision": 0.825,
+    "recall": 0.7333,
+    "specificity": 0.8542,
+    "false_positive_rate": 0.1458,
+    "f1_score": 0.7765,
+    "roc_auc": 0.881,
+    "confusion_matrix": {
+      "tn": 41,
+      "fp": 7,
+      "fn": 12,
+      "tp": 33
+    }
+  },
+  "held_out_test_metrics": {
+    "total_samples": 114,
+    "accuracy": 0.4912,
+    "precision": 0.8095,
+    "recall": 0.4048,
+    "specificity": 0.7333,
+    "false_positive_rate": 0.2667,
+    "f1_score": 0.5397,
+    "roc_auc": 0.6266,
+    "pr_auc": 0.8562,
+    "confusion_matrix": {
+      "tn": 22,
+      "fp": 8,
+      "fn": 50,
+      "tp": 34
+    }
+  }
+}

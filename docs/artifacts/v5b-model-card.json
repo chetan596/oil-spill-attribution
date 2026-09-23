@@ -1,0 +1,31 @@
+{
+  "model_id": "unet-dual-pol-sar-v5b-wind",
+  "model_name": "Multimodal Sentinel-1 SAR + ERA5 Wind Speed U-Net",
+  "version": "5.2.0-experimental",
+  "status": "HELD_STOP_CONDITION_ACTIVE",
+  "production_ready": false,
+  "architecture": {
+    "model_type": "UNet",
+    "input_channels": 3,
+    "input_modalities": [
+      "SAR_VV_Decibel_Calibrated",
+      "SAR_VH_Decibel_Calibrated",
+      "ERA5_10m_Wind_Speed_Normalized"
+    ],
+    "base_channels": 16,
+    "output_classes": 2,
+    "activation": "Softmax"
+  },
+  "radiometric_normalization": {
+    "sar_vv_range_db": [-35.0, -5.0],
+    "sar_vh_range_db": [-45.0, -15.0],
+    "wind_speed_range_ms": [0.0, 25.0],
+    "wind_speed_formula": "clip(U10_ms, 0.0, 25.0) / 25.0"
+  },
+  "provenance_requirements": {
+    "metocean_source": "ERA5_Hourly_Single_Levels",
+    "resampling_protocol": "Bilinear spatial resampling to SAR scene bounding box (EPSG:4326)",
+    "temporal_tolerance_minutes": 180
+  },
+  "scientific_status_note": "Model V5-B architecture is fully defined and ready. Training is held under Phase 20 Stop Conditions because the static Zenodo benchmark lacks verified UTC timestamps. Real-time CDSE mode provides verified timestamps for future live multimodal execution."
+}

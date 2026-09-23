@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-09-21T02:25:32.006044",
+  "audit": "Phase 13 Baseline Model Inventory",
+  "all_passed": true,
+  "checkpoints": {
+    "original_v2": {
+      "name": "Original V2 ResNet-18",
+      "path": "services/ml-python/app/models/optical_oil_segmentation_v2/optical_oil_segmentation_v2.pth",
+      "expected_sha": "e3d44f7e480daedf42ef5e96fd0e650193f5763f8dac38630fd21a034e5ea398",
+      "actual_sha": "e3d44f7e480daedf42ef5e96fd0e650193f5763f8dac38630fd21a034e5ea398",
+      "status": "VERIFIED",
+      "file_size_bytes": 63743491
+    },
+    "original_resnet34": {
+      "name": "Original ResNet-34 U-Net (4-Class Head)",
+      "path": "ml/external_models/optical/unet_resnet34_oil/model.pth",
+      "expected_sha": "9aab3f6de981ad73810d3b909603d430aafd94e35f143a2d3e80aa7336521576",
+      "actual_sha": "9aab3f6de981ad73810d3b909603d430aafd94e35f143a2d3e80aa7336521576",
+      "status": "VERIFIED",
+      "file_size_bytes": 97921556
+    },
+    "phase7b_drone_resnet34": {
+      "name": "Phase 7B Drone ResNet-34 Balanced Focal-Dice",
+      "path": "ml/training/runs/resnet34_balanced_focaldice_pilot/checkpoints/best_val_iou.pt",
+      "expected_sha": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+      "actual_sha": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+      "status": "VERIFIED",
+      "file_size_bytes": 97921247
+    },
+    "phase11_rgb_control": {
+      "name": "Phase 11 Satellite RGB Control ResNet-34",
+      "path": "ml/training/runs/phase11_rgb_control/checkpoints/best_val_iou.pt",
+      "expected_sha": "a4c32de7177bc42c2f0298427ce8bef4a2bf8d4a35e25c3450a67eb16f8e099a",
+      "actual_sha": "a4c32de7177bc42c2f0298427ce8bef4a2bf8d4a35e25c3450a67eb16f8e099a",
+      "status": "VERIFIED",
+      "file_size_bytes": 97921503
+    },
+    "phase11_rgbnir": {
+      "name": "Phase 11 Satellite RGB+NIR 4-Band ResNet-34",
+      "path": "ml/training/runs/mados_rgbnir_resnet34/checkpoints/best_val_iou.pt",
+      "expected_sha": "5137660ee14dd5c385053d3400cef11852d010ed941fad709dfcbca9b2d53442",
+      "actual_sha": "5137660ee14dd5c385053d3400cef11852d010ed941fad709dfcbca9b2d53442",
+      "status": "VERIFIED",
+      "file_size_bytes": 97934047
+    },
+    "phase11_rgbnir_swir": {
+      "name": "Phase 11 Sentinel-2 6-Band RGB+NIR+SWIR ResNet-34",
+      "path": "ml/training/runs/mados_rgbnir_swir_resnet34/checkpoints/best_val_iou.pt",
+      "expected_sha": "856ea016b8f750a40af942ee2e59f5919d2f04fbc510d01d2c772ecbdb3ee983",
+      "actual_sha": "856ea016b8f750a40af942ee2e59f5919d2f04fbc510d01d2c772ecbdb3ee983",
+      "status": "VERIFIED",
+      "file_size_bytes": 97959135
+    }
+  }
+}

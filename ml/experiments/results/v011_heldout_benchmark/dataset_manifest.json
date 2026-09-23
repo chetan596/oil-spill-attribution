@@ -1,0 +1,417 @@
+{
+  "test_scenes": [
+    {
+      "sample_id": "real_part3_test_00060_full",
+      "scene_id": "real_part3_test_00060",
+      "folder": "part3_test",
+      "source": "Part III (Zenodo 10.5281/zenodo.13761290)",
+      "category": "test_set",
+      "split": "test",
+      "image_path": "data/raw/satellite/real/part3_test/images/00060.tif",
+      "mask_path": "data/raw/satellite/real/part3_test/masks/00060.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "dd1a7e21b8e5de933d90c0edd472f330511218630e4e4a4020e5fa1e819235e3",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195212e-05,
+          0.0,
+          -125.64445465022385,
+          0.0,
+          -8.983152841195212e-05,
+          45.96182537971593,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          -125.64445465022385,
+          45.777850409528256,
+          -125.46047968003617,
+          45.96182537971593
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -37.54520034790039,
+          "max_val": 3.248736619949341,
+          "mean_val": -31.45409393310547,
+          "median_val": -31.427837371826172,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -33.75447082519531,
+          "max_val": 12.010270118713379,
+          "mean_val": -21.744651794433594,
+          "median_val": -21.735397338867188,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part3_test_00062_full",
+      "scene_id": "real_part3_test_00062",
+      "folder": "part3_test",
+      "source": "Part III (Zenodo 10.5281/zenodo.13761290)",
+      "category": "test_set",
+      "split": "test",
+      "image_path": "data/raw/satellite/real/part3_test/images/00062.tif",
+      "mask_path": "data/raw/satellite/real/part3_test/masks/00062.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "5839130bb966a1b6b2837c4b64ba99930792656f9b4907dc164464132e069708",
+      "mask_sha256": "1aaaf9138a7efb8cb7fa9bfb2d29c9b2b5ba35fa6c782979f80d669d278ca7d8",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195212e-05,
+          0.0,
+          -125.64445465022385,
+          0.0,
+          -8.983152841195212e-05,
+          45.79078614961958,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          -125.64445465022385,
+          45.6068111794319,
+          -125.46047968003617,
+          45.79078614961958
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -37.09012222290039,
+          "max_val": -24.837358474731445,
+          "mean_val": -31.556678771972656,
+          "median_val": -31.525585174560547,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -33.408512115478516,
+          "max_val": -14.10585880279541,
+          "mean_val": -21.794631958007812,
+          "median_val": -21.773719787597656,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4170142,
+          "1": 24162
+        },
+        "is_binary": true,
+        "oil_pixel_count": 24162,
+        "oil_coverage_pct": 0.5761
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part3_test_00063_full",
+      "scene_id": "real_part3_test_00063",
+      "folder": "part3_test",
+      "source": "Part III (Zenodo 10.5281/zenodo.13761290)",
+      "category": "test_set",
+      "split": "test",
+      "image_path": "data/raw/satellite/real/part3_test/images/00063.tif",
+      "mask_path": "data/raw/satellite/real/part3_test/masks/00063.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "132837cf6d8e91c38054cb81b0e7b05bcd10b8ec7429e4933c1a1b57aa0ceafb",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195212e-05,
+          0.0,
+          -125.64445465022385,
+          0.0,
+          -8.983152841195212e-05,
+          45.61974691952322,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          -125.64445465022385,
+          45.435771949335546,
+          -125.46047968003617,
+          45.61974691952322
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -37.44162368774414,
+          "max_val": -25.025556564331055,
+          "mean_val": -31.62822723388672,
+          "median_val": -31.590911865234375,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -35.303184509277344,
+          "max_val": -13.919366836547852,
+          "mean_val": -22.056724548339844,
+          "median_val": -21.987947463989258,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part3_test_00064_full",
+      "scene_id": "real_part3_test_00064",
+      "folder": "part3_test",
+      "source": "Part III (Zenodo 10.5281/zenodo.13761290)",
+      "category": "test_set",
+      "split": "test",
+      "image_path": "data/raw/satellite/real/part3_test/images/00064.tif",
+      "mask_path": "data/raw/satellite/real/part3_test/masks/00064.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "e453d38cd9d904460da0e018553e138eae825ef558a6d21fbaf63d89ec74cbe5",
+      "mask_sha256": "aafadb05051fa493e22136043422e81cd008f4f452766dd39208c2b09408c54d",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195212e-05,
+          0.0,
+          -125.64445465022385,
+          0.0,
+          -8.983152841195212e-05,
+          45.44870768942686,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          -125.64445465022385,
+          45.264732719239184,
+          -125.46047968003617,
+          45.44870768942686
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -56.026939392089844,
+          "max_val": 0.0,
+          "mean_val": -23.563758850097656,
+          "median_val": -31.273096084594727,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -47.49684143066406,
+          "max_val": 0.0,
+          "mean_val": -16.938678741455078,
+          "median_val": -21.715829849243164,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4141684,
+          "1": 52620
+        },
+        "is_binary": true,
+        "oil_pixel_count": 52620,
+        "oil_coverage_pct": 1.2546
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part3_test_00080_full",
+      "scene_id": "real_part3_test_00080",
+      "folder": "part3_test",
+      "source": "Part III (Zenodo 10.5281/zenodo.13761290)",
+      "category": "test_set",
+      "split": "test",
+      "image_path": "data/raw/satellite/real/part3_test/images/00080.tif",
+      "mask_path": "data/raw/satellite/real/part3_test/masks/00080.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "35ba4d9ba6597f83e46c61402426e324e5996a631821cf2d13037e35ef774525",
+      "mask_sha256": "cb49b2b230ff8a53a0934fb1ceed754d2a65beff0f3ca75e022af65e8d8853bb",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195216e-05,
+          0.0,
+          -89.10252536070145,
+          0.0,
+          -8.983152841195216e-05,
+          29.005780311042464,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          -89.10252536070145,
+          28.821805340854787,
+          -88.91855039051377,
+          29.005780311042464
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -37.402767181396484,
+          "max_val": -1.173191785812378,
+          "mean_val": -31.13909912109375,
+          "median_val": -31.190839767456055,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -37.35990524291992,
+          "max_val": 8.75647258758545,
+          "mean_val": -23.764123916625977,
+          "median_val": -23.351764678955078,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4065829,
+          "1": 128475
+        },
+        "is_binary": true,
+        "oil_pixel_count": 128475,
+        "oil_coverage_pct": 3.0631
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    }
+  ],
+  "manifest_sha256": "9d4cf3f6755976c72bfdb1172bbc03616efeba8e15869ba893665db506dc621d",
+  "total_scenes": 5
+}

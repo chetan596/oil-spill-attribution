@@ -1,0 +1,51 @@
+{
+  "validation_type": "REAL_CDSE_SAR_LIVE_SCENE_BASELINE_INFERENCE",
+  "source_product": {
+    "name": "S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG",
+    "uuid": "3f5c4ba1-ed70-4065-91b9-2bbeb7ebfb79",
+    "acquisition_timestamp": "2024-02-18T01:03:29.872826Z",
+    "derived_raster_path": "D:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\satellite\\cdse\\S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\derived\\real_cdse_vv_vh.tif",
+    "derived_raster_sha256": "5782f50e670ac61ce76b8107942761de1af9af50e2ba40f73a1c2eb42fe017bc",
+    "spatial_extent": {
+      "left": 72.71698533141581,
+      "bottom": 18.965879160508283,
+      "right": 72.77399821488896,
+      "top": 19.020798197953575
+    }
+  },
+  "active_model": {
+    "model_id": "unet-dual-pol-sar-v2",
+    "architecture": "UNet",
+    "in_channels": 2,
+    "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v2.pth"
+  },
+  "model_response_diagnostics": {
+    "probability_statistics": {
+      "min": 0.00039821708924137056,
+      "max": 0.36283519864082336,
+      "mean": 0.024304887279868126,
+      "median": 0.02233564853668213,
+      "std": 0.011739389039576054,
+      "p90": 0.03509462997317314,
+      "p95": 0.04069238901138306,
+      "p99": 0.06517285108566284
+    },
+    "candidate_detection": {
+      "threshold_0_50": {
+        "positive_pixels": 0,
+        "candidate_area_km2": 0.0
+      },
+      "threshold_0_35": {
+        "positive_pixels": 1,
+        "candidate_area_km2": 0.0001
+      }
+    },
+    "ground_truth_status": "NOT_AVAILABLE",
+    "accuracy_metrics_reported": "NONE (unsupervised live evaluation)"
+  },
+  "co_registered_metocean": {
+    "era5_wind_speed_ms": 2.790785551071167,
+    "noaa_crw_sst_deg_c": 26.30439567565918
+  },
+  "benchmark_separation": "COMPLETELY_ISOLATED (0 Zenodo splits modified)"
+}

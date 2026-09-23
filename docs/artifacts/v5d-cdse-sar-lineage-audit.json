@@ -1,0 +1,90 @@
+{
+  "audit_title": "Phase V5-D SAR Lineage & Provenance Forensic Audit",
+  "audit_timestamp": "2026-09-14T09:51:00Z",
+  "final_classification": "SAR_DATA_SYNTHETIC_OR_DERIVED",
+  "cdse_metadata_provenance": {
+    "source": "Copernicus Data Space Ecosystem (STAC API)",
+    "product_id": "S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG",
+    "product_uuid": "3f5c4ba1-ed70-4065-91b9-2bbeb7ebfb79",
+    "acquisition_start": "2024-02-18T01:03:29.872826Z",
+    "acquisition_end": "2024-02-18T01:03:54.871034Z",
+    "geographic_bounds": [
+      71.124001,
+      17.870647,
+      73.81562,
+      19.813993
+    ],
+    "crs": "EPSG:4326",
+    "metadata_classification": "REAL CDSE METADATA / SOURCE PRODUCT"
+  },
+  "pixel_provenance_trace": {
+    "dual_pol_raster_path": "data/raw/satellite/cdse/S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\s1a-iw-grd-dual-pol.tiff",
+    "dual_pol_size_bytes": 2099320,
+    "dual_pol_sha256": "ee13cf948c06f62432f5926eba637c197363068bb8104122e814aa1116285fd8",
+    "vv_raster_path": "data/raw/satellite/cdse/S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\measurement\\s1a-iw-grd-vv-20240218t010329-20240218t010354-052606-065d1d-001-cog.tiff",
+    "vv_raster_size_bytes": 1049710,
+    "vv_raster_sha256": "31b74b0035210df706b81f0877b1d7c8c8ef0f56cae6116cfc4b483b10cd730a",
+    "vh_raster_path": "data/raw/satellite/cdse/S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG\\measurement\\s1a-iw-grd-vh-20240218t010329-20240218t010354-052606-065d1d-002-cog.tiff",
+    "vh_raster_size_bytes": 1049710,
+    "vh_raster_sha256": "82f48ab8f843293ac0c4e33dade1a006b6bca88e1f262fad84a712f85e191719",
+    "raster_metadata": {
+      "count": 2,
+      "width": 512,
+      "height": 512,
+      "dtypes": [
+        "float32",
+        "float32"
+      ],
+      "crs": "EPSG:4326",
+      "bounds": [
+        71.124001,
+        17.870647,
+        73.81562,
+        19.813993
+      ],
+      "transform": [
+        0.005257068359374978,
+        0.0,
+        71.124001,
+        0.0,
+        -0.0037955976562499966,
+        19.813993,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "pixel_statistics": {
+      "vv_band_1": {
+        "min": -30.510005950927734,
+        "max": -14.307764053344727,
+        "mean": -22.40265655517578,
+        "std": 1.8024905920028687
+      },
+      "vh_band_2": {
+        "min": -42.744075775146484,
+        "max": -31.227027893066406,
+        "mean": -36.60010528564453,
+        "std": 1.2010246515274048
+      }
+    }
+  },
+  "code_origin_findings": {
+    "generating_script": "scripts/verify_real_cdse_inference.py",
+    "generation_mechanism": "np.random.normal with seed 52606",
+    "generation_code_snippet": "vv_data = (np.random.normal(loc=0.42, scale=0.06, size=(512, 512))).clip(0.01, 0.99) * 30.0 - 35.0",
+    "pixel_extraction_from_real_safe": false,
+    "actual_instrument_pixels_present": false
+  },
+  "distinction_declarations": {
+    "era5_metocean_lineage": "REAL ERA5 REANALYSIS DATA",
+    "noaa_crw_sst_lineage": "REAL NOAA CRW SATELLITE SST DATA",
+    "cdse_scene_metadata_lineage": "REAL CDSE METADATA / SOURCE PRODUCT",
+    "cdse_scene_pixel_lineage": "SYNTHETIC/REPRESENTATIVE SAR"
+  },
+  "scientific_constraints": {
+    "supervised_training_v5d": "HELD (Static benchmark lacks timestamps; live CDSE pixel data is representative)",
+    "sealed_test_evaluation": "UNTOUCHED",
+    "performance_claim": "NOT CLAIMED"
+  }
+}

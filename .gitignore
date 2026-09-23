@@ -28,19 +28,41 @@ htmlcov/
 *.egg-info/
 .eggs/
 
-# Datasets and model checkpoints
-ml/datasets/raw/*
-!ml/datasets/raw/.gitkeep
-ml/datasets/processed/*
-!ml/datasets/processed/.gitkeep
-ml/model_registry/versions/*.pth
-ml/model_registry/versions/*.onnx
-data/raw/satellite/*
-!data/raw/satellite/.gitkeep
-data/raw/ais/*
-!data/raw/ais/.gitkeep
+# Datasets and raw data files
+data/raw/*
+!data/raw/**/.gitkeep
 data/processed/*
-!data/processed/.gitkeep
+!data/processed/**/.gitkeep
+data/uploads/
+data/interim/*
+!data/interim/**/.gitkeep
+data/mock/*
+!data/mock/**/.gitkeep
+ml/datasets/raw/*
+!ml/datasets/raw/**/.gitkeep
+ml/datasets/processed/*
+!ml/datasets/processed/**/.gitkeep
+
+# ML training runs, external models, and benchmarks
+ml/training/runs/
+ml/external_models/
+ml/benchmark/
+
+# Weights and binary models repo-wide
+*.pth
+*.pt
+*.onnx
+*.h5
+*.ckpt
+*.safetensors
+*.bin
+*.tar.gz
+*.zip
+
+# Scratch and temp files
+scratch/
+*/scratch/
+**/scratch/
 
 # IDEs & OS files
 .vscode/

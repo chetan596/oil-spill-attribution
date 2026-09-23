@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" style="background:#0f172a; font-family:sans-serif;">
+<text x="600" y="36" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="bold">Part 0.9D Residual U-Net + High FG Loss Training Curves</text>
+<text x="600" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Training history over 19 epochs | Seed: 42 | Residual U-Net + High FG Loss</text>
+<rect x="60" y="70" width="340" height="280" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<text x="230" y="94" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">Training & Validation Loss</text>
+<rect x="105" y="110" width="280" height="205" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+<line x1="105" y1="161" x2="385" y2="161" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="105" y1="212" x2="385" y2="212" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="105" y1="263" x2="385" y2="263" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="105,175 120,194 136,202 151,208 167,213 182,216 198,218 213,219 229,221 245,222 260,223 276,226 291,227 307,226 322,226 338,228 353,228 369,225 385,225" fill="none" stroke="#3b82f6" stroke-width="2.2" />
+<polyline points="105,176 120,167 136,194 151,185 167,204 182,181 198,202 213,140 229,184 245,110 260,152 276,209 291,202 307,205 322,208 338,188 353,203 369,139 385,125" fill="none" stroke="#ef4444" stroke-width="2.2" stroke-dasharray="4,4"/>
+<text x="99" y="120" text-anchor="end" fill="#94a3b8" font-size="10">2.04</text>
+<text x="99" y="315" text-anchor="end" fill="#94a3b8" font-size="10">0.00</text>
+<text x="105" y="331" text-anchor="middle" fill="#94a3b8" font-size="10">1</text>
+<text x="385" y="331" text-anchor="middle" fill="#94a3b8" font-size="10">19</text>
+<line x1="113" y1="121" x2="129" y2="121" stroke="#3b82f6" stroke-width="2" />
+<text x="135" y="124" fill="#cbd5e1" font-size="10">Train Loss</text>
+<line x1="113" y1="135" x2="129" y2="135" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,3"/>
+<text x="135" y="138" fill="#cbd5e1" font-size="10">Val Loss</text>
+<rect x="450" y="70" width="340" height="280" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<text x="620" y="94" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">Validation Dice / F1</text>
+<rect x="495" y="110" width="280" height="205" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+<line x1="495" y1="161" x2="775" y2="161" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="495" y1="212" x2="775" y2="212" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="495" y1="263" x2="775" y2="263" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="495,286 510,290 526,284 541,280 557,223 572,284 588,262 603,284 619,281 635,283 650,284 666,110 681,252 697,241 712,241 728,288 743,233 759,283 775,285" fill="none" stroke="#10b981" stroke-width="2.2" />
+<text x="489" y="120" text-anchor="end" fill="#94a3b8" font-size="10">0.26</text>
+<text x="489" y="315" text-anchor="end" fill="#94a3b8" font-size="10">0.00</text>
+<text x="495" y="331" text-anchor="middle" fill="#94a3b8" font-size="10">1</text>
+<text x="775" y="331" text-anchor="middle" fill="#94a3b8" font-size="10">19</text>
+<line x1="503" y1="121" x2="519" y2="121" stroke="#10b981" stroke-width="2" />
+<text x="525" y="124" fill="#cbd5e1" font-size="10">Val Dice</text>
+<rect x="840" y="70" width="340" height="280" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<text x="1010" y="94" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">Validation IoU</text>
+<rect x="885" y="110" width="280" height="205" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+<line x1="885" y1="161" x2="1165" y2="161" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="885" y1="212" x2="1165" y2="212" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="885" y1="263" x2="1165" y2="263" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="885,290 900,293 916,287 931,284 947,230 962,288 978,267 993,288 1009,285 1025,287 1040,288 1056,110 1071,258 1087,248 1102,247 1118,291 1133,240 1149,287 1165,288" fill="none" stroke="#8b5cf6" stroke-width="2.2" />
+<text x="879" y="120" text-anchor="end" fill="#94a3b8" font-size="10">0.15</text>
+<text x="879" y="315" text-anchor="end" fill="#94a3b8" font-size="10">0.00</text>
+<text x="885" y="331" text-anchor="middle" fill="#94a3b8" font-size="10">1</text>
+<text x="1165" y="331" text-anchor="middle" fill="#94a3b8" font-size="10">19</text>
+<line x1="893" y1="121" x2="909" y2="121" stroke="#8b5cf6" stroke-width="2" />
+<text x="915" y="124" fill="#cbd5e1" font-size="10">Val IoU</text>
+<rect x="60" y="410" width="340" height="280" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<text x="230" y="434" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">Validation Precision</text>
+<rect x="105" y="450" width="280" height="205" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+<line x1="105" y1="501" x2="385" y2="501" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="105" y1="552" x2="385" y2="552" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="105" y1="603" x2="385" y2="603" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="105,636 120,639 136,633 151,633 167,587 182,635 198,615 213,635 229,633 245,635 260,635 276,450 291,612 307,585 322,605 338,637 353,598 369,635 385,636" fill="none" stroke="#f97316" stroke-width="2.2" />
+<text x="99" y="460" text-anchor="end" fill="#94a3b8" font-size="10">0.21</text>
+<text x="99" y="655" text-anchor="end" fill="#94a3b8" font-size="10">0.00</text>
+<text x="105" y="671" text-anchor="middle" fill="#94a3b8" font-size="10">1</text>
+<text x="385" y="671" text-anchor="middle" fill="#94a3b8" font-size="10">19</text>
+<line x1="113" y1="461" x2="129" y2="461" stroke="#f97316" stroke-width="2" />
+<text x="135" y="464" fill="#cbd5e1" font-size="10">Val Precision</text>
+<rect x="450" y="410" width="340" height="280" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<text x="620" y="434" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">Validation Recall</text>
+<rect x="495" y="450" width="280" height="205" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+<line x1="495" y1="501" x2="775" y2="501" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="495" y1="552" x2="775" y2="552" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="495" y1="603" x2="775" y2="603" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="495,554 510,525 526,615 541,517 557,563 572,555 588,607 603,474 619,537 635,450 650,485 666,577 681,535 697,625 712,506 728,590 743,534 759,477 775,468" fill="none" stroke="#06b6d4" stroke-width="2.2" />
+<text x="489" y="460" text-anchor="end" fill="#94a3b8" font-size="10">0.93</text>
+<text x="489" y="655" text-anchor="end" fill="#94a3b8" font-size="10">0.00</text>
+<text x="495" y="671" text-anchor="middle" fill="#94a3b8" font-size="10">1</text>
+<text x="775" y="671" text-anchor="middle" fill="#94a3b8" font-size="10">19</text>
+<line x1="503" y1="461" x2="519" y2="461" stroke="#06b6d4" stroke-width="2" />
+<text x="525" y="464" fill="#cbd5e1" font-size="10">Val Recall</text>
+<rect x="840" y="410" width="340" height="280" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<text x="1010" y="434" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">Validation FPR</text>
+<rect x="885" y="450" width="280" height="205" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+<line x1="885" y1="501" x2="1165" y2="501" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="885" y1="552" x2="1165" y2="552" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="885" y1="603" x2="1165" y2="603" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="885,545 900,492 916,619 931,530 947,629 962,555 978,631 993,467 1009,547 1025,450 1040,479 1056,649 1071,599 1087,647 1102,596 1118,581 1133,613 1149,477 1165,458" fill="none" stroke="#e11d48" stroke-width="2.2" />
+<text x="879" y="460" text-anchor="end" fill="#94a3b8" font-size="10">0.23</text>
+<text x="879" y="655" text-anchor="end" fill="#94a3b8" font-size="10">0.00</text>
+<text x="885" y="671" text-anchor="middle" fill="#94a3b8" font-size="10">1</text>
+<text x="1165" y="671" text-anchor="middle" fill="#94a3b8" font-size="10">19</text>
+<line x1="893" y1="461" x2="909" y2="461" stroke="#e11d48" stroke-width="2" />
+<text x="915" y="464" fill="#cbd5e1" font-size="10">Val FPR</text>
+</svg>

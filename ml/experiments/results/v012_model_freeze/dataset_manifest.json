@@ -1,0 +1,28 @@
+{
+  "manifest_path": "ml/datasets/manifest.json",
+  "sha256": "9d4cf3f6755976c72bfdb1172bbc03616efeba8e15869ba893665db506dc621d",
+  "dataset_name": "Zenodo Sentinel-1 Verified Real SAR Oil Spill Dataset",
+  "zenodo_doi": "10.5281/zenodo.13761290",
+  "total_scenes": 40,
+  "splits": {
+    "train": {
+      "scene_count": 28,
+      "scenes": []
+    },
+    "validation": {
+      "scene_count": 7,
+      "scenes": []
+    },
+    "held_out_test": {
+      "scene_count": 5,
+      "scenes": [],
+      "benchmark_status": "EVALUATED_ONCE_IN_PART_0_11_LOCKED_FROM_FURTHER_MODEL_SELECTION",
+      "quarantine_rule": "No model selection or hyperparameter tuning may utilize these test scenes."
+    }
+  },
+  "raster_format": "GeoTIFF (EPSG:4326)",
+  "bands": "2-channel (Band 1 = VV, Band 2 = VH)",
+  "resolution": "2048 x 2048 float32 calibrated Sigma0 dB",
+  "mask_format": "GeoTIFF uint8 binary (0 = Clean Sea Surface, 1 = Oil Spill)",
+  "freeze_status": "FROZEN_IMMUTABLE"
+}

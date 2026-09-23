@@ -1,0 +1,46 @@
+{
+  "audit_name": "PART 0.6 \u2014 BASELINE FAILURE ANALYSIS & DIAGNOSTICS",
+  "status": "DIAGNOSTICS_COMPLETE",
+  "timestamp": "2026-09-19T05:34:00.473539+00:00",
+  "disclaimer": "These forensic measurements analyze empirical failure modes on the 40-scene subset without model retraining or weight modification.",
+  "key_forensic_findings": {
+    "v2_zero_positive_root_cause": {
+      "established_cause": "PREPROCESSING_NEGATIVE_DB_TRUNCATION",
+      "empirical_evidence": {
+        "v2_preprocessing_rule": "arr * (arr > 0)",
+        "raw_sar_decibel_median": -31.888,
+        "raw_sar_decibel_p99": 0.0,
+        "percentage_of_sar_data_zeroed_by_v2": 100.0,
+        "v2_max_probability_across_validation": 0.99938953,
+        "v2_mean_probability_across_validation": 0.2782676828571429
+      },
+      "conclusion": "Because calibrated Sentinel-1 sea surface backscatter is negative in dB (median -21 dB), V2 historical positive-masking zeroes >99% of valid sea pixels before inference, causing the neural network to output near-zero oil probabilities across all scenes."
+    },
+    "v4_high_lookalike_fpr_root_cause": {
+      "established_cause": "SPECTRAL_BACKSCATTER_AMBIGUITY_WITHOUT_CONTEXT",
+      "empirical_evidence": {
+        "v4_preprocessing_rule": "Linear clipping [-35, -5] dB for VV, [-45, -15] dB for VH",
+        "v4_oil_recall_at_0_50": 0.960674,
+        "v4_clean_ocean_fpr_at_0_50": 0.00246,
+        "v4_lookalike_fpr_at_0_50": 0.868254,
+        "v4_lookalike_scene_mean_positive_prediction_pct": 86.8254
+      },
+      "conclusion": "V4 calibrated dB clipping successfully restores input dynamic range and achieves high oil recall (96.07%). However, low wind and oceanographic dark look-alike formations share identical low dB backscatter values, causing high false alarm rates (86.83% FPR) in the absence of spatial context or auxiliary atmospheric inputs."
+    },
+    "output_correlation": {
+      "v2_v4_mean_mae": 0.2701355,
+      "v2_v4_mean_spearman_r": -0.0115475
+    }
+  },
+  "artifacts_generated": [
+    "v2_probability_distribution.json",
+    "v4_probability_distribution.json",
+    "v2_threshold_diagnostic.json",
+    "v4_threshold_diagnostic.json",
+    "v2_vs_v4_output_comparison.json",
+    "preprocessing_distribution_diagnostic.json",
+    "error_category_analysis.json",
+    "spatial_error_summary.json",
+    "diagnostic_summary.json"
+  ]
+}

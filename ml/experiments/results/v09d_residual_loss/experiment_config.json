@@ -1,0 +1,42 @@
+{
+  "experiment_id": "PART_0_9D_RESIDUAL_UNET_LOSS_SYNTHESIS",
+  "model_id": "unet-dual-pol-sar-v09d-residual-loss",
+  "status": "EXPERIMENTAL",
+  "architecture": {
+    "name": "UNetResidual",
+    "in_channels": 2,
+    "num_classes": 2,
+    "base_channels": 16,
+    "bilinear": true,
+    "block_type": "ResidualBlock (2x Conv3x3 + BatchNorm2d + 1x1 Projection Shortcut)"
+  },
+  "parameter_comparison": {
+    "v6_parameters": 1080802,
+    "v09d_parameters": 1114338,
+    "parameter_difference": 33536,
+    "percentage_increase": 3.1
+  },
+  "training": {
+    "loss": "CombinedLoss",
+    "loss_params": {
+      "ce_weight": 1.0,
+      "dice_weight": 1.0,
+      "foreground_weight": 10.0
+    },
+    "loss_selection_justification": "Selected from Part 0.8 V8D experiment, which achieved the highest Micro IoU (0.0310) and Micro Dice (0.0602) while maintaining low look-alike FPR (17.17%).",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 2,
+    "amp": true,
+    "max_epochs": 30,
+    "patience": 7,
+    "seed": 42
+  },
+  "preprocessing": "sentinel1_sigma0_db_v1",
+  "hardware": {
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "torch_version": "2.11.0+cu128"
+  }
+}

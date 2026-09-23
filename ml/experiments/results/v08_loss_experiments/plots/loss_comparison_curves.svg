@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" style="background:#0f172a; font-family:sans-serif;">
+<text x="600" y="36" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="bold">Part 0.8 Controlled Loss-Function Experiments — Validation Comparison</text>
+<text x="600" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Validation Dice and Loss trajectories across 4 loss objectives on UNet Dual-Pol SAR</text>
+<rect x="60" y="80" width="500" height="440" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<text x="310" y="108" text-anchor="middle" fill="#e2e8f0" font-size="15" font-weight="600">Validation Dice / F1 Score</text>
+<rect x="110" y="130" width="420" height="340" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+<line x1="110" y1="198" x2="530" y2="198" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="110" y1="266" x2="530" y2="266" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="110" y1="334" x2="530" y2="334" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="110" y1="402" x2="530" y2="402" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="110,349 127,385 145,383 162,378 180,378 197,390 215,381 232,378" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+<polyline points="110,419 127,381 145,380 162,373 180,415 197,382 215,383 232,383 250,382 267,378 285,394" fill="none" stroke="#10b981" stroke-width="2.5"/>
+<polyline points="110,381 127,382 145,381 162,371 180,393 197,377 215,375 232,383 250,378 267,380 285,381" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+<polyline points="110,387 127,408 145,383 162,387 180,395 197,387 215,381 232,377 250,389 267,378 285,382 302,377 320,389 337,392 355,373 372,375 390,378 407,326 425,380 442,378 460,379 477,379 495,377 512,373 530,374" fill="none" stroke="#ec4899" stroke-width="2.5"/>
+<text x="104" y="142" text-anchor="end" fill="#94a3b8" font-size="11">0.15</text>
+<text x="104" y="470" text-anchor="end" fill="#94a3b8" font-size="11">0.00</text>
+<text x="110" y="488" text-anchor="middle" fill="#94a3b8" font-size="11">1</text>
+<text x="530" y="488" text-anchor="middle" fill="#94a3b8" font-size="11">25</text>
+<line x1="120" y1="143" x2="138" y2="143" stroke="#3b82f6" stroke-width="2.5"/>
+<text x="144" y="146" fill="#e2e8f0" font-size="11">V8_A_BASELINE_LOSS</text>
+<line x1="120" y1="159" x2="138" y2="159" stroke="#10b981" stroke-width="2.5"/>
+<text x="144" y="162" fill="#e2e8f0" font-size="11">V8_B_FOCAL_DICE</text>
+<line x1="120" y1="175" x2="138" y2="175" stroke="#f59e0b" stroke-width="2.5"/>
+<text x="144" y="178" fill="#e2e8f0" font-size="11">V8_C_FOCAL_TVERSKY</text>
+<line x1="120" y1="191" x2="138" y2="191" stroke="#ec4899" stroke-width="2.5"/>
+<text x="144" y="194" fill="#e2e8f0" font-size="11">V8_D_HIGH_FG_WEIGHT</text>
+<rect x="620" y="80" width="500" height="440" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<text x="870" y="108" text-anchor="middle" fill="#e2e8f0" font-size="15" font-weight="600">Validation Loss</text>
+<rect x="670" y="130" width="420" height="340" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+<line x1="670" y1="198" x2="1090" y2="198" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="670" y1="266" x2="1090" y2="266" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="670" y1="334" x2="1090" y2="334" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="670" y1="402" x2="1090" y2="402" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="670,322 687,291 705,304 722,326 740,176 757,312 775,261 792,264" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+<polyline points="670,356 687,332 705,349 722,353 740,313 757,350 775,330 792,328 810,346 827,294 845,327" fill="none" stroke="#10b981" stroke-width="2.5"/>
+<polyline points="670,358 687,359 705,359 722,360 740,359 757,359 775,359 792,359 810,359 827,360 845,361" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+<polyline points="670,307 687,229 705,280 722,308 740,185 757,307 775,280 792,262 810,299 827,260 845,273 862,279 880,338 897,196 915,299 932,272 950,303 967,338 985,198 1002,217 1020,294 1037,253 1055,233 1072,194 1090,216" fill="none" stroke="#ec4899" stroke-width="2.5"/>
+<text x="664" y="142" text-anchor="end" fill="#94a3b8" font-size="11">3.00</text>
+<text x="664" y="470" text-anchor="end" fill="#94a3b8" font-size="11">0.00</text>
+<text x="670" y="488" text-anchor="middle" fill="#94a3b8" font-size="11">1</text>
+<text x="1090" y="488" text-anchor="middle" fill="#94a3b8" font-size="11">25</text>
+<line x1="680" y1="143" x2="698" y2="143" stroke="#3b82f6" stroke-width="2.5"/>
+<text x="704" y="146" fill="#e2e8f0" font-size="11">V8_A_BASELINE_LOSS</text>
+<line x1="680" y1="159" x2="698" y2="159" stroke="#10b981" stroke-width="2.5"/>
+<text x="704" y="162" fill="#e2e8f0" font-size="11">V8_B_FOCAL_DICE</text>
+<line x1="680" y1="175" x2="698" y2="175" stroke="#f59e0b" stroke-width="2.5"/>
+<text x="704" y="178" fill="#e2e8f0" font-size="11">V8_C_FOCAL_TVERSKY</text>
+<line x1="680" y1="191" x2="698" y2="191" stroke="#ec4899" stroke-width="2.5"/>
+<text x="704" y="194" fill="#e2e8f0" font-size="11">V8_D_HIGH_FG_WEIGHT</text>
+</svg>

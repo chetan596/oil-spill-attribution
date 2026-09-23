@@ -10,7 +10,8 @@ const spillRepository = require("../repositories/spill.repository");
 const AppError = require("../errors/AppError");
 const logger = require("../logger");
 
-const ML_SERVICE_URL = process.env.ML_SERVICE_URL || "http://localhost:8000";
+const config = require("../config/env");
+const ML_SERVICE_URL = config.mlServiceUrl || process.env.ML_SERVICE_URL || "http://127.0.0.1:8000";
 const DEMO_MODE = (process.env.DEMO_MODE || "true").toLowerCase() === "true";
 
 /**
@@ -162,7 +163,7 @@ const driftService = {
         {
           latitude: Number(latitude),
           longitude: Number(longitude),
-          detection_timestamp: detectionTimestamp ? new Date(detectionTimestamp).toISOString() : new Date().toISOString(),
+          detection_timestamp: detectionTimestamp ? new Date(detectionTimestamp).toISOString() : null,
           hours_back: Number(hoursBack) || 24,
           hours_forward: Number(hoursForward) || 6,
           wind_speed_kts: windSpeedKts != null ? Number(windSpeedKts) : undefined,
@@ -170,7 +171,7 @@ const driftService = {
           current_speed_kts: currentSpeedKts != null ? Number(currentSpeedKts) : undefined,
           current_direction_deg: currentDirectionDeg != null ? Number(currentDirectionDeg) : undefined,
           windage_factor: windageFactor != null ? Number(windageFactor) : undefined,
-          source: source || "demo",
+          source: source || (DEMO_MODE ? "demo" : "copernicus_era5"),
         },
         { timeout: 15000 }
       );
@@ -218,10 +219,19 @@ const driftService = {
         simulationMeta: mlData.simulation_meta || {},
       };
     } catch (err) {
-      logger.warn("[DriftService] Python ML drift service unreachable or failed", {
-        error: err.message,
+      const detailMsg = err.response?.data?.detail || err.message;
+      logger.warn("[DriftService] Python ML drift service returned error or was unreachable", {
+        error: detailMsg,
         demoMode: DEMO_MODE,
       });
+
+      if (
+        detailMsg.includes("METOCEAN_PROVIDER_CONFIGURATION_REQUIRED") ||
+        detailMsg.includes("METOCEAN_TIMESTAMP_REQUIRED") ||
+        detailMsg.includes("METOCEAN_DATA_UNAVAILABLE")
+      ) {
+        throw new Error(detailMsg);
+      }
 
       if (DEMO_MODE) {
         logger.info("[DriftService] Using deterministic demonstration Lagrangian drift fallback");
@@ -234,7 +244,7 @@ const driftService = {
         });
       }
 
-      throw new Error(`Drift Simulation Pipeline Failure: ${err.message}`);
+      throw new Error(`Drift Simulation Pipeline Failure: ${detailMsg}`);
     }
   },
 

@@ -1,0 +1,139 @@
+{
+  "scene_id": "real_part1_oil_00000",
+  "ground_truth_positive_pixels": 14539,
+  "ground_truth_exact_area_km2": 0.8308279466525391,
+  "v2_evaluations": [
+    {
+      "threshold": 0.2,
+      "predicted_positive_pixels": 4194164,
+      "tp": 14539,
+      "fp": 4179625,
+      "fn": 0,
+      "tn": 140,
+      "iou": 0.34664834279250883,
+      "dice": 0.6909016863389981,
+      "precision": 0.34664834279250883,
+      "recall": 99.99999999999932,
+      "predicted_area_km2": 239.6745762462343
+    },
+    {
+      "threshold": 0.25,
+      "predicted_positive_pixels": 4194046,
+      "tp": 14539,
+      "fp": 4179507,
+      "fn": 0,
+      "tn": 258,
+      "iou": 0.3466580957862646,
+      "dice": 0.6909210577902074,
+      "precision": 0.3466580957862646,
+      "recall": 99.99999999999932,
+      "predicted_area_km2": 239.66783316227355
+    },
+    {
+      "threshold": 0.3,
+      "predicted_positive_pixels": 36778,
+      "tp": 259,
+      "fp": 36519,
+      "fn": 14280,
+      "tn": 4143246,
+      "iou": 0.5072662462297769,
+      "dice": 1.0094120856636182,
+      "precision": 0.7042253521126741,
+      "recall": 1.7814155031295014,
+      "predicted_area_km2": 2.101670694132133
+    },
+    {
+      "threshold": 0.35,
+      "predicted_positive_pixels": 9861,
+      "tp": 0,
+      "fp": 9861,
+      "fn": 14539,
+      "tn": 4169904,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "predicted_area_km2": 0.5635046689552713
+    },
+    {
+      "threshold": 0.4,
+      "predicted_positive_pixels": 258,
+      "tp": 0,
+      "fp": 258,
+      "fn": 14539,
+      "tn": 4179507,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "predicted_area_km2": 0.01474335306667275
+    }
+  ],
+  "v3_evaluations": [
+    {
+      "threshold": 0.2,
+      "predicted_positive_pixels": 4164612,
+      "tp": 14539,
+      "fp": 4150073,
+      "fn": 0,
+      "tn": 29692,
+      "iou": 0.3491081522120188,
+      "dice": 0.6957872543968859,
+      "precision": 0.3491081522120188,
+      "recall": 99.99999999999932,
+      "predicted_area_km2": 237.98583372752765
+    },
+    {
+      "threshold": 0.25,
+      "predicted_positive_pixels": 444193,
+      "tp": 3234,
+      "fp": 440959,
+      "fn": 11305,
+      "tn": 3738806,
+      "iou": 0.70999214047043,
+      "dice": 1.4099735793448023,
+      "precision": 0.7280619010205022,
+      "recall": 22.243620606644047,
+      "predicted_area_km2": 25.383310964126235
+    },
+    {
+      "threshold": 0.3,
+      "predicted_positive_pixels": 519,
+      "tp": 0,
+      "fp": 519,
+      "fn": 14539,
+      "tn": 4179246,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "predicted_area_km2": 0.029658140471330065
+    },
+    {
+      "threshold": 0.35,
+      "predicted_positive_pixels": 1,
+      "tp": 0,
+      "fp": 1,
+      "fn": 14539,
+      "tn": 4179764,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "predicted_area_km2": 5.714477932818895e-05
+    },
+    {
+      "threshold": 0.4,
+      "predicted_positive_pixels": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 14539,
+      "tn": 4179765,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "predicted_area_km2": 0.0
+    }
+  ]
+}

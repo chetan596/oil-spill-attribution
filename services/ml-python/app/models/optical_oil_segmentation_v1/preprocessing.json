@@ -1,0 +1,22 @@
+{
+  "input_size": [
+    256,
+    256
+  ],
+  "normalization_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "normalization_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "image_interpolation": "BILINEAR",
+  "mask_interpolation": "NEAREST",
+  "oil_class_definitions": {
+    "MADOS_Sentinel2": "pixel_value == 6",
+    "Kerf_Drone_Oil_Spill": "R > 200 and G < 50 and B > 100"
+  }
+}

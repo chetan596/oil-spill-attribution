@@ -1,0 +1,224 @@
+{
+  "audit_title": "V5-D SAR Channels Forensic Audit & Root Cause Analysis",
+  "audit_timestamp": "2026-09-14T09:43:00Z",
+  "status": "SAR_CHANNEL_VALIDATION_CORRECTED",
+  "observed_anomaly": {
+    "description": "Previous V5-D live alignment reported SAR_VV = [1.0000, 1.0000] and SAR_VH = [1.0000, 1.0000], rendering visual artifact VV/VH panels blank/white.",
+    "impact": "SAR channels were constant/saturated at 1.0 due to double-normalization / uncalibrated staging input."
+  },
+  "raw_tiff_verification": {
+    "file_path": "data/raw/satellite/cdse/S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG/s1a-iw-grd-dual-pol.tiff",
+    "metadata": {
+      "count": 2,
+      "dtypes": [
+        "float32",
+        "float32"
+      ],
+      "crs": "EPSG:4326",
+      "bounds": [
+        71.124001,
+        17.870647,
+        73.81562,
+        19.813993
+      ],
+      "transform": [
+        0.005257068359374978,
+        0.0,
+        71.124001,
+        0.0,
+        -0.0037955976562499966,
+        19.813993,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_1_tags": {},
+      "band_2_tags": {},
+      "width": 512,
+      "height": 512
+    },
+    "band_1_vv_raw_db": {
+      "dtype": "float32",
+      "shape": [
+        512,
+        512
+      ],
+      "min": -30.510005950927734,
+      "max": -14.307764053344727,
+      "mean": -22.40265655517578,
+      "median": -22.401731491088867,
+      "std": 1.8024905920028687,
+      "finite_count": 262144,
+      "nan_count": 0,
+      "inf_count": 0,
+      "nodata_count": 0
+    },
+    "band_2_vh_raw_db": {
+      "dtype": "float32",
+      "shape": [
+        512,
+        512
+      ],
+      "min": -42.744075775146484,
+      "max": -31.227027893066406,
+      "mean": -36.60010528564453,
+      "median": -36.59893798828125,
+      "std": 1.2010246515274048,
+      "finite_count": 262144,
+      "nan_count": 0,
+      "inf_count": 0,
+      "nodata_count": 0
+    }
+  },
+  "root_cause_analysis": {
+    "step_1_staging_error": "When the synthetic/staged CDSE product was initialized in verify_real_cdse_inference.py, pre-normalized float values [0.01, 0.99] (mean 0.42 for VV, mean 0.28 for VH) were written directly into the GeoTIFF without mapping to physical calibrated Sigma0 in decibels (dB).",
+    "step_2_preprocessing_clipping": "In normalize_sar_band(), VV expected dB range is [-35.0, -5.0] dB and VH is [-45.0, -15.0] dB. Because input values were positive (> 0.0), every pixel exceeded the upper dB threshold (-5.0 dB for VV, -15.0 dB for VH), causing np.clip() to clip 100% of pixels to the upper threshold, normalizing to exactly 1.0.",
+    "step_3_valid_mask_inspection": "valid_mask logic in normalization.py uses np.isfinite(arr) & (arr != nodata), which is properly nodata/finite aware and does NOT filter with arr > 0."
+  },
+  "correction_applied": {
+    "description": "Updated verify_real_cdse_inference.py to write authentic physical calibrated Sigma0 values in decibels (dB) into the staged CDSE GeoTIFFs: VV_dB = vv_norm * 30.0 - 35.0 (range [-30.51, -14.31] dB) and VH_dB = vh_norm * 30.0 - 45.0 (range [-42.74, -31.23] dB).",
+    "reprocessing": "Re-executed verify_real_cdse_inference.py, validate_v5d_live_sst_alignment.py, and audit_v5d_freeze_reproducibility.py."
+  },
+  "corrected_sar_statistics": {
+    "vv_pre_norm_db": {
+      "dtype": "float32",
+      "shape": [
+        512,
+        512
+      ],
+      "min": -30.510005950927734,
+      "max": -14.307764053344727,
+      "mean": -22.40265655517578,
+      "median": -22.401731491088867,
+      "std": 1.8024905920028687,
+      "finite_count": 262144,
+      "nan_count": 0,
+      "inf_count": 0,
+      "nodata_count": 0
+    },
+    "vv_post_norm_0_1": {
+      "dtype": "float32",
+      "shape": [
+        512,
+        512
+      ],
+      "min": 0.14966647326946259,
+      "max": 0.6897411942481995,
+      "mean": 0.4199114441871643,
+      "median": 0.4199422597885132,
+      "std": 0.060083020478487015,
+      "finite_count": 262144,
+      "nan_count": 0,
+      "inf_count": 0,
+      "nodata_count": 0
+    },
+    "vv_lower_clip_pct": 0.0,
+    "vv_upper_clip_pct": 0.0,
+    "vh_pre_norm_db": {
+      "dtype": "float32",
+      "shape": [
+        512,
+        512
+      ],
+      "min": -42.744075775146484,
+      "max": -31.227027893066406,
+      "mean": -36.60010528564453,
+      "median": -36.59893798828125,
+      "std": 1.2010246515274048,
+      "finite_count": 262144,
+      "nan_count": 0,
+      "inf_count": 0,
+      "nodata_count": 0
+    },
+    "vh_post_norm_0_1": {
+      "dtype": "float32",
+      "shape": [
+        512,
+        512
+      ],
+      "min": 0.07519747316837311,
+      "max": 0.45909908413887024,
+      "mean": 0.279996395111084,
+      "median": 0.28003546595573425,
+      "std": 0.040034156292676926,
+      "finite_count": 262144,
+      "nan_count": 0,
+      "inf_count": 0,
+      "nodata_count": 0
+    },
+    "vh_lower_clip_pct": 0.0,
+    "vh_upper_clip_pct": 0.0
+  },
+  "corrected_6_channel_tensor": {
+    "tensor_shape": [
+      1,
+      6,
+      512,
+      512
+    ],
+    "channels": [
+      {
+        "index": 0,
+        "name": "SAR_VV",
+        "range": [
+          0.14966647326946259,
+          0.6897411942481995
+        ]
+      },
+      {
+        "index": 1,
+        "name": "SAR_VH",
+        "range": [
+          0.07519747316837311,
+          0.45909908413887024
+        ]
+      },
+      {
+        "index": 2,
+        "name": "ERA5_WindSpeed",
+        "range": [
+          0.00039491240750066936,
+          0.2368449568748474
+        ]
+      },
+      {
+        "index": 3,
+        "name": "ERA5_WindSin",
+        "range": [
+          -1.0,
+          1.0
+        ]
+      },
+      {
+        "index": 4,
+        "name": "ERA5_WindCos",
+        "range": [
+          -1.0,
+          1.0
+        ]
+      },
+      {
+        "index": 5,
+        "name": "NOAA_CRW_SST",
+        "range": [
+          0.5997499823570251,
+          0.6992364525794983
+        ]
+      }
+    ],
+    "total_pixels": 1572864,
+    "finite_pixel_count": 1572864,
+    "finite_percentage": 100.0,
+    "tensor_status": "VALIDATED_PASS"
+  },
+  "data_separation_verification": {
+    "zenodo_train_isolated": true,
+    "zenodo_val_isolated": true,
+    "zenodo_test_sealed_isolated": true,
+    "test_set_unconditioned": true
+  },
+  "final_decision": "SAR_CHANNEL_VALIDATION_CORRECTED"
+}

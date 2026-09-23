@@ -1,0 +1,65 @@
+{
+  "dataset": "INTERNAL_TEST",
+  "total_pairs": 708,
+  "operating_threshold": 0.8,
+  "global_metrics": {
+    "mean_iou": 0.5299658568811934,
+    "foreground_iou": 0.07043919789188065,
+    "background_iou": 0.9894925158705061,
+    "dice": 0.1316080316016143,
+    "precision": 0.07347921025026523,
+    "recall": 0.6299810570507023,
+    "specificity": 0.9899554801395597,
+    "fpr": 0.010044519860440318,
+    "pixel_accuracy": 0.9895008755269024,
+    "tp": 36915,
+    "fp": 465472,
+    "tn": 45875419,
+    "fn": 21682
+  },
+  "source_breakdown": {
+    "MADOS_Sentinel2": {
+      "total_samples": 708,
+      "oil_positive_samples": 80,
+      "mean_iou": 0.5299658568811934,
+      "foreground_iou": 0.07043919789188065,
+      "background_iou": 0.9894925158705061,
+      "dice": 0.1316080316016143,
+      "precision": 0.07347921025026523,
+      "recall": 0.6299810570507023,
+      "specificity": 0.9899554801395597,
+      "fpr": 0.010044519860440318
+    }
+  },
+  "oil_size_stratification": {
+    "VERY_SMALL (<0.1%)": {
+      "sample_count": 11,
+      "foreground_iou": 0.047471300031026994,
+      "dice": 0.09063981042654029,
+      "precision": 0.050779953534683044,
+      "recall": 0.4214876033057851
+    },
+    "SMALL (0.1%-1%)": {
+      "sample_count": 45,
+      "foreground_iou": 0.1323254447352957,
+      "dice": 0.23372334402717493,
+      "precision": 0.13938046872801957,
+      "recall": 0.7233172725945394
+    },
+    "MEDIUM (1%-10%)": {
+      "sample_count": 24,
+      "foreground_iou": 0.21482168855894918,
+      "dice": 0.35366785196891876,
+      "precision": 0.2502143043494465,
+      "recall": 0.602972875875696
+    },
+    "LARGE (10%-50%)": {
+      "sample_count": 0,
+      "status": "INSUFFICIENT_SAMPLE_SIZE"
+    },
+    "VERY_LARGE (>50%)": {
+      "sample_count": 0,
+      "status": "INSUFFICIENT_SAMPLE_SIZE"
+    }
+  }
+}

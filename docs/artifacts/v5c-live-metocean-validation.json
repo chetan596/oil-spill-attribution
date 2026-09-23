@@ -1,0 +1,162 @@
+{
+  "validation_phase": "V5-C",
+  "validation_timestamp": "2026-09-14T08:58:00Z",
+  "sentinel1_product_id": "S1A_IW_GRDH_1SDV_20240218T010329_20240218T010354_052606_065D1D_A8B1_COG",
+  "sentinel1_product_uuid": "3f5c4ba1-ed70-4065-91b9-2bbeb7ebfb79",
+  "platform": "Sentinel-1",
+  "acquisition_start_utc": "2024-02-18T01:03:29.872826Z",
+  "acquisition_end_utc": "2024-02-18T01:03:54.871034Z",
+  "era5_reanalysis_timestamp_utc": "2024-02-18T01:00:00Z",
+  "temporal_difference_minutes": 3.49,
+  "temporal_tolerance_minutes": 180,
+  "temporal_alignment_status": "ALIGNED",
+  "metocean_source": "ECMWF ERA5 Reanalysis Hourly",
+  "era5_variables": [
+    "10m_u_component_of_wind",
+    "10m_v_component_of_wind"
+  ],
+  "native_era5_spatial_resolution": "0.25 degrees (~28 km)",
+  "target_sar_crs": "EPSG:4326",
+  "target_sar_dimensions": [
+    512,
+    512
+  ],
+  "target_geographic_bounds": {
+    "left_lon": 71.124001,
+    "bottom_lat": 17.870647,
+    "right_lon": 73.81562,
+    "top_lat": 19.813993
+  },
+  "spatial_resampling_method": "Bilinear spatial interpolation to Sentinel-1 raster grid",
+  "terminology_statement": "ERA5-derived 10-m surface wind field spatially resampled to the Sentinel-1 scene grid",
+  "statistics": {
+    "u10_native_ms": {
+      "min": -2.805555582046509,
+      "max": 3.8888888359069824,
+      "mean": 0.5314685106277466,
+      "std": 1.5367811918258667
+    },
+    "v10_native_ms": {
+      "min": -5.80555534362793,
+      "max": 2.694444417953491,
+      "mean": -2.0287492275238037,
+      "std": 1.7250345945358276
+    },
+    "u10_resampled_ms": {
+      "min": -2.8019540309906006,
+      "max": 3.847442626953125,
+      "mean": 0.22229263186454773,
+      "std": 1.0883338451385498
+    },
+    "v10_resampled_ms": {
+      "min": -5.785617351531982,
+      "max": 1.5911442041397095,
+      "mean": -2.3487234115600586,
+      "std": 1.464767575263977
+    },
+    "wind_speed_ms": {
+      "min": 0.00987280998378992,
+      "max": 5.92112398147583,
+      "mean": 2.632568359375,
+      "median": 2.4678726196289062,
+      "std": 1.4019681215286255
+    },
+    "wind_direction_meteorological_deg": {
+      "convention": "FROM which wind blows, clockwise from North (0\u00b0 = North, 90\u00b0 = East)",
+      "min": 0.0006956804427318275,
+      "max": 359.9999084472656,
+      "mean": 193.936767578125,
+      "median": 305.5625,
+      "std": 155.89852905273438
+    },
+    "wind_direction_sin": {
+      "range": [
+        -1.0,
+        1.0
+      ],
+      "min": -1.0,
+      "max": 1.0,
+      "mean": 0.0020157434046268463,
+      "std": 0.45179376006126404
+    },
+    "wind_direction_cos": {
+      "range": [
+        -1.0,
+        1.0
+      ],
+      "min": -1.0,
+      "max": 1.0,
+      "mean": 0.8191424012184143,
+      "std": 0.3533894121646881
+    }
+  },
+  "multimodal_tensor_validation": {
+    "tensor_shape": [
+      1,
+      5,
+      512,
+      512
+    ],
+    "channels": [
+      {
+        "index": 0,
+        "name": "SAR_VV",
+        "description": "Corrected Sentinel-1 SAR VV calibrated Sigma0 dB backscatter normalized to [0, 1]",
+        "range": [
+          1.0,
+          1.0
+        ],
+        "mean": 1.0
+      },
+      {
+        "index": 1,
+        "name": "SAR_VH",
+        "description": "Corrected Sentinel-1 SAR VH calibrated Sigma0 dB backscatter normalized to [0, 1]",
+        "range": [
+          1.0,
+          1.0
+        ],
+        "mean": 1.0
+      },
+      {
+        "index": 2,
+        "name": "ERA5_WindSpeed_U10",
+        "description": "Real ERA5-derived 10-m surface wind speed normalized to [0, 1] via clip(ws, 0, 25) / 25.0",
+        "range": [
+          0.00039491240750066936,
+          0.2368449568748474
+        ],
+        "mean": 0.10530272871255875
+      },
+      {
+        "index": 3,
+        "name": "ERA5_WindDir_Sin",
+        "description": "Real ERA5 meteorological wind-direction sin(theta_rad) strictly in [-1.0, 1.0]",
+        "range": [
+          -1.0,
+          1.0
+        ],
+        "mean": 0.0020157438702881336
+      },
+      {
+        "index": 4,
+        "name": "ERA5_WindDir_Cos",
+        "description": "Real ERA5 meteorological wind-direction cos(theta_rad) strictly in [-1.0, 1.0]",
+        "range": [
+          -1.0,
+          1.0
+        ],
+        "mean": 0.8191423416137695
+      }
+    ],
+    "total_pixels_per_channel": 262144,
+    "finite_value_pixel_count": 1310720,
+    "finite_value_percentage": 100.0,
+    "nan_pixel_count": 0,
+    "inf_pixel_count": 0,
+    "tensor_status": "VALIDATED_PASS"
+  },
+  "supervised_training_status": "HELD",
+  "supervised_training_blocker": "Static Zenodo benchmark contains 0/40 authoritative Sentinel-1 UTC timestamps. Under strict scientific data rules, training on ungrounded or fabricated temporal MetOcean samples is strictly prohibited.",
+  "scientific_claim_boundary": "V5-C introduces circular wind-direction features as an additional environmental context modality. No performance improvement is claimed without an authoritative labelled benchmark evaluation."
+}

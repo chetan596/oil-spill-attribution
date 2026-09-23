@@ -1,0 +1,61 @@
+{
+  "experiment_id": "PART_0_9A_MULTISCALE_ARCHITECTURE",
+  "model_id": "unet-dual-pol-sar-v09a-multiscale",
+  "status": "EXPERIMENTAL",
+  "architecture": {
+    "name": "UNetMultiScaleContext",
+    "in_channels": 2,
+    "num_classes": 2,
+    "base_channels": 16,
+    "bilinear": true,
+    "context_branches": [
+      {
+        "branch": 1,
+        "dilation": 1,
+        "padding": 1,
+        "kernel_size": 3
+      },
+      {
+        "branch": 2,
+        "dilation": 2,
+        "padding": 2,
+        "kernel_size": 3
+      },
+      {
+        "branch": 3,
+        "dilation": 4,
+        "padding": 4,
+        "kernel_size": 3
+      }
+    ],
+    "fusion": "Conv2d(1x1) + BatchNorm2d + ReLU"
+  },
+  "parameter_comparison": {
+    "v6_parameters": 1080802,
+    "v09a_parameters": 1242590,
+    "parameter_difference": 161788,
+    "percentage_increase": 14.97
+  },
+  "training": {
+    "loss": "CombinedLoss",
+    "loss_params": {
+      "ce_weight": 1.0,
+      "dice_weight": 1.0,
+      "foreground_weight": 5.0
+    },
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 2,
+    "amp": true,
+    "max_epochs": 30,
+    "patience": 7,
+    "seed": 42
+  },
+  "preprocessing": "sentinel1_sigma0_db_v1",
+  "hardware": {
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "torch_version": "2.11.0+cu128"
+  }
+}

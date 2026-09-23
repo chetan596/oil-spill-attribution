@@ -73,10 +73,11 @@ model Analysis {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 
-  scene   SatelliteScene? @relation(fields: [sceneId], references: [id])
-  jobs    AnalysisJob[]
-  spill   Spill?
-  report  Report?
+  scene          SatelliteScene? @relation(fields: [sceneId], references: [id])
+  jobs           AnalysisJob[]
+  spill          Spill?
+  report         Report?
+  manualAnalysis ManualAnalysis?
 
   @@map("analyses")
 }
@@ -248,4 +249,73 @@ model AuditLog {
   user User? @relation(fields: [userId], references: [id])
 
   @@map("audit_logs")
+}
+
+model ManualAnalysis {
+  id                      String   @id @default(uuid())
+  analysisId              String   @unique
+  jobId                   String?  @unique
+  sourceType              String   @default("MANUAL_IMAGE")
+  originalFilename        String
+  storageFilename         String
+  fileUrl                 String?
+  sha256                  String
+  mimeType                String
+  fileSizeBytes           Int
+  imageWidth              Int?
+  imageHeight             Int?
+  channels                Int?
+
+  // Compatibility
+  sarCompatible           Boolean  @default(false)
+  compatibilityStatus     String   // "SUPPORTED" | "NOT_SUPPORTED" | "INSUFFICIENT_DATA"
+  compatibilityReason     String?
+
+  // Detection
+  oilSpillDetected        Boolean?
+  detectionConfidence     Float?
+  modelVersion            String?
+
+  // Segmentation / Localization
+  maskAvailable           Boolean  @default(false)
+  regionCount             Int      @default(0)
+  coveragePercent         Float?
+  areaKm2                 Float?
+
+  // Severity / Extent
+  severityCategory        String?  // "LOW" | "MODERATE" | "HIGH" | "EXTENSIVE" | "NOT_ESTABLISHED"
+  severityConfidence      Float?
+  severityBasis           Json?
+
+  // Oil Type
+  oilTypeStatus           String   @default("NOT_ESTABLISHED")
+  oilTypeClass            String?
+  oilTypeConfidence       Float?
+  oilTypeReason           String?
+
+  // Authenticity / Integrity
+  authenticityStatus      String   @default("NOT_ESTABLISHED")
+  authenticityConfidence  Float?
+  authenticityLimitations Json?
+
+  // Image Quality
+  qualityScore            Float?
+  qualityFactors          Json?
+
+  // Look-Alike Risk
+  lookAlikeRisk           Float?
+  lookAlikeStatus         String?  // "LOW" | "MODERATE" | "HIGH" | "NOT_ESTABLISHED"
+  lookAlikeIndicators     Json?
+
+  // Artifacts & Metadata
+  artifacts               Json?
+  regions                 Json?
+  scientificLimitations   Json?
+
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  analysis                Analysis @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+
+  @@map("manual_analyses")
 }

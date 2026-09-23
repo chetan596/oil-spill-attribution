@@ -1,0 +1,38 @@
+{
+  "accuracy_3class": 0.8121468926553672,
+  "macro_precision": 0.8183719061395051,
+  "macro_recall": 0.7251962680372314,
+  "macro_f1": 0.757940259667925,
+  "weighted_f1": 0.8101031520789862,
+  "confusion_matrix_3class": [
+    [
+      113,
+      47,
+      2
+    ],
+    [
+      50,
+      415,
+      1
+    ],
+    [
+      7,
+      26,
+      47
+    ]
+  ],
+  "oil_precision": 0.9285714285714286,
+  "oil_recall": 0.65,
+  "oil_f1": 0.7647058823529412,
+  "oil_specificity": 0.9936305732484076,
+  "oil_fpr": 0.006369426751592357,
+  "clean_fpr": 0.018518518518518517,
+  "lookalike_fpr": 0.002145922746781116,
+  "roc_auc": 0.9047372611464969,
+  "pr_auc": 0.8016062741246065,
+  "binary_tp": 52,
+  "binary_fp": 4,
+  "binary_tn": 624,
+  "binary_fn": 28,
+  "decision_threshold": 0.3
+}

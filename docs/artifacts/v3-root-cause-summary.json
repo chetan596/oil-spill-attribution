@@ -1,0 +1,33 @@
+{
+  "audit_timestamp": "2026-09-14T00:00:00Z",
+  "primary_root_causes_ranked": [
+    {
+      "rank": 1,
+      "category": "A. PREPROCESSING / NORMALIZATION BUG ON CALIBRATED dB SAR",
+      "severity": "CRITICAL / ROOT CAUSE",
+      "evidence": "In normalize_sar_band(), valid_mask = arr > 0 was used. Zenodo Sentinel-1 Sigma0 values are calibrated in decibels (ranging from -55 dB to -2 dB). Because all dB values are negative, valid_mask evaluated to empty, causing min/max bounds to default to [0.0, 1.0] and clipping all negative values to 0.0. The model received almost completely zeroed-out inputs during both training and inference.",
+      "remedy": "Fix normalization to support decibel ranges: use valid_mask = ~np.isnan(arr) & (arr != nodata) and apply robust percentile clipping on actual dB values (e.g., [-35 dB, -5 dB] for VV, [-45 dB, -15 dB] for VH)."
+    },
+    {
+      "rank": 2,
+      "category": "D. EXCESSIVE POSITIVE OVERSAMPLING & LOSS IMBALANCE",
+      "severity": "HIGH",
+      "evidence": "WeightedRandomSampler applied 10x over-weighting to positive tiles. Combined with Focal Soft-Dice on near-zero inputs, the network learned an elevated baseline prior probability (~0.28). Lowering the threshold to 0.25 caused widespread false-positive flooding (FPR > 10.4%).",
+      "remedy": "Use moderate positive weighting (2x-3x), hard-negative look-alike mining, and Focal-Tversky loss (beta=0.7) with proper radiometrically calibrated inputs."
+    },
+    {
+      "rank": 3,
+      "category": "F. POOR PROBABILITY CALIBRATION",
+      "severity": "HIGH",
+      "evidence": "Probabilities clustered tightly between 0.27 and 0.31 for uninformative regions, with true oil pixels failing to produce confident activations > 0.35. Platt scaling or temperature scaling is needed.",
+      "remedy": "Calibrate output logits on the validation set using temperature scaling post-training."
+    },
+    {
+      "rank": 4,
+      "category": "B. TILE STRIDE & RECONSTRUCTION RESOLUTION",
+      "severity": "MODERATE",
+      "evidence": "Training used 512x512 non-overlapping tiles, which creates edge discontinuities at tile boundaries during naive un-tiled reconstruction.",
+      "remedy": "Use 50% overlapping inference (stride=256) with 2D Gaussian window blending for smooth boundary reconstruction."
+    }
+  ]
+}

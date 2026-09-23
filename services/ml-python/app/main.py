@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.routes import health, detection, hindcast
+from app.api.routes import health, detection, hindcast, ais, dossier
 from app.core.config import settings
 
 app = FastAPI(
@@ -20,6 +20,8 @@ app.add_middleware(
 app.include_router(health.router, prefix="/api/v1/health", tags=["Health"])
 app.include_router(detection.router, prefix="/api/v1/detection", tags=["Detection"])
 app.include_router(hindcast.router, prefix="/api/v1/hindcast", tags=["Hindcast"])
+app.include_router(ais.router, prefix="/api/v1/ais", tags=["AIS"])
+app.include_router(dossier.router, prefix="/api/v1/dossier", tags=["Dossier"])
 
 if __name__ == "__main__":
     import uvicorn

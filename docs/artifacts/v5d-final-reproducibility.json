@@ -1,0 +1,153 @@
+{
+  "audit_phase": "V5-D_FINAL_FREEZE",
+  "audit_timestamp": "2026-09-14T09:33:00Z",
+  "sst_provenance": {
+    "product_identity": "NOAA Daily Global 5km Geo-Polar Blended Night-only Sea Surface Temperature Analysis Version 3.1 (CoralTemp v3.1)",
+    "operating_authority": "NOAA / NESDIS Coral Reef Watch & NOAA PIFSC OceanWatch",
+    "variable_name": "analysed_sst",
+    "physical_unit": "degrees_Celsius",
+    "source_endpoint": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1",
+    "native_spatial_resolution": "0.05 degrees (~5 km at equator)",
+    "native_dimensions": [
+      56,
+      66
+    ],
+    "native_crs": "EPSG:4326",
+    "observation_timestamp_utc": "2024-02-18T12:00:00Z",
+    "geographic_coverage": {
+      "min_lon": 71.025,
+      "max_lon": 74.275,
+      "min_lat": 17.525,
+      "max_lat": 20.275
+    },
+    "raw_persisted_artifact": "data/raw/weather/sst/S1A_IW_20240218_noaa_crw_sst.npz"
+  },
+  "temporal_semantics": {
+    "sentinel1_acquisition_utc": "2024-02-18T01:03:29.872826Z",
+    "sst_observation_utc": "2024-02-18T12:00:00Z",
+    "temporal_difference_minutes": 656.5,
+    "temporal_difference_hours": 10.94,
+    "product_temporal_nature": "Daily Level 4 Foundation SST Composite (measures mixed-layer bulk ocean temperature below diurnal skin thermocline; thermal variation < 0.5\u00b0C over 11h)",
+    "alignment_tolerance_rule": "<= 24.0 hours for daily foundation SST feasibility co-registration",
+    "temporal_status": "ALIGNED_FEASIBILITY"
+  },
+  "spatial_co_registration": {
+    "native_sst_resolution": "0.05 degrees (~5 km)",
+    "target_sar_grid": [
+      512,
+      512
+    ],
+    "target_crs": "EPSG:4326",
+    "resampling_method": "Bilinear spatial interpolation to Sentinel-1 raster grid",
+    "coastal_extrapolation_documentation": "Inland land cells east of ~73.0\u00b0E have nodata in native ocean SST. Nearest-neighbor extrapolation fills only outer terrestrial boundaries outside the active marine sector; all Sentinel-1 marine pixels interpolate from valid ocean nodes.",
+    "approved_terminology": "NOAA CRW 5-km daily sea surface temperature field spatially resampled to the Sentinel-1 scene grid"
+  },
+  "normalization": {
+    "formula": "clip(SST_deg_c, 0.0, 40.0) / 40.0",
+    "physical_range_deg_c": [
+      0.0,
+      40.0
+    ],
+    "scene_observed_range_deg_c": [
+      23.99,
+      27.97
+    ],
+    "normalized_tensor_range": [
+      0.5997,
+      0.6992
+    ],
+    "clipping_pixel_count": 0,
+    "deterministic_status": "DETERMINISTIC_PASS"
+  },
+  "six_channel_reproducibility": {
+    "tensor_shape": [
+      1,
+      6,
+      512,
+      512
+    ],
+    "channels": [
+      {
+        "index": 0,
+        "name": "SAR_VV",
+        "range": [
+          0.14966647326946259,
+          0.6897411942481995
+        ],
+        "mean": 0.4199114739894867,
+        "std": 0.06008313596248627
+      },
+      {
+        "index": 1,
+        "name": "SAR_VH",
+        "range": [
+          0.07519747316837311,
+          0.45909908413887024
+        ],
+        "mean": 0.27999642491340637,
+        "std": 0.04003423452377319
+      },
+      {
+        "index": 2,
+        "name": "ERA5_WindSpeed",
+        "range": [
+          0.00039491240750066936,
+          0.2368449568748474
+        ]
+      },
+      {
+        "index": 3,
+        "name": "ERA5_WindSin",
+        "range": [
+          -1.0,
+          1.0
+        ]
+      },
+      {
+        "index": 4,
+        "name": "ERA5_WindCos",
+        "range": [
+          -1.0,
+          1.0
+        ]
+      },
+      {
+        "index": 5,
+        "name": "NOAA_CRW_SST",
+        "range": [
+          0.5997499823570251,
+          0.6992364525794983
+        ]
+      }
+    ],
+    "finite_pixel_percentage": 100.0,
+    "nan_pixel_count": 0,
+    "inf_pixel_count": 0,
+    "reproducibility_status": "REPRODUCIBLE_PASS"
+  },
+  "cross_phase_data_separation": {
+    "zenodo_dataset_total_scenes": 40,
+    "zenodo_train_scenes": 28,
+    "zenodo_val_scenes": 7,
+    "zenodo_sealed_test_scenes": 5,
+    "sealed_test_scene_ids": [
+      "00060",
+      "00062",
+      "00063",
+      "00064",
+      "00080"
+    ],
+    "live_cdse_scene_isolated": true,
+    "test_set_unconditioned": true,
+    "data_leakage_detected": false
+  },
+  "final_declarations": {
+    "v5d_feasibility_status": "VALIDATED",
+    "v5d_real_6channel_alignment_status": "VALIDATED",
+    "v5d_supervised_training_status": "HELD",
+    "sealed_benchmark_test_status": "UNTOUCHED",
+    "performance_improvement_claimed": false,
+    "v5d_model_weights_created": false,
+    "scientific_boundary_statement": "V5-D validates the availability and co-registration of real NOAA CRW daily SST with a real Sentinel-1 acquisition and real ERA5-derived MetOcean fields. No supervised V5-D performance claim is made."
+  }
+}

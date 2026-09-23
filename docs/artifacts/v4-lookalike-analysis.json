@@ -1,0 +1,250 @@
+{
+  "analysis_timestamp": "2026-09-14T01:30:00Z",
+  "model_id": "unet-dual-pol-sar-v4",
+  "selected_threshold": 0.5,
+  "lookalike_scenes_analyzed_count": 10,
+  "aggregate_lookalike_fpr_pct": 59.7735,
+  "physical_interpretation": "Look-alike scenes (biogenic slicks, grease ice, internal waves, low-wind damping) physically reduce Bragg roughness in dual-pol SAR backscatter identically to crude oil. Model V4 produces large contiguous connected components (mean max region > 50,000 px) rather than random point noise, proving the model correctly detects dark backscatter patches but cannot distinguish surfactant origin without meteorological (wind speed) conditioning.",
+  "scene_breakdown": [
+    {
+      "scene_id": "real_part2_lookalike_00000",
+      "split": "train",
+      "total_pixels": 4194304,
+      "predicted_positive_pixels": 3803558,
+      "predicted_area_km2": 380.3558,
+      "false_positive_rate_pct": 90.6839,
+      "probability_distribution": {
+        "mean": 0.8986,
+        "median": 0.9926,
+        "p90": 0.9987,
+        "p95": 0.9993,
+        "p99": 0.9998,
+        "max": 1.0
+      },
+      "connected_components": {
+        "candidate_regions_count": 44,
+        "mean_region_pixels": 86444.5,
+        "median_region_pixels": 49.5,
+        "max_region_pixels": 3792503,
+        "min_region_pixels": 1,
+        "topology": "Large contiguous dark-surface anomaly"
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00001",
+      "split": "train",
+      "total_pixels": 4194304,
+      "predicted_positive_pixels": 1113948,
+      "predicted_area_km2": 111.3948,
+      "false_positive_rate_pct": 26.5586,
+      "probability_distribution": {
+        "mean": 0.3068,
+        "median": 0.1836,
+        "p90": 0.8211,
+        "p95": 0.8871,
+        "p99": 0.95,
+        "max": 0.9971
+      },
+      "connected_components": {
+        "candidate_regions_count": 1147,
+        "mean_region_pixels": 971.2,
+        "median_region_pixels": 45.0,
+        "max_region_pixels": 690571,
+        "min_region_pixels": 1,
+        "topology": "Large contiguous dark-surface anomaly"
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00002",
+      "split": "train",
+      "total_pixels": 4194304,
+      "predicted_positive_pixels": 4063456,
+      "predicted_area_km2": 406.3456,
+      "false_positive_rate_pct": 96.8803,
+      "probability_distribution": {
+        "mean": 0.8929,
+        "median": 0.9398,
+        "p90": 0.994,
+        "p95": 0.9982,
+        "p99": 0.9998,
+        "max": 1.0
+      },
+      "connected_components": {
+        "candidate_regions_count": 46,
+        "mean_region_pixels": 88336.0,
+        "median_region_pixels": 4.0,
+        "max_region_pixels": 4060577,
+        "min_region_pixels": 1,
+        "topology": "Large contiguous dark-surface anomaly"
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00003",
+      "split": "train",
+      "total_pixels": 4194304,
+      "predicted_positive_pixels": 3647321,
+      "predicted_area_km2": 364.7321,
+      "false_positive_rate_pct": 86.9589,
+      "probability_distribution": {
+        "mean": 0.8252,
+        "median": 0.9403,
+        "p90": 0.9935,
+        "p95": 0.9971,
+        "p99": 0.9997,
+        "max": 1.0
+      },
+      "connected_components": {
+        "candidate_regions_count": 437,
+        "mean_region_pixels": 8346.3,
+        "median_region_pixels": 26.0,
+        "max_region_pixels": 3561904,
+        "min_region_pixels": 1,
+        "topology": "Large contiguous dark-surface anomaly"
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00004",
+      "split": "val",
+      "total_pixels": 4194304,
+      "predicted_positive_pixels": 4170256,
+      "predicted_area_km2": 417.0256,
+      "false_positive_rate_pct": 99.4267,
+      "probability_distribution": {
+        "mean": 0.9617,
+        "median": 0.9845,
+        "p90": 0.9972,
+        "p95": 0.9983,
+        "p99": 0.9993,
+        "max": 1.0
+      },
+      "connected_components": {
+        "candidate_regions_count": 1,
+        "mean_region_pixels": 4170256.0,
+        "median_region_pixels": 4170256.0,
+        "max_region_pixels": 4170256,
+        "min_region_pixels": 4170256,
+        "topology": "Large contiguous dark-surface anomaly"
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00005",
+      "split": "train",
+      "total_pixels": 4194304,
+      "predicted_positive_pixels": 3355257,
+      "predicted_area_km2": 335.5257,
+      "false_positive_rate_pct": 79.9956,
+      "probability_distribution": {
+        "mean": 0.7803,
+        "median": 0.9736,
+        "p90": 0.9986,
+        "p95": 0.9993,
+        "p99": 0.9997,
+        "max": 1.0
+      },
+      "connected_components": {
+        "candidate_regions_count": 132,
+        "mean_region_pixels": 25418.6,
+        "median_region_pixels": 32.5,
+        "max_region_pixels": 3333884,
+        "min_region_pixels": 1,
+        "topology": "Large contiguous dark-surface anomaly"
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00006",
+      "split": "train",
+      "total_pixels": 4194304,
+      "predicted_positive_pixels": 1483788,
+      "predicted_area_km2": 148.3788,
+      "false_positive_rate_pct": 35.3763,
+      "probability_distribution": {
+        "mean": 0.3926,
+        "median": 0.1652,
+        "p90": 0.994,
+        "p95": 0.9984,
+        "p99": 0.9996,
+        "max": 1.0
+      },
+      "connected_components": {
+        "candidate_regions_count": 545,
+        "mean_region_pixels": 2722.5,
+        "median_region_pixels": 33.0,
+        "max_region_pixels": 1415881,
+        "min_region_pixels": 1,
+        "topology": "Large contiguous dark-surface anomaly"
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00007",
+      "split": "train",
+      "total_pixels": 4194304,
+      "predicted_positive_pixels": 142583,
+      "predicted_area_km2": 14.2583,
+      "false_positive_rate_pct": 3.3994,
+      "probability_distribution": {
+        "mean": 0.0554,
+        "median": 0.0182,
+        "p90": 0.0314,
+        "p95": 0.3433,
+        "p99": 0.9427,
+        "max": 1.0
+      },
+      "connected_components": {
+        "candidate_regions_count": 460,
+        "mean_region_pixels": 310.0,
+        "median_region_pixels": 107.5,
+        "max_region_pixels": 9832,
+        "min_region_pixels": 1,
+        "topology": "Scattered low-contrast regions"
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00008",
+      "split": "train",
+      "total_pixels": 4194304,
+      "predicted_positive_pixels": 175809,
+      "predicted_area_km2": 17.5809,
+      "false_positive_rate_pct": 4.1916,
+      "probability_distribution": {
+        "mean": 0.0689,
+        "median": 0.0178,
+        "p90": 0.1178,
+        "p95": 0.4179,
+        "p99": 0.9464,
+        "max": 1.0
+      },
+      "connected_components": {
+        "candidate_regions_count": 652,
+        "mean_region_pixels": 269.6,
+        "median_region_pixels": 91.0,
+        "max_region_pixels": 10822,
+        "min_region_pixels": 1,
+        "topology": "Large contiguous dark-surface anomaly"
+      }
+    },
+    {
+      "scene_id": "real_part2_lookalike_00090",
+      "split": "val",
+      "total_pixels": 4194304,
+      "predicted_positive_pixels": 3114838,
+      "predicted_area_km2": 311.4838,
+      "false_positive_rate_pct": 74.2635,
+      "probability_distribution": {
+        "mean": 0.7031,
+        "median": 0.8998,
+        "p90": 0.9987,
+        "p95": 1.0,
+        "p99": 1.0,
+        "max": 1.0
+      },
+      "connected_components": {
+        "candidate_regions_count": 346,
+        "mean_region_pixels": 9002.4,
+        "median_region_pixels": 25.5,
+        "max_region_pixels": 3042345,
+        "min_region_pixels": 1,
+        "topology": "Large contiguous dark-surface anomaly"
+      }
+    }
+  ]
+}

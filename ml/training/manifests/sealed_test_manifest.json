@@ -1,0 +1,2018 @@
+[
+  {
+    "sample_id": "kerf_test_0001",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1019)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1019).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "e20154807d4c71ec940e07f4af1087da52093ca33d3feb3254d156ece8fa8d55",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0002",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1024)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1024).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "04812753b446b0fa3a06df97d84720132af96f0b424f9a32616d06a471c534c1",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0003",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1026)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1026).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "64e55c603d8832e44768101da4bd673c697b05c79ede1226fb84e5378bd460b2",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0004",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1037)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1037).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "cc179a4a607781b8a471017e41d4616e9a337ebb23775f89450fdf3dbb94d6f4",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0005",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1038)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1038).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "76a2be497823cb52301a1144b0e30dbfe8dca7f206adbfffebd2ca53ed903570",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0009",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1049)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1049).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "06523db60810ff5718b2cba85462f80816ce9c12234c8b18576298dfdcf7ba02",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0013",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1061)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1061).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "8624ffb4caead4d5c140512c04aea155a027bcb29bd3612fce84da38c96f679c",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0015",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1069)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1069).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "2aa18ed1af4e544fb9cb3a2a3c4aa6f7ee216be0189d5221b140c14d69acf0e3",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0019",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (109)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (109).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "69913d811fd0c0dd24b4d759a5575b04f663ef18fae7f4cbe8acc7384e309fd3",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0020",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1095)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1095).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "95e1d266717fa2964660f5458feeb7d29c72296b1e1b7ad4260d4450f0b82e95",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0021",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1097)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1097).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "116f71d9369785fef8343b8f2576aeea6f325eeac345375fc6b819da96bcc77f",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0022",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (110)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (110).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "67cecd028b8893da9c5f886da319e4e2c788c1187fdff19be41c197d33af28e3",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0023",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1109)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1109).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "425157979f929eb35cb262ad23c90d0003f8f5bd9652b49c7af3f7eeb9cdc851",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0024",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1113)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1113).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "fdbca429c99e8e4443b8b10633a76cc9b5596722b06db2392a141bcdf07149b5",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0025",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (112)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (112).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "e018630d66a678eb13db46cd1043526f1846a177182d7f3bee4deea1986d4df3",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0026",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1124)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1124).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "0e5849eb2e81cfeab7328e042af5eaea435239a3f9dc5f1a56287d21f5924db5",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0027",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1130)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1130).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "867deaef9adb2295ae71f8f190e85f02c33cd2d3c67c28d267dfa55e014cd3a0",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0028",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1138)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1138).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "27f386ad366c2decb39643598c3fb6f62a33861738b49d8895e3c87818251ca5",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0029",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1140)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1140).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "b39f7e5192302cdf8d24a48d3e347ecec528f5c9cba25066a6934820d3bd83a7",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0030",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1145)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1145).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "8e820b422cf11e283cde0724e80d68bb7727643104345f8e51b55aa7a40f987c",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0031",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (115)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (115).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "10f293e4024247c20833e2a47763aab88c5211352be8bb2c00055fc489bcbeda",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0032",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1151)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1151).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "7c2f97634d6f2ace21d5b89c70872ff505ca28a8e007b02008d041acf6287d32",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0033",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1155)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1155).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "637dd9c006e60aab7e59411a19d6d89fb1df88e455a07b36868bfef3a4fb56ed",
+    "width": 5184,
+    "height": 2920
+  },
+  {
+    "sample_id": "kerf_test_0034",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1164)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1164).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "3024406c98545866636338af4709e436bd3141c4f32436a6058d01752205580a",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0035",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1171)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1171).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "f608beae4aac43288a037015e21ef84306aeb896692251b15d847d768f2426f4",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0036",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1175)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1175).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "e44f9d49c6fe24787f362e6b7dd749c4c555e423daa2a48f37408555bf140d87",
+    "width": 5184,
+    "height": 2920
+  },
+  {
+    "sample_id": "kerf_test_0037",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1177)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1177).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "73ad9447fe938bd5e9e0ce0b8d95de0938e8dec0fe9a28f68aa3c5f4247ce770",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0038",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1178)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1178).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "333fe66572d3de2410ab96b43fa95417e957be53a9568e66ee606b40fda123fc",
+    "width": 5184,
+    "height": 2920
+  },
+  {
+    "sample_id": "kerf_test_0043",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1197)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1197).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "f6e5405b65adcdf2752b7a71c579f57a9b4b5540ab1c29864b41607a22c3597e",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0045",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1206)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1206).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "b8c63d84e1298dae13262b24bd0701fde989b7c6034bbccbc7a49cad2cdb3816",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0046",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1208)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1208).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "451f6976058ee68784f0fe5c140555d20d3de7ccdbeba2a2bfa69654ee12b94c",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0047",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1214)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1214).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "b91d621b08463ac294cc5c17b957cda1cc6674ca2991b2c5ccba05fba2ab6529",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0048",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1217)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1217).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "e62a4ce7c47167997cc4935c5fb10c7d3908c07e54e2f6a6a7d1893fd3ab0ae0",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0049",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1218)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1218).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "1cca948f99e1d347640b86d8ae8484d7cac3a6efdac8eba34e6d0bc86fe4c535",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0050",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1220)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1220).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "0ccfc562b85488eb58424edfa24a54a1c6d11676c9a9211f99d8e0c7c4789dc3",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0051",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1227)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1227).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "0c59a5528f140c1bff479be90234f924a45fbef4ceb57b0740d4104ea8a2c356",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0052",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1231)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1231).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "5f35a721d220d3ea568e5b6b634c0b5dda8a0ade3956e260f7d54808afa961d9",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0053",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1233)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1233).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "narrow_filament"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "33eb22e3d91b49fb4f20dea3ed8a40fadbde61cf29ee56ec5c22c0527dc8e06b",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0054",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (1241)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1241).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "47705602a6e9c003439a64a58b7913eb1273d8b576669d5b1fcfb73581d47a37",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0055",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1252)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1252).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "87b4e00846136b9de596aa3a7bc2021150bacd27748a90eac6d2f0f31b26f371",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0056",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (1256)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (1256).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "35c181f112413777101d4e70e58c43dc5c7f0f4e410bbb9abd78fe79d3e3297d",
+    "width": 768,
+    "height": 432
+  },
+  {
+    "sample_id": "kerf_test_0058",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (128)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (128).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "fdae6c4dcf614af8c2ef3b95692f7d445c5d8910a2b4c8a463526e6af185ff01",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0059",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (131)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (131).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "7f57cfd5d47392921127ba114f0ff8869ccee7e0fff5358807d960799cc75284",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0060",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (133)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (133).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "9f9c66399488e6c95857b3e1b0b4549d4148edbc355963535a49e88263897ffa",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0061",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (134)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (134).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "d970f796e819ba4dfa1e0c380129264178517049fb7bc73cc84361537e779e35",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0062",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (135)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (135).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "de67e40826c2b463288558ed26991bd2a87e7da695b59cfe00ed3a2c7e959595",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0063",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (14)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (14).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "919278f2eff9608cc44619cde29f23d1902d37cd83f7c79115e100acde944773",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0064",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (142)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (142).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "835d2cbbfd027de78c6c25a0bd02cc85f25c50bed7bcd604d0f681f678ae46f2",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0065",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (144)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (144).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "025da644e919a42b25d8f59c0394a19a3beeb1b90c56a4f45ad18446014b53ee",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0066",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (145)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (145).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "f868bdb5d9780b42ea361d1756910ca173f00c0d27729af53cece0253c2f13e6",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0067",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (148)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (148).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "8b31f1961032b2d38e607818a76df6a289bbe6736ebaaafd6fb7a4d6c1ef0449",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0068",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (161)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (161).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "d379330c8c45bff8a663d03498e358fbbbf54a62e0b841268dc0c8f05b66c1bf",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0069",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (162)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (162).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "45d85bd5f40c841a155f01adec3f5e58d46ae1a79f6e0b36011e1c5dfa8984fd",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0070",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (165)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (165).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "d7ecad52fa28c497c297fc346adb62995e1c508aabe72886c13cd5baf51301d3",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0071",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (166)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (166).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "fb20227f680b39e8bd2e8a790a1d65bd154cb74770d9cbe082e9a5a4a06236b7",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0072",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (167)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (167).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "d6f42e3aacb2802f25ae7b301204d321726af3e03d2dfa112f99a540461de611",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0074",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (177)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (177).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "3749635f37532d5364c9876332198f9e22138466ff605e468884d33617197a43",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0075",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (179)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (179).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "fa60db373751b39adab33c478909072b0dabb85d86d572974894fbd1b225e8f1",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0077",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (184)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (184).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "5f5476d419d7b052c616f6a4a01b4b6cfca15950b46b2909a53a6cae3db65e7d",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0078",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (187)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (187).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "7727f4bdd84de8cb8bc7e757eef122fef98b5403c818970454724884841cca53",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0080",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (198)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (198).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "1fd2a69061ebc526305e34684f9c2cc90940d849a3639393728b3bab42a94fa4",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0081",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (200)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (200).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "9fd08fafdd3c70bb51f30a152c83282359e166c6a6db27bf339c18e63f75f717",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0082",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (203)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (203).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "0c5e488e5de3e7ec598a700cd6fb181a6d9bec13cc76e24584b685b0c0a69ab4",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0085",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (218)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (218).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "34f28245592e068d95cf4990c56837bda6bd9ed9bc22439f4d9c49525383d3b9",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0086",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (231)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (231).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "aef260cb93b54a951cdc4f1f0921606f62c85ab7a5b1c92b97d6fa162a61a65a",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0087",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (235)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (235).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "661b925bbdf8dcd191a235c58e17187adaab3b7b226aee6cecadbd17bf436b83",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0088",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (237)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (237).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "b771810e984f5f84c54a39b8556ea4f366d6134b7d9684df84782cabaf3b431c",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0089",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (239)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (239).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "3d582e228eba31585a2957a426095aaf5207770e2c5708504e4bcb3b682e0831",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0090",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (240)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (240).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "51d156d4f72e220050480697cac3845a421f339c86b7a9eb3473412d1cb15fe9",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0091",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (247)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (247).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "75a14ee03a2aff0507cc750df85ce6c2cc7f353f8d9c7e5751d3a879af3355ea",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0092",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (249)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (249).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "17b5980327d16a411173216f5ba241300f30f5760603c3e8717b0085dbfc175b",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0093",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (251)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (251).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "47ad0e09f26c2924106dc3a06250a62e353391ee4c239bd31c3168502971919d",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0094",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (259)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (259).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "5304058c927dfce43170451503638b740fc8053d3171fefadbe57edbf2089782",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0096",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (27)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (27).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "345cdd8d15003dcfdaf2b3350add0aa4bad79c811f6a2bb8cb4f4112c7389022",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0097",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (275)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (275).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "c609d2976bfa2eb0ac5f7fe0c2fc48529c2b092ae6f4d68df70781caaf43e2fd",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0098",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (283)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (283).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "2820399be28a079f24b771781fa14a4fb9f48dab7783a01a0f5d98af6ab79f5c",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0099",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (285)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (285).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "ebbab9bc6243cc7700335f85d8f2dd8beea7e0bdfca682b4a6e6e4a8f3a24761",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0100",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (291)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (291).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "e858e62edb201f6c181d233bcc26405831cce89ceb2a90f2eb9d88935f1603f2",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0103",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (304)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (304).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "12c8723e69e8eb493564d94244339d1877137a7d167dac715e6707ed9c1afaf0",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0109",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (342)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (342).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "c6abed4f7368d771cbd76e6699a52d475ded022dea7bd0da74f08e8fb7d1c872",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0113",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (348)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (348).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "3f1634b58c958e97d95a086617df7415ee2055abc6449b6594d6d39cf52f8818",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0115",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (356)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (356).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "ffd85429c322d6bff628a2eaea5c518779edc501d59d2c046fe629512b4457ab",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0120",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (383)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (383).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "c651b86c943700e2a2941bf89d1f30818b2b74da2644ac9c928a9401eff25600",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0121",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (385)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (385).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "cb6b2e2e228678a32c876948e418a49d687593de1e11b58b0beafb8a165cb8e5",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0122",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (389)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (389).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "d8058ad76700a80870b9de1cb5d0ef9b6aee802860e8ff78ed0de053bf59cee9",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0123",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (390)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (390).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "2fa43309eea19a20ac6fcbb1411ce2f682287130627f06a2e237d641a8efdb9b",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0126",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (4)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (4).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "narrow_filament"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "98f188ab314ec82ecdb2c1dd49619e16ffc5cfb0486d669a7a539f9a2040a6d8",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0127",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (404)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (404).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "8b8c37c90948c6db26eef43bed9122e45aba0b3e66816c7c1907de95e6278e7b",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0128",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (406)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (406).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "b16cbf1ee6c9e08d6e979d937df49a21d7be7f4e31672e74f0cd621f27626e2f",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0129",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (415)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (415).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "a39eb4c2971e7b3d7cf912283100e35e956967b9536e3e5f52a452d4054fe2fc",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0130",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (420)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (420).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "000f9fabcd75cdb2dfd4c8aa000068d49ebf2ddc0742fc04f02b22119e369aa7",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0131",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (425)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (425).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "784d919a00ba0f3f4634b1c6765df95ffa81ba7f5fb0ebbf89c180673d8f80d4",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0132",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (426)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (426).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "a0b6e027ebd3ef160ec9197d86de0a583eddca9613ac8bb99790ed725c29aad0",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0133",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (429)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (429).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "9610e049a1fce267258db500e43c0a6546533aeebd3fc1db56ecbc2911d24863",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0134",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (430)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (430).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "0736060fe05375bbd407bee04f22710b2819213bc3bc42fcc82cfabf5d1875d4",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0135",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (435)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (435).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "473aaab3d963a5b7af6a7cc41c0c80345f6f9ea60953b2071159e13d3317a133",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0136",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (438)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (438).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "6a6e8f2f0ef0b6ceafd78c9bca4c8a14a060c5be3e3efd46cf96aaacba524963",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0137",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (446)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (446).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "cc1558983ee6a717a05204cbd78d2ba929e5e0033c2e20807e7570f9c11e295c",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0139",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (461)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (461).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "99e8da5a47f865447e487144bb67b0a1db2d7ca3f848c426d19eca3a4fa50b70",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0140",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (462)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (462).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "67c2aedfb14459999bd74aedec6724866eee376a760691eb14e5954eb634fa27",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0142",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (48)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (48).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "5f31d660ebb1b85d84b00e6398e2e1e78a6b1152fd3fa8d7cf1a8c3e6c3af80c",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0150",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (536)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (536).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "d5620da40154ace7f89607503e29e8cfcba8283810907a58f51b2e01c953e205",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0151",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (539)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (539).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "5073784f850b3fb9e75dc21c660a1692474525d00348dfc29d417b988bcb35a1",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0152",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (544)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (544).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "e79a94c41788509fed9e98ea0336dd4c74bb8e1cc89973ce48bbde9de889c830",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0162",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (59)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (59).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "da2da11ee2d5f5d23c92745db7d1bebc82574a9e40a145242cd43cdc9edbdedc",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0167",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (60)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (60).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "df05f9a209b70416de8cdd225c67479e0e4d7f5c162736cd620c542ce38d293a",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0169",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (61)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (61).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "c212bb0f2889bb44836f54bd4382297e91163715bbd8286a57f9d5c2e07741f6",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0173",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (64)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (64).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "73f3dd6777378bd0a6031ccc8e086fc0e221135a7514ad99be1d38c6f179a184",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0176",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (665)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (665).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "42731bcbcc3d1e449816b7f2d7730ee7775159af7f0ccc43903b42078600aacd",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0185",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (71)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (71).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "511c634d4d3a4f0412faeef9a9369d26b988a3f46cd42e20230186801cb75a9f",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0190",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (74)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (74).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "19fa42fa89f5b45d8563eeb4a70eda4d63398ea2bbea63d1f315805f833c887e",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0192",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (747)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (747).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "5aa46660233ae1b8700d990d1a8a1323baaa67a2f9026f0bf075f284cf8d7ef8",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0194",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (749)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (749).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "602856a8b4c5a98c66ad5b02979759e62f2098c5e05b7822711a17dcc682ba44",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0197",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (758)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (758).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "b6dd54f3ef455c05647cb5be7a621770dd632808833db8757ba845e35fef8b76",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0198",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (759)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (759).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "eee87b3885020a0c839921b8da5a009e768afde46f13ec49cb6d4b587486c3a8",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0199",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (761)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (761).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "3cd17b04c1633c5f0aa634e91322096bec43c4dc41bd91eafdf1f8eccd3f1b72",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0200",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (764)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (764).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "bd54a42bdadb7bf856bbf731f31944538bf77d8e4e9d71bbfcb9221f710f8ff7",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0201",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (767)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (767).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "116015bb0c06e6454d67200797449e16f8ac23e97275a6b6888f8e88536570bd",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0204",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (776)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (776).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "0425e4b5a040e719d015a829212ba23c0a03273cf34e90731704c8453a9479ad",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0205",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (778)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (778).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "b079d5a6c696c9a63142f8d36039b6a220c53ffa50395352477075ea0bc927cb",
+    "width": 5184,
+    "height": 2920
+  },
+  {
+    "sample_id": "kerf_test_0208",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/clean_ocean/kerf_test_Oil (79)_clean_ocean.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (79).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "clean_ocean"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "39a6332c7bdd046490ddf5631c53c0de83270571ffeac50142f0f30f3edc1e5c",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0243",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (959)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (959).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "516e9bd28bd7d5ac14d359c7e2882f3dea780db4a21691709bfc8664f7f03266",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0245",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (973)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (973).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "3d1d0a1a22987561078b0679b94a054cc4a38c9973eacd6f495f444cdd0cc24e",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0246",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (993)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (993).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "46406a65335bc342440a413a69e3f3464c68f935de8b29ebc8f6d68394838b1e",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0247",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil (995)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (995).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "e10226f10c2f76c1f951a14452c092df327e985d59c50a320d1eedadbf7145a9",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0248",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (996)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (996).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "620101745908e88933a53b4f4fc9af76d0b819d04c49a5024cc4d5e530e06b4f",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0249",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (997)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (997).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "81c418188bb01efeea3468fa683cc0237a615a0dcf8013f11f7b18750001cdbb",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0250",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil (998)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil (998).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil",
+      "large_slick"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "d37c3bc34ff5ce62461b4c95c25688ccc74939e817c05eec86010403c5056f93",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "sample_id": "kerf_test_0251",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/oil_spill/kerf_test_Oil_2 (10)_oil_spill.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil_2 (10).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "oil"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": true,
+    "sha256_image": "6b4d6ff8ecabc581cccbb71d7160a6cfd3c39ba9b9438182805b53cff93c7124",
+    "width": 3840,
+    "height": 2160
+  },
+  {
+    "sample_id": "kerf_test_0252",
+    "dataset": "Kerf_Drone_Oil_Spill",
+    "image_path": "data/raw/optical_real/external_test/look_alike/kerf_test_Oil_2 (3)_look_alike.jpg",
+    "mask_path": "data/raw/archives/kerf_extracted/test/masks/Oil_2 (3).png",
+    "source_group": "kerf_test",
+    "categories": [
+      "look_alike"
+    ],
+    "split": "sealed_external_test",
+    "is_oil_positive": false,
+    "sha256_image": "789cc39e61cfeea36bc3c3738bfc5a42e45384b7d72c096d03d009f41b11d86e",
+    "width": 3840,
+    "height": 2160
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "production_freeze": "LOCKED",
+  "freeze_timestamp": "2026-09-21T02:25:54.666075",
+  "models": {
+    "sentinel_2_multispectral": {
+      "model_id": "mados-resnet34-rgbnir-swir-v1",
+      "architecture": "U-Net ResNet-34",
+      "checkpoint_path": "ml/training/runs/mados_rgbnir_swir_resnet34/checkpoints/best_val_iou.pt",
+      "checkpoint_sha256": "856ea016b8f750a40af942ee2e59f5919d2f04fbc510d01d2c772ecbdb3ee983",
+      "input_bands": [
+        "B4",
+        "B3",
+        "B2",
+        "B8",
+        "B11",
+        "B12"
+      ],
+      "input_resolution_m": 10.0,
+      "preprocessing_version": "sentinel2-ms-v1",
+      "model_version": "1.0.0",
+      "threshold": 0.5,
+      "postprocessing_version": "connected-components-v1",
+      "benchmark": {
+        "dataset": "MADOS Sentinel-2 Test Partition (Locked)",
+        "iou": 0.4273,
+        "f1": 0.5987,
+        "precision": 0.6062,
+        "recall": 0.5915,
+        "positive_discovery_rate": 0.801,
+        "clean_ocean_false_alarm_rate": 0.0231
+      }
+    },
+    "satellite_rgb_fallback": {
+      "model_id": "mados-resnet34-rgb-v1",
+      "architecture": "U-Net ResNet-34",
+      "checkpoint_path": "ml/training/runs/phase11_rgb_control/checkpoints/best_val_iou.pt",
+      "checkpoint_sha256": "a4c32de7177bc42c2f0298427ce8bef4a2bf8d4a35e25c3450a67eb16f8e099a",
+      "input_bands": [
+        "B4",
+        "B3",
+        "B2"
+      ],
+      "input_resolution_m": 10.0,
+      "preprocessing_version": "mados-rgb-v1",
+      "model_version": "1.0.0",
+      "threshold": 0.5,
+      "postprocessing_version": "connected-components-v1",
+      "benchmark": {
+        "dataset": "MADOS RGB Sentinel-2 Test Partition (Locked)",
+        "iou": 0.3554,
+        "f1": 0.5245,
+        "precision": 0.5651,
+        "recall": 0.4893
+      }
+    },
+    "drone_aerial_rgb": {
+      "model_id": "kerf-resnet34-focaldice-v1",
+      "architecture": "U-Net ResNet-34",
+      "checkpoint_path": "ml/training/runs/resnet34_balanced_focaldice_pilot/checkpoints/best_val_iou.pt",
+      "checkpoint_sha256": "d1ae45d3eaf995a221da3d273c177eb13c850b193cd6690a1b6bc47b0baf5264",
+      "input_bands": [
+        "R",
+        "G",
+        "B"
+      ],
+      "input_resolution_m": 0.05,
+      "preprocessing_version": "kerf-rgb-v1",
+      "model_version": "1.0.0",
+      "threshold": 0.5,
+      "postprocessing_version": "connected-components-v1",
+      "benchmark": {
+        "dataset": "KERF Drone Benchmark Partition (Locked)",
+        "iou": 0.8268
+      }
+    }
+  },
+  "sar_engine": {
+    "model_id": "unet-dual-pol-sar-v09d",
+    "checkpoint_path": "ml/model_registry/versions/unet_dual_pol_sar_v09d_residual_loss.pth",
+    "checkpoint_sha256": "ab22ffa2fb1c3be99ff2bb99353db76ed4934bd00210f7bce21df74506ce827d",
+    "status": "UNTOUCHED_AND_VERIFIED"
+  }
+}

@@ -1,0 +1,638 @@
+{
+  "phase": "PART_0_8",
+  "timestamp": "2026-09-19T11:31:22.256948+00:00",
+  "objective": "Controlled evaluation of 4 loss functions on UNet dual-pol SAR",
+  "held_out_test_status": "STRICTLY_LOCKED (Part III quarantined)",
+  "summary_table_threshold_0_50": [
+    {
+      "experiment_id": "V8_A_BASELINE_LOSS",
+      "model_id": "unet-dual-pol-sar-v8a",
+      "loss_name": "CombinedLoss",
+      "loss_parameters": {
+        "ce_weight": 1.0,
+        "dice_weight": 1.0,
+        "foreground_weight": 5.0
+      },
+      "checkpoint_sha256": "502198f43bd74caf74f6497de4c5bce776fd337bc79a4d0c2b06ca9292ab04f2",
+      "best_epoch": 1,
+      "total_epochs": 8,
+      "duration_seconds": 150.59,
+      "threshold_0_50": {
+        "micro_iou": 0.027216,
+        "micro_dice": 0.05299,
+        "micro_precision": 0.029927,
+        "micro_recall": 0.231008,
+        "overall_fpr": 0.039842,
+        "clean_ocean_fpr": 0.0,
+        "look_alike_fpr": 0.138709,
+        "oil_scenes_iou": 0.231008,
+        "oil_scenes_dice": 0.375315
+      }
+    },
+    {
+      "experiment_id": "V8_B_FOCAL_DICE",
+      "model_id": "unet-dual-pol-sar-v8b",
+      "loss_name": "FocalDiceLoss",
+      "loss_parameters": {
+        "alpha": 0.25,
+        "gamma": 2.0,
+        "dice_weight": 1.0
+      },
+      "checkpoint_sha256": "7171dd4983db09df47581b6d27aa0f9d218b84753e89973ffe15b34d1b57e455",
+      "best_epoch": 4,
+      "total_epochs": 11,
+      "duration_seconds": 144.44,
+      "threshold_0_50": {
+        "micro_iou": 0.022088,
+        "micro_dice": 0.043221,
+        "micro_precision": 0.02278,
+        "micro_recall": 0.421106,
+        "overall_fpr": 0.09612,
+        "clean_ocean_fpr": 0.0,
+        "look_alike_fpr": 0.334634,
+        "oil_scenes_iou": 0.420952,
+        "oil_scenes_dice": 0.592493
+      }
+    },
+    {
+      "experiment_id": "V8_C_FOCAL_TVERSKY",
+      "model_id": "unet-dual-pol-sar-v8c",
+      "loss_name": "FocalTverskyLoss",
+      "loss_parameters": {
+        "alpha": 0.7,
+        "beta": 0.3,
+        "gamma": 0.75
+      },
+      "checkpoint_sha256": "898afa87cc6e9751d1bdbb569e8cbc00e1f4f339c6d78451c8201566e03b44b2",
+      "best_epoch": 4,
+      "total_epochs": 11,
+      "duration_seconds": 143.33,
+      "threshold_0_50": {
+        "micro_iou": 0.022728,
+        "micro_dice": 0.044446,
+        "micro_precision": 0.022754,
+        "micro_recall": 0.951446,
+        "overall_fpr": 0.217421,
+        "clean_ocean_fpr": 9.3e-05,
+        "look_alike_fpr": 0.748957,
+        "oil_scenes_iou": 0.667109,
+        "oil_scenes_dice": 0.800318
+      }
+    },
+    {
+      "experiment_id": "V8_D_HIGH_FG_WEIGHT",
+      "model_id": "unet-dual-pol-sar-v8d",
+      "loss_name": "CombinedLoss",
+      "loss_parameters": {
+        "ce_weight": 1.0,
+        "dice_weight": 1.0,
+        "foreground_weight": 10.0
+      },
+      "checkpoint_sha256": "2e7df8bc37b0cbe5e132b9d391898f6cc02aaa790fd02d0087eacfd1811cf4c4",
+      "best_epoch": 18,
+      "total_epochs": 25,
+      "duration_seconds": 309.64,
+      "threshold_0_50": {
+        "micro_iou": 0.031019,
+        "micro_dice": 0.060172,
+        "micro_precision": 0.033212,
+        "micro_recall": 0.319635,
+        "overall_fpr": 0.049507,
+        "clean_ocean_fpr": 0.000262,
+        "look_alike_fpr": 0.171746,
+        "oil_scenes_iou": 0.313702,
+        "oil_scenes_dice": 0.477584
+      }
+    }
+  ],
+  "experiments": {
+    "V8_A_BASELINE_LOSS": {
+      "model_id": "unet-dual-pol-sar-v8a",
+      "checkpoint": {
+        "path": "ml/model_registry/versions/unet_dual_pol_sar_v8a.pth",
+        "sha256": "502198f43bd74caf74f6497de4c5bce776fd337bc79a4d0c2b06ca9292ab04f2",
+        "size_bytes": 13070043
+      },
+      "best_epoch": 1,
+      "total_epochs": 8,
+      "threshold_sweep": [
+        {
+          "threshold": 0.3,
+          "micro_pixel_aggregate": {
+            "tp": 92184,
+            "fp": 4811115,
+            "fn": 63209,
+            "tn": 24393620,
+            "iou": 0.018561,
+            "dice": 0.036446,
+            "precision": 0.0188,
+            "recall": 0.593231,
+            "fpr": 0.164737
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.009881,
+            "look_alike_fpr": 0.55485,
+            "oil_scenes_iou": 0.402201,
+            "oil_scenes_dice": 0.573671
+          }
+        },
+        {
+          "threshold": 0.35,
+          "micro_pixel_aggregate": {
+            "tp": 72761,
+            "fp": 3954095,
+            "fn": 82632,
+            "tn": 25250640,
+            "iou": 0.017706,
+            "dice": 0.034795,
+            "precision": 0.018069,
+            "recall": 0.468239,
+            "fpr": 0.135392
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.00217,
+            "look_alike_fpr": 0.467263,
+            "oil_scenes_iou": 0.424035,
+            "oil_scenes_dice": 0.59554
+          }
+        },
+        {
+          "threshold": 0.4,
+          "micro_pixel_aggregate": {
+            "tp": 62126,
+            "fp": 3169508,
+            "fn": 93267,
+            "tn": 26035227,
+            "iou": 0.018685,
+            "dice": 0.036685,
+            "precision": 0.019224,
+            "recall": 0.399799,
+            "fpr": 0.108527
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.000204,
+            "look_alike_fpr": 0.377597,
+            "oil_scenes_iou": 0.399085,
+            "oil_scenes_dice": 0.570495
+          }
+        },
+        {
+          "threshold": 0.45,
+          "micro_pixel_aggregate": {
+            "tp": 52155,
+            "fp": 2083421,
+            "fn": 103238,
+            "tn": 27121314,
+            "iou": 0.023296,
+            "dice": 0.045531,
+            "precision": 0.024422,
+            "recall": 0.335633,
+            "fpr": 0.071338
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 1.2e-05,
+            "look_alike_fpr": 0.248348,
+            "oil_scenes_iou": 0.33559,
+            "oil_scenes_dice": 0.502534
+          }
+        },
+        {
+          "threshold": 0.5,
+          "micro_pixel_aggregate": {
+            "tp": 35897,
+            "fp": 1163573,
+            "fn": 119496,
+            "tn": 28041162,
+            "iou": 0.027216,
+            "dice": 0.05299,
+            "precision": 0.029927,
+            "recall": 0.231008,
+            "fpr": 0.039842
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.0,
+            "look_alike_fpr": 0.138709,
+            "oil_scenes_iou": 0.231008,
+            "oil_scenes_dice": 0.375315
+          }
+        },
+        {
+          "threshold": 0.6,
+          "micro_pixel_aggregate": {
+            "tp": 7108,
+            "fp": 188811,
+            "fn": 148285,
+            "tn": 29015924,
+            "iou": 0.020651,
+            "dice": 0.040465,
+            "precision": 0.03628,
+            "recall": 0.045742,
+            "fpr": 0.006465
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.0,
+            "look_alike_fpr": 0.022508,
+            "oil_scenes_iou": 0.045742,
+            "oil_scenes_dice": 0.087483
+          }
+        }
+      ]
+    },
+    "V8_B_FOCAL_DICE": {
+      "model_id": "unet-dual-pol-sar-v8b",
+      "checkpoint": {
+        "path": "ml/model_registry/versions/unet_dual_pol_sar_v8b.pth",
+        "sha256": "7171dd4983db09df47581b6d27aa0f9d218b84753e89973ffe15b34d1b57e455",
+        "size_bytes": 13070043
+      },
+      "best_epoch": 4,
+      "total_epochs": 11,
+      "threshold_sweep": [
+        {
+          "threshold": 0.3,
+          "micro_pixel_aggregate": {
+            "tp": 84941,
+            "fp": 4166191,
+            "fn": 70452,
+            "tn": 25038544,
+            "iou": 0.019655,
+            "dice": 0.038552,
+            "precision": 0.019981,
+            "recall": 0.546621,
+            "fpr": 0.142655
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 7e-06,
+            "look_alike_fpr": 0.496458,
+            "oil_scenes_iou": 0.541253,
+            "oil_scenes_dice": 0.702355
+          }
+        },
+        {
+          "threshold": 0.35,
+          "micro_pixel_aggregate": {
+            "tp": 78230,
+            "fp": 3730111,
+            "fn": 77163,
+            "tn": 25474624,
+            "iou": 0.020134,
+            "dice": 0.039473,
+            "precision": 0.020542,
+            "recall": 0.503433,
+            "fpr": 0.127723
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.0,
+            "look_alike_fpr": 0.444554,
+            "oil_scenes_iou": 0.500473,
+            "oil_scenes_dice": 0.667087
+          }
+        },
+        {
+          "threshold": 0.4,
+          "micro_pixel_aggregate": {
+            "tp": 73832,
+            "fp": 3386690,
+            "fn": 81561,
+            "tn": 25818045,
+            "iou": 0.020844,
+            "dice": 0.040837,
+            "precision": 0.021336,
+            "recall": 0.475131,
+            "fpr": 0.115964
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.0,
+            "look_alike_fpr": 0.403655,
+            "oil_scenes_iou": 0.473334,
+            "oil_scenes_dice": 0.642534
+          }
+        },
+        {
+          "threshold": 0.45,
+          "micro_pixel_aggregate": {
+            "tp": 69892,
+            "fp": 3093005,
+            "fn": 85501,
+            "tn": 26111730,
+            "iou": 0.021516,
+            "dice": 0.042125,
+            "precision": 0.022097,
+            "recall": 0.449776,
+            "fpr": 0.105908
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.0,
+            "look_alike_fpr": 0.368681,
+            "oil_scenes_iou": 0.448944,
+            "oil_scenes_dice": 0.619684
+          }
+        },
+        {
+          "threshold": 0.5,
+          "micro_pixel_aggregate": {
+            "tp": 65437,
+            "fp": 2807170,
+            "fn": 89956,
+            "tn": 26397565,
+            "iou": 0.022088,
+            "dice": 0.043221,
+            "precision": 0.02278,
+            "recall": 0.421106,
+            "fpr": 0.09612
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.0,
+            "look_alike_fpr": 0.334634,
+            "oil_scenes_iou": 0.420952,
+            "oil_scenes_dice": 0.592493
+          }
+        },
+        {
+          "threshold": 0.6,
+          "micro_pixel_aggregate": {
+            "tp": 53345,
+            "fp": 2165805,
+            "fn": 102048,
+            "tn": 27038930,
+            "iou": 0.022982,
+            "dice": 0.044931,
+            "precision": 0.024038,
+            "recall": 0.343291,
+            "fpr": 0.074159
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.0,
+            "look_alike_fpr": 0.258184,
+            "oil_scenes_iou": 0.343289,
+            "oil_scenes_dice": 0.511117
+          }
+        }
+      ]
+    },
+    "V8_C_FOCAL_TVERSKY": {
+      "model_id": "unet-dual-pol-sar-v8c",
+      "checkpoint": {
+        "path": "ml/model_registry/versions/unet_dual_pol_sar_v8c.pth",
+        "sha256": "898afa87cc6e9751d1bdbb569e8cbc00e1f4f339c6d78451c8201566e03b44b2",
+        "size_bytes": 13070043
+      },
+      "best_epoch": 4,
+      "total_epochs": 11,
+      "threshold_sweep": [
+        {
+          "threshold": 0.3,
+          "micro_pixel_aggregate": {
+            "tp": 152593,
+            "fp": 11169157,
+            "fn": 2800,
+            "tn": 18035578,
+            "iou": 0.013475,
+            "dice": 0.026591,
+            "precision": 0.013478,
+            "recall": 0.981981,
+            "fpr": 0.382443
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.314018,
+            "look_alike_fpr": 0.995798,
+            "oil_scenes_iou": 0.452779,
+            "oil_scenes_dice": 0.623329
+          }
+        },
+        {
+          "threshold": 0.35,
+          "micro_pixel_aggregate": {
+            "tp": 152210,
+            "fp": 11128044,
+            "fn": 3183,
+            "tn": 18076691,
+            "iou": 0.01349,
+            "dice": 0.02662,
+            "precision": 0.013493,
+            "recall": 0.979516,
+            "fpr": 0.381036
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.311551,
+            "look_alike_fpr": 0.994144,
+            "oil_scenes_iou": 0.460579,
+            "oil_scenes_dice": 0.63068
+          }
+        },
+        {
+          "threshold": 0.4,
+          "micro_pixel_aggregate": {
+            "tp": 149953,
+            "fp": 6585229,
+            "fn": 5440,
+            "tn": 22619506,
+            "iou": 0.022246,
+            "dice": 0.043524,
+            "precision": 0.022264,
+            "recall": 0.964992,
+            "fpr": 0.225485
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.001358,
+            "look_alike_fpr": 0.774828,
+            "oil_scenes_iou": 0.653367,
+            "oil_scenes_dice": 0.790347
+          }
+        },
+        {
+          "threshold": 0.45,
+          "micro_pixel_aggregate": {
+            "tp": 148880,
+            "fp": 6437967,
+            "fn": 6513,
+            "tn": 22766768,
+            "iou": 0.02258,
+            "dice": 0.044163,
+            "precision": 0.022603,
+            "recall": 0.958087,
+            "fpr": 0.220443
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.000121,
+            "look_alike_fpr": 0.759043,
+            "oil_scenes_iou": 0.661592,
+            "oil_scenes_dice": 0.796335
+          }
+        },
+        {
+          "threshold": 0.5,
+          "micro_pixel_aggregate": {
+            "tp": 147848,
+            "fp": 6349719,
+            "fn": 7545,
+            "tn": 22855016,
+            "iou": 0.022728,
+            "dice": 0.044446,
+            "precision": 0.022754,
+            "recall": 0.951446,
+            "fpr": 0.217421
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 9.3e-05,
+            "look_alike_fpr": 0.748957,
+            "oil_scenes_iou": 0.667109,
+            "oil_scenes_dice": 0.800318
+          }
+        },
+        {
+          "threshold": 0.6,
+          "micro_pixel_aggregate": {
+            "tp": 145341,
+            "fp": 6185658,
+            "fn": 10052,
+            "tn": 23019077,
+            "iou": 0.022921,
+            "dice": 0.044814,
+            "precision": 0.022957,
+            "recall": 0.935312,
+            "fpr": 0.211803
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 3.7e-05,
+            "look_alike_fpr": 0.730361,
+            "oil_scenes_iou": 0.679097,
+            "oil_scenes_dice": 0.808884
+          }
+        }
+      ]
+    },
+    "V8_D_HIGH_FG_WEIGHT": {
+      "model_id": "unet-dual-pol-sar-v8d",
+      "checkpoint": {
+        "path": "ml/model_registry/versions/unet_dual_pol_sar_v8d.pth",
+        "sha256": "2e7df8bc37b0cbe5e132b9d391898f6cc02aaa790fd02d0087eacfd1811cf4c4",
+        "size_bytes": 13070043
+      },
+      "best_epoch": 18,
+      "total_epochs": 25,
+      "threshold_sweep": [
+        {
+          "threshold": 0.3,
+          "micro_pixel_aggregate": {
+            "tp": 64345,
+            "fp": 2019845,
+            "fn": 91048,
+            "tn": 27184890,
+            "iou": 0.029581,
+            "dice": 0.057462,
+            "precision": 0.030873,
+            "recall": 0.414079,
+            "fpr": 0.069162
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.000752,
+            "look_alike_fpr": 0.239402,
+            "oil_scenes_iou": 0.400454,
+            "oil_scenes_dice": 0.571892
+          }
+        },
+        {
+          "threshold": 0.35,
+          "micro_pixel_aggregate": {
+            "tp": 60785,
+            "fp": 1866103,
+            "fn": 94608,
+            "tn": 27338632,
+            "iou": 0.030069,
+            "dice": 0.058383,
+            "precision": 0.031546,
+            "recall": 0.391169,
+            "fpr": 0.063897
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.000591,
+            "look_alike_fpr": 0.221327,
+            "oil_scenes_iou": 0.380115,
+            "oil_scenes_dice": 0.550846
+          }
+        },
+        {
+          "threshold": 0.4,
+          "micro_pixel_aggregate": {
+            "tp": 56853,
+            "fp": 1716068,
+            "fn": 98540,
+            "tn": 27488667,
+            "iou": 0.030379,
+            "dice": 0.058967,
+            "precision": 0.032067,
+            "recall": 0.365866,
+            "fpr": 0.05876
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.000473,
+            "look_alike_fpr": 0.203633,
+            "oil_scenes_iou": 0.356904,
+            "oil_scenes_dice": 0.526056
+          }
+        },
+        {
+          "threshold": 0.45,
+          "micro_pixel_aggregate": {
+            "tp": 53061,
+            "fp": 1576476,
+            "fn": 102332,
+            "tn": 27628259,
+            "iou": 0.030638,
+            "dice": 0.059454,
+            "precision": 0.032562,
+            "recall": 0.341463,
+            "fpr": 0.05398
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.000365,
+            "look_alike_fpr": 0.187159,
+            "oil_scenes_iou": 0.334133,
+            "oil_scenes_dice": 0.500899
+          }
+        },
+        {
+          "threshold": 0.5,
+          "micro_pixel_aggregate": {
+            "tp": 49669,
+            "fp": 1445852,
+            "fn": 105724,
+            "tn": 27758883,
+            "iou": 0.031019,
+            "dice": 0.060172,
+            "precision": 0.033212,
+            "recall": 0.319635,
+            "fpr": 0.049507
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.000262,
+            "look_alike_fpr": 0.171746,
+            "oil_scenes_iou": 0.313702,
+            "oil_scenes_dice": 0.477584
+          }
+        },
+        {
+          "threshold": 0.6,
+          "micro_pixel_aggregate": {
+            "tp": 43628,
+            "fp": 1201022,
+            "fn": 111765,
+            "tn": 28003713,
+            "iou": 0.032164,
+            "dice": 0.062324,
+            "precision": 0.035052,
+            "recall": 0.280759,
+            "fpr": 0.041124
+          },
+          "category_breakdown": {
+            "clean_ocean_fpr": 0.000116,
+            "look_alike_fpr": 0.14282,
+            "oil_scenes_iou": 0.277223,
+            "oil_scenes_dice": 0.434103
+          }
+        }
+      ]
+    }
+  }
+}

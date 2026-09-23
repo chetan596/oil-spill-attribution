@@ -1,0 +1,131 @@
+{
+  "protocol": "Validation set (7 scenes), thresholds [0.30, 0.35, 0.40, 0.45, 0.50, 0.60]",
+  "v09d_detailed_sweep": [
+    {
+      "threshold": 0.3,
+      "micro_pixel_aggregate": {
+        "tp": 69520,
+        "fp": 310141,
+        "fn": 85873,
+        "tn": 28894594,
+        "iou": 0.149334,
+        "dice": 0.259862,
+        "precision": 0.183111,
+        "recall": 0.447382,
+        "fpr": 0.01062
+      },
+      "category_breakdown": {
+        "clean_ocean_fpr": 0.003205,
+        "look_alike_fpr": 0.031732,
+        "oil_scenes_iou": 0.403099,
+        "oil_scenes_dice": 0.574583
+      }
+    },
+    {
+      "threshold": 0.35,
+      "micro_pixel_aggregate": {
+        "tp": 66369,
+        "fp": 281831,
+        "fn": 89024,
+        "tn": 28922904,
+        "iou": 0.151796,
+        "dice": 0.263582,
+        "precision": 0.190606,
+        "recall": 0.427104,
+        "fpr": 0.00965
+      },
+      "category_breakdown": {
+        "clean_ocean_fpr": 0.002578,
+        "look_alike_fpr": 0.029065,
+        "oil_scenes_iou": 0.386358,
+        "oil_scenes_dice": 0.557371
+      }
+    },
+    {
+      "threshold": 0.4,
+      "micro_pixel_aggregate": {
+        "tp": 63110,
+        "fp": 257816,
+        "fn": 92283,
+        "tn": 28946919,
+        "iou": 0.152731,
+        "dice": 0.26499,
+        "precision": 0.19665,
+        "recall": 0.406132,
+        "fpr": 0.008828
+      },
+      "category_breakdown": {
+        "clean_ocean_fpr": 0.002099,
+        "look_alike_fpr": 0.02676,
+        "oil_scenes_iou": 0.368806,
+        "oil_scenes_dice": 0.538872
+      }
+    },
+    {
+      "threshold": 0.45,
+      "micro_pixel_aggregate": {
+        "tp": 59839,
+        "fp": 235597,
+        "fn": 95554,
+        "tn": 28969138,
+        "iou": 0.153045,
+        "dice": 0.265462,
+        "precision": 0.202545,
+        "recall": 0.385082,
+        "fpr": 0.008067
+      },
+      "category_breakdown": {
+        "clean_ocean_fpr": 0.00169,
+        "look_alike_fpr": 0.024599,
+        "oil_scenes_iou": 0.351044,
+        "oil_scenes_dice": 0.519664
+      }
+    },
+    {
+      "threshold": 0.5,
+      "micro_pixel_aggregate": {
+        "tp": 56457,
+        "fp": 215118,
+        "fn": 98936,
+        "tn": 28989617,
+        "iou": 0.152376,
+        "dice": 0.264455,
+        "precision": 0.207887,
+        "recall": 0.363318,
+        "fpr": 0.007366
+      },
+      "category_breakdown": {
+        "clean_ocean_fpr": 0.001355,
+        "look_alike_fpr": 0.022586,
+        "oil_scenes_iou": 0.33273,
+        "oil_scenes_dice": 0.499321
+      }
+    },
+    {
+      "threshold": 0.6,
+      "micro_pixel_aggregate": {
+        "tp": 48871,
+        "fp": 181424,
+        "fn": 106522,
+        "tn": 29023311,
+        "iou": 0.145097,
+        "dice": 0.253422,
+        "precision": 0.21221,
+        "recall": 0.314499,
+        "fpr": 0.006212
+      },
+      "category_breakdown": {
+        "clean_ocean_fpr": 0.00087,
+        "look_alike_fpr": 0.019221,
+        "oil_scenes_iou": 0.29041,
+        "oil_scenes_dice": 0.450105
+      }
+    }
+  ],
+  "key_observations": [
+    "Operating at lower thresholds (0.30 - 0.35) increases Recall (42.7% - 44.7%) and Oil Scenes IoU (38.6% - 40.3%) with only a modest increase in Look-Alike FPR (2.91% - 3.17%).",
+    "Operating at standard threshold (0.50) yields balanced Micro Dice (0.2645), higher Precision (20.79%), and very low Look-Alike FPR (2.26%).",
+    "Operating at higher threshold (0.60) maximizes Precision (21.22%) and minimizes Look-Alike FPR (1.92%), but reduces Recall to 31.45%.",
+    "No single universal threshold is optimal for all operational deployments: tactical surveillance prioritizing detection of faint slicks favors 0.35, whereas automated alert pipelines prioritizing low false-alarm frequency favor 0.50."
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "real_part3_test_00060": {
+    "category": "clean_ocean",
+    "gt_positive_pixels": 0,
+    "v4": {
+      "tp": 0,
+      "fp": 264143,
+      "fn": 0,
+      "tn": 3930161,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 6.297659873962402,
+      "pred_pos_pixels": 264143
+    },
+    "v5a": {
+      "tp": 0,
+      "fp": 1409142,
+      "fn": 0,
+      "tn": 2785162,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 33.5965633392334,
+      "pred_pos_pixels": 1409142
+    },
+    "difference": {
+      "fp_diff": 1144999,
+      "tp_diff": 0,
+      "fpr_diff": 27.298903465270996,
+      "recall_diff": 0.0
+    }
+  },
+  "real_part3_test_00062": {
+    "category": "oil_spill",
+    "gt_positive_pixels": 24162,
+    "v4": {
+      "tp": 346,
+      "fp": 252785,
+      "fn": 23816,
+      "tn": 3917357,
+      "iou": 0.12493365156510085,
+      "dice": 0.24955552430101002,
+      "precision": 0.1366881180100422,
+      "recall": 1.4320006621968322,
+      "fpr": 6.061783987211946,
+      "pred_pos_pixels": 253131
+    },
+    "v5a": {
+      "tp": 5956,
+      "fp": 1335517,
+      "fn": 18206,
+      "tn": 2834625,
+      "iou": 0.43804456787226986,
+      "dice": 0.8722682122236175,
+      "precision": 0.4439895547655451,
+      "recall": 24.650277294925814,
+      "fpr": 32.02569600747409,
+      "pred_pos_pixels": 1341473
+    },
+    "difference": {
+      "fp_diff": 1082732,
+      "tp_diff": 5610,
+      "fpr_diff": 25.963912020262143,
+      "recall_diff": 23.218276632728983
+    }
+  },
+  "real_part3_test_00063": {
+    "category": "clean_ocean",
+    "gt_positive_pixels": 0,
+    "v4": {
+      "tp": 0,
+      "fp": 453063,
+      "fn": 0,
+      "tn": 3741241,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 10.801863670349121,
+      "pred_pos_pixels": 453063
+    },
+    "v5a": {
+      "tp": 0,
+      "fp": 1714673,
+      "fn": 0,
+      "tn": 2479631,
+      "iou": 0.0,
+      "dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 40.88099002838135,
+      "pred_pos_pixels": 1714673
+    },
+    "difference": {
+      "fp_diff": 1261610,
+      "tp_diff": 0,
+      "fpr_diff": 30.079126358032227,
+      "recall_diff": 0.0
+    }
+  },
+  "real_part3_test_00064": {
+    "category": "oil_spill",
+    "gt_positive_pixels": 52620,
+    "v4": {
+      "tp": 5657,
+      "fp": 863978,
+      "fn": 46963,
+      "tn": 3277706,
+      "iou": 0.6171735046334379,
+      "dice": 1.2267756748404723,
+      "precision": 0.6505027971505286,
+      "recall": 10.750665146332173,
+      "fpr": 20.860548511185307,
+      "pred_pos_pixels": 869635
+    },
+    "v5a": {
+      "tp": 22490,
+      "fp": 2016176,
+      "fn": 30130,
+      "tn": 2125508,
+      "iou": 1.0871057368633736,
+      "dice": 2.1508296808757867,
+      "precision": 1.103172368597897,
+      "recall": 42.740402888635415,
+      "fpr": 48.680102103395626,
+      "pred_pos_pixels": 2038666
+    },
+    "difference": {
+      "fp_diff": 1152198,
+      "tp_diff": 16833,
+      "fpr_diff": 27.81955359221032,
+      "recall_diff": 31.98973774230324
+    }
+  },
+  "real_part3_test_00080": {
+    "category": "oil_spill",
+    "gt_positive_pixels": 128475,
+    "v4": {
+      "tp": 67883,
+      "fp": 2637520,
+      "fn": 60592,
+      "tn": 1428309,
+      "iou": 2.4541982180011175,
+      "dice": 4.79082021173812,
+      "precision": 2.5091640690869346,
+      "recall": 52.837517026658844,
+      "fpr": 64.87041142163136,
+      "pred_pos_pixels": 2705403
+    },
+    "v5a": {
+      "tp": 100305,
+      "fp": 3533440,
+      "fn": 28170,
+      "tn": 532389,
+      "iou": 2.7391405862779448,
+      "dice": 5.33222405919909,
+      "precision": 2.7603753152739117,
+      "recall": 78.07355516637472,
+      "fpr": 86.90577001639764,
+      "pred_pos_pixels": 3633745
+    },
+    "difference": {
+      "fp_diff": 895920,
+      "tp_diff": 32422,
+      "fpr_diff": 22.03535859476628,
+      "recall_diff": 25.236038139715873
+    }
+  }
+}

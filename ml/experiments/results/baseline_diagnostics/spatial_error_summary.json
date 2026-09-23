@@ -1,0 +1,341 @@
+{
+  "threshold": 0.5,
+  "v4_validation_spatial_errors": {
+    "model_id": "unet-dual-pol-sar-v4",
+    "threshold": 0.5,
+    "split": "val",
+    "scene_count": 7,
+    "scenes": [
+      {
+        "scene_id": "real_part1_oil_00006",
+        "split": "val",
+        "category": "oil",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 89378,
+        "predicted_positives": 100066,
+        "false_positives": {
+          "pixel_count": 10707,
+          "percentage_of_scene": 0.2553,
+          "cluster_count": 92,
+          "largest_cluster_pixels": 1249,
+          "median_cluster_pixels": 16.0
+        },
+        "false_negatives": {
+          "pixel_count": 19,
+          "percentage_of_scene": 0.0005,
+          "cluster_count": 3,
+          "largest_cluster_pixels": 11,
+          "median_cluster_pixels": 5.0
+        }
+      },
+      {
+        "scene_id": "real_part1_oil_00011",
+        "split": "val",
+        "category": "oil",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 49967,
+        "predicted_positives": 49967,
+        "false_positives": {
+          "pixel_count": 6092,
+          "percentage_of_scene": 0.1452,
+          "cluster_count": 32,
+          "largest_cluster_pixels": 5243,
+          "median_cluster_pixels": 17.0
+        },
+        "false_negatives": {
+          "pixel_count": 6092,
+          "percentage_of_scene": 0.1452,
+          "cluster_count": 36,
+          "largest_cluster_pixels": 2149,
+          "median_cluster_pixels": 11.5
+        }
+      },
+      {
+        "scene_id": "real_part1_oil_00204",
+        "split": "val",
+        "category": "oil",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 16048,
+        "predicted_positives": 31846,
+        "false_positives": {
+          "pixel_count": 15798,
+          "percentage_of_scene": 0.3767,
+          "cluster_count": 2,
+          "largest_cluster_pixels": 15109,
+          "median_cluster_pixels": 7899.0
+        },
+        "false_negatives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        }
+      },
+      {
+        "scene_id": "real_part2_lookalike_00004",
+        "split": "val",
+        "category": "look_alike",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 0,
+        "predicted_positives": 4170177,
+        "false_positives": {
+          "pixel_count": 4170177,
+          "percentage_of_scene": 99.4248,
+          "cluster_count": 1,
+          "largest_cluster_pixels": 4170177,
+          "median_cluster_pixels": 4170177.0
+        },
+        "false_negatives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        }
+      },
+      {
+        "scene_id": "real_part2_lookalike_00090",
+        "split": "val",
+        "category": "look_alike",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 0,
+        "predicted_positives": 3113264,
+        "false_positives": {
+          "pixel_count": 3113264,
+          "percentage_of_scene": 74.226,
+          "cluster_count": 328,
+          "largest_cluster_pixels": 3040936,
+          "median_cluster_pixels": 31.5
+        },
+        "false_negatives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        }
+      },
+      {
+        "scene_id": "real_part2_no_oil_00004",
+        "split": "val",
+        "category": "no_oil",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 0,
+        "predicted_positives": 20449,
+        "false_positives": {
+          "pixel_count": 20449,
+          "percentage_of_scene": 0.4875,
+          "cluster_count": 242,
+          "largest_cluster_pixels": 2532,
+          "median_cluster_pixels": 37.0
+        },
+        "false_negatives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        }
+      },
+      {
+        "scene_id": "real_part2_no_oil_00017",
+        "split": "val",
+        "category": "no_oil",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 0,
+        "predicted_positives": 183,
+        "false_positives": {
+          "pixel_count": 183,
+          "percentage_of_scene": 0.0044,
+          "cluster_count": 3,
+          "largest_cluster_pixels": 97,
+          "median_cluster_pixels": 85.0
+        },
+        "false_negatives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        }
+      }
+    ]
+  },
+  "v2_validation_spatial_errors": {
+    "model_id": "unet-dual-pol-sar-v2",
+    "threshold": 0.5,
+    "split": "val",
+    "scene_count": 7,
+    "scenes": [
+      {
+        "scene_id": "real_part1_oil_00006",
+        "split": "val",
+        "category": "oil",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 89378,
+        "predicted_positives": 146,
+        "false_positives": {
+          "pixel_count": 146,
+          "percentage_of_scene": 0.0035,
+          "cluster_count": 9,
+          "largest_cluster_pixels": 113,
+          "median_cluster_pixels": 4.0
+        },
+        "false_negatives": {
+          "pixel_count": 89378,
+          "percentage_of_scene": 2.1309,
+          "cluster_count": 19,
+          "largest_cluster_pixels": 43508,
+          "median_cluster_pixels": 21.0
+        }
+      },
+      {
+        "scene_id": "real_part1_oil_00011",
+        "split": "val",
+        "category": "oil",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 49967,
+        "predicted_positives": 60,
+        "false_positives": {
+          "pixel_count": 60,
+          "percentage_of_scene": 0.0014,
+          "cluster_count": 9,
+          "largest_cluster_pixels": 36,
+          "median_cluster_pixels": 2.0
+        },
+        "false_negatives": {
+          "pixel_count": 49967,
+          "percentage_of_scene": 1.1913,
+          "cluster_count": 8,
+          "largest_cluster_pixels": 49339,
+          "median_cluster_pixels": 1.0
+        }
+      },
+      {
+        "scene_id": "real_part1_oil_00204",
+        "split": "val",
+        "category": "oil",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 16048,
+        "predicted_positives": 0,
+        "false_positives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        },
+        "false_negatives": {
+          "pixel_count": 16048,
+          "percentage_of_scene": 0.3826,
+          "cluster_count": 5,
+          "largest_cluster_pixels": 11819,
+          "median_cluster_pixels": 16.0
+        }
+      },
+      {
+        "scene_id": "real_part2_lookalike_00004",
+        "split": "val",
+        "category": "look_alike",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 0,
+        "predicted_positives": 0,
+        "false_positives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        },
+        "false_negatives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        }
+      },
+      {
+        "scene_id": "real_part2_lookalike_00090",
+        "split": "val",
+        "category": "look_alike",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 0,
+        "predicted_positives": 1050,
+        "false_positives": {
+          "pixel_count": 1050,
+          "percentage_of_scene": 0.025,
+          "cluster_count": 143,
+          "largest_cluster_pixels": 65,
+          "median_cluster_pixels": 2.0
+        },
+        "false_negatives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        }
+      },
+      {
+        "scene_id": "real_part2_no_oil_00004",
+        "split": "val",
+        "category": "no_oil",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 0,
+        "predicted_positives": 0,
+        "false_positives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        },
+        "false_negatives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        }
+      },
+      {
+        "scene_id": "real_part2_no_oil_00017",
+        "split": "val",
+        "category": "no_oil",
+        "threshold": 0.5,
+        "total_pixels": 4194304,
+        "ground_truth_positives": 0,
+        "predicted_positives": 0,
+        "false_positives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        },
+        "false_negatives": {
+          "pixel_count": 0,
+          "percentage_of_scene": 0.0,
+          "cluster_count": 0,
+          "largest_cluster_pixels": 0,
+          "median_cluster_pixels": 0.0
+        }
+      }
+    ]
+  }
+}

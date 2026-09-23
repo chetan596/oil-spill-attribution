@@ -1,0 +1,17 @@
+{
+  "audit_timestamp": "2026-09-19T16:57:16.560213+00:00",
+  "rules_enforced": [
+    "No claims of 100% accuracy or guaranteed oil detection.",
+    "No claims that V09D or any model is production ready.",
+    "V09D must be designated EXPERIMENTAL_VALIDATED_WITH_LIMITATIONS.",
+    "AIS vessel correlation must explicitly state correlation does not establish legal liability/responsibility.",
+    "V2 must be explicitly documented as historical artifact with corrupted preprocessing."
+  ],
+  "audit_findings": {
+    "production_readiness_claims": "NONE_ACTIVE (V09D labeled EXPERIMENTAL_VALIDATED_WITH_LIMITATIONS)",
+    "vessel_attribution_legal_boundary": "PRESERVED (AIS correlation explicitly separated from legal proof of discharge)",
+    "performance_representation": "HONEST_AND_OBJECTIVE (Full validation and held-out test metrics, including low recall and domain generalization gaps, documented without distortion)",
+    "benchmark_quarantine": "VERIFIED (Part III held-out test partition permanently locked after single evaluation)"
+  },
+  "audit_status": "PASSED"
+}

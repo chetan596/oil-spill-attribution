@@ -1,0 +1,90 @@
+{
+  "evaluation_protocol": "Full-scene sliding window inference with 512x512 tiles, stride 448 (64px overlap), 2D Hann window blending.",
+  "operating_threshold_policy": {
+    "preregistered_operating_threshold": 0.5,
+    "policy_rule": "Fixed pre-registered validation operating threshold; descriptive sweeps (0.30-0.60) used for characterization only, never for post-hoc selection."
+  },
+  "validation_results_at_0_50": {
+    "V09D_RESIDUAL_LOSS": {
+      "micro_iou": 0.152376,
+      "micro_dice": 0.264455,
+      "precision": 0.207887,
+      "recall": 0.363318,
+      "overall_fpr": 0.007366,
+      "clean_ocean_fpr": 0.001355,
+      "look_alike_fpr": 0.022586,
+      "oil_scenes_iou": 0.33273
+    },
+    "V6_BASELINE": {
+      "micro_iou": 0.052088,
+      "micro_dice": 0.099018,
+      "precision": 0.054818,
+      "recall": 0.511252,
+      "overall_fpr": 0.020297,
+      "clean_ocean_fpr": 2.3e-05,
+      "look_alike_fpr": 0.161488,
+      "oil_scenes_iou": 0.217316
+    },
+    "V2_HISTORICAL": {
+      "micro_iou": 0.0,
+      "micro_dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "overall_fpr": 0.0,
+      "clean_ocean_fpr": 0.0,
+      "look_alike_fpr": 0.0,
+      "oil_scenes_iou": 0.0
+    }
+  },
+  "held_out_benchmark_results_at_0_50": {
+    "V09D_RESIDUAL_LOSS": {
+      "micro_iou": 0.011823,
+      "micro_dice": 0.02337,
+      "precision": 0.052205,
+      "recall": 0.015054,
+      "overall_fpr": 0.002701,
+      "clean_ocean_fpr": 0.000397,
+      "look_alike_fpr": "NOT_AVAILABLE",
+      "tp_pixels": 3090,
+      "fp_pixels": 56100,
+      "fn_pixels": 202167,
+      "tn_pixels": 20710163,
+      "total_predicted_pixels": 59190
+    },
+    "V6_BASELINE": {
+      "micro_iou": 0.009323,
+      "micro_dice": 0.018474,
+      "precision": 0.032585,
+      "recall": 0.012891,
+      "overall_fpr": 0.003783,
+      "clean_ocean_fpr": 0.000372,
+      "look_alike_fpr": "NOT_AVAILABLE",
+      "tp_pixels": 2646,
+      "fp_pixels": 78558,
+      "fn_pixels": 202611,
+      "tn_pixels": 20687705,
+      "total_predicted_pixels": 81204
+    },
+    "V2_HISTORICAL": {
+      "micro_iou": 0.0,
+      "micro_dice": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "overall_fpr": 8e-06,
+      "clean_ocean_fpr": 7e-06,
+      "look_alike_fpr": "NOT_AVAILABLE",
+      "tp_pixels": 0,
+      "fp_pixels": 156,
+      "fn_pixels": 205257,
+      "tn_pixels": 20766107,
+      "total_predicted_pixels": 156
+    }
+  },
+  "generalization_gap_analysis": {
+    "v09d_iou_gap": -0.140553,
+    "v09d_recall_gap": -0.348264,
+    "v6_iou_gap": -0.042765,
+    "v6_recall_gap": -0.498361,
+    "scientific_interpretation": "These observations are consistent with substantial geographic and scene-domain variation, but the benchmark does not establish a single causal source for the generalization gap. V09D maintained higher precision (5.22% vs 3.26%) and lower false alarms (56,100 px vs 78,558 px) than V6 on held-out test scenes, but absolute detection recall on low-contrast diffuse slicks remains a key limitation."
+  }
+}

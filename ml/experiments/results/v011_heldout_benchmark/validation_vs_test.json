@@ -1,0 +1,58 @@
+{
+  "description": "Descriptive comparison of validation performance vs sealed held-out test performance at threshold 0.50.",
+  "models": {
+    "V09D_RESIDUAL_LOSS": {
+      "model_id": "unet-dual-pol-sar-v09d-residual-loss",
+      "validation": {
+        "micro_iou": 0.152376,
+        "micro_dice": 0.264455,
+        "precision": 0.207887,
+        "recall": 0.363318,
+        "fpr": 0.007366
+      },
+      "held_out_test": {
+        "micro_iou": 0.011823,
+        "micro_dice": 0.02337,
+        "precision": 0.052205,
+        "recall": 0.015054,
+        "fpr": 0.002701
+      },
+      "absolute_difference": {
+        "micro_iou": -0.140553,
+        "micro_dice": -0.241085,
+        "precision": -0.155682,
+        "recall": -0.348264,
+        "fpr": -0.004665
+      }
+    },
+    "V6_BASELINE": {
+      "model_id": "unet-dual-pol-sar-v6",
+      "validation": {
+        "micro_iou": 0.052088,
+        "micro_dice": 0.099018,
+        "precision": 0.054818,
+        "recall": 0.511252,
+        "fpr": 0.046904
+      },
+      "held_out_test": {
+        "micro_iou": 0.009323,
+        "micro_dice": 0.018474,
+        "precision": 0.032585,
+        "recall": 0.012891,
+        "fpr": 0.003783
+      },
+      "absolute_difference": {
+        "micro_iou": -0.042765,
+        "micro_dice": -0.080544,
+        "precision": -0.022233,
+        "recall": -0.498361,
+        "fpr": -0.043121
+      }
+    }
+  },
+  "possible_explanatory_factors": [
+    "Geographic and sea-state variation across Part III test scenes.",
+    "Higher proportion of true oil slick pixels in the test set (205K positive pixels in 5 scenes vs 155K in 7 validation scenes).",
+    "Different slick dispersion patterns and backscatter contrast ranges."
+  ]
+}

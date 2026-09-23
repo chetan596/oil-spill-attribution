@@ -1,0 +1,29 @@
+{
+  "input_size": [
+    224,
+    224
+  ],
+  "normalize_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "normalize_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "color_handling": "RGB",
+  "augmentation": {
+    "train": [
+      "RandomHorizontalFlip(p=0.5)",
+      "RandomVerticalFlip(p=0.5)",
+      "RandomRotation(15)",
+      "ColorJitter(b=0.15, c=0.15, s=0.10)"
+    ],
+    "eval": [
+      "Resize(224, 224)",
+      "Normalize(ImageNet)"
+    ]
+  }
+}

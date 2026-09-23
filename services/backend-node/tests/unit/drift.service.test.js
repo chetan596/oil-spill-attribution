@@ -1,8 +1,12 @@
+const axios = require("axios");
 const driftService = require("../../src/services/drift.service");
 const spillRepository = require("../../src/repositories/spill.repository");
 
 describe("DriftService Integration Client & Fallback", () => {
   it("should compute deterministic Lagrangian drift in DEMO_MODE fallback", async () => {
+    const originalPost = axios.post;
+    axios.post = jest.fn().mockRejectedValue(new Error("Downstream service unreachable"));
+
     const res = await driftService.runDriftSimulation({
       latitude: 18.921,
       longitude: 72.832,
@@ -10,6 +14,8 @@ describe("DriftService Integration Client & Fallback", () => {
       hoursBack: 24,
       hoursForward: 6,
     });
+
+    axios.post = originalPost;
 
     expect(res).toBeDefined();
     expect(res.status).toBe("success");

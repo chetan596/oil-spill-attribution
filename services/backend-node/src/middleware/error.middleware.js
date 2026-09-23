@@ -77,6 +77,7 @@ const errorHandler = (err, req, res, next) => { // eslint-disable-line no-unused
     error: {
       code:    err.code    || "INTERNAL_SERVER_ERROR",
       message: isOperational ? err.message : "Internal server error",
+      stage:   err.stage   || (isOperational && err.details?.stage) || undefined,
       details: isOperational ? (err.details || {}) : {},
     },
   });

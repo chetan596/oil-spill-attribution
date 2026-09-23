@@ -1,0 +1,16 @@
+{
+  "model_id": "unet-dual-pol-sar-v5b-wind",
+  "audit_timestamp": "2026-09-14T08:40:00Z",
+  "status": "HELD_STOP_CONDITION_ACTIVE",
+  "reason": "Phase 20 Stop Condition: Real ERA5 alignment cannot be established on static Zenodo benchmark without fabricating timestamps.",
+  "dataset_eligibility": {
+    "total_scenes_evaluated": 40,
+    "train_scenes_eligible": 0,
+    "validation_scenes_eligible": 0,
+    "test_scenes_sealed": 5
+  },
+  "metrics": {
+    "validation": null,
+    "sealed_test": null
+  }
+}

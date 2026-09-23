@@ -28,7 +28,7 @@ const config = {
     `redis://${process.env.REDIS_HOST || "localhost"}:${Number(process.env.REDIS_PORT) || 6379}`,
 
   // ── ML Python Service ─────────────────────────────────────────────────────
-  mlServiceUrl:       process.env.ML_SERVICE_URL        || "http://localhost:8000",
+  mlServiceUrl:       process.env.ML_SERVICE_URL        || "http://127.0.0.1:8000",
   mlApiKey:           process.env.ML_API_KEY            || "",
   mlServiceTimeoutMs: Number(process.env.ML_SERVICE_TIMEOUT_MS) || 120000,
 
@@ -38,6 +38,28 @@ const config = {
 
   // ── Logging ───────────────────────────────────────────────────────────────
   logLevel: process.env.LOG_LEVEL || "info",
+
+  // ── Copernicus Data Space Ecosystem (CDSE) ─────────────────────────────────
+  cdseUsername: process.env.CDSE_USERNAME || process.env.COPERNICUS_API_USER || "",
+  cdsePassword: process.env.CDSE_PASSWORD || process.env.COPERNICUS_API_PASSWORD || "",
+  cdseAuthUrl:  process.env.CDSE_AUTH_URL || "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/protocol/openid-connect/token",
+  cdseStacUrl:  process.env.CDSE_STAC_URL || "https://stac.dataspace.copernicus.eu/v1",
+  cdseOdataUrl: process.env.CDSE_ODATA_URL || "https://catalogue.dataspace.copernicus.eu/odata/v1",
+  cdseDownloadUrl: process.env.CDSE_DOWNLOAD_URL || "https://download.dataspace.copernicus.eu/odata/v1",
+  cdseStorageDir: process.env.CDSE_STORAGE_DIR || "data/raw/satellite/cdse",
+
+  // ── Historical AIS Telemetry Provider ─────────────────────────────────────
+  aisHistoricalProvider:    process.env.AIS_HISTORICAL_PROVIDER || "",
+  aisHistoricalApiUrl:      process.env.AIS_HISTORICAL_API_URL || "",
+  aisHistoricalApiKey:      process.env.AIS_HISTORICAL_API_KEY || "",
+  aisHistoricalBearerToken: process.env.AIS_HISTORICAL_BEARER_TOKEN || "",
+  aisHistoricalUsername:    process.env.AIS_HISTORICAL_USERNAME || "",
+  aisHistoricalPassword:    process.env.AIS_HISTORICAL_PASSWORD || "",
+  aisHistoricalTimeoutMs:   Number(process.env.AIS_HISTORICAL_TIMEOUT_MS) || 30000,
+
+  // ── Global Fishing Watch (GFW) Historical AIS ─────────────────────────
+  gfwApiUrl:   process.env.GFW_API_URL   || "https://gateway.api.globalfishingwatch.org",
+  gfwApiToken: process.env.GFW_API_TOKEN || process.env.AIS_HISTORICAL_API_KEY || "",
 };
 
 // Warn loudly when using the default secret in non-development environments

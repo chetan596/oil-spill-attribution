@@ -1,0 +1,6 @@
+{
+  "selected_pixel_threshold": 0.8,
+  "selection_criterion": "0.6 * Dice + 0.4 * Foreground_IoU",
+  "validation_dice_at_threshold": 0.9389244019718919,
+  "validation_iou_at_threshold": 0.8848798367588314
+}

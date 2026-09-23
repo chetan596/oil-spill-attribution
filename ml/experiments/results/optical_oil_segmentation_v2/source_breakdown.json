@@ -1,0 +1,42 @@
+{
+  "validation": {
+    "Kerf_Drone_Oil_Spill": {
+      "total_samples": 105,
+      "oil_positive_samples": 76,
+      "mean_iou": 0.9284034857876613,
+      "foreground_iou": 0.9100716843712664,
+      "background_iou": 0.9467352872040561,
+      "dice": 0.9529188792417835,
+      "precision": 0.9702932070807718,
+      "recall": 0.9361558244419179,
+      "specificity": 0.9828668338599046,
+      "fpr": 0.017133166140095427
+    },
+    "MADOS_Sentinel2": {
+      "total_samples": 625,
+      "oil_positive_samples": 77,
+      "mean_iou": 0.5181315567709849,
+      "foreground_iou": 0.05005276418700234,
+      "background_iou": 0.9862103493549674,
+      "dice": 0.09533380777442249,
+      "precision": 0.051654690504353624,
+      "recall": 0.6174400498287138,
+      "specificity": 0.9866545218516842,
+      "fpr": 0.013345478148315762
+    }
+  },
+  "internal_test": {
+    "MADOS_Sentinel2": {
+      "total_samples": 708,
+      "oil_positive_samples": 80,
+      "mean_iou": 0.5299658568811934,
+      "foreground_iou": 0.07043919789188065,
+      "background_iou": 0.9894925158705061,
+      "dice": 0.1316080316016143,
+      "precision": 0.07347921025026523,
+      "recall": 0.6299810570507023,
+      "specificity": 0.9899554801395597,
+      "fpr": 0.010044519860440318
+    }
+  }
+}

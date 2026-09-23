@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" style="background:#0f172a; font-family:sans-serif;">
+<text x="400" y="36" text-anchor="middle" fill="#f8fafc" font-size="18" font-weight="bold">V09D Residual + Loss: Metric Trade-offs vs Threshold</text>
+<text x="400" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Threshold response across Precision, Recall, Dice, and Look-Alike FPR</text>
+<rect x="80" y="80" width="640" height="340" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<line x1="80" y1="148" x2="720" y2="148" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="80" y1="216" x2="720" y2="216" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="80" y1="284" x2="720" y2="284" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="80" y1="352" x2="720" y2="352" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="80,244 186,241 293,240 400,240 506,241 720,248" fill="none" stroke="#10b981" stroke-width="2.8"/>
+<circle cx="80" cy="244" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="241" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="240" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="240" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="241" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="248" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,319 186,317 293,317 400,316 506,317 720,322" fill="none" stroke="#8b5cf6" stroke-width="2.8"/>
+<circle cx="80" cy="319" r="4" fill="#8b5cf6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="317" r="4" fill="#8b5cf6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="317" r="4" fill="#8b5cf6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="316" r="4" fill="#8b5cf6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="317" r="4" fill="#8b5cf6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="322" r="4" fill="#8b5cf6" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,296 186,291 293,287 400,283 506,279 720,276" fill="none" stroke="#f97316" stroke-width="2.8"/>
+<circle cx="80" cy="296" r="4" fill="#f97316" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="291" r="4" fill="#f97316" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="287" r="4" fill="#f97316" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="283" r="4" fill="#f97316" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="279" r="4" fill="#f97316" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="276" r="4" fill="#f97316" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,116 186,130 293,144 400,159 506,173 720,207" fill="none" stroke="#06b6d4" stroke-width="2.8"/>
+<circle cx="80" cy="116" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="130" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="144" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="159" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="173" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="207" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,399 186,401 293,402 400,404 506,405 720,407" fill="none" stroke="#ef4444" stroke-width="2.8"/>
+<circle cx="80" cy="399" r="4" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="401" r="4" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="402" r="4" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="404" r="4" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="405" r="4" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="407" r="4" fill="#ef4444" stroke="#0f172a" stroke-width="1"/>
+<text x="72" y="424" text-anchor="end" fill="#94a3b8" font-size="11">0.00</text>
+<text x="72" y="356" text-anchor="end" fill="#94a3b8" font-size="11">0.10</text>
+<text x="72" y="288" text-anchor="end" fill="#94a3b8" font-size="11">0.20</text>
+<text x="72" y="220" text-anchor="end" fill="#94a3b8" font-size="11">0.30</text>
+<text x="72" y="152" text-anchor="end" fill="#94a3b8" font-size="11">0.40</text>
+<text x="72" y="84" text-anchor="end" fill="#94a3b8" font-size="11">0.50</text>
+<text x="80" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.30</text>
+<text x="186" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.35</text>
+<text x="293" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.40</text>
+<text x="400" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.45</text>
+<text x="506" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.50</text>
+<text x="720" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.60</text>
+<line x1="95" y1="96" x2="111" y2="96" stroke="#10b981" stroke-width="2.5"/>
+<text x="117" y="100" fill="#e2e8f0" font-size="10">Micro Dice</text>
+<line x1="220" y1="96" x2="236" y2="96" stroke="#8b5cf6" stroke-width="2.5"/>
+<text x="242" y="100" fill="#e2e8f0" font-size="10">Micro IoU</text>
+<line x1="345" y1="96" x2="361" y2="96" stroke="#f97316" stroke-width="2.5"/>
+<text x="367" y="100" fill="#e2e8f0" font-size="10">Precision</text>
+<line x1="470" y1="96" x2="486" y2="96" stroke="#06b6d4" stroke-width="2.5"/>
+<text x="492" y="100" fill="#e2e8f0" font-size="10">Recall</text>
+<line x1="595" y1="96" x2="611" y2="96" stroke="#ef4444" stroke-width="2.5"/>
+<text x="617" y="100" fill="#e2e8f0" font-size="10">Look-Alike FPR</text>
+</svg>

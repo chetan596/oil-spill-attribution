@@ -1,6 +1,7 @@
 import React from 'react';
 import { Database, Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Button from './Button';
 
 export default function EmptyState({
   icon: Icon = Database,
@@ -9,35 +10,33 @@ export default function EmptyState({
   actionText,
   actionLink,
   onAction,
+  className = '',
 }) {
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '48px 24px',
-      textAlign: 'center',
-      color: '#94a3b8',
-      background: 'rgba(15, 23, 42, 0.5)',
-      borderRadius: '8px',
-      border: '1px dashed #334155',
-      margin: '16px 0',
-    }}>
-      <div style={{ padding: '16px', background: '#1e293b', borderRadius: '50%', marginBottom: '16px', color: '#38bdf8' }}>
-        <Icon size={32} />
+    <div
+      className={`flex flex-col items-center justify-center p-12 text-center rounded-[8px] border border-dashed border-[var(--og-border,#25292F)] bg-[var(--og-surface-recessed,#0C0E11)] my-4 ${className}`}
+      role="status"
+    >
+      <div className="w-12 h-12 rounded-[8px] bg-[var(--og-surface-raised,#171A1E)] border border-[var(--og-border,#25292F)] text-[var(--og-violet,#A855F7)] flex items-center justify-center mb-4">
+        <Icon size={24} />
       </div>
-      <h3 style={{ fontSize: '1.1rem', color: '#f8fafc', fontWeight: 600, marginBottom: '6px' }}>{title}</h3>
-      <p style={{ fontSize: '0.9rem', maxWidth: '400px', marginBottom: '20px' }}>{description}</p>
+      <h3 className="text-sm font-display font-medium text-[var(--og-text-primary,#ECEEF1)] mb-1.5">
+        {title}
+      </h3>
+      <p className="text-xs text-[var(--og-text-muted,#777E87)] max-w-sm mb-5 leading-relaxed">
+        {description}
+      </p>
       {actionLink && (
-        <Link to={actionLink} className="btn-primary" style={{ textDecoration: 'none' }}>
-          <Plus size={16} /> {actionText || 'Create New'}
+        <Link to={actionLink} style={{ textDecoration: 'none' }}>
+          <Button variant="primary" size="sm" icon={Plus}>
+            {actionText || 'Create New'}
+          </Button>
         </Link>
       )}
       {onAction && !actionLink && (
-        <button onClick={onAction} className="btn-primary">
-          <Plus size={16} /> {actionText || 'Create New'}
-        </button>
+        <Button variant="primary" size="sm" onClick={onAction} icon={Plus}>
+          {actionText || 'Create New'}
+        </Button>
       )}
     </div>
   );

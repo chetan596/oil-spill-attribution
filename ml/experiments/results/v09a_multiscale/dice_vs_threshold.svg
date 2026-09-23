@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" style="background:#0f172a; font-family:sans-serif;">
+<text x="400" y="36" text-anchor="middle" fill="#f8fafc" font-size="18" font-weight="bold">Validation Dice vs Detection Threshold</text>
+<text x="400" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Validation split (7 scenes) threshold sensitivity comparison</text>
+<rect x="80" y="80" width="640" height="340" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+<line x1="80" y1="148" x2="720" y2="148" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="80" y1="216" x2="720" y2="216" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="80" y1="284" x2="720" y2="284" stroke="#334155" stroke-dasharray="3,3"/>
+<line x1="80" y1="352" x2="720" y2="352" stroke="#334155" stroke-dasharray="3,3"/>
+<polyline points="80,281 186,273 293,266 400,259 506,252 720,237" fill="none" stroke="#94a3b8" stroke-width="2.0"/>
+<circle cx="80" cy="281" r="4" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="273" r="4" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="266" r="4" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="259" r="4" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="252" r="4" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="237" r="4" fill="#94a3b8" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,359 186,361 293,358 400,343 506,330 720,352" fill="none" stroke="#3b82f6" stroke-width="2.0"/>
+<circle cx="80" cy="359" r="4" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="361" r="4" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="358" r="4" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="343" r="4" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="330" r="4" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="352" r="4" fill="#3b82f6" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,355 186,353 293,351 400,349 506,347 720,344" fill="none" stroke="#10b981" stroke-width="2.0"/>
+<circle cx="80" cy="355" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="353" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="351" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="349" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="347" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="344" r="4" fill="#10b981" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,375 186,375 293,347 400,345 506,345 720,344" fill="none" stroke="#f59e0b" stroke-width="2.0"/>
+<circle cx="80" cy="375" r="4" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="375" r="4" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="347" r="4" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="345" r="4" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="345" r="4" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="344" r="4" fill="#f59e0b" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,323 186,321 293,320 400,319 506,318 720,315" fill="none" stroke="#ec4899" stroke-width="2.0"/>
+<circle cx="80" cy="323" r="4" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="321" r="4" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="320" r="4" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="319" r="4" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="318" r="4" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="315" r="4" fill="#ec4899" stroke="#0f172a" stroke-width="1"/>
+<polyline points="80,272 186,272 293,273 400,275 506,274 720,272" fill="none" stroke="#06b6d4" stroke-width="3.0"/>
+<circle cx="80" cy="272" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="186" cy="272" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="293" cy="273" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="400" cy="275" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="506" cy="274" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<circle cx="720" cy="272" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+<text x="72" y="424" text-anchor="end" fill="#94a3b8" font-size="11">0.00</text>
+<text x="72" y="356" text-anchor="end" fill="#94a3b8" font-size="11">0.04</text>
+<text x="72" y="288" text-anchor="end" fill="#94a3b8" font-size="11">0.08</text>
+<text x="72" y="220" text-anchor="end" fill="#94a3b8" font-size="11">0.12</text>
+<text x="72" y="152" text-anchor="end" fill="#94a3b8" font-size="11">0.16</text>
+<text x="72" y="84" text-anchor="end" fill="#94a3b8" font-size="11">0.20</text>
+<text x="80" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.30</text>
+<text x="186" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.35</text>
+<text x="293" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.40</text>
+<text x="400" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.45</text>
+<text x="506" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.50</text>
+<text x="720" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">0.60</text>
+<line x1="95" y1="96" x2="113" y2="96" stroke="#94a3b8" stroke-width="2.5"/>
+<text x="119" y="100" fill="#e2e8f0" font-size="11">V6_BASELINE</text>
+<line x1="95" y1="114" x2="113" y2="114" stroke="#3b82f6" stroke-width="2.5"/>
+<text x="119" y="118" fill="#e2e8f0" font-size="11">V8_A_BASELINE_LOSS</text>
+<line x1="95" y1="132" x2="113" y2="132" stroke="#10b981" stroke-width="2.5"/>
+<text x="119" y="136" fill="#e2e8f0" font-size="11">V8_B_FOCAL_DICE</text>
+<line x1="95" y1="150" x2="113" y2="150" stroke="#f59e0b" stroke-width="2.5"/>
+<text x="119" y="154" fill="#e2e8f0" font-size="11">V8_C_FOCAL_TVERSKY</text>
+<line x1="95" y1="168" x2="113" y2="168" stroke="#ec4899" stroke-width="2.5"/>
+<text x="119" y="172" fill="#e2e8f0" font-size="11">V8_D_HIGH_FG_WEIGHT</text>
+<line x1="95" y1="186" x2="113" y2="186" stroke="#06b6d4" stroke-width="2.5"/>
+<text x="119" y="190" fill="#e2e8f0" font-size="11">V09A_MULTISCALE</text>
+</svg>

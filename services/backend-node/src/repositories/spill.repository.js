@@ -19,6 +19,7 @@ const spillRepository = {
         geomWkt:           detection.geomWkt || detection.polygonWkt || null,
         confidence:        Number(detection.confidence),
         estimatedAgeHours: detection.estimatedAgeHours ? Number(detection.estimatedAgeHours) : null,
+        detectedAt:        detection.detectedAt ? new Date(detection.detectedAt) : undefined,
       },
     });
   },
@@ -30,7 +31,9 @@ const spillRepository = {
     return prisma.spill.findUnique({
       where: { id },
       include: {
-        analysis: true,
+        analysis: {
+          include: { scene: true },
+        },
         driftRun: {
           include: {
             points: { orderBy: { seqIndex: "asc" } },
@@ -51,6 +54,9 @@ const spillRepository = {
     return prisma.spill.findUnique({
       where: { analysisId },
       include: {
+        analysis: {
+          include: { scene: true },
+        },
         driftRun: { include: { points: true } },
         attributionResults: {
           include: { vessel: true },

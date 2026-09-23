@@ -1,4 +1,5 @@
 const prisma = require("../db/database");
+const { DEMO_SCENARIOS } = require("../data/demo-scenarios");
 
 /**
  * AnalysisRepository — persistence layer for Analysis and AnalysisJob models.
@@ -11,6 +12,53 @@ const analysisRepository = {
    * @returns {{ analysis: Analysis, job: AnalysisJob }}
    */
   async create({ userId, sceneId, payload }) {
+    // Ensure satelliteScene record exists before creating Analysis referencing it
+    if (sceneId) {
+      if (DEMO_SCENARIOS[sceneId]) {
+        const sc = DEMO_SCENARIOS[sceneId];
+        await prisma.satelliteScene.upsert({
+          where: { id: sc.id },
+          update: {},
+          create: {
+            id: sc.id,
+            sceneId: sc.sceneId,
+            satellite: sc.satellite,
+            acquisitionAt: sc.acquisitionAt,
+            fileUrl: sc.fileUrl,
+            geomWkt: sc.sceneGeomWkt,
+            bandInfo: sc.bandInfo,
+          },
+        });
+      } else {
+        const meta = payload?.metadata || {};
+        const bbox = meta.bbox;
+        let geomWkt = null;
+        if (Array.isArray(bbox) && bbox.length === 4) {
+          geomWkt = `POLYGON((${bbox[0]} ${bbox[1]}, ${bbox[2]} ${bbox[1]}, ${bbox[2]} ${bbox[3]}, ${bbox[0]} ${bbox[3]}, ${bbox[0]} ${bbox[1]}))`;
+        } else if (meta.geometry?.type === "Polygon" && Array.isArray(meta.geometry?.coordinates?.[0])) {
+          const coords = meta.geometry.coordinates[0];
+          geomWkt = `POLYGON((${coords.map(([lng, lat]) => `${lng} ${lat}`).join(", ")}))`;
+        }
+
+        await prisma.satelliteScene.upsert({
+          where: { id: sceneId },
+          update: {},
+          create: {
+            id: sceneId,
+            sceneId: sceneId,
+            satellite: meta.platform || "Sentinel-1A (CDSE)",
+            acquisitionAt: meta.acquisitionStart ? new Date(meta.acquisitionStart) : new Date(),
+            fileUrl: meta.localPath || meta.downloadUrl || null,
+            geomWkt,
+            bandInfo: {
+              polarisation: meta.polarization || "VV+VH",
+              resolutionMeters: 10,
+            },
+          },
+        });
+      }
+    }
+
     return prisma.$transaction(async (tx) => {
       const analysis = await tx.analysis.create({
         data: {
@@ -120,6 +168,26 @@ const analysisRepository = {
     return prisma.analysisJob.update({
       where: { id: jobId },
       data: { bullJobId: String(bullJobId) },
+    });
+  },
+
+  /**
+   * Update AnalysisJob progress and merge additional payload data (e.g. download telemetry).
+   */
+  async updateJobProgress(jobId, progress, stageInfo = {}) {
+    const job = await prisma.analysisJob.findUnique({ where: { id: jobId } });
+    if (!job) return null;
+    const currentPayload = typeof job.payload === "object" && job.payload ? job.payload : {};
+    const updatedPayload = {
+      ...currentPayload,
+      ...stageInfo,
+    };
+    return prisma.analysisJob.update({
+      where: { id: jobId },
+      data: {
+        progress: Math.min(100, Math.max(0, Math.round(progress))),
+        payload: updatedPayload,
+      },
     });
   },
 };

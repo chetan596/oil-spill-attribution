@@ -1,0 +1,7 @@
+{
+  "manifest_path": "d:\\PROJECTS\\Collge Project\\oil-spill-attribution\\data\\raw\\optical_real\\metadata\\external_test_manifest.json",
+  "manifest_sha256": "3520d8de98979004578d0e28ea40de26941acad8846e2493faa54360211acc38",
+  "evaluation_timestamp": "2026-09-20T08:53:00Z",
+  "checkpoint_sha256": "6ccf88c8be6764384297005effedbaf047165ef20dc4148911bc66ddfc10dd84",
+  "threshold": 0.3
+}

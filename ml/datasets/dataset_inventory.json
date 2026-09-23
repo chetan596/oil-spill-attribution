@@ -1,0 +1,3285 @@
+{
+  "dataset_name": "Sentinel-1 SAR Oil Spill Verified Real Subset (40 Scenes)",
+  "source": "Zenodo (DOIs: 10.5281/zenodo.8346860, 10.5281/zenodo.8253899, 10.5281/zenodo.13761290)",
+  "generated_at": "2026-09-19T05:18:58.791965+00:00",
+  "total_samples": 40,
+  "total_scenes": 40,
+  "samples": [
+    {
+      "sample_id": "real_part1_oil_00000_full",
+      "scene_id": "real_part1_oil_00000",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00000.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00000.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "b164662ebf451ab83578d1214f94cdfeda26de10395fa7cba67aa3d3583d9693",
+      "mask_sha256": "16ccddfecc14e3225a2d2be6e525bd36eb990947ac13a100419e25d1795eb001",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          3.9656639450910203,
+          0.0,
+          -8.983152841195215e-05,
+          55.33396508271642,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          3.9656639450910203,
+          55.14999011252874,
+          4.1496389152786985,
+          55.33396508271642
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -54.12104797363281,
+          "max_val": -1.9929887056350708,
+          "mean_val": -34.270816802978516,
+          "median_val": -33.301063537597656,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -38.24626159667969,
+          "max_val": 5.545726299285889,
+          "mean_val": -20.78446388244629,
+          "median_val": -20.73689842224121,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4179765,
+          "1": 14539
+        },
+        "is_binary": true,
+        "oil_pixel_count": 14539,
+        "oil_coverage_pct": 0.3466
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00002_full",
+      "scene_id": "real_part1_oil_00002",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00002.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00002.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "922c86d0a765b94689577bd83e7e20b72c3d4fb5670f5b0b7e4e98fcbdf8b6bd",
+      "mask_sha256": "2033a6c0d9789614deb9f2c88188ee9ebece618a8c8d50034df867aae9570465",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          5.90018590944241,
+          0.0,
+          -8.983152841195215e-05,
+          55.5435420385015,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          5.90018590944241,
+          55.35956706831382,
+          6.084160879630088,
+          55.5435420385015
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -50.25813674926758,
+          "max_val": -25.917387008666992,
+          "mean_val": -36.46908950805664,
+          "median_val": -36.27046585083008,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -36.533912658691406,
+          "max_val": -14.563878059387207,
+          "mean_val": -20.80209732055664,
+          "median_val": -20.75344467163086,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4177990,
+          "1": 16314
+        },
+        "is_binary": true,
+        "oil_pixel_count": 16314,
+        "oil_coverage_pct": 0.389
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00003_full",
+      "scene_id": "real_part1_oil_00003",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00003.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00003.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "47c6bbb02bd25b3e1235be9590660489c59cfcd83ec719b17dd09b5ea4f330d4",
+      "mask_sha256": "2dcffbc08546bbb4bd10f2ca657ba762aec4515e93b9c937f7e3f699793dbfd2",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          5.845568340167943,
+          0.0,
+          -8.983152841195215e-05,
+          55.444996851833594,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          5.845568340167943,
+          55.26102188164592,
+          6.029543310355621,
+          55.444996851833594
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -52.8363151550293,
+          "max_val": -26.63810920715332,
+          "mean_val": -37.23030090332031,
+          "median_val": -37.0020866394043,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -38.06644821166992,
+          "max_val": -13.981441497802734,
+          "mean_val": -21.051372528076172,
+          "median_val": -20.995141983032227,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4169513,
+          "1": 24791
+        },
+        "is_binary": true,
+        "oil_pixel_count": 24791,
+        "oil_coverage_pct": 0.5911
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00004_full",
+      "scene_id": "real_part1_oil_00004",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00004.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00004.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "ea5c7c077ee4e44802eb0f7e808d82abe837978067d9b3e3157b95f31e7f9156",
+      "mask_sha256": "25f79deac6e46ce5a3b36cf832faade60c1bce63a3497c42670205ac5a0b0902",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          5.782596438751165,
+          0.0,
+          -8.983152841195215e-05,
+          55.343666887784906,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          5.782596438751165,
+          55.15969191759723,
+          5.966571408938843,
+          55.343666887784906
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -54.52854919433594,
+          "max_val": -10.68842887878418,
+          "mean_val": -37.627960205078125,
+          "median_val": -37.38276672363281,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -39.9082145690918,
+          "max_val": -0.6875216364860535,
+          "mean_val": -21.44717025756836,
+          "median_val": -21.354480743408203,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4150255,
+          "1": 44049
+        },
+        "is_binary": true,
+        "oil_pixel_count": 44049,
+        "oil_coverage_pct": 1.0502
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00006_full",
+      "scene_id": "real_part1_oil_00006",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "val",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00006.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00006.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "c409c163f29d0b0b99333063fd94afa1b244f573bb56933c163c21633a0f7e27",
+      "mask_sha256": "8f74cf5351e66630ed5185469fce770a8810a8eb20fbe17c73b733e6a6d4568b",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          5.615240301319698,
+          0.0,
+          -8.983152841195215e-05,
+          55.100223445788515,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          5.615240301319698,
+          54.91624847560084,
+          5.799215271507376,
+          55.100223445788515
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -54.78169250488281,
+          "max_val": 1.656172752380371,
+          "mean_val": -38.00398254394531,
+          "median_val": -37.65547180175781,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -48.00086975097656,
+          "max_val": 9.05048656463623,
+          "mean_val": -21.935302734375,
+          "median_val": -21.744413375854492,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4104926,
+          "1": 89378
+        },
+        "is_binary": true,
+        "oil_pixel_count": 89378,
+        "oil_coverage_pct": 2.1309
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00007_full",
+      "scene_id": "real_part1_oil_00007",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00007.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00007.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "927b382ebffc2f84447a17b80b30e6c3f1f6758fcb8d6e7a13e7c4de70932405",
+      "mask_sha256": "4d2638e21b23f84e733fd1fcd7ee43290297a01dc8d7523407a0b2c765ab4866",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          30.625126448259813,
+          0.0,
+          -8.983152841195215e-05,
+          32.269626175898125,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          30.625126448259813,
+          32.08565120571045,
+          30.80910141844749,
+          32.269626175898125
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -47.589778900146484,
+          "max_val": 14.835772514343262,
+          "mean_val": -30.080318450927734,
+          "median_val": -29.956817626953125,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -29.926971435546875,
+          "max_val": 25.42379379272461,
+          "mean_val": -17.66554832458496,
+          "median_val": -17.649906158447266,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4123532,
+          "1": 70772
+        },
+        "is_binary": true,
+        "oil_pixel_count": 70772,
+        "oil_coverage_pct": 1.6873
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00008_full",
+      "scene_id": "real_part1_oil_00008",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00008.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00008.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "f1e22287865a97554267e891394448bc8942747647b3dde8e903e23862a2ab2a",
+      "mask_sha256": "ea5a930b161038def83fb41953f41e63cbf658c51c641a309dd1bce70ee5bb5e",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          30.577875064315126,
+          0.0,
+          -8.983152841195215e-05,
+          32.22569855850468,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          30.577875064315126,
+          32.041723588317005,
+          30.761850034502803,
+          32.22569855850468
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -47.589778900146484,
+          "max_val": -20.847076416015625,
+          "mean_val": -30.155881881713867,
+          "median_val": -30.025012969970703,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -29.926971435546875,
+          "max_val": -10.674943923950195,
+          "mean_val": -17.738162994384766,
+          "median_val": -17.697595596313477,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4093755,
+          "1": 100549
+        },
+        "is_binary": true,
+        "oil_pixel_count": 100549,
+        "oil_coverage_pct": 2.3973
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00009_full",
+      "scene_id": "real_part1_oil_00009",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00009.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00009.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "a5d415e861c05c79e2bfd638eec7dbcf9dff4e1bcc217de7fc030388a61f7fbc",
+      "mask_sha256": "2ee01dcf6f9806eab7acb40c6234104ed1aae993026d92b7d9b94c08b91deeab",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          29.198322133239117,
+          0.0,
+          -8.983152841195215e-05,
+          32.63479208299711,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          29.198322133239117,
+          32.45081711280943,
+          29.382297103426794,
+          32.63479208299711
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -45.20075225830078,
+          "max_val": 2.185065269470215,
+          "mean_val": -31.420427322387695,
+          "median_val": -31.325695037841797,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -27.03579330444336,
+          "max_val": 17.24567413330078,
+          "mean_val": -15.822858810424805,
+          "median_val": -15.834492683410645,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4149313,
+          "1": 44991
+        },
+        "is_binary": true,
+        "oil_pixel_count": 44991,
+        "oil_coverage_pct": 1.0727
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00010_full",
+      "scene_id": "real_part1_oil_00010",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00010.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00010.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "60ad878195f7f6d948c76f56cba41f9cdea3e711eb5b1648dca6b92d3a8d14ac",
+      "mask_sha256": "ab5e6f0fc5681bea8d0c7d65449690915f1edc6e74fd9a42777fbcefe1ecccaf",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          29.131487476100624,
+          0.0,
+          -8.983152841195215e-05,
+          32.703153876118606,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          29.131487476100624,
+          32.51917890593093,
+          29.3154624462883,
+          32.703153876118606
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -44.70975112915039,
+          "max_val": -23.828590393066406,
+          "mean_val": -31.311298370361328,
+          "median_val": -31.218862533569336,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -27.03579330444336,
+          "max_val": -8.5798978805542,
+          "mean_val": -15.470016479492188,
+          "median_val": -15.457477569580078,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4131784,
+          "1": 62520
+        },
+        "is_binary": true,
+        "oil_pixel_count": 62520,
+        "oil_coverage_pct": 1.4906
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00011_full",
+      "scene_id": "real_part1_oil_00011",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "val",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00011.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00011.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "adbcffcfc19b92a5ffeda4006a052639c9afad5753093bcd7cf143c9dfbffb98",
+      "mask_sha256": "60d072069993f06b53246608895df193ef97ffa492308c67a94f29b71600411d",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          28.84740029177702,
+          0.0,
+          -8.983152841195215e-05,
+          32.90033543218936,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          28.84740029177702,
+          32.71636046200168,
+          29.031375261964698,
+          32.90033543218936
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -47.776363372802734,
+          "max_val": 0.4849978983402252,
+          "mean_val": -33.64861297607422,
+          "median_val": -33.52663040161133,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -36.578189849853516,
+          "max_val": 9.205252647399902,
+          "mean_val": -21.137313842773438,
+          "median_val": -21.10915184020996,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4144337,
+          "1": 49967
+        },
+        "is_binary": true,
+        "oil_pixel_count": 49967,
+        "oil_coverage_pct": 1.1913
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00013_full",
+      "scene_id": "real_part1_oil_00013",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00013.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00013.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "d5e04143b6173dbfb6214b01ba86dd79464c8fcdc8188f7be7c764921f6a150f",
+      "mask_sha256": "d1780032a7da8eb05c2495ed3adafdc0e53cd7c9e7688ec4f5193d9f6ac3cbfc",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          29.171153120173695,
+          0.0,
+          -8.983152841195215e-05,
+          32.257950172515486,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          29.171153120173695,
+          32.07397520232781,
+          29.355128090361372,
+          32.257950172515486
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -101.09986877441406,
+          "max_val": 0.0,
+          "mean_val": -33.67472839355469,
+          "median_val": -34.36152267456055,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -57.55730056762695,
+          "max_val": 0.0,
+          "mean_val": -21.236709594726562,
+          "median_val": -21.42633056640625,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4025104,
+          "1": 169200
+        },
+        "is_binary": true,
+        "oil_pixel_count": 169200,
+        "oil_coverage_pct": 4.034
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00015_full",
+      "scene_id": "real_part1_oil_00015",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00015.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00015.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "907167deaac8f6bb6cc7e077b4ed066e46f386543c9c69f4f2033a5495754dd9",
+      "mask_sha256": "8186086db5eaf82b6594e6e51d68b6303171f865c9243cdba094da809e1be7be",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          31.195558302964574,
+          0.0,
+          -8.983152841195215e-05,
+          32.48272256293659,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          31.195558302964574,
+          32.29874759274891,
+          31.37953327315225,
+          32.48272256293659
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -88.25957489013672,
+          "max_val": 0.0,
+          "mean_val": -27.19953155517578,
+          "median_val": -28.78447723388672,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -84.37571716308594,
+          "max_val": 0.0,
+          "mean_val": -16.548715591430664,
+          "median_val": -17.391311645507812,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4124978,
+          "1": 69326
+        },
+        "is_binary": true,
+        "oil_pixel_count": 69326,
+        "oil_coverage_pct": 1.6529
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00017_full",
+      "scene_id": "real_part1_oil_00017",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00017.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00017.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "8073136f31f896e871b3724e60594a0dcb2dffa953c47c8152ee80758aee04b5",
+      "mask_sha256": "b3798298097bff06fc001497bbd3885e2947838c64c7762df5abae64b118d588",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          30.966847231627742,
+          0.0,
+          -8.983152841195215e-05,
+          32.65915168473766,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          30.966847231627742,
+          32.47517671454998,
+          31.15082220181542,
+          32.65915168473766
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -48.92154312133789,
+          "max_val": -14.000999450683594,
+          "mean_val": -29.846725463867188,
+          "median_val": -29.78510284423828,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -39.94886016845703,
+          "max_val": -11.721203804016113,
+          "mean_val": -19.457839965820312,
+          "median_val": -19.281383514404297,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4108640,
+          "1": 85664
+        },
+        "is_binary": true,
+        "oil_pixel_count": 85664,
+        "oil_coverage_pct": 2.0424
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00203_full",
+      "scene_id": "real_part1_oil_00203",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00203.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00203.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "94d409d14d11be3e54be1e74e8fba91b96504805f848b31767f8c55d331fbc7c",
+      "mask_sha256": "56d5b88cc1b769aeae0beee1603662b85f9da6949d18740ac5ebf11388e12b2b",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          30.039217087685355,
+          0.0,
+          -8.983152841195215e-05,
+          33.473331853018664,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          30.039217087685355,
+          33.28935688283099,
+          30.22319205787303,
+          33.473331853018664
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -47.1157341003418,
+          "max_val": -1.9312329292297363,
+          "mean_val": -32.61323547363281,
+          "median_val": -32.517311096191406,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -32.63976287841797,
+          "max_val": 13.145110130310059,
+          "mean_val": -19.613414764404297,
+          "median_val": -19.641876220703125,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4186229,
+          "1": 8075
+        },
+        "is_binary": true,
+        "oil_pixel_count": 8075,
+        "oil_coverage_pct": 0.1925
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part1_oil_00204_full",
+      "scene_id": "real_part1_oil_00204",
+      "folder": "part1_oil",
+      "source": "Part I (Zenodo 10.5281/zenodo.8346860)",
+      "category": "oil",
+      "split": "val",
+      "image_path": "data/raw/satellite/real/part1_oil/images/00204.tif",
+      "mask_path": "data/raw/satellite/real/part1_oil/masks/00204.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "fbf23719ca3306f272de19cca41e78ec7f465407d39dc3252a7eb47f8a923c46",
+      "mask_sha256": "fbf1bddda0c6f1918f9fd8bb257fb9d6c79c3abc02e8007803f1fd17641ae07a",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          30.21699368241261,
+          0.0,
+          -8.983152841195215e-05,
+          33.252346293125264,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          30.21699368241261,
+          33.06837132293759,
+          30.400968652600287,
+          33.252346293125264
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -45.996673583984375,
+          "max_val": -23.882190704345703,
+          "mean_val": -32.215084075927734,
+          "median_val": -32.11198043823242,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -33.78912353515625,
+          "max_val": -10.871895790100098,
+          "mean_val": -18.38816261291504,
+          "median_val": -18.39669418334961,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4178256,
+          "1": 16048
+        },
+        "is_binary": true,
+        "oil_pixel_count": 16048,
+        "oil_coverage_pct": 0.3826
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_lookalike_00000_full",
+      "scene_id": "real_part2_lookalike_00000",
+      "folder": "part2_lookalike",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "look_alike",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_lookalike/images/00000.tif",
+      "mask_path": "data/raw/satellite/real/part2_lookalike/masks/00000.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "54b42e5652327e6e1e119e5029fc705f9f6705c0d65959c190fffa1f4483ac90",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          3.408528805880093,
+          0.0,
+          -8.983152841195215e-05,
+          54.66382188076325,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          3.408528805880093,
+          54.479846910575574,
+          3.5925037760677707,
+          54.66382188076325
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -54.47390365600586,
+          "max_val": -22.01230239868164,
+          "mean_val": -33.191139221191406,
+          "median_val": -32.852298736572266,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -49.03485107421875,
+          "max_val": -12.103548049926758,
+          "mean_val": -30.321338653564453,
+          "median_val": -30.954673767089844,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_lookalike_00001_full",
+      "scene_id": "real_part2_lookalike_00001",
+      "folder": "part2_lookalike",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "look_alike",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_lookalike/images/00001.tif",
+      "mask_path": "data/raw/satellite/real/part2_lookalike/masks/00001.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "3897cefc49dbfe4a67ca9413c460a966bd1978a697e602988467003ad2a31988",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          29.05684762524395,
+          0.0,
+          -8.983152841195215e-05,
+          32.83960722367196,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          29.05684762524395,
+          32.655632253484285,
+          29.240822595431627,
+          32.83960722367196
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -49.23085021972656,
+          "max_val": -26.25680160522461,
+          "mean_val": -35.70886993408203,
+          "median_val": -35.56814956665039,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -38.34029006958008,
+          "max_val": -15.154812812805176,
+          "mean_val": -23.619342803955078,
+          "median_val": -23.5992374420166,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_lookalike_00002_full",
+      "scene_id": "real_part2_lookalike_00002",
+      "folder": "part2_lookalike",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "look_alike",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_lookalike/images/00002.tif",
+      "mask_path": "data/raw/satellite/real/part2_lookalike/masks/00002.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "e31cc233024600a60565102698bcad2e9941314e87f104cb2c816aa2c9b1a95e",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          28.66104991106089,
+          0.0,
+          -8.983152841195215e-05,
+          32.404822626158115,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          28.66104991106089,
+          32.22084765597044,
+          28.845024881248566,
+          32.404822626158115
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -48.538902282714844,
+          "max_val": -19.80223274230957,
+          "mean_val": -32.8743896484375,
+          "median_val": -32.7480354309082,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -46.666725158691406,
+          "max_val": -17.916915893554688,
+          "mean_val": -26.864215850830078,
+          "median_val": -26.589868545532227,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_lookalike_00003_full",
+      "scene_id": "real_part2_lookalike_00003",
+      "folder": "part2_lookalike",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "look_alike",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_lookalike/images/00003.tif",
+      "mask_path": "data/raw/satellite/real/part2_lookalike/masks/00003.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "c663bce7b8c1a7d45c517dba46bea0c573a733178385a80ee2e565f8db6a5d26",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          29.487230477865616,
+          0.0,
+          -8.983152841195215e-05,
+          33.19453159242759,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          29.487230477865616,
+          33.01055662223991,
+          29.671205448053293,
+          33.19453159242759
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -50.019561767578125,
+          "max_val": -22.02155876159668,
+          "mean_val": -33.08034133911133,
+          "median_val": -32.95429611206055,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -47.240692138671875,
+          "max_val": -13.84178352355957,
+          "mean_val": -27.090572357177734,
+          "median_val": -26.80842399597168,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_lookalike_00004_full",
+      "scene_id": "real_part2_lookalike_00004",
+      "folder": "part2_lookalike",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "look_alike",
+      "split": "val",
+      "image_path": "data/raw/satellite/real/part2_lookalike/images/00004.tif",
+      "mask_path": "data/raw/satellite/real/part2_lookalike/masks/00004.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "2d5e27ed3d9a55d32f87bdbb45d478922e5d8cea45e7f2261a62c5b90adcb0b0",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          29.458843714887436,
+          0.0,
+          -8.983152841195215e-05,
+          33.310414264079,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          29.458843714887436,
+          33.12643929389132,
+          29.642818685075113,
+          33.310414264079
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -74.7400131225586,
+          "max_val": 0.0,
+          "mean_val": -34.22576141357422,
+          "median_val": -34.08831787109375,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -68.67827606201172,
+          "max_val": 0.0,
+          "mean_val": -30.65994644165039,
+          "median_val": -30.598981857299805,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_lookalike_00005_full",
+      "scene_id": "real_part2_lookalike_00005",
+      "folder": "part2_lookalike",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "look_alike",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_lookalike/images/00005.tif",
+      "mask_path": "data/raw/satellite/real/part2_lookalike/masks/00005.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "73ac3847a18801ab9f8669787dab57fef6ec387b893f06ce6cab3c0d5fcdc7c5",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          29.311430176763423,
+          0.0,
+          -8.983152841195215e-05,
+          33.331794167841046,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          29.311430176763423,
+          33.14781919765337,
+          29.4954051469511,
+          33.331794167841046
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -103.02851867675781,
+          "max_val": 0.0,
+          "mean_val": -35.79778289794922,
+          "median_val": -35.65282440185547,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -86.13795471191406,
+          "max_val": 0.0,
+          "mean_val": -29.237167358398438,
+          "median_val": -29.474925994873047,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_lookalike_00006_full",
+      "scene_id": "real_part2_lookalike_00006",
+      "folder": "part2_lookalike",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "look_alike",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_lookalike/images/00006.tif",
+      "mask_path": "data/raw/satellite/real/part2_lookalike/masks/00006.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "421801cfed038da2d8b71c0aaf9d92e8b1b95e06e598df6d5f6333ec1abeab3f",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          29.199589923890542,
+          0.0,
+          -8.983152841195215e-05,
+          33.347963842955195,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          29.199589923890542,
+          33.16398887276752,
+          29.38356489407822,
+          33.347963842955195
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -85.79203033447266,
+          "max_val": 0.0,
+          "mean_val": -35.857887268066406,
+          "median_val": -35.713687896728516,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -83.83683013916016,
+          "max_val": 0.0,
+          "mean_val": -25.158777236938477,
+          "median_val": -23.68509292602539,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_lookalike_00007_full",
+      "scene_id": "real_part2_lookalike_00007",
+      "folder": "part2_lookalike",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "look_alike",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_lookalike/images/00007.tif",
+      "mask_path": "data/raw/satellite/real/part2_lookalike/masks/00007.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "78068c13a630eef26cc05da6b59cc8359dcc2c41765cfef33689ce0cff15a12c",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          30.66034205668616,
+          0.0,
+          -8.983152841195215e-05,
+          33.18053387564063,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          30.66034205668616,
+          32.99655890545295,
+          30.84431702687384,
+          33.18053387564063
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -49.28101348876953,
+          "max_val": 0.0,
+          "mean_val": -24.5364990234375,
+          "median_val": -29.739784240722656,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -33.113243103027344,
+          "max_val": 0.0,
+          "mean_val": -16.2348690032959,
+          "median_val": -19.751529693603516,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_lookalike_00008_full",
+      "scene_id": "real_part2_lookalike_00008",
+      "folder": "part2_lookalike",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "look_alike",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_lookalike/images/00008.tif",
+      "mask_path": "data/raw/satellite/real/part2_lookalike/masks/00008.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "38710cf2b0441aa49d04cd1f3c64a25b2d2f2d7011541184e9a52c7f7db9e8b4",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          30.477714559424662,
+          0.0,
+          -8.983152841195215e-05,
+          33.126904453178696,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          30.477714559424662,
+          32.94292948299102,
+          30.66168952961234,
+          33.126904453178696
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -48.05397033691406,
+          "max_val": 1.1684764623641968,
+          "mean_val": -30.007823944091797,
+          "median_val": -29.863555908203125,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -35.83769607543945,
+          "max_val": 16.111358642578125,
+          "mean_val": -20.4750919342041,
+          "median_val": -20.42367935180664,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_lookalike_00090_full",
+      "scene_id": "real_part2_lookalike_00090",
+      "folder": "part2_lookalike",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "look_alike",
+      "split": "val",
+      "image_path": "data/raw/satellite/real/part2_lookalike/images/00090.tif",
+      "mask_path": "data/raw/satellite/real/part2_lookalike/masks/00090.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "772fb07e465540dcf801dec5b754087d9f3107748ab102f1b9677ec1ff09963b",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          54.47833379029707,
+          0.0,
+          -8.983152841195215e-05,
+          24.785345436568758,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          54.47833379029707,
+          24.60137046638108,
+          54.66230876048475,
+          24.785345436568758
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -48.2380485534668,
+          "max_val": 4.4964423179626465,
+          "mean_val": -31.502105712890625,
+          "median_val": -32.758827209472656,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -45.825374603271484,
+          "max_val": 10.502973556518555,
+          "mean_val": -23.957918167114258,
+          "median_val": -25.19454574584961,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_no_oil_00000_full",
+      "scene_id": "real_part2_no_oil_00000",
+      "folder": "part2_no_oil",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "no_oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_no_oil/images/00000.tif",
+      "mask_path": "data/raw/satellite/real/part2_no_oil/masks/00000.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "226485f662b4aaa98f931c464f00db73e2a863dd611fadcc381edc915567dafa",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          4.633112201191825,
+          0.0,
+          -8.983152841195215e-05,
+          55.57390509510474,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          4.633112201191825,
+          55.389930124917065,
+          4.8170871713795025,
+          55.57390509510474
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -54.02985763549805,
+          "max_val": -24.37700843811035,
+          "mean_val": -36.54528045654297,
+          "median_val": -36.188819885253906,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -30.429672241210938,
+          "max_val": -15.443129539489746,
+          "mean_val": -22.070093154907227,
+          "median_val": -22.04145050048828,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_no_oil_00001_full",
+      "scene_id": "real_part2_no_oil_00001",
+      "folder": "part2_no_oil",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "no_oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_no_oil/images/00001.tif",
+      "mask_path": "data/raw/satellite/real/part2_no_oil/masks/00001.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "d4ae1ee4f882ae6ca9bc471129e3983f1b89a9a422d1df61ca7ecb19cbb74ff1",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          5.37745624561326,
+          0.0,
+          -8.983152841195215e-05,
+          55.659604373209746,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          5.37745624561326,
+          55.47562940302207,
+          5.561431215800938,
+          55.659604373209746
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -54.66998291015625,
+          "max_val": -22.222742080688477,
+          "mean_val": -37.05726623535156,
+          "median_val": -36.73613739013672,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -28.847482681274414,
+          "max_val": -14.277982711791992,
+          "mean_val": -20.519853591918945,
+          "median_val": -20.499732971191406,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_no_oil_00002_full",
+      "scene_id": "real_part2_no_oil_00002",
+      "folder": "part2_no_oil",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "no_oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_no_oil/images/00002.tif",
+      "mask_path": "data/raw/satellite/real/part2_no_oil/masks/00002.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "d687f41419b843da9bc71c68163c46a97e3a6be7922e3a4858c167bc6cc2b252",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          5.696717497589338,
+          0.0,
+          -8.983152841195215e-05,
+          54.90322290398111,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          5.696717497589338,
+          54.71924793379343,
+          5.880692467777016,
+          54.90322290398111
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -54.20640182495117,
+          "max_val": 9.725525856018066,
+          "mean_val": -37.869319915771484,
+          "median_val": -37.52686309814453,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -31.259912490844727,
+          "max_val": 20.14118194580078,
+          "mean_val": -21.68117904663086,
+          "median_val": -21.667787551879883,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_no_oil_00003_full",
+      "scene_id": "real_part2_no_oil_00003",
+      "folder": "part2_no_oil",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "no_oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_no_oil/images/00003.tif",
+      "mask_path": "data/raw/satellite/real/part2_no_oil/masks/00003.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "c4155587e9d245d149a1b2ec35dbcd44bf773f24de457a4b7f34f5298c42ea6b",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          6.118656186540278,
+          0.0,
+          -8.983152841195215e-05,
+          54.98973066584182,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          6.118656186540278,
+          54.80575569565414,
+          6.302631156727956,
+          54.98973066584182
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -49.22518539428711,
+          "max_val": -26.847936630249023,
+          "mean_val": -36.620182037353516,
+          "median_val": -36.43366241455078,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -30.336145401000977,
+          "max_val": -14.52273178100586,
+          "mean_val": -21.688270568847656,
+          "median_val": -21.68808364868164,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_no_oil_00004_full",
+      "scene_id": "real_part2_no_oil_00004",
+      "folder": "part2_no_oil",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "no_oil",
+      "split": "val",
+      "image_path": "data/raw/satellite/real/part2_no_oil/images/00004.tif",
+      "mask_path": "data/raw/satellite/real/part2_no_oil/masks/00004.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "40c4a5f75022e3520bc2aa7781ed0cb50b4311014ca1a6c85ec309578beb6857",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          6.5156217105926935,
+          0.0,
+          -8.983152841195215e-05,
+          55.31042922227249,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          6.5156217105926935,
+          55.12645425208481,
+          6.699596680780371,
+          55.31042922227249
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -47.29087829589844,
+          "max_val": -19.972593307495117,
+          "mean_val": -31.521509170532227,
+          "median_val": -31.388816833496094,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -29.100366592407227,
+          "max_val": -6.546454429626465,
+          "mean_val": -21.316923141479492,
+          "median_val": -21.31000328063965,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_no_oil_00005_full",
+      "scene_id": "real_part2_no_oil_00005",
+      "folder": "part2_no_oil",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "no_oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_no_oil/images/00005.tif",
+      "mask_path": "data/raw/satellite/real/part2_no_oil/masks/00005.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "ee33a27c287d3e2211929210cb0ff390c5d7d07df79475aefc89cc3adc05e1aa",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          6.380335428804294,
+          0.0,
+          -8.983152841195215e-05,
+          55.69625563680182,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          6.380335428804294,
+          55.512280666614146,
+          6.564310398991972,
+          55.69625563680182
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -47.79011917114258,
+          "max_val": -0.426394522190094,
+          "mean_val": -31.77438735961914,
+          "median_val": -31.649112701416016,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -28.49098014831543,
+          "max_val": 15.706283569335938,
+          "mean_val": -20.58525848388672,
+          "median_val": -20.586177825927734,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_no_oil_00006_full",
+      "scene_id": "real_part2_no_oil_00006",
+      "folder": "part2_no_oil",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "no_oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_no_oil/images/00006.tif",
+      "mask_path": "data/raw/satellite/real/part2_no_oil/masks/00006.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "141f112a884806ccd8e07a8299cb1bb31be7ccb8a678b29d9d94561a69c1b6f4",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          6.196899447787088,
+          0.0,
+          -8.983152841195215e-05,
+          55.65448397609026,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          6.196899447787088,
+          55.470509005902585,
+          6.380874417974765,
+          55.65448397609026
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -47.87405776977539,
+          "max_val": 0.3000534176826477,
+          "mean_val": -34.034934997558594,
+          "median_val": -33.90026092529297,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -28.197555541992188,
+          "max_val": 11.13433837890625,
+          "mean_val": -20.86562728881836,
+          "median_val": -20.87548065185547,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_no_oil_00007_full",
+      "scene_id": "real_part2_no_oil_00007",
+      "folder": "part2_no_oil",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "no_oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_no_oil/images/00007.tif",
+      "mask_path": "data/raw/satellite/real/part2_no_oil/masks/00007.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "820193412d0f7188cc64434b51641c79af85269d8633da4be8b080f85168f612",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          30.774695943065712,
+          0.0,
+          -8.983152841195215e-05,
+          32.1957846595435,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          30.774695943065712,
+          32.01180968935582,
+          30.95867091325339,
+          32.1957846595435
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -48.940399169921875,
+          "max_val": -21.255735397338867,
+          "mean_val": -29.784555435180664,
+          "median_val": -29.647212982177734,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -24.199203491210938,
+          "max_val": -9.179607391357422,
+          "mean_val": -16.653614044189453,
+          "median_val": -16.671375274658203,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_no_oil_00008_full",
+      "scene_id": "real_part2_no_oil_00008",
+      "folder": "part2_no_oil",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "no_oil",
+      "split": "train",
+      "image_path": "data/raw/satellite/real/part2_no_oil/images/00008.tif",
+      "mask_path": "data/raw/satellite/real/part2_no_oil/masks/00008.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "09581b1642055ed7aa8890af5d77d6df430d63786434afb26a32f5c0ca0aaa19",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          30.12997506365313,
+          0.0,
+          -8.983152841195215e-05,
+          32.92395902885079,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          30.12997506365313,
+          32.73998405866311,
+          30.313950033840808,
+          32.92395902885079
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -48.19993591308594,
+          "max_val": -23.338598251342773,
+          "mean_val": -31.97534942626953,
+          "median_val": -31.843891143798828,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -27.780611038208008,
+          "max_val": -13.334028244018555,
+          "mean_val": -19.973941802978516,
+          "median_val": -19.97743034362793,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part2_no_oil_00017_full",
+      "scene_id": "real_part2_no_oil_00017",
+      "folder": "part2_no_oil",
+      "source": "Part II (Zenodo 10.5281/zenodo.8253899)",
+      "category": "no_oil",
+      "split": "val",
+      "image_path": "data/raw/satellite/real/part2_no_oil/images/00017.tif",
+      "mask_path": "data/raw/satellite/real/part2_no_oil/masks/00017.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "1e1f39731635e3f938e2248825b9fc64780888045b77e1e4b5c3206b0979c959",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195215e-05,
+          0.0,
+          28.877982902922096,
+          0.0,
+          -8.983152841195215e-05,
+          32.675485765367725,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          28.877982902922096,
+          32.49151079518005,
+          29.061957873109773,
+          32.675485765367725
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -47.73448944091797,
+          "max_val": -23.72888946533203,
+          "mean_val": -32.13447189331055,
+          "median_val": -32.037925720214844,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -23.906387329101562,
+          "max_val": -10.471236228942871,
+          "mean_val": -17.450166702270508,
+          "median_val": -17.481081008911133,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part3_test_00060_full",
+      "scene_id": "real_part3_test_00060",
+      "folder": "part3_test",
+      "source": "Part III (Zenodo 10.5281/zenodo.13761290)",
+      "category": "test_set",
+      "split": "test",
+      "image_path": "data/raw/satellite/real/part3_test/images/00060.tif",
+      "mask_path": "data/raw/satellite/real/part3_test/masks/00060.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "dd1a7e21b8e5de933d90c0edd472f330511218630e4e4a4020e5fa1e819235e3",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195212e-05,
+          0.0,
+          -125.64445465022385,
+          0.0,
+          -8.983152841195212e-05,
+          45.96182537971593,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          -125.64445465022385,
+          45.777850409528256,
+          -125.46047968003617,
+          45.96182537971593
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -37.54520034790039,
+          "max_val": 3.248736619949341,
+          "mean_val": -31.45409393310547,
+          "median_val": -31.427837371826172,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -33.75447082519531,
+          "max_val": 12.010270118713379,
+          "mean_val": -21.744651794433594,
+          "median_val": -21.735397338867188,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part3_test_00062_full",
+      "scene_id": "real_part3_test_00062",
+      "folder": "part3_test",
+      "source": "Part III (Zenodo 10.5281/zenodo.13761290)",
+      "category": "test_set",
+      "split": "test",
+      "image_path": "data/raw/satellite/real/part3_test/images/00062.tif",
+      "mask_path": "data/raw/satellite/real/part3_test/masks/00062.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "5839130bb966a1b6b2837c4b64ba99930792656f9b4907dc164464132e069708",
+      "mask_sha256": "1aaaf9138a7efb8cb7fa9bfb2d29c9b2b5ba35fa6c782979f80d669d278ca7d8",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195212e-05,
+          0.0,
+          -125.64445465022385,
+          0.0,
+          -8.983152841195212e-05,
+          45.79078614961958,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          -125.64445465022385,
+          45.6068111794319,
+          -125.46047968003617,
+          45.79078614961958
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -37.09012222290039,
+          "max_val": -24.837358474731445,
+          "mean_val": -31.556678771972656,
+          "median_val": -31.525585174560547,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -33.408512115478516,
+          "max_val": -14.10585880279541,
+          "mean_val": -21.794631958007812,
+          "median_val": -21.773719787597656,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4170142,
+          "1": 24162
+        },
+        "is_binary": true,
+        "oil_pixel_count": 24162,
+        "oil_coverage_pct": 0.5761
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part3_test_00063_full",
+      "scene_id": "real_part3_test_00063",
+      "folder": "part3_test",
+      "source": "Part III (Zenodo 10.5281/zenodo.13761290)",
+      "category": "test_set",
+      "split": "test",
+      "image_path": "data/raw/satellite/real/part3_test/images/00063.tif",
+      "mask_path": "data/raw/satellite/real/part3_test/masks/00063.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "132837cf6d8e91c38054cb81b0e7b05bcd10b8ec7429e4933c1a1b57aa0ceafb",
+      "mask_sha256": "f1aa0ad4cbbd93669d577a8d940448dcd5d4aacec3aa613c78b891af8752da34",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195212e-05,
+          0.0,
+          -125.64445465022385,
+          0.0,
+          -8.983152841195212e-05,
+          45.61974691952322,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          -125.64445465022385,
+          45.435771949335546,
+          -125.46047968003617,
+          45.61974691952322
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -37.44162368774414,
+          "max_val": -25.025556564331055,
+          "mean_val": -31.62822723388672,
+          "median_val": -31.590911865234375,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -35.303184509277344,
+          "max_val": -13.919366836547852,
+          "mean_val": -22.056724548339844,
+          "median_val": -21.987947463989258,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0
+        ],
+        "value_distribution": {
+          "0": 4194304
+        },
+        "is_binary": true,
+        "oil_pixel_count": 0,
+        "oil_coverage_pct": 0.0
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part3_test_00064_full",
+      "scene_id": "real_part3_test_00064",
+      "folder": "part3_test",
+      "source": "Part III (Zenodo 10.5281/zenodo.13761290)",
+      "category": "test_set",
+      "split": "test",
+      "image_path": "data/raw/satellite/real/part3_test/images/00064.tif",
+      "mask_path": "data/raw/satellite/real/part3_test/masks/00064.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "e453d38cd9d904460da0e018553e138eae825ef558a6d21fbaf63d89ec74cbe5",
+      "mask_sha256": "aafadb05051fa493e22136043422e81cd008f4f452766dd39208c2b09408c54d",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195212e-05,
+          0.0,
+          -125.64445465022385,
+          0.0,
+          -8.983152841195212e-05,
+          45.44870768942686,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          -125.64445465022385,
+          45.264732719239184,
+          -125.46047968003617,
+          45.44870768942686
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -56.026939392089844,
+          "max_val": 0.0,
+          "mean_val": -23.563758850097656,
+          "median_val": -31.273096084594727,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -47.49684143066406,
+          "max_val": 0.0,
+          "mean_val": -16.938678741455078,
+          "median_val": -21.715829849243164,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4141684,
+          "1": 52620
+        },
+        "is_binary": true,
+        "oil_pixel_count": 52620,
+        "oil_coverage_pct": 1.2546
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    },
+    {
+      "sample_id": "real_part3_test_00080_full",
+      "scene_id": "real_part3_test_00080",
+      "folder": "part3_test",
+      "source": "Part III (Zenodo 10.5281/zenodo.13761290)",
+      "category": "test_set",
+      "split": "test",
+      "image_path": "data/raw/satellite/real/part3_test/images/00080.tif",
+      "mask_path": "data/raw/satellite/real/part3_test/masks/00080.tif",
+      "width": 2048,
+      "height": 2048,
+      "bands": 2,
+      "image_sha256": "35ba4d9ba6597f83e46c61402426e324e5996a631821cf2d13037e35ef774525",
+      "mask_sha256": "cb49b2b230ff8a53a0934fb1ceed754d2a65beff0f3ca75e022af65e8d8853bb",
+      "duplicate_classification": "UNIQUE",
+      "modality": {
+        "polarization": "VV+VH",
+        "has_vv": true,
+        "has_vh": true,
+        "has_mask": true,
+        "channels": 2,
+        "dtype": "float32",
+        "width": 2048,
+        "height": 2048,
+        "crs": "EPSG:4326",
+        "transform": [
+          8.983152841195216e-05,
+          0.0,
+          -89.10252536070145,
+          0.0,
+          -8.983152841195216e-05,
+          29.005780311042464,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bounds": [
+          -89.10252536070145,
+          28.821805340854787,
+          -88.91855039051377,
+          29.005780311042464
+        ]
+      },
+      "sar_statistics": {
+        "representation": "Calibrated Sigma0 dB (Float32)",
+        "vv": {
+          "min_val": -37.402767181396484,
+          "max_val": -1.173191785812378,
+          "mean_val": -31.13909912109375,
+          "median_val": -31.190839767456055,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        },
+        "vh": {
+          "min_val": -37.35990524291992,
+          "max_val": 8.75647258758545,
+          "mean_val": -23.764123916625977,
+          "median_val": -23.351764678955078,
+          "nan_count": 0,
+          "inf_count": 0,
+          "invalid_pct": 0.0
+        }
+      },
+      "mask_statistics": {
+        "dtype": "uint8",
+        "width": 2048,
+        "height": 2048,
+        "unique_values": [
+          0,
+          1
+        ],
+        "value_distribution": {
+          "0": 4065829,
+          "1": 128475
+        },
+        "is_binary": true,
+        "oil_pixel_count": 128475,
+        "oil_coverage_pct": 3.0631
+      },
+      "validation_status": "PASSED",
+      "validation_errors": []
+    }
+  ]
+}
